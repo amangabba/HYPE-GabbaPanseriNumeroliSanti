@@ -106,7 +106,7 @@ async function initializeDatabaseConnection() {
     PointOfInterest.belongsToMany(Itinerary, { through: Involved })
 
     //TODO: Remove this in production
-    await database.sync({force: true})
+    await database.sync(/*{force: true}*/)
 
     return {
         PointOfInterest,
