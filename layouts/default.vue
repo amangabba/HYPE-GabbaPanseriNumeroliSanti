@@ -1,7 +1,16 @@
 <template>
     <div class="main-page">
         <the-header/>
-        <nuxt/>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                    <h4>Sidebar</h4>
+                </div>
+                <div class="col">
+                    <nuxt/>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
