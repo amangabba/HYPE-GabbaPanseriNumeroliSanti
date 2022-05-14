@@ -1,24 +1,15 @@
 <template>
-  <custom-page :title="title" :image="image" :description="description" />
+    <div class="container">
+        <h1>Title</h1>
+    </div>
 </template>
 
 <script>
-import CustomPage from '~/components/CustomPage.vue'
 export default {
-  name: 'IndexPage',
-  components: {
-    CustomPage,
-  },
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
-    const title = data.title
-    const image = data.image
-    const description = data.description
-    return {
-      title,
-      description,
-      image,
-    }
-  },
+    name: "IndexPage"
 }
 </script>
+
+<style scoped>
+
+</style>
