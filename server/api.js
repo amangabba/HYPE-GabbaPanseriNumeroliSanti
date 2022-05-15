@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const {Sequelize, DataTypes} = require("sequelize")
+const { Sequelize, DataTypes } = require('sequelize')
 const initialize = require('./initialize').default
 
 // With this line, our server will know how to parse any incoming request
@@ -13,10 +13,10 @@ if (process.env.NODE_ENV === 'production') {
     pg.defaults.ssl = true
     database = new Sequelize(process.env.DATABASE_URL, {
         ssl: true,
-        dialectOptions: {ssl: {require: true, rejectUnauthorized: false}}
+        dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
     })
 } else {
-    database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp")
+    database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
 }
 
 // Function that will initialize the connection to the database
@@ -24,20 +24,20 @@ async function initializeDatabaseConnection() {
     await database.authenticate()
 
     // Define tables schema for the database
-    const PointOfInterest = database.define("point_of_interest", {
+    const PointOfInterest = database.define('point_of_interest', {
         name: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
         },
         type: DataTypes.STRING,
         visit_info: DataTypes.STRING,
         description: DataTypes.STRING,
-        image_links: DataTypes.ARRAY(DataTypes.STRING)
+        image_links: DataTypes.ARRAY(DataTypes.STRING),
     })
-    const Event = database.define("event", {
+    const Event = database.define('event', {
         name: {
             type: DataTypes.STRING,
-            unique: 'name_date'
+            unique: 'name_date',
         },
         practical_info: DataTypes.STRING,
         description: DataTypes.STRING,
@@ -46,36 +46,36 @@ async function initializeDatabaseConnection() {
         season: DataTypes.ENUM('Summer', 'Winter'),
         start_date: {
             type: DataTypes.DATEONLY,
-            unique: 'name_date'
+            unique: 'name_date',
         },
-        end_date: DataTypes.DATEONLY
+        end_date: DataTypes.DATEONLY,
     })
-    const Itinerary = database.define("itinerary", {
+    const Itinerary = database.define('itinerary', {
         title: {
             type: DataTypes.STRING,
-            unique: 'title_duration'
+            unique: 'title_duration',
         },
         duration: {
             type: DataTypes.INTEGER,
-            unique: 'title_duration'
+            unique: 'title_duration',
         },
         description: DataTypes.STRING,
-        map_link: DataTypes.STRING
+        map_link: DataTypes.STRING,
     })
-    const ServiceType = database.define("service_type", {
+    const ServiceType = database.define('service_type', {
         type: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
         },
-        cover_link: DataTypes.STRING
+        cover_link: DataTypes.STRING,
     })
-    const Service = database.define("service", {
+    const Service = database.define('service', {
         name: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
         },
         address: DataTypes.STRING,
-        opening_hours: DataTypes.JSON
+        opening_hours: DataTypes.JSON,
     })
 
     // Define relationship for the database
@@ -85,35 +85,35 @@ async function initializeDatabaseConnection() {
     ServiceType.hasMany(Service, { onDelete: 'CASCADE' })
     Service.belongsTo(ServiceType)
 
-    const Involved = database.define("involved", {
+    const Involved = database.define('involved', {
         itinerary_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: Itinerary,
-                key: 'id'
-            }
+                key: 'id',
+            },
         },
         point_of_interest_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: PointOfInterest,
-                key: 'id'
-            }
+                key: 'id',
+            },
         },
-        number: DataTypes.INTEGER
+        number: DataTypes.INTEGER,
     })
     Itinerary.hasMany(PointOfInterest)
     PointOfInterest.belongsToMany(Itinerary, { through: Involved })
 
-    //TODO: Remove this in production
-    await database.sync(/*{force: true}*/)
+    // TODO: Remove this in production
+    await database.sync({force: true})
 
     return {
         PointOfInterest,
         Event,
         Itinerary,
         ServiceType,
-        Service
+        Service,
     }
 }
 
@@ -132,11 +132,46 @@ async function initializeDatabaseConnection() {
 //     },
 // }
 
-
 async function runMainApi() {
     const models = await initializeDatabaseConnection()
     await initialize(models)
 
+    app.get('/itineraries/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.Itinerary.findOne({ where: { id } })
+        return res.json(result)
+    })
+
+    app.get('/itineraries', async (req, res) => {
+        const result = await models.Itinerary.findAll()
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                title: element.title,
+                duration: element.duration,
+                description: element.description,
+                map_link: element.map_link,
+            })
+        }
+        return res.json(filtered)
+    })
+
+    // TODO: Fix INVOLVEDS table
+/*
+    app.get('/itineraries', async(req, res) => {
+        const result = models.Itinerary.findAll({
+            include: [{
+                model: models.PointOfInterest,
+                through: {
+                    model:models.Involved
+                    attributes: ['name', 'type']
+                }
+            }]
+        })
+        return result
+    })
+    */
     // app.get('/page-info/:topic', (req, res) => {
     //     const {topic} = req.params
     //     const result = pageContentObject[topic]

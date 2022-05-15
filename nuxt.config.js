@@ -4,37 +4,33 @@ export default {
     serverMiddleware: [
         {
             path: '/api',
-            handler: '~/server/api.js'
-        }
+            handler: '~/server/api.js',
+        },
     ],
     head: {
         title: 'lambrate-hypermedia',
         htmlAttrs: {
-            lang: 'en'
+            lang: 'en',
         },
         meta: [
-            {charset: 'utf-8'},
+            { charset: 'utf-8' },
             {
                 name: 'viewport',
-                content: 'width=device-width, initial-scale=1'
+                content: 'width=device-width, initial-scale=1',
             },
-            {hid: 'description', name: 'description', content: ''},
-            {name: 'format-detection', content: 'telephone=no'}
+            { hid: 'description', name: 'description', content: '' },
+            { name: 'format-detection', content: 'telephone=no' },
         ],
-        link: [
-            {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
-        ],
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         script: [
             {
-                src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
-            }
-        ]
+                src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',
+            },
+        ],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [
-        '@/assets/app.scss'
-    ],
+    css: ['@/assets/app.scss'],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [],
@@ -45,13 +41,13 @@ export default {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         // https://go.nuxtjs.dev/eslint
-        '@nuxtjs/eslint-module'
+        '@nuxtjs/eslint-module',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -60,9 +56,9 @@ export default {
         baseURL:
             process.env.NODE_ENV === 'production'
                 ? 'https://lambrate-hypermedia.herokuapp.com/'
-                : 'http://localhost:3000'
+                : 'http://localhost:3000',
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {}
+    build: {},
 }

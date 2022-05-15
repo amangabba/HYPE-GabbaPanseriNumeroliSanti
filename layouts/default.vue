@@ -1,13 +1,13 @@
 <template>
     <div class="main-page">
-        <the-header/>
+        <the-header />
         <div class="container-fluid">
             <div class="row">
                 <div class="col-1">
                     <h4>Sidebar</h4>
                 </div>
                 <div class="col">
-                    <nuxt/>
+                    <nuxt />
                 </div>
             </div>
         </div>

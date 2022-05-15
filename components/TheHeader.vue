@@ -13,7 +13,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarToggler">
+        <div id="navbarToggler" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li
                     v-for="(navItem, navItemIndex) of headerList"
@@ -29,17 +29,6 @@
     </nav>
 </template>
 
-<style scoped>
-.header {
-    background: orange;
-}
-
-.logo {
-    color: white;
-    font-size: 32px;
-}
-</style>
-
 <script>
 export default {
     name: 'TheHeader',
@@ -51,8 +40,8 @@ export default {
                     path: '/',
                 },
                 {
-                    name: 'List',
-                    path: '/list',
+                    name: 'All Itineraries',
+                    path: '/all-itineraries',
                 },
                 {
                     name: 'About',
@@ -63,3 +52,14 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.header {
+    background: orange;
+}
+
+.logo {
+    color: white;
+    font-size: 32px;
+}
+</style>

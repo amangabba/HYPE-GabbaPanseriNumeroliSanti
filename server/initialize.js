@@ -1,19 +1,29 @@
 export default async (models) => {
-    // const catList = [
-    //     {
-    //         name: 'Cat 1',
-    //         breed: 'Siberian',
-    //         description: 'Details about cat 1',
-    //         img: 'https://fs.i3lab.group/hypermedia/cats/siberian.jpg',
-    //         locationId: location0.id,
-    //     },
-    //     {
-    //         name: 'Cat 2',
-    //         breed: 'Birman',
-    //         description: 'Details about cat 2',
-    //         img: 'https://fs.i3lab.group/hypermedia/cats/birman.jpg',
-    //         locationId: location0.id,
-    //     }
-    // ]
-    // await models.Cat.bulkCreate(catList)
+    const itineraryList = [
+        {
+            title: 'Itinerary 1',
+            duration: '141',
+            description: 'Details about itinerary 1',
+            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
+        },
+        {
+            title: 'Itinerary 2',
+            duration: '142',
+            description: 'Details about itinerary 2',
+            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
+        },
+        {
+            title: 'Itinerary 3',
+            duration: '143',
+            description: 'Details about itinerary 3',
+            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
+        },
+        {
+            title: 'Itinerary 4',
+            duration: '144',
+            description: 'Details about itinerary 4',
+            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
+        },
+    ]
+    await models.Itinerary.bulkCreate(itineraryList)
 }
