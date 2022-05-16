@@ -4,9 +4,9 @@
         <div class="row mt-3">
             <CardItinerary
                 v-for="itinerary of itineraryList"
-                class="col-sm-2 m-2 img-thumbnail"
-                :key="itinerary.id"
                 :id="itinerary.id"
+                :key="itinerary.id"
+                class="col-sm-2 m-2 img-thumbnail"
                 :title="itinerary.title"
                 :duration="itinerary.duration"
                 :description="itinerary.description"
@@ -21,10 +21,7 @@
 export default {
     name: 'ItinerariesPage',
     components: {
-    //    CardItinerary,
-    },
-    data() {
-        return {}
+        //    CardItinerary,
     },
 
     async asyncData({ $axios }) {
@@ -34,6 +31,8 @@ export default {
             itineraryList: data,
         }
     },
-
+    data() {
+        return {}
+    },
 }
 </script>

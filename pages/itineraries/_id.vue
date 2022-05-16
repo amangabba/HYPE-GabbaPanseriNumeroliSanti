@@ -14,11 +14,6 @@
 <script>
 export default {
     name: 'ItineraryPage',
-    data () {
-        return {
-
-        }
-    },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/itineraries/' + id)
@@ -28,6 +23,9 @@ export default {
             description: data.description,
             map_link: data.map_link,
         }
+    },
+    data() {
+        return {}
     },
 }
 </script>

@@ -6,9 +6,7 @@
         ></div>
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
-            <p class="card-text">
-                {{ duration }} minutes
-            </p>
+            <p class="card-text">{{ duration }} minutes</p>
             <div class="btn btn-primary btn-orange" @click="goToItinerary()">
                 Open
             </div>
@@ -53,13 +51,16 @@ export default {
 .card {
     border: 2px solid lightgray;
 }
+
 .card:hover {
     border: 2px solid orange;
 }
+
 .btn-orange {
     background-color: orange;
     border: 2px solid orange;
 }
+
 .card-image {
     background-position: center;
     background-repeat: no-repeat;
