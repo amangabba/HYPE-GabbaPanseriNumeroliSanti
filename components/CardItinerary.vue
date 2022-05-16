@@ -7,7 +7,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <p class="card-text">
-                {{ duration }} minutes
+                {{ poi_list.length  ? poi_list[0].name + ' -> ' + poi_list[poi_list.length-1].name: "" }} ({{ duration }} min)
             </p>
             <div class="btn btn-primary btn-orange" @click="goToItinerary()">
                 Open
@@ -40,6 +40,10 @@ export default {
             type: String,
             required: true,
         },
+        poi_list: {
+            type: Array,
+            required: true,
+        }
     },
     methods: {
         goToItinerary() {

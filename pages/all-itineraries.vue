@@ -11,6 +11,7 @@
                 :duration="itinerary.duration"
                 :description="itinerary.description"
                 :map_link="itinerary.map_link"
+                :poi_list="itinerary.poi_list"
             />
         </div>
     </div>
@@ -29,7 +30,6 @@ export default {
 
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/itineraries')
-        console.log(data)
         return {
             itineraryList: data,
         }

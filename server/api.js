@@ -86,6 +86,7 @@ async function initializeDatabaseConnection() {
     Service.belongsTo(ServiceType)
 
     const Involved = database.define('involved', {
+        /*
         itinerary_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -100,9 +101,10 @@ async function initializeDatabaseConnection() {
                 key: 'id',
             },
         },
+         */
         number: DataTypes.INTEGER,
     })
-    Itinerary.hasMany(PointOfInterest)
+    Itinerary.belongsToMany(PointOfInterest, { through: Involved })
     PointOfInterest.belongsToMany(Itinerary, { through: Involved })
 
     // TODO: Remove this in production
@@ -114,6 +116,7 @@ async function initializeDatabaseConnection() {
         Itinerary,
         ServiceType,
         Service,
+        Involved
     }
 }
 
@@ -142,36 +145,36 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    app.get('/itineraries', async (req, res) => {
-        const result = await models.Itinerary.findAll()
+    // TODO: Fix INVOLVEDS table
+    app.get('/itineraries', async(req, res) => {
+        const result = await models.Itinerary.findAll({
+            include: models.PointOfInterest
+        })
         const filtered = []
         for (const element of result) {
+            const filteredPOIs = []
+            const pois = element.point_of_interests
+            for (const poi of pois) {
+                filteredPOIs.push({
+                    id: poi.id,
+                    name: poi.name,
+                    number: poi.involved.number
+                })
+            }
+            filteredPOIs.sort((a,b) => a.number - b.number)
             filtered.push({
                 id: element.id,
                 title: element.title,
                 duration: element.duration,
                 description: element.description,
                 map_link: element.map_link,
+                // TODO: Improve this code
+                poi_list: filteredPOIs,
             })
         }
         return res.json(filtered)
     })
 
-    // TODO: Fix INVOLVEDS table
-/*
-    app.get('/itineraries', async(req, res) => {
-        const result = models.Itinerary.findAll({
-            include: [{
-                model: models.PointOfInterest,
-                through: {
-                    model:models.Involved
-                    attributes: ['name', 'type']
-                }
-            }]
-        })
-        return result
-    })
-    */
     // app.get('/page-info/:topic', (req, res) => {
     //     const {topic} = req.params
     //     const result = pageContentObject[topic]

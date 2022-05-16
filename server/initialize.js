@@ -25,5 +25,51 @@ export default async (models) => {
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
         },
     ]
+
+    const PointOFInterestList = [
+        {
+            name: 'POI 1',
+            type: 'TYPE 1',
+            visit_info: 'Visit Info 1',
+            description: 'Details about Visit 1',
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+        },
+        {
+            name: 'POI 2',
+            type: 'TYPE 2',
+            visit_info: 'Visit Info 2',
+            description: 'Details about Visit 2',
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+        },
+        {
+            name: 'POI 3',
+            type: 'TYPE 3',
+            visit_info: 'Visit Info 3',
+            description: 'Details about Visit 3',
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+        },
+    ]
+
+    const InvolvedList = [
+        {
+            number: 1,
+            itineraryId: 1,
+            pointOfInterestId: 1,
+        },
+        {
+            number: 2,
+            itineraryId: 1,
+            pointOfInterestId: 2,
+        },
+        {
+            number: 3,
+            itineraryId: 1,
+            pointOfInterestId: 3,
+        },
+    ]
+
     await models.Itinerary.bulkCreate(itineraryList)
+    await models.PointOfInterest.bulkCreate(PointOFInterestList)
+    await models.Involved.bulkCreate(InvolvedList)
+
 }
