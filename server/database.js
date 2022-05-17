@@ -13,9 +13,12 @@ if (process.env.NODE_ENV === 'production') {
     database = new Sequelize(process.env.DATABASE_URL, {
         ssl: true,
         dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+        logging: false
     })
 } else {
-    database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp')
+    database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp', {
+        logging: false
+    })
 }
 
 /**
