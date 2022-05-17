@@ -7,6 +7,9 @@
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
             <p class="card-text">
+                {{ type }}
+            </p>
+            <p class="card-text">
                 {{ visit_information }}
             </p>
             <div class="btn btn-primary btn-orange" @click="goToDetails()">

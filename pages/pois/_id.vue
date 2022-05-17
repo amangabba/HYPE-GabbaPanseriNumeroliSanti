@@ -4,6 +4,7 @@
             <h1>{{ name }}</h1>
         </div>
         <div class="row">
+            <b>{{ type }}</b>
             <b>{{ visit_information }}</b>
             <p>{{ description }}</p>
             <img class="w-50 mx-auto" :src="poi_link" alt="Map" />
@@ -24,6 +25,7 @@ export default {
         const { data } = await $axios.get('/api/pois/' + id)
         return {
             name: data.name,
+            type: data.type,
             visit_information: data.visit_information,
             description: data.description,
             poi_link: data.poi_link,
