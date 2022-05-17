@@ -30,47 +30,43 @@ export default async (models) => {
         {
             name: 'POI 1',
             type: 'Type1',
-            visit_information: 'Always open',
+            visit_info: 'Always open',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            poi_link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG'
+            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
         },
         {
             name: 'POI 2',
             type: 'Type2',
-            visit_information: 'Just on Sunday',
+            visit_info: 'Just on Sunday',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            poi_link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG'
+            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
         },
         {
             name: 'POI 3',
             type: 'Type3',
-            visit_information: 'Closed forever',
+            visit_info: 'Closed forever',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            poi_link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG'
+            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
         },
-    ]
-    await models.Itinerary.bulkCreate(itineraryList)
-    await models.PointOfInterest.bulkCreate(poiList)
-    const PointOFInterestList = [
         {
-            name: 'POI 1',
+            name: 'POI 4',
             type: 'TYPE 1',
             visit_info: 'Visit Info 1',
             description: 'Details about Visit 1',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
-            name: 'POI 2',
+            name: 'POI 5',
             type: 'TYPE 2',
             visit_info: 'Visit Info 2',
             description: 'Details about Visit 2',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
-            name: 'POI 3',
+            name: 'POI 6',
             type: 'TYPE 3',
             visit_info: 'Visit Info 3',
             description: 'Details about Visit 3',
@@ -78,7 +74,7 @@ export default async (models) => {
         },
     ]
 
-    const InvolvedList = [
+    const involvedList = [
         {
             number: 1,
             itineraryId: 1,
@@ -95,10 +91,6 @@ export default async (models) => {
             pointOfInterestId: 3,
         },
     ]
-
-    await models.Itinerary.bulkCreate(itineraryList)
-    await models.PointOfInterest.bulkCreate(PointOFInterestList)
-    await models.Involved.bulkCreate(InvolvedList)
 
     const serviceList = [
         {
@@ -226,6 +218,10 @@ export default async (models) => {
             ],
         },
     ]
+
+    await models.Itinerary.bulkCreate(itineraryList)
+    await models.PointOfInterest.bulkCreate(poiList)
+    await models.Involved.bulkCreate(involvedList)
     await models.ServiceType.bulkCreate(serviceList, {
         include: [models.Service],
     })

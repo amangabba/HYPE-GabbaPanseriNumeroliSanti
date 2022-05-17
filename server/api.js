@@ -189,9 +189,9 @@ async function runMainApi() {
                 id: element.id,
                 name: element.name,
                 type: element.type,
-                visit_information: element.visit_information,
+                visit_info: element.visit_info,
                 description: element.description,
-                poi_link: element.poi_link,
+                image_links: element.image_links,
             })
         }
         return res.json(filtered)
