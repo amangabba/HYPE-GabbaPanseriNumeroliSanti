@@ -44,8 +44,12 @@ export default {
                     path: '/all-itineraries',
                 },
                 {
-                    name: 'About',
-                    path: '/about',
+                    name: 'All Point Of Interests',
+                    path: '/all-pois',
+                },
+                {
+                    name: 'Services',
+                    path: '/all-service-types',
                 },
             ],
         }
