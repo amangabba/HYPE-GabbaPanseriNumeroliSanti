@@ -2,7 +2,7 @@
     <div class="card" style="width: 18rem">
         <div
             class="card-img-top card-image"
-            :style="{ 'background-image': 'url(' + poi_link + ')' }"
+            :style="{ 'background-image': 'url(' + image_links + ')' }"
         ></div>
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
@@ -10,7 +10,7 @@
                 {{ type }}
             </p>
             <p class="card-text">
-                {{ visit_information }}
+                {{ visit_info }}
             </p>
             <div class="btn btn-primary btn-orange" @click="goToDetails()">
                 Open
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'CardPOIComponent',
     props: {
@@ -35,7 +36,7 @@ export default {
             type: String,
             required: true,
         },
-        visit_information: {
+        visit_info: {
             type: String,
             required: true,
         },
@@ -43,7 +44,7 @@ export default {
             type: String,
             required: true,
         },
-        poi_link: {
+        image_links: {
             type: String,
             required: true,
         },

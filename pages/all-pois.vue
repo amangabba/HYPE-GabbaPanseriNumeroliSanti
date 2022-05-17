@@ -9,9 +9,9 @@
                 :id="poi.id"
                 :name="poi.name"
                 :type="poi.type"
-                :visit_information="poi.visit_information"
+                :visit_info="poi.visit_info"
                 :description="poi.description"
-                :poi_link="poi.poi_link"
+                :image_links="poi.image_links"
             />
         </div>
     </div>

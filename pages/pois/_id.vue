@@ -5,9 +5,9 @@
         </div>
         <div class="row">
             <b>{{ type }}</b>
-            <b>{{ visit_information }}</b>
+            <b>{{ visit_info }}</b>
             <p>{{ description }}</p>
-            <img class="w-50 mx-auto" :src="poi_link" alt="Map" />
+            <img class="w-50 mx-auto" :src="image_links" alt="Image" />
         </div>
     </div>
 </template>
@@ -26,9 +26,9 @@ export default {
         return {
             name: data.name,
             type: data.type,
-            visit_information: data.visit_information,
+            visit_info: data.visit_info,
             description: data.description,
-            poi_link: data.poi_link,
+            image_links: data.image_links,
         }
     },
 }

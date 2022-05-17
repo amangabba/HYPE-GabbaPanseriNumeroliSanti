@@ -33,7 +33,7 @@ export default async (models) => {
             visit_info: 'Always open',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
             name: 'POI 2',
@@ -41,7 +41,7 @@ export default async (models) => {
             visit_info: 'Just on Sunday',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg']
         },
         {
             name: 'POI 3',
@@ -49,7 +49,7 @@ export default async (models) => {
             visit_info: 'Closed forever',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/800px-Mole_Antonelliana_Torino.JPG']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg']
         },
         {
             name: 'POI 4',
