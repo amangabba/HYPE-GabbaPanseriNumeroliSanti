@@ -157,6 +157,28 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
+    app.get('/pois/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.PointOfInterest.findOne({ where: { id } })
+        return res.json(result)
+    })
+
+    app.get('/pois', async (req, res) => {
+        const result = await models.PointOfInterest.findAll()
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                name: element.name,
+                type: element.type,
+                visit_information: element.visit_information,
+                description: element.description,
+                poi_link: element.poi_link,
+            })
+        }
+        return res.json(filtered)
+    })
+
     // TODO: Fix INVOLVEDS table
 /*
     app.get('/itineraries', async(req, res) => {
