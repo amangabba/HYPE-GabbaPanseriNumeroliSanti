@@ -100,4 +100,142 @@ export default async (models) => {
     await models.PointOfInterest.bulkCreate(PointOFInterestList)
     await models.Involved.bulkCreate(InvolvedList)
 
+    const serviceList = [
+        {
+            type: 'Hospital',
+            cover_link: getImageUrl('hospital_cover.webp'),
+            services: [
+                {
+                    name: 'Hospital1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0],
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: [[]],
+                    },
+                },
+                {
+                    name: 'Hospital2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0],
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: [[]],
+                    },
+                },
+            ],
+        },
+        {
+            type: 'Pharmacy',
+            cover_link: getImageUrl('pharmacy_cover.webp'),
+            services: [
+                {
+                    name: 'Pharmacy1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0],
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: [[]],
+                    },
+                },
+                {
+                    name: 'Pharmacy2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0],
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0],
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: [[]],
+                    },
+                },
+            ],
+        },
+    ]
+    await models.ServiceType.bulkCreate(serviceList, {
+        include: [models.Service],
+    })
+}
+
+const baseUrl =
+    process.env.NODE_ENV === 'production'
+        ? 'https://lambrate-hypermedia.herokuapp.com/'
+        : 'http://localhost:3000'
+
+function getImageUrl(imageName) {
+    return baseUrl + '/images/' + imageName
 }
