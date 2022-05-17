@@ -1,7 +1,7 @@
 <template>
     <div class="page container mt-5 text-center">
         <h1 class="display-4">All POIs</h1>
-        <div class="row mt-3">
+        <div class="row mt-3 justify-content-center">
             <CardPOI
                 v-for="poi of poiList"
                 class="col-sm-2 m-2 img-thumbnail"

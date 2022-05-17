@@ -1,7 +1,7 @@
 <template>
     <div class="page container mt-5 text-center">
         <h1 class="display-4">All Itineraries</h1>
-        <div class="row mt-3">
+        <div class="row mt-3 justify-content-center">
             <CardItinerary
                 v-for="itinerary of itineraryList"
                 :id="itinerary.id"

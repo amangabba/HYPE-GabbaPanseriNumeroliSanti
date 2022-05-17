@@ -48,7 +48,7 @@ export default {
                     path: '/all-pois',
                 },
                 {
-                    name: 'Services',
+                    name: 'Main Services',
                     path: '/all-service-types',
                 },
             ],

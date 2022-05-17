@@ -243,12 +243,12 @@ function insertData(models) {
         },
     ]
 
-    models.Itinerary.bulkCreate(itineraryList).then(() => process.stdout.write('Itineraries created'))
-    models.PointOfInterest.bulkCreate(poiList).then(() => process.stdout.write('POIs created'))
-    models.Involved.bulkCreate(involvedList).then(() => process.stdout.write('Involved relationships created'))
+    models.Itinerary.bulkCreate(itineraryList).then(() => process.stdout.write('Itineraries created\n'))
+    models.PointOfInterest.bulkCreate(poiList).then(() => process.stdout.write('POIs created\n'))
+    models.Involved.bulkCreate(involvedList).then(() => process.stdout.write('Involved relationships created\n'))
     models.ServiceType.bulkCreate(serviceList, {
         include: [models.Service],
-    }).then(() => process.stdout.write('Service Types created'))
+    }).then(() => process.stdout.write('Service Types created\n'))
 }
 
 initializeDatabaseConnection(true).then(models => insertData(models))
