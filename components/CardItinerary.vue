@@ -57,13 +57,16 @@ export default {
 .card {
     border: 2px solid lightgray;
 }
+
 .card:hover {
     border: 2px solid orange;
 }
+
 .btn-orange {
     background-color: orange;
     border: 2px solid orange;
 }
+
 .card-image {
     background-position: center;
     background-repeat: no-repeat;

@@ -4,7 +4,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-1">
-                    <h4>Sidebar</h4>
+                    <ul class="nav nav-pills">
+                        <li
+                            v-for="(navEl, index) of navLinks"
+                            :key="`navLink${index}`"
+                            class="nav-item"
+                        >
+                            <NuxtLink :to="navEl.link" class="nav-link">{{
+                                navEl.name
+                            }}</NuxtLink>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col">
                     <nuxt />
@@ -21,6 +31,20 @@ export default {
     name: 'DefaultLayout',
     components: {
         TheHeader,
+    },
+    data() {
+        return {
+            navLinks: [
+                {
+                    name: 'Home',
+                    link: '/',
+                },
+                {
+                    name: 'Services',
+                    link: '/all-service-types',
+                },
+            ],
+        }
     },
 }
 </script>

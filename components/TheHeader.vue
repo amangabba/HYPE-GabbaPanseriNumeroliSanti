@@ -57,9 +57,4 @@ export default {
 .header {
     background: orange;
 }
-
-.logo {
-    color: white;
-    font-size: 32px;
-}
 </style>

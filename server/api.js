@@ -108,7 +108,7 @@ async function initializeDatabaseConnection() {
     PointOfInterest.belongsToMany(Itinerary, { through: Involved })
 
     // TODO: Remove this in production
-    await database.sync({force: true})
+    await database.sync({ force: true })
 
     return {
         PointOfInterest,
@@ -175,6 +175,43 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
+    app.get('/services', async (req, res) => {
+        const result = await models.ServiceType.findAll()
+        const list = []
+        for (const element of result) {
+            list.push({
+                id: element.id,
+                type: element.type,
+                cover_link: element.cover_link,
+            })
+        }
+        return res.json(list)
+    })
+
+    app.get('/services/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.ServiceType.findOne({
+            where: { id },
+            include: models.Service,
+        })
+        return res.json(result)
+    })
+
+    // TODO: Fix INVOLVEDS table
+    /*
+        app.get('/itineraries', async(req, res) => {
+            const result = models.Itinerary.findAll({
+                include: [{
+                    model: models.PointOfInterest,
+                    through: {
+                        model:models.Involved
+                        attributes: ['name', 'type']
+                    }
+                }]
+            })
+            return result
+        })
+        */
     // app.get('/page-info/:topic', (req, res) => {
     //     const {topic} = req.params
     //     const result = pageContentObject[topic]
