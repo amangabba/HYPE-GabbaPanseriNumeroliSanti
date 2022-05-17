@@ -1,4 +1,28 @@
-export default async (models) => {
+const { initializeDatabaseConnection } = require('./database')
+
+/**
+ * Base URL of the website, based on environment variable to tell if we are or not in production
+ * @type {string}
+ */
+const baseUrl =
+    process.env.NODE_ENV === 'production'
+        ? 'https://lambrate-hypermedia.herokuapp.com/'
+        : 'http://localhost:3000'
+
+/**
+ * Gets the URL of an image served by the application
+ * @param imageName the name and extension of the image that is present in the static/images folder
+ * @returns {string}
+ */
+function getImageUrl(imageName) {
+    return baseUrl + '/images/' + imageName
+}
+
+/**
+ * Insert data into the DB tables
+ * @param models object containing the ORM models for the DB tables
+ */
+function insertData(models) {
     const itineraryList = [
         {
             title: 'Itinerary 1',
@@ -219,19 +243,12 @@ export default async (models) => {
         },
     ]
 
-    await models.Itinerary.bulkCreate(itineraryList)
-    await models.PointOfInterest.bulkCreate(poiList)
-    await models.Involved.bulkCreate(involvedList)
-    await models.ServiceType.bulkCreate(serviceList, {
+    models.Itinerary.bulkCreate(itineraryList).then(() => process.stdout.write('Itineraries created'))
+    models.PointOfInterest.bulkCreate(poiList).then(() => process.stdout.write('POIs created'))
+    models.Involved.bulkCreate(involvedList).then(() => process.stdout.write('Involved relationships created'))
+    models.ServiceType.bulkCreate(serviceList, {
         include: [models.Service],
-    })
+    }).then(() => process.stdout.write('Service Types created'))
 }
 
-const baseUrl =
-    process.env.NODE_ENV === 'production'
-        ? 'https://lambrate-hypermedia.herokuapp.com/'
-        : 'http://localhost:3000'
-
-function getImageUrl(imageName) {
-    return baseUrl + '/images/' + imageName
-}
+initializeDatabaseConnection(true).then(models => insertData(models))
