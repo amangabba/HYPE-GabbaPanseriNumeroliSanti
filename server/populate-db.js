@@ -57,7 +57,7 @@ function insertData(models) {
             visit_info: 'Always open',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
             name: 'POI 2',
@@ -65,7 +65,7 @@ function insertData(models) {
             visit_info: 'Just on Sunday',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg']
         },
         {
             name: 'POI 3',
@@ -73,28 +73,28 @@ function insertData(models) {
             visit_info: 'Closed forever',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg']
         },
         {
             name: 'POI 4',
             type: 'TYPE 1',
             visit_info: 'Visit Info 1',
             description: 'Details about Visit 1',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
             name: 'POI 5',
             type: 'TYPE 2',
             visit_info: 'Visit Info 2',
             description: 'Details about Visit 2',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
         },
         {
             name: 'POI 6',
             type: 'TYPE 3',
             visit_info: 'Visit Info 3',
             description: 'Details about Visit 3',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg'],
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
         },
     ]
 

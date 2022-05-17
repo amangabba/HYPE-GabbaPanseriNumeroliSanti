@@ -7,7 +7,8 @@
             <b>{{ type }}</b>
             <b>{{ visit_info }}</b>
             <p>{{ description }}</p>
-            <img class="w-50 mx-auto" :src="image_links" alt="Image" />
+            <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
+            <img class="w-50 mx-auto" :src="image_links[1]" alt="Image" />
         </div>
     </div>
 </template>

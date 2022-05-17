@@ -2,7 +2,7 @@
     <div class="card" style="width: 18rem">
         <div
             class="card-img-top card-image"
-            :style="{ 'background-image': 'url(' + image_links + ')' }"
+            :style="{ 'background-image': 'url(' + image_links[0] + ')' }"
         ></div>
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
@@ -45,7 +45,7 @@ export default {
             required: true,
         },
         image_links: {
-            type: String,
+            type: Array,
             required: true,
         },
     },
