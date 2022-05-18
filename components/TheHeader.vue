@@ -47,6 +47,10 @@ export default {
                     name: 'About',
                     path: '/about',
                 },
+                {
+                    name: 'All Events',
+                    path: '/all-events',
+                },               
             ],
         }
     },

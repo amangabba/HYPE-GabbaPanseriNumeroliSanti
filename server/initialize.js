@@ -25,7 +25,39 @@ export default async (models) => {
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg',
         },
     ]
+    const eventList = [
+        {
+            name: 'Event 1',
+            practical_info: 'practical info about event 1',
+            description: 'description of event 1',
+            address: 'event 1 address',
+            image_links: ['https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg","https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg'],
+            season: 'Summer',
+            start_date: '2022-10-12',
+            end_date: '2022-10-12',
+        },
+        {
+            name: "event 2",
+            practical_info: "practical_info about event 2",
+            description: "description of event 2",
+            address: "event 2 address",
+            image_links: ["https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg", "https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg"],
+            season: "Winter",
+            start_date: '2022-10-12',
+            end_date: '2022-10-12',
+        },
+        {
+            name: "event 3",
+            practical_info: "practical_info about event 3",
+            description: "description of event 3",
+            address: "event 3 address",
+            image_links: ["https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg","https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg"],
+            season: "Summer",
+            start_date: '2022-10-12',
+            end_date: '2022-10-12',
+        }
 
+    ]
     const poiList = [
         {
             name: 'POI 1',
