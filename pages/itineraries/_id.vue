@@ -17,7 +17,9 @@
                         :key="index"
                         :lat-lng="poi.lat_long"
                     >
-                        <l-popup>{{ poi.number }} - {{ poi.name }}</l-popup>
+                        <l-popup>
+                            <a :href=" baseUrl + poi.id ">{{ poi.number }} - {{ poi.name }}</a>
+                        </l-popup>
                     </l-marker>
                 </l-map>
             </client-only>
@@ -50,6 +52,10 @@ export default {
             map_attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             map_zoom: 13,
             map_center: [45.07654, 7.68372],
+            // TODO: Find a better way to use baseUrl
+            baseUrl: (process.env.NODE_ENV === 'production')
+                ?'https://lambrate-hypermedia.herokuapp.com/pois/'
+                : 'http://localhost:3000/pois/'
         }
     },
 
