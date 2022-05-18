@@ -111,6 +111,31 @@ async function runMainApi() {
         })
         return res.json(result)
     })
+
+    app.get('/events/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.Event.findOne({ where: { id } })
+        return res.json(result)
+    })
+
+    app.get('/events', async (req, res) => {
+        const result = await models.Event.findAll()
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                name: element.name,
+                address: element.address,
+                practical_info: element.practical_info,
+                description: element.description,
+                image_links: element.image_links,
+                season: element.season,
+                start_date: element.start_date,
+                end_date: element.end_date,
+            })
+        }
+        return res.json(filtered)
+    })
 }
 
 runMainApi()

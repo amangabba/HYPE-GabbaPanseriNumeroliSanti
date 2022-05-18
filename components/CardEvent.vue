@@ -42,7 +42,7 @@ export default {
       required: true,
     },
     image_links:{
-      type: String,
+      type: Array,
       required: true,
     },
     season:{

@@ -10,7 +10,7 @@
             <b>{{ address }}</b>
             <b>{{ season }}</b>
             <p>{{ description }}</p>
-            <img class="w-50 mx-auto" :src="image_links" alt="Image" />
+            <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
         </div>
     </div>
 </template>

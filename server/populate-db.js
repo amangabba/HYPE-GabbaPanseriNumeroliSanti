@@ -55,7 +55,7 @@ function insertData(models) {
             practical_info: 'practical info about event 1',
             description: 'description of event 1',
             address: 'event 1 address',
-            image_links: ['https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg","https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg'],
+            image_links: ["https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg","https://www.wikieventi.it/news/wp-content/uploads/2016/09/Pala-Alpitour-Torino-come-arrivare-Madonna-678x381.jpg"],
             season: 'Summer',
             start_date: '2022-10-12',
             end_date: '2022-10-12',
@@ -287,9 +287,12 @@ function insertData(models) {
         },
     ]
 
+    
+
     models.Itinerary.bulkCreate(itineraryList).then(() => process.stdout.write('Itineraries created\n'))
     models.PointOfInterest.bulkCreate(poiList).then(() => process.stdout.write('POIs created\n'))
     models.Involved.bulkCreate(involvedList).then(() => process.stdout.write('Involved relationships created\n'))
+    models.Event.bulkCreate(eventList).then(() => process.stdout.write('Events created\n'))
     models.ServiceType.bulkCreate(serviceList, {
         include: [models.Service],
     }).then(() => process.stdout.write('Service Types created\n'))

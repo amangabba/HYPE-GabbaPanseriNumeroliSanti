@@ -11,7 +11,7 @@
              :practical_info="event.practical_info"
              :description="event.description"
              :address="event.address"
-             :image_links="event.img"
+             :image_links="event.image_links"
              :season="event.season"
              :start_date="event.start_date"
              :end_date="event.end_date"
