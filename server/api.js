@@ -11,8 +11,31 @@ async function runMainApi() {
 
     app.get('/itineraries/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.Itinerary.findOne({ where: { id } })
-        return res.json(result)
+        const result = await models.Itinerary.findOne({
+            where: { id },
+            include: models.PointOfInterest,
+        })
+        const filteredPOIs = []
+        const pois = result.point_of_interests
+        for (const poi of pois) {
+            filteredPOIs.push({
+                id: poi.id,
+                name: poi.name,
+                number: poi.involved.number,
+                latitude: poi.latitude,
+                longitude: poi.longitude,
+                lat_long: [poi.latitude, poi.longitude]
+            })
+        }
+        filteredPOIs.sort((a,b) => a.number - b.number)
+        return res.json({
+            id: result.id,
+            title: result.title,
+            duration: result.duration,
+            description: result.description,
+            map_link: result.map_link,
+            poi_list: filteredPOIs,
+        })
     })
 
     app.get('/itineraries', async(req, res) => {
@@ -27,7 +50,9 @@ async function runMainApi() {
                 filteredPOIs.push({
                     id: poi.id,
                     name: poi.name,
-                    number: poi.involved.number
+                    number: poi.involved.number,
+                    latitude: poi.latitude,
+                    longitude: poi.longitude,
                 })
             }
             filteredPOIs.sort((a,b) => a.number - b.number)

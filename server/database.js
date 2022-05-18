@@ -39,6 +39,8 @@ async function initializeDatabaseConnection(dropTables = false) {
         visit_info: DataTypes.STRING,
         description: DataTypes.STRING,
         image_links: DataTypes.ARRAY(DataTypes.STRING),
+        latitude: DataTypes.DOUBLE,
+        longitude: DataTypes.DOUBLE,
     })
     const Event = database.define('event', {
         name: {

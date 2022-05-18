@@ -52,28 +52,34 @@ function insertData(models) {
 
     const poiList = [
         {
-            name: 'POI 1',
-            type: 'Type1',
+            name: 'Piazza San Carlo',
+            type: 'Piazza',
             visit_info: 'Always open',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.0679,
+            longitude: 7.68276
         },
         {
-            name: 'POI 2',
-            type: 'Type2',
+            name: 'Piazza Carlo Felice',
+            type: 'Piazza',
             visit_info: 'Just on Sunday',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.0638,
+            longitude: 7.67975,
         },
         {
-            name: 'POI 3',
-            type: 'Type3',
+            name: 'Piazza della Repubblica',
+            type: 'Piazza',
             visit_info: 'Closed forever',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
-            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg']
+            image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.07654,
+            longitude: 7.68372,
         },
         {
             name: 'POI 4',
@@ -81,6 +87,8 @@ function insertData(models) {
             visit_info: 'Visit Info 1',
             description: 'Details about Visit 1',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.07654,
+            longitude: 7.68372,
         },
         {
             name: 'POI 5',
@@ -88,6 +96,8 @@ function insertData(models) {
             visit_info: 'Visit Info 2',
             description: 'Details about Visit 2',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.07654,
+            longitude: 7.68372,
         },
         {
             name: 'POI 6',
@@ -95,6 +105,8 @@ function insertData(models) {
             visit_info: 'Visit Info 3',
             description: 'Details about Visit 3',
             image_links: ['https://www.ricksteves.com/italy-itinerary.jpg', 'https://www.ricksteves.com/italy-itinerary.jpg'],
+            latitude: 45.07654,
+            longitude: 7.68372,
         },
     ]
 
