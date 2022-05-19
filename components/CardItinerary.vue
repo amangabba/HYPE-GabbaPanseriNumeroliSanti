@@ -7,7 +7,14 @@
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <p class="card-text">
-                {{ poi_list.length  ? poi_list[0].name + ' -> ' + poi_list[poi_list.length-1].name: "" }} ({{ duration }} min)
+                {{
+                    poi_list.length
+                        ? poi_list[0].name +
+                          ' -> ' +
+                          poi_list[poi_list.length - 1].name
+                        : ''
+                }}
+                ({{ duration }} min)
             </p>
             <div class="btn btn-primary btn-orange" @click="goToItinerary()">
                 Open
@@ -22,34 +29,34 @@ export default {
     props: {
         id: {
             type: Number,
-            required: true,
+            required: true
         },
         title: {
             type: String,
-            required: true,
+            required: true
         },
         duration: {
             type: Number,
-            required: true,
+            required: true
         },
         description: {
             type: String,
-            required: true,
+            required: true
         },
         map_link: {
             type: String,
-            required: true,
+            required: true
         },
         poi_list: {
             type: Array,
-            required: true,
+            required: true
         }
     },
     methods: {
         goToItinerary() {
             this.$router.push(`/itineraries/${this.id}`)
-        },
-    },
+        }
+    }
 }
 </script>
 

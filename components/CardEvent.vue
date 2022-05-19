@@ -7,7 +7,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
             <p class="card-text">
-              {{ practical_info }}
+                {{ practical_info }}
             </p>
             <div class="btn btn-primary btn-orange" @click="goToEvents()">
                 Open
@@ -17,52 +17,51 @@
 </template>
 
 <script>
-
 export default {
-  name: 'CardEventComponent',
-  props: {
-    id: {
-      type: Number,
-      required: true,
+    name: 'CardEventComponent',
+    props: {
+        id: {
+            type: Number,
+            required: true
+        },
+        name: {
+            type: String,
+            required: true
+        },
+        practical_info: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        address: {
+            type: String,
+            required: true
+        },
+        image_links: {
+            type: Array,
+            required: true
+        },
+        season: {
+            type: String,
+            required: true
+        },
+        start_date: {
+            type: String, // credo!
+            required: true
+        },
+        end_date: {
+            type: String, // credo!
+            required: true
+        }
     },
-    name: {
-      type: String,
-      required: true,
-    },
-    practical_info: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    address:{
-      type: String,
-      required: true,
-    },
-    image_links:{
-      type: Array,
-      required: true,
-    },
-    season:{
-      type: String, 
-      required: true,
-    },
-    start_date:{
-      type: String,  // credo!
-      required: true,
-    },
-    end_date:{
-      type: String, // credo!
-      required: true,
-    },
-  },
-  methods: { 
-    goToEvents() {
-      this.$router.push(`/events/${this.id}`) 
-    },
-  },
+    methods: {
+        goToEvents() {
+            this.$router.push(`/events/${this.id}`)
+        }
+    }
 }
 </script>
 

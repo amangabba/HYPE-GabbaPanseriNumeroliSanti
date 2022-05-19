@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="container">
         <h1>Title</h1>
@@ -9,7 +7,7 @@
 
 <script>
 export default {
-    name: 'IndexPage',
+    name: 'IndexPage'
 }
 </script>
 

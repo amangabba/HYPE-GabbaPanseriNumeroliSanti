@@ -4,9 +4,9 @@
         <div class="row mt-3 justify-content-center">
             <CardPOI
                 v-for="poi of poiList"
-                class="col-sm-2 m-2 img-thumbnail"
-                :key="poi.id"
                 :id="poi.id"
+                :key="poi.id"
+                class="col-sm-2 m-2 img-thumbnail"
                 :name="poi.name"
                 :type="poi.type"
                 :visit_info="poi.visit_info"
@@ -20,21 +20,20 @@
 <script>
 // import CardPOI from '~/components/CardPOI'
 export default {
-    name: 'poisPage',
+    name: 'PoisPage',
     components: {
         //    CardPOI,
-    },
-    data() {
-        return {}
     },
 
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/pois')
         console.log(data)
         return {
-            poiList: data,
+            poiList: data
         }
     },
-
+    data() {
+        return {}
+    }
 }
 </script>

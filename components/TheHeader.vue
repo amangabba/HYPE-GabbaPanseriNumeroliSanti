@@ -37,27 +37,27 @@ export default {
             headerList: [
                 {
                     name: 'Home',
-                    path: '/',
+                    path: '/'
                 },
                 {
                     name: 'All Itineraries',
-                    path: '/all-itineraries',
+                    path: '/all-itineraries'
                 },
                 {
                     name: 'All Point Of Interests',
-                    path: '/all-pois',
+                    path: '/all-pois'
                 },
                 {
                     name: 'Main Services',
-                    path: '/all-service-types',
+                    path: '/all-service-types'
                 },
                 {
                     name: 'All Events',
-                    path: '/all-events',
-                },               
-            ],
+                    path: '/all-events'
+                }
+            ]
         }
-    },
+    }
 }
 </script>
 

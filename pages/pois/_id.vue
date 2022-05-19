@@ -16,11 +16,6 @@
 <script>
 export default {
     name: 'POIPage',
-    data () {
-        return {
-
-        }
-    },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
@@ -29,9 +24,12 @@ export default {
             type: data.type,
             visit_info: data.visit_info,
             description: data.description,
-            image_links: data.image_links,
+            image_links: data.image_links
         }
     },
+    data() {
+        return {}
+    }
 }
 </script>
 

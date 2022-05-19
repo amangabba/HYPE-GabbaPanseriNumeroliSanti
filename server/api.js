@@ -13,7 +13,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Itinerary.findOne({
             where: { id },
-            include: models.PointOfInterest,
+            include: models.PointOfInterest
         })
         const filteredPOIs = []
         const pois = result.point_of_interests
@@ -27,18 +27,18 @@ async function runMainApi() {
                 lat_long: [poi.latitude, poi.longitude]
             })
         }
-        filteredPOIs.sort((a,b) => a.number - b.number)
+        filteredPOIs.sort((a, b) => a.number - b.number)
         return res.json({
             id: result.id,
             title: result.title,
             duration: result.duration,
             description: result.description,
             map_link: result.map_link,
-            poi_list: filteredPOIs,
+            poi_list: filteredPOIs
         })
     })
 
-    app.get('/itineraries', async(req, res) => {
+    app.get('/itineraries', async (req, res) => {
         const result = await models.Itinerary.findAll({
             include: models.PointOfInterest
         })
@@ -52,17 +52,17 @@ async function runMainApi() {
                     name: poi.name,
                     number: poi.involved.number,
                     latitude: poi.latitude,
-                    longitude: poi.longitude,
+                    longitude: poi.longitude
                 })
             }
-            filteredPOIs.sort((a,b) => a.number - b.number)
+            filteredPOIs.sort((a, b) => a.number - b.number)
             filtered.push({
                 id: element.id,
                 title: element.title,
                 duration: element.duration,
                 description: element.description,
                 map_link: element.map_link,
-                poi_list: filteredPOIs,
+                poi_list: filteredPOIs
             })
         }
         return res.json(filtered)
@@ -84,7 +84,7 @@ async function runMainApi() {
                 type: element.type,
                 visit_info: element.visit_info,
                 description: element.description,
-                image_links: element.image_links,
+                image_links: element.image_links
             })
         }
         return res.json(filtered)
@@ -97,7 +97,7 @@ async function runMainApi() {
             list.push({
                 id: element.id,
                 type: element.type,
-                cover_link: element.cover_link,
+                coverLink: element.cover_link
             })
         }
         return res.json(list)
@@ -107,7 +107,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.ServiceType.findOne({
             where: { id },
-            include: models.Service,
+            include: models.Service
         })
         return res.json(result)
     })
@@ -131,7 +131,7 @@ async function runMainApi() {
                 image_links: element.image_links,
                 season: element.season,
                 start_date: element.start_date,
-                end_date: element.end_date,
+                end_date: element.end_date
             })
         }
         return res.json(filtered)

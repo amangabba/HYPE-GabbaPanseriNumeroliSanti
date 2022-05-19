@@ -1,5 +1,5 @@
-const pg = require("pg");
-const {Sequelize, DataTypes} = require("sequelize");
+const pg = require('pg')
+const { Sequelize, DataTypes } = require('sequelize')
 
 /**
  * The database object
@@ -16,9 +16,12 @@ if (process.env.NODE_ENV === 'production') {
         logging: false
     })
 } else {
-    database = new Sequelize('postgres://postgres:postgres@localhost:5432/hyp', {
-        logging: false
-    })
+    database = new Sequelize(
+        'postgres://postgres:postgres@localhost:5432/hyp',
+        {
+            logging: false
+        }
+    )
 }
 
 /**
@@ -33,19 +36,19 @@ async function initializeDatabaseConnection(dropTables = false) {
     const PointOfInterest = database.define('point_of_interest', {
         name: {
             type: DataTypes.STRING,
-            unique: true,
+            unique: true
         },
         type: DataTypes.STRING,
         visit_info: DataTypes.STRING,
         description: DataTypes.STRING,
         image_links: DataTypes.ARRAY(DataTypes.STRING),
         latitude: DataTypes.DOUBLE,
-        longitude: DataTypes.DOUBLE,
+        longitude: DataTypes.DOUBLE
     })
     const Event = database.define('event', {
         name: {
             type: DataTypes.STRING,
-            unique: 'name_date',
+            unique: 'name_date'
         },
         practical_info: DataTypes.STRING,
         description: DataTypes.STRING,
@@ -54,36 +57,36 @@ async function initializeDatabaseConnection(dropTables = false) {
         season: DataTypes.ENUM('Summer', 'Winter'),
         start_date: {
             type: DataTypes.DATEONLY,
-            unique: 'name_date',
+            unique: 'name_date'
         },
-        end_date: DataTypes.DATEONLY,
+        end_date: DataTypes.DATEONLY
     })
     const Itinerary = database.define('itinerary', {
         title: {
             type: DataTypes.STRING,
-            unique: 'title_duration',
+            unique: 'title_duration'
         },
         duration: {
             type: DataTypes.INTEGER,
-            unique: 'title_duration',
+            unique: 'title_duration'
         },
         description: DataTypes.STRING,
-        map_link: DataTypes.STRING,
+        map_link: DataTypes.STRING
     })
     const ServiceType = database.define('service_type', {
         type: {
             type: DataTypes.STRING,
-            unique: true,
+            unique: true
         },
-        cover_link: DataTypes.STRING,
+        cover_link: DataTypes.STRING
     })
     const Service = database.define('service', {
         name: {
             type: DataTypes.STRING,
-            unique: true,
+            unique: true
         },
         address: DataTypes.STRING,
-        opening_hours: DataTypes.JSON,
+        opening_hours: DataTypes.JSON
     })
 
     // Define relationship for the database
@@ -94,7 +97,7 @@ async function initializeDatabaseConnection(dropTables = false) {
     Service.belongsTo(ServiceType)
 
     const Involved = database.define('involved', {
-        number: DataTypes.INTEGER,
+        number: DataTypes.INTEGER
     })
     Itinerary.belongsToMany(PointOfInterest, { through: Involved })
     PointOfInterest.belongsToMany(Itinerary, { through: Involved })
@@ -111,4 +114,4 @@ async function initializeDatabaseConnection(dropTables = false) {
     }
 }
 
-module.exports = {database, initializeDatabaseConnection}
+module.exports = { database, initializeDatabaseConnection }

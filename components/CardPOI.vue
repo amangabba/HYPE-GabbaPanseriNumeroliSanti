@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'CardPOIComponent',
     props: {
@@ -30,30 +29,30 @@ export default {
         },
         name: {
             type: String,
-            required: true,
+            required: true
         },
         type: {
             type: String,
-            required: true,
+            required: true
         },
         visit_info: {
             type: String,
-            required: true,
+            required: true
         },
         description: {
             type: String,
-            required: true,
+            required: true
         },
         image_links: {
             type: Array,
-            required: true,
-        },
+            required: true
+        }
     },
     methods: {
         goToDetails() {
             this.$router.push(`/pois/${this.id}`)
-        },
-    },
+        }
+    }
 }
 </script>
 

@@ -29,14 +29,13 @@ export default {
             image_links: data.image_links,
             season: data.season,
             start_date: data.start_date,
-            end_date: data.end_date,
+            end_date: data.end_date
         }
     },
     data() {
         return {}
-    },
+    }
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
