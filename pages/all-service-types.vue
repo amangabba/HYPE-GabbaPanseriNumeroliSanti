@@ -42,7 +42,7 @@ import IntroductoryPage from '~/components/IntroductoryPage'
 
 export default {
     name: 'ServiceTypesPage',
-    components: { IntroductoryPage },
+    components: {IntroductoryPage},
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/services')
         const serviceTypeList = []

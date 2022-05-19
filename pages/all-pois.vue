@@ -1,39 +1,43 @@
 <template>
-    <div class="page container mt-5 text-center">
-        <h1 class="display-4">All POIs</h1>
-        <div class="row mt-3 justify-content-center">
-            <CardPOI
-                v-for="poi of poiList"
-                :id="poi.id"
-                :key="poi.id"
-                class="col-sm-2 m-2 img-thumbnail"
-                :name="poi.name"
-                :type="poi.type"
-                :visit_info="poi.visit_info"
-                :description="poi.description"
-                :image_links="poi.image_links"
-            />
-        </div>
-    </div>
+    <IntroductoryPage
+        :title="title"
+        :element-list="poiList"
+        :cover-image-link="coverImageLink"
+        :subtitle="subtitle"
+    >
+    </IntroductoryPage>
 </template>
 
+
 <script>
-// import CardPOI from '~/components/CardPOI'
+import IntroductoryPage from '~/components/IntroductoryPage'
 export default {
     name: 'PoisPage',
-    components: {
-        //    CardPOI,
-    },
+    components: {IntroductoryPage},
 
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/pois')
-        console.log(data)
+        const poiList = []
+        for (const elem of data) {
+            poiList.push({
+                title: elem.name,
+                imageLink: elem.image_links[0],
+                visitInfo: elem.visit_info,
+                link: `/pois/${elem.id}`
+            })
+        }
         return {
-            poiList: data
+            poiList
         }
     },
     data() {
-        return {}
+        return {
+            title: 'All Points of Interest',
+            subtitle: 'All the magical places in Turin',
+            coverImageLink: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Venaria_Reale-01052016_061.jpg/1920px-Venaria_Reale-01052016_061.jpg'
+        }
     }
 }
 </script>
+
+<style scoped></style>
