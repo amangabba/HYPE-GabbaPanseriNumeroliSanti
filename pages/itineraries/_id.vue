@@ -1,23 +1,23 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div class="row p-5 text-center">
-            <h1>{{ title }}</h1>
+        <div class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-5">
+            <h1 class="display-4" >{{ title }}</h1>
         </div>
-        <div class="row">
-            <div class="col h-auto text-center">
-                <img :src="map_link" alt="Map"/>
-            </div>
-            <div class="col text-left">
-                <p>DURATION: {{ duration }} minutes</p>
-                <p>DESCRIPTION: {{ description }}</p>
+        <div class="row m-2">
+            <img class="col-md-6 h-auto text-center" :src="map_link" alt="Map"/>
+            <div class="col-md-6 text-left p-2">
+                <p><i>Duration:</i> {{ duration }} minutes</p>
+                <p v-if="poi_list.length"><i>Starting point:</i> {{ poi_list[0].name }} ({{ poi_list[0].type}})</p>
+                <p v-if="poi_list.length > 1"><i>Ending point:</i> {{ poi_list[poi_list.length-1].name }} ({{ poi_list[poi_list.length-1].type}})</p>
+                <p><i>Description:</i> {{ description }}</p>
             </div>
         </div>
 
         <div class="row justify-content-center mx-auto mt-2">
             <div class="col-md-6">
-                <table class="table table-hover">
+                <table class="table">
                     <thead>
-                    <tr class="bg-primary bg-gradient">
+                    <tr class="bg-primary bg-gradient bg-opacity-50">
                         <th colspan="3">POINTS OF INTEREST</th>
                     </tr>
                     </thead>

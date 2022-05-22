@@ -21,6 +21,7 @@ async function runMainApi() {
             filteredPOIs.push({
                 id: poi.id,
                 name: poi.name,
+                type: poi.type,
                 number: poi.involved.number,
                 latitude: poi.latitude,
                 longitude: poi.longitude,

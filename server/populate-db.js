@@ -27,25 +27,25 @@ function insertData(models) {
         {
             title: 'Itinerary 1',
             duration: '141',
-            description: 'Details about itinerary 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 2',
             duration: '142',
-            description: 'Details about itinerary 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 3',
             duration: '143',
-            description: 'Details about itinerary 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 4',
             duration: '144',
-            description: 'Details about itinerary 4',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         }
     ]

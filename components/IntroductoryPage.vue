@@ -12,6 +12,7 @@
                 v-for="(element, index) of elementList"
                 :key="`card-${index}`"
                 :title="element.title"
+                :subtitle="element.subtitle"
                 :description="element.description ? element.description : ''"
                 :link="element.link"
                 :image-link="element.imageLink"
@@ -47,4 +48,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+    .row > *{
+        padding-right: 0;
+        padding-left: 0;
+    }
+</style>
