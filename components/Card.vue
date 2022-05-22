@@ -1,6 +1,6 @@
 <template>
     <div class="custom-card card mt-3 col-sm-2 m-2">
-        <img :src="imageLink" class="card-img-top" :alt="title" />
+        <img :src="imageLink" class="card-img-top mt-2" :alt="title" />
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <p>
@@ -35,4 +35,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss">
+    .custom-card {
+        background-color: var(--bs-secondary-light);
+    }
+</style>

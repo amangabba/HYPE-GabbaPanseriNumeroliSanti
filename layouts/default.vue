@@ -19,3 +19,13 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+body, nuxt-link{
+    background-color: var(--bs-primary-background);
+    color: var(--bs-primary-dark);
+}
+.btn {
+    background-color: var(--bs-primary-light);
+}
+</style>
