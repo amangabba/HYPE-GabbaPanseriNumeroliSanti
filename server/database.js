@@ -40,6 +40,7 @@ async function initializeDatabaseConnection(dropTables = false) {
         },
         type: DataTypes.STRING,
         visit_info: DataTypes.STRING,
+        address: DataTypes.STRING,
         description: DataTypes.STRING,
         image_links: DataTypes.ARRAY(DataTypes.STRING),
         latitude: DataTypes.DOUBLE,

@@ -95,6 +95,7 @@ function insertData(models) {
             name: 'Piazza San Carlo',
             type: 'Piazza',
             visit_info: 'Always open',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
@@ -109,6 +110,7 @@ function insertData(models) {
             name: 'Piazza Carlo Felice',
             type: 'Piazza',
             visit_info: 'Just on Sunday',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
@@ -123,6 +125,7 @@ function insertData(models) {
             name: 'Piazza della Repubblica',
             type: 'Piazza',
             visit_info: 'Closed forever',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
@@ -149,6 +152,7 @@ function insertData(models) {
             name: 'POI 5',
             type: 'TYPE 2',
             visit_info: 'Visit Info 2',
+            address: 'Via E. Fermi 19',
             description: 'Details about Visit 2',
             image_links: [
                 'https://www.ricksteves.com/italy-itinerary.jpg',
@@ -161,6 +165,7 @@ function insertData(models) {
             name: 'POI 6',
             type: 'TYPE 3',
             visit_info: 'Visit Info 3',
+            address: 'Via E. Fermi 19',
             description: 'Details about Visit 3',
             image_links: [
                 'https://www.ricksteves.com/italy-itinerary.jpg',
