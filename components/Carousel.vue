@@ -9,14 +9,12 @@
                 <img :src="coverImageLinks[0]" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Previous</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img :src="coverImageLinks[1]" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Next</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
         </div>
