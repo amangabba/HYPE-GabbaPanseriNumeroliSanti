@@ -2,8 +2,10 @@
     <IntroductoryPage
         :title="title"
         :element-list="itineraryList"
-        :cover-image-link="coverImageLink"
-        :subtitle="subtitle" />
+        :cover-image="coverImage"
+        :subtitle="subtitle"
+    >
+    </IntroductoryPage>
 </template>
 
 <script>
@@ -17,12 +19,12 @@ export default {
         const itineraryList = []
         for (const elem of data) {
             const poiList = elem.poi_list
-            const description = poiList.length ? 'From: ' + poiList[0].name + ' ' + poiList[poiList.length - 1].name + ' | ' : ''
             itineraryList.push({
                 title: elem.title,
+                subtitle: 'Duration: ' + elem.duration + ' min',
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
-                description: description + 'Duration: ' + elem.duration
+                description: poiList.length ? 'From "' + poiList[0].name + '" to "' + poiList[poiList.length - 1].name + '"': ''
             })
         }
         return {
@@ -33,7 +35,7 @@ export default {
         return {
             title:"All Itineraries",
             subtitle:"Visit the city with different plans!",
-            coverImageLink: "https://wallpaperaccess.com/full/2667331.jpg",
+            coverImage: "introductory-cover.png",
         }
     }
 }

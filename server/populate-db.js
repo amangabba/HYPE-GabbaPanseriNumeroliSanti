@@ -27,25 +27,25 @@ function insertData(models) {
         {
             title: 'Itinerary 1',
             duration: '141',
-            description: 'Details about itinerary 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 2',
             duration: '142',
-            description: 'Details about itinerary 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 3',
             duration: '143',
-            description: 'Details about itinerary 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 4',
             duration: '144',
-            description: 'Details about itinerary 4',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         }
     ]
@@ -192,7 +192,7 @@ function insertData(models) {
     const serviceList = [
         {
             type: 'Hospital',
-            cover_link: getImageUrl('hospital_cover.webp'),
+            cover_link: getImageUrl('service-hospital.png'),
             services: [
                 {
                     name: 'Hospital1',
@@ -219,7 +219,7 @@ function insertData(models) {
                             [15.3, 19.0]
                         ],
                         Friday: [[8.3, 11.3]],
-                        Saturday: [[]]
+                        Saturday: []
                     }
                 },
                 {
@@ -247,14 +247,14 @@ function insertData(models) {
                             [15.3, 19.0]
                         ],
                         Friday: [[8.3, 11.3]],
-                        Saturday: [[]]
+                        Saturday: []
                     }
                 }
             ]
         },
         {
             type: 'Pharmacy',
-            cover_link: getImageUrl('pharmacy_cover.webp'),
+            cover_link: getImageUrl('service-pharmacy.png'),
             services: [
                 {
                     name: 'Pharmacy1',
@@ -281,7 +281,7 @@ function insertData(models) {
                             [15.3, 19.0]
                         ],
                         Friday: [[8.3, 11.3]],
-                        Saturday: [[]]
+                        Saturday: []
                     }
                 },
                 {
@@ -309,7 +309,255 @@ function insertData(models) {
                             [15.3, 19.0]
                         ],
                         Friday: [[8.3, 11.3]],
-                        Saturday: [[]]
+                        Saturday: []
+                    }
+                }
+            ]
+        },
+        {
+            type: 'Bank',
+            cover_link: getImageUrl('service-bank.png'),
+            services: [
+                {
+                    name: 'Bank1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                },
+                {
+                    name: 'Bank2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                }
+            ]
+        },
+        {
+            type: 'Water Supply Point',
+            cover_link: getImageUrl('service-water.png'),
+            services: [
+                {
+                    name: 'Supply1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                },
+                {
+                    name: 'Supply2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                }
+            ]
+        },
+        {
+            type: 'Police Station',
+            cover_link: getImageUrl('service-police.png'),
+            services: [
+                {
+                    name: 'Station1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                },
+                {
+                    name: 'Station2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                }
+            ]
+        },
+        {
+            type: 'Library',
+            cover_link: getImageUrl('service-library.png'),
+            services: [
+                {
+                    name: 'Library1',
+                    address: '2550 Griffin Street',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
+                    }
+                },
+                {
+                    name: 'Library2',
+                    address: '2197 Kildeer Drive',
+                    opening_hours: {
+                        Sunday: [
+                            [9.3, 12.0],
+                            [15.3, 22.0]
+                        ],
+                        Monday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Tuesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Wednesday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Thursday: [
+                            [8.3, 12.0],
+                            [15.3, 19.0]
+                        ],
+                        Friday: [[8.3, 11.3]],
+                        Saturday: []
                     }
                 }
             ]
