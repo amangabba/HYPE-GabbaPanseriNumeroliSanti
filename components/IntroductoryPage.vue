@@ -1,13 +1,13 @@
 <template>
     <div class="container-fluid text-center">
         <div
-            class="title-row row p-5 justify-content-center"
-            :style="`background-image: url(${coverImageLink});`"
+            class="title-row row p-5 justify-content-center w-100 m-0"
+            :style="`background-image: url(http://localhost:3000/images/introductory-cover.png);`"
         >
             <h1 class="display-4">{{ title }}</h1>
             {{ subtitle }}
         </div>
-        <div class="row mt-3 justify-content-center">
+        <div class="row mt-3 justify-content-center w-100">
             <Card
                 v-for="(element, index) of elementList"
                 :key="`card-${index}`"
@@ -49,6 +49,13 @@ export default {
 </script>
 
 <style scoped>
+    .title-row {
+        background-position-x: center;
+        background-position-y: -50px;
+        text-shadow: 2px 4px black;
+        color: white;
+        font-size: larger;
+    }
     .row > *{
         padding-right: 0;
         padding-left: 0;

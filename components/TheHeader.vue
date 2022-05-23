@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light px-3 header">
+    <nav class="navbar navbar-expand-lg navbar-light px-3 header bg-primary">
         <a class="navbar-brand" href="/">Lambrate</a>
         <button
             class="navbar-toggler"
