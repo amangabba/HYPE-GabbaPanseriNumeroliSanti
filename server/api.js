@@ -84,6 +84,7 @@ async function runMainApi() {
                 name: element.name,
                 type: element.type,
                 visit_info: element.visit_info,
+                address: element.address,
                 description: element.description,
                 image_links: element.image_links
             })
