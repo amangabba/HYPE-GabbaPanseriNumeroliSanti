@@ -2,7 +2,7 @@
     <div class="container-fluid text-center">
         <div
             class="title-row row p-5 justify-content-center w-100 m-0"
-            :style="`background-image: url(http://localhost:3000/images/introductory-cover.png);`"
+            :style="`background-image: url('/images/${coverImage}');`"
         >
             <h1 class="display-4">{{ title }}</h1>
             {{ subtitle }}
@@ -36,7 +36,7 @@ export default {
             type: String,
             required: true
         },
-        coverImageLink: {
+        coverImage: {
             type: String,
             required: true
         },

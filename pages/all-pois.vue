@@ -2,7 +2,7 @@
     <IntroductoryPage
         :title="title"
         :element-list="poiList"
-        :cover-image-link="coverImageLink"
+        :cover-image="coverImage"
         :subtitle="subtitle"
     >
     </IntroductoryPage>
@@ -34,7 +34,7 @@ export default {
         return {
             title: 'All Points of Interest',
             subtitle: 'All the magical places in Turin',
-            coverImageLink: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Venaria_Reale-01052016_061.jpg/1920px-Venaria_Reale-01052016_061.jpg'
+            coverImage: 'introductory-cover.png'
         }
     }
 }

@@ -2,7 +2,7 @@
     <IntroductoryPage
         :title="title"
         :element-list="itineraryList"
-        :cover-image-link="coverImageLink"
+        :cover-image="coverImage"
         :subtitle="subtitle"
     >
     </IntroductoryPage>
@@ -35,7 +35,7 @@ export default {
         return {
             title:"All Itineraries",
             subtitle:"Visit the city with different plans!",
-            coverImageLink: "https://wallpaperaccess.com/full/2667331.jpg",
+            coverImage: "introductory-cover.png",
         }
     }
 }

@@ -2,7 +2,7 @@
     <IntroductoryPage
         :title="title"
         :element-list="serviceTypeList"
-        :cover-image-link="coverImageLink"
+        :cover-image="coverImage"
         :subtitle="subtitle"
         class="service-type-page"
     >
@@ -33,7 +33,7 @@ export default {
         return {
             title: 'Main Services',
             subtitle: 'Discover the main services present in Torino',
-            coverImageLink: 'https://wallpaperaccess.com/full/2667331.jpg'
+            coverImage: 'introductory-cover.png'
         }
     }
 }
