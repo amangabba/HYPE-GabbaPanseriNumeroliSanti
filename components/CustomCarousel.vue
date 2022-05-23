@@ -32,7 +32,7 @@
 <script>
 
 export default {
-    name: "Carousel",
+    name: "CustomCarousel",
     props: {
         coverImageLinks: {
             type: Array,

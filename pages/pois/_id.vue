@@ -13,17 +13,17 @@
         <br>
         </div>
         <h3 class="text-left">See correlated Points of Interest:</h3>
-        <Carousel
+        <carousel-component
             class="w-25 mx-auto text-left" :cover-image-links="image_links"
-        ></Carousel>
+        ></carousel-component>
     </div>
 </template>
 
 <script>
-import Carousel from '~/components/Carousel'
+import CarouselComponent from '~/components/CustomCarousel'
 export default {
     name: 'POIPage',
-    components: {Carousel},
+    components: {CarouselComponent},
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
