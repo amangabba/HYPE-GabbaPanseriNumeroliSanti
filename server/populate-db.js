@@ -95,12 +95,13 @@ function insertData(models) {
             name: 'Piazza San Carlo',
             type: 'Piazza',
             visit_info: 'Always open',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.0679,
             longitude: 7.68276
@@ -109,12 +110,13 @@ function insertData(models) {
             name: 'Piazza Carlo Felice',
             type: 'Piazza',
             visit_info: 'Just on Sunday',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.0638,
             longitude: 7.67975
@@ -123,48 +125,54 @@ function insertData(models) {
             name: 'Piazza della Repubblica',
             type: 'Piazza',
             visit_info: 'Closed forever',
+            address: 'Via E. Fermi 19',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.07654,
             longitude: 7.68372
         },
         {
-            name: 'POI 4',
+            name: 'Mole Antonelliana 1',
             type: 'TYPE 1',
             visit_info: 'Visit Info 1',
-            description: 'Details about Visit 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+                'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.07654,
             longitude: 7.68372
         },
         {
-            name: 'POI 5',
+            name: 'Mole antonelliana 2',
             type: 'TYPE 2',
             visit_info: 'Visit Info 2',
-            description: 'Details about Visit 2',
+            address: 'Via E. Fermi 19',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+                'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.07654,
             longitude: 7.68372
         },
         {
-            name: 'POI 6',
+            name: 'Mole antonelliana 3',
             type: 'TYPE 3',
             visit_info: 'Visit Info 3',
-            description: 'Details about Visit 3',
+            address: 'Via E. Fermi 19',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+                'labore et dolore magna aliqua.',
             image_links: [
-                'https://www.ricksteves.com/italy-itinerary.jpg',
-                'https://www.ricksteves.com/italy-itinerary.jpg'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
             ],
             latitude: 45.07654,
             longitude: 7.68372

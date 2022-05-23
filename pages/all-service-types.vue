@@ -16,7 +16,7 @@ export default {
     name: 'ServiceTypesPage',
     components: {IntroductoryPage},
     async asyncData({ $axios }) {
-        const { data } = await $axios.get('/api/services')
+        const { data } = await $axios.get('/api/service-types')
         const serviceTypeList = []
         for (const elem of data) {
             serviceTypeList.push({

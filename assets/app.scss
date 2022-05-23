@@ -9,4 +9,5 @@ $theme-colors: (
     'light': #c0ccda,
     'dark': #001738
 );
+$enable-shadows: true;
 @import '~bootstrap/scss/bootstrap.scss';

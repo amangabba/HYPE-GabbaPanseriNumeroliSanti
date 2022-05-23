@@ -1,5 +1,5 @@
 <template>
-    <div class="custom-card card mt-3 col-sm-2 m-2">
+    <div class="custom-card card mt-3 col-sm-2 m-2 shadow-sm">
         <img :src="imageLink" class="card-img-top" :alt="title" />
         <div class="card-body d-flex flex-column align-items-center">
             <h5 class="card-title">{{ title }}</h5>
@@ -40,4 +40,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.custom-card:hover {
+    border: 2px solid var(--bs-primary);
+}
+</style>

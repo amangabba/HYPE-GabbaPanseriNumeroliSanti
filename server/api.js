@@ -87,6 +87,7 @@ async function runMainApi() {
                 name: element.name,
                 type: element.type,
                 visit_info: element.visit_info,
+                address: element.address,
                 description: element.description,
                 image_links: element.image_links
             })
@@ -94,7 +95,7 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
-    app.get('/services', async (req, res) => {
+    app.get('/service-types', async (req, res) => {
         const result = await models.ServiceType.findAll()
         const list = []
         for (const element of result) {
@@ -107,13 +108,19 @@ async function runMainApi() {
         return res.json(list)
     })
 
-    app.get('/services/:id', async (req, res) => {
+    app.get('/service-types/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.ServiceType.findOne({
+        const serviceType = await models.ServiceType.findOne({
             where: { id },
             include: models.Service
         })
-        return res.json(result)
+        const otherServiceTypes = await models.ServiceType.findAll({
+            order: [['id', 'ASC']]
+        })
+        return res.json({
+            serviceType,
+            otherServiceTypes
+        })
     })
 
     app.get('/events/:id', async (req, res) => {
