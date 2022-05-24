@@ -23,6 +23,7 @@ async function runMainApi() {
                 name: poi.name,
                 type: poi.type,
                 visit_info: poi.visit_info,
+                address: poi.address,
                 description: poi.description,
                 number: poi.involved.number,
                 image_links: poi.image_links,
