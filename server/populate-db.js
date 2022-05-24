@@ -27,25 +27,29 @@ function insertData(models) {
         {
             title: 'Itinerary 1',
             duration: '141',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 2',
             duration: '142',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 3',
             duration: '143',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
             title: 'Itinerary 4',
             duration: '144',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         }
     ]
@@ -101,7 +105,7 @@ function insertData(models) {
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.0679,
             longitude: 7.68276
@@ -116,7 +120,7 @@ function insertData(models) {
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.0638,
             longitude: 7.67975
@@ -131,7 +135,7 @@ function insertData(models) {
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.07654,
             longitude: 7.68372
@@ -140,11 +144,12 @@ function insertData(models) {
             name: 'Mole Antonelliana 1',
             type: 'TYPE 1',
             visit_info: 'Visit Info 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.07654,
             longitude: 7.68372
@@ -154,11 +159,12 @@ function insertData(models) {
             type: 'TYPE 2',
             visit_info: 'Visit Info 2',
             address: 'Via E. Fermi 19',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.07654,
             longitude: 7.68372
@@ -168,11 +174,12 @@ function insertData(models) {
             type: 'TYPE 3',
             visit_info: 'Visit Info 3',
             address: 'Via E. Fermi 19',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mole_Antonelliana_Torino.JPG/1200px-Mole_Antonelliana_Torino.JPG',
-                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg',
+                'https://www.informagiovani-italia.com/mole_antonelliana3.jpg'
             ],
             latitude: 45.07654,
             longitude: 7.68372

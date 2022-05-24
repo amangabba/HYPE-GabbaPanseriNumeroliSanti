@@ -26,7 +26,7 @@ import Card from '~/components/Card'
 
 export default {
     name: 'IntroductoryPage',
-    components: {Card},
+    components: { Card },
     props: {
         title: {
             type: String,
@@ -49,15 +49,15 @@ export default {
 </script>
 
 <style scoped>
-    .title-row {
-        background-position-x: center;
-        background-position-y: -50px;
-        text-shadow: 2px 4px black;
-        color: white;
-        font-size: larger;
-    }
-    .row > *{
-        padding-right: 0;
-        padding-left: 0;
-    }
+.title-row {
+    background-position-x: center;
+    background-position-y: -50px;
+    text-shadow: 2px 4px black;
+    color: white;
+    font-size: larger;
+}
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
+}
 </style>

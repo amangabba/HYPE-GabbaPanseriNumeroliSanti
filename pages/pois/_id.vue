@@ -10,11 +10,12 @@
             <p>{{ description }}</p>
             <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
             <img class="w-50 mx-auto" :src="image_links[1]" alt="Image" />
-        <br>
+            <br />
         </div>
         <h3 class="text-left">See correlated Points of Interest:</h3>
         <carousel-component
-            class="w-25 mx-auto text-left" :cover-image-links="image_links"
+            class="w-25 mx-auto text-left"
+            :cover-image-links="image_links"
         ></carousel-component>
     </div>
 </template>
@@ -23,7 +24,7 @@
 import CarouselComponent from '~/components/CustomCarousel'
 export default {
     name: 'POIPage',
-    components: {CarouselComponent},
+    components: { CarouselComponent },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
