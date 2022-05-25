@@ -10,7 +10,6 @@
             <p>{{ description }}</p>
             <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
             <img class="w-50 mx-auto" :src="image_links[1]" alt="Image" />
-            <img class="w-50 mx-auto" :src="image_links[2]" alt="Image" />
             <br />
         </div>
         <h3 class="text-left">See correlated Points of Interest:</h3>
