@@ -1,5 +1,7 @@
 <template>
-    <nav class="navbar sticky-top shadow navbar-expand-lg navbar-light px-3 header bg-primary">
+    <nav
+        class="navbar sticky-top shadow navbar-expand-lg navbar-light px-3 header bg-primary"
+    >
         <a class="navbar-brand" href="/">Lambrate</a>
         <button
             class="navbar-toggler"
@@ -57,7 +59,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
-
-</style>
+<style lang="scss"></style>

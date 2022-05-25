@@ -7,7 +7,9 @@
             <p>
                 {{ description }}
             </p>
-            <NuxtLink :to="link" class="btn btn-primary mt-auto"> See more </NuxtLink>
+            <NuxtLink :to="link" class="btn btn-primary mt-auto">
+                See more
+            </NuxtLink>
         </div>
     </div>
 </template>
@@ -25,7 +27,7 @@ export default {
             required: true
         },
         subtitle: {
-            type:String,
+            type: String,
             default: ''
         },
         description: {

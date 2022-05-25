@@ -22,17 +22,18 @@
                         >
                             <div class="row w-100">
                                 <div class="col-8">
-                                    <span class="fw-bold">{{ service.name }}</span>
-                                    <br>
+                                    <span class="fw-bold">{{
+                                        service.name
+                                    }}</span>
+                                    <br />
                                     <span class="text-muted">{{
-                                            service.address
-                                        }}</span>
+                                        service.address
+                                    }}</span>
                                 </div>
                                 <div class="col align-self-center">
                                     {{ serviceStatus[index] }}
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div
@@ -54,7 +55,10 @@
                                         <div class="col-3 my-auto">
                                             {{ day }}
                                         </div>
-                                        <div class="col text-end my-auto" v-html="formatHours(hours)"></div>
+                                        <div
+                                            class="col text-end my-auto"
+                                            v-html="formatHours(hours)"
+                                        ></div>
                                     </div>
                                 </li>
                             </ul>
@@ -63,41 +67,48 @@
                 </div>
             </div>
         </div>
-<!--        <div class="row justify-content-center">-->
-<!--            <h4>Other Service Types</h4>-->
-<!--            <div class="col-3">-->
-<!--                <div class="card flex-row align-items-center" style="width: 18rem;">-->
-<!--                    <div class="col-1">-->
-<!--                        <NuxtLink :to="`service-types/${previous.id}`">-->
-<!--                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">-->
-<!--                                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>-->
-<!--                            </svg>-->
-<!--                        </NuxtLink>-->
-<!--                    </div>-->
-<!--                    <div class="col">-->
-<!--                        <img :src="previous.cover_link" class="card-img-top" :alt="previous.type">-->
-<!--                        <div class="card-body">-->
-<!--                            <h5 class="card-title">{{ previous.type }}</h5>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-3 align-self-end">{{next}}</div>-->
-<!--        </div>-->
+        <!--        <div class="row justify-content-center">-->
+        <!--            <h4>Other Service Types</h4>-->
+        <!--            <div class="col-3">-->
+        <!--                <div class="card flex-row align-items-center" style="width: 18rem;">-->
+        <!--                    <div class="col-1">-->
+        <!--                        <NuxtLink :to="`service-types/${previous.id}`">-->
+        <!--                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">-->
+        <!--                                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>-->
+        <!--                            </svg>-->
+        <!--                        </NuxtLink>-->
+        <!--                    </div>-->
+        <!--                    <div class="col">-->
+        <!--                        <img :src="previous.cover_link" class="card-img-top" :alt="previous.type">-->
+        <!--                        <div class="card-body">-->
+        <!--                            <h5 class="card-title">{{ previous.type }}</h5>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-3 align-self-end">{{next}}</div>-->
+        <!--        </div>-->
     </div>
 </template>
 
 <script>
 function checkOpen(services) {
-    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const weekday = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
     const result = services.map(() => 'Now Closed')
     for (let i = 0; i < services.length; i++) {
         const date = new Date()
         const hours = date.getHours()
         let open = false
-        services[i].opening_hours[weekday[date.getDay()]].forEach(arr => {
-            if (hours >= arr[0] && hours <= arr[1])
-                open = true
+        services[i].opening_hours[weekday[date.getDay()]].forEach((arr) => {
+            if (hours >= arr[0] && hours <= arr[1]) open = true
         })
 
         if (open) result[i] = 'Now Open'
@@ -122,7 +133,10 @@ function getNextAndPrevious(serviceTypes, currentId) {
         nextId = currentId + 1
     }
 
-    return { next: serviceTypes[nextId - 1], previous: serviceTypes[previousId - 1] }
+    return {
+        next: serviceTypes[nextId - 1],
+        previous: serviceTypes[previousId - 1]
+    }
 }
 
 export default {
@@ -144,13 +158,13 @@ export default {
         }
     },
     methods: {
-        formatHours: arr => {
-            let res = ""
-            const padNum = num => {
+        formatHours: (arr) => {
+            let res = ''
+            const padNum = (num) => {
                 const split = num.toFixed(2).split('.')
-                return split[0].padStart(2, '0') + ":" + split[1]
+                return split[0].padStart(2, '0') + ':' + split[1]
             }
-            arr.forEach(subArr => {
+            arr.forEach((subArr) => {
                 res += padNum(subArr[0]) + ' - ' + padNum(subArr[1]) + '<br>'
             })
             if (res === '') res = 'Closed'
@@ -163,7 +177,7 @@ export default {
 
 <style scoped>
 img {
- width: 150px;
+    width: 150px;
 }
 #service-accordion {
     max-width: 600px;
