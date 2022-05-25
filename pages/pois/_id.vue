@@ -15,21 +15,20 @@
                 <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
                 <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
             </div>
-        <br>
         </div>
-        <h3 class="text-left">See correlated Points of Interest:</h3>
+        <h3 class="title-row row m-2">See correlated Points of Interest:</h3>
         <carousel-component
             :id="'pois'"
             class="w-25 mx-auto text-left"
             :cover-image-links="image_links"
         ></carousel-component>
-        <h3 class="text-left">See correlated Points of Interest:</h3>
+        <h3 class="title-row row m-2">See Itineraries for this Point of Interest:</h3>>
         <carousel-component
             :id="'itineraries'"
             class="w-25 mx-auto text-left"
             :cover-image-links="image_links"
         ></carousel-component>
-        <h3 class="text-left">See correlated Points of Interest:</h3>
+        <h3 class="title-row row m-2">See Events that will be host in this Point of Interest:</h3>
         <carousel-component
             :id="'events'"
             class="w-25 mx-auto text-left"
