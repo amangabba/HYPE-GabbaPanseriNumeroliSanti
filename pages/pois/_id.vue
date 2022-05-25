@@ -1,20 +1,32 @@
 <template>
-    <div class="text-center">
-        <div class="row">
+    <div class="text-center container-fluid">
+        <div class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-5">
             <h1>{{ name }}</h1>
         </div>
         <div class="row">
-            <b>{{ type }}</b>
-            <b>{{ visit_info }}</b>
-            <b>{{ address }}</b>
+            <p><i>Visit Information</i>: {{ visit_info }}</p>
+            <p><i>Address of the Point of Interest</i>: {{ address }}</p>
             <p>{{ description }}</p>
-            <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
-            <img class="w-50 mx-auto" :src="image_links[1]" alt="Image" />
+            <h3 class="title-row row m-2 mb-3">Gallery</h3>
+            <div class="row m-2 justify-content-md-center">
+                <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
+                <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
+                <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
+                <img class="w-25 mh-auto p-2 border border-dark rounded" :src="image_links[0]" alt="Image" />
+            </div>
         <br>
         </div>
-        <h3 class="text-left">See correlated Points of Interest:</h3>
+        <h3 class="title-row row m-2">See correlated Points of Interest:</h3>
         <Carousel
-            class="w-25 mx-auto text-left" :cover-image-links="image_links"
+            class="w-50 mx-auto" :cover-image-links="image_links"
+        ></Carousel>
+        <h3 class="title-row row m-2">See Itineraries for this Point of Interest:</h3>
+        <Carousel
+            class="w-50 mx-auto" :cover-image-links="image_links"
+        ></Carousel>
+        <h3 class="title-row row m-2">See Events that will be host in this Point of Interest:</h3>
+        <Carousel
+            class="w-50 mx-auto" :cover-image-links="image_links"
         ></Carousel>
     </div>
 </template>
