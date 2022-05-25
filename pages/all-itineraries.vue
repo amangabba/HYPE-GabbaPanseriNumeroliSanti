@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import IntroductoryPage from "~/components/IntroductoryPage";
+import IntroductoryPage from '~/components/IntroductoryPage'
 export default {
     name: 'ItinerariesPage',
     components: { IntroductoryPage },
@@ -24,7 +24,13 @@ export default {
                 subtitle: 'Duration: ' + elem.duration + ' min',
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
-                description: poiList.length ? 'From "' + poiList[0].name + '" to "' + poiList[poiList.length - 1].name + '"': ''
+                description: poiList.length
+                    ? 'From "' +
+                      poiList[0].name +
+                      '" to "' +
+                      poiList[poiList.length - 1].name +
+                      '"'
+                    : ''
             })
         }
         return {
@@ -33,9 +39,9 @@ export default {
     },
     data() {
         return {
-            title:"All Itineraries",
-            subtitle:"Visit the city with different plans!",
-            coverImage: "introductory-cover.png",
+            title: 'All Itineraries',
+            subtitle: 'Visit the city with different plans!',
+            coverImage: 'introductory-cover.png'
         }
     }
 }

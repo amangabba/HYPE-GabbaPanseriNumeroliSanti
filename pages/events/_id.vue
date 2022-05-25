@@ -1,16 +1,32 @@
 <template>
-    <div class="text-center">
-        <div class="row">
-            <h1>{{ name }}</h1>
+    <div class="justify-content-center container-fluid">
+        <div
+            class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-5"
+        >
+            <h6 class="display-4">{{ name }}</h6>
         </div>
-        <div class="row">
-            <b>{{ practical_info }}</b>
-            <b>The event starts on {{ start_date }}</b>
-            <b>The event ends on {{ end_date }}</b>
-            <b>{{ address }}</b>
-            <b>{{ season }}</b>
+        <div class="row m-2">
+            <img
+                class="col-md-6 h-auto text-center"
+                :src="image_links[0]"
+                alt="Image"
+            />
+            <div class="col-md-6 text-left p-2">
+                <b>{{ practical_info }}</b>
+                <!-- in che senso? io non le metterei--->
+                <p>The event starts on: {{ start_date }}</p>
+                <p>The event ends on: {{ end_date }}</p>
+                <p>Address: {{ address }}</p>
+                <p>Location: (link of a poi)</p>
+                <!--link of a poi-->
+                <p>{{ season }}</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mx-auto mt-2">
             <p>{{ description }}</p>
-            <img class="w-50 mx-auto" :src="image_links[0]" alt="Image" />
+        </div>
+        <div class="row justify-content-center mx-auto mt-2">
+            <p>Other event in this location</p>
         </div>
     </div>
 </template>

@@ -22,7 +22,11 @@ async function runMainApi() {
                 id: poi.id,
                 name: poi.name,
                 type: poi.type,
+                visit_info: poi.visit_info,
+                address: poi.address,
+                description: poi.description,
                 number: poi.involved.number,
+                image_links: poi.image_links,
                 latitude: poi.latitude,
                 longitude: poi.longitude,
                 lat_long: [poi.latitude, poi.longitude]

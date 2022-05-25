@@ -8,12 +8,11 @@
     </IntroductoryPage>
 </template>
 
-
 <script>
 import IntroductoryPage from '~/components/IntroductoryPage'
 export default {
     name: 'PoisPage',
-    components: {IntroductoryPage},
+    components: { IntroductoryPage },
 
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/pois')
