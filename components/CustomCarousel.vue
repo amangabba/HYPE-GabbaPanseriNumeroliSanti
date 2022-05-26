@@ -24,7 +24,8 @@
                     alt="..."
                 />
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Previous</h5>
+                    <!--ToDo: metti a posto bottone per il carosello-->
+                    <button class="btn btn-primary" href="baseUrl + elements_id[index]" role="button">Open</button>
                 </div>
             </div>
         </div>
@@ -53,13 +54,17 @@
 export default {
     name: 'CustomCarousel',
     props: {
+        id:{
+            type: String,
+            required: true,
+        },
         coverImageLinks: {
             type: Array,
             required: true
         },
-        id:{
-            type: String,
-            required: true,
+        elements_id: {
+            type: Array,
+            required: true
         }
     }
 }
