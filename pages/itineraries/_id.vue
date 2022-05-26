@@ -10,7 +10,7 @@
                 <img
                     class="col-md-3 h-auto text-center"
                     :src="map_link"
-                    alt="Map"
+                    alt="Interactive Map"
                 />
                 <div class="col-md-9 text-left p-3">
                     <p><i>Duration:</i> {{ duration }} minutes</p>
@@ -37,46 +37,18 @@
                     {{ poi_list[0].address }}
                 </h4>
             </div>
-            <iframe
+            <Map
                 ref="map"
-                class="row justify-content-center mx-auto mt-2"
-                height="300px"
-                width="740px"
-                :src="
-                    'https://www.openstreetmap.org/export/embed.html?bbox=' +
-                    String(poi_list[0].longitude - long_diff) +
-                    '%2C' +
-                    String(poi_list[0].latitude - lat_diff) +
-                    '%2C' +
-                    String(poi_list[0].longitude + long_diff) +
-                    '%2C' +
-                    String(poi_list[0].latitude + lat_diff) +
-                    '&layer=mapnik&marker=' +
-                    poi_list[0].latitude +
-                    '%2C' +
-                    poi_list[0].longitude
-                "
-                style="
-                    border: 1px solid black;
-                    max-width: 100%;
-                    min-width: 200px;
-                "
+                :center_long="poi_list[0].longitude"
+                :center_lat="poi_list[0].latitude"
+                :marker_long="poi_list[0].longitude"
+                :marker_lat="poi_list[0].latitude"
             >
-            </iframe>
+            </Map>
             <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
                 <h2 class="display-3">List of Points of Interest</h2>
             </div>
             <div class="row justify-content-center mx-auto mt-2">
-                <!--                <grid
-                                    v-for="(poi,index) in poi_list"
-                                      :key="'grid-card-'+index"
-                                      :title="'('+poi.number+'/'+poi_list.length+') - '+poi.name"
-                                      :image-link="poi.image_links.length ? poi.image_links[0] : ''"
-                                      :image-alt-text="'Point of Interest ' + poi.name + ' Image'"
-                                      :subtitle="'Address'"
-                                      :description="poi.description"
-                                    :link="baseUrl + poi.id"
-                                ></grid>-->
                 <div
                     v-for="(poi, index) in poi_list"
                     :id="`grid-card-${poi.number}`"
@@ -144,12 +116,12 @@
 </template>
 
 <script>
-// import Grid from "~/components/GridCard";
+import Map from '~/components/Map'
 
 export default {
     name: 'ItineraryPage',
     components: {
-        //    Grid,
+        Map
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params
@@ -167,36 +139,35 @@ export default {
             map_center: [45.07654, 7.68372],
             map_marker: [],
             lat_diff: 0.00248,
-            long_diff: 0.0069,
+            long_diff: 0.0069
         }
     },
     methods: {
+        // Called to update the map, it's information and the selected grid card
         putMarker(key, lat, long, name, address) {
-            this.$refs.map.src =
-                'https://www.openstreetmap.org/export/embed.html?bbox=' +
-                String(long - this.long_diff) +
-                '%2C' +
-                String(lat - this.lat_diff) +
-                '%2C' +
-                String(long + this.long_diff) +
-                '%2C' +
-                String(lat + this.lat_diff) +
-                '&layer=mapnik&marker=' +
-                lat +
-                '%2C' +
-                long
+            // Update Map center
+            this.$refs.map.center_long = long
+            this.$refs.map.center_lat = lat
+            // Update Map marker
+            this.$refs.map.marker_long = long
+            this.$refs.map.marker_lat = lat
 
+            // Classes to update
             const selectedRowClasses = ['bg-opacity-10', 'bg-primary']
             for (const row of this.$refs['grid-cards']) {
+                // Remove classes from all the grid cards
                 row.classList.remove(...selectedRowClasses)
                 if (row.id === `grid-card-${key}`) {
+                    // Add classes to the selected grid card
                     row.classList.add(...selectedRowClasses)
                 }
             }
 
+            // Update the map marker information
             this.$refs['map-marker-info'].innerHTML =
                 '(' + key + ') ' + name + ' - ' + address
 
+            // Scroll into view the map
             this.$refs['map-title'].scrollIntoView()
         }
     }

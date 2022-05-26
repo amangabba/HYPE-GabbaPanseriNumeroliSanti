@@ -57,7 +57,8 @@ function insertData(models) {
         {
             name: 'Leggere il giardino',
             practical_info: 'practical info about event 1',
-            description: 'Guided tour of parco della Palazzina di Caccia di Stupinigi',
+            description:
+                'Guided tour of parco della Palazzina di Caccia di Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/stupinigi-un-gioiello-rococo-dedicato-a-diana/castello-di-stupinigi-veduta-aerea.jpg',
@@ -71,8 +72,10 @@ function insertData(models) {
         },
         {
             name: 'Storie dal tornio',
-            practical_info:'10 May from 17.00 to 18.30. The ceramic of Greeks. 14 April from 17.00 to 18.30. The ceramic of Cipro. 12 May dalle  17:00 The ceramic of Etruscans',
-            description: 'Stories from the lathe. The ceramics of the Museum of Antiquities a new cycle of meetings and workshops to learn about and deepen the archaeological collections of the Royal Museums!', //Ceramics had in ancient times a diffusion comparable to that of todays plastic, but with a much greater environmental sustainability!', //troppo lungo se no All archaeological museums are overflowing with vases, distinguishable by appearance, shape, function, decoration...Do you already know what bucchero is? What is the difference between black-figure and red-figure vases? What does sealed earth mean? How was the slat polishing made? If yes, welcome colleague! Otherwise you can participate in the series of meetings Stories from the lathe and discover it together with the archaeologists of the Royal Museums.Each event includes an interactive behind-the-scenes workshop to familiarize yourself with techniques and materials used for the main ceramic classes of the Mediterranean, and a guided tour in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
+            practical_info:
+                '10 May from 17.00 to 18.30. The ceramic of Greeks. 14 April from 17.00 to 18.30. The ceramic of Cipro. 12 May dalle  17:00 The ceramic of Etruscans',
+            description:
+                'Stories from the lathe. The ceramics of the Museum of Antiquities a new cycle of meetings and workshops to learn about and deepen the archaeological collections of the Royal Museums!', // Ceramics had in ancient times a diffusion comparable to that of todays plastic, but with a much greater environmental sustainability!', //troppo lungo se no All archaeological museums are overflowing with vases, distinguishable by appearance, shape, function, decoration...Do you already know what bucchero is? What is the difference between black-figure and red-figure vases? What does sealed earth mean? How was the slat polishing made? If yes, welcome colleague! Otherwise you can participate in the series of meetings Stories from the lathe and discover it together with the archaeologists of the Royal Museums.Each event includes an interactive behind-the-scenes workshop to familiarize yourself with techniques and materials used for the main ceramic classes of the Mediterranean, and a guided tour in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
                 'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
@@ -86,7 +89,8 @@ function insertData(models) {
         {
             name: 'Frida Kahlo',
             practical_info: 'practical info',
-            description: 'The most beautiful picture from Nickolas Muray come back to Palazzina di Caccia Stupinigi',
+            description:
+                'The most beautiful picture from Nickolas Muray come back to Palazzina di Caccia Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.themammothreflex.com/wp-content/uploads/2020/02/frida-khalo-foto-Nickolas-Muray-mostra-torino-1-5.jpg',
@@ -100,7 +104,8 @@ function insertData(models) {
         {
             name: 'Passepartout',
             practical_info: 'practical info',
-            description: 'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi',
+            description:
+                'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://i.pinimg.com/originals/6e/e1/cf/6ee1cfba97cbfe5d1ac5be5b2f905707.jpg',
@@ -112,10 +117,11 @@ function insertData(models) {
             start_date: '2022-04-24',
             end_date: '2022-04-25'
         },
-       {
+        {
             name: 'Lyric and musical',
             practical_info: 'practical info',
-            description: 'the Salone of Onour of the Palazzina di Caccia di Stupinigi will host five appointments of the Sunday review of the Teatro Superga with the great opera and musicals that have made history',
+            description:
+                'the Salone of Onour of the Palazzina di Caccia di Stupinigi will host five appointments of the Sunday review of the Teatro Superga with the great opera and musicals that have made history',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',

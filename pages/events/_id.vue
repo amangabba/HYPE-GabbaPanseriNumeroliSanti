@@ -1,6 +1,8 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r">
+        <div
+            class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
+        >
             <h2 class="display-5">{{ name }}</h2>
         </div>
         <div class="title-row row p-1 text-left bg-primary bg-opacity-10 mb-3">
@@ -8,15 +10,25 @@
         </div>
         <div id="content" class="container">
             <div class="row m-1">
-                <carousel-component :id="'events'" class="img-thumbnail w-50 col-md-3 h-auto text-center" :cover-image-links="image_links">
+                <carousel-component
+                    :id="'events'"
+                    class="img-thumbnail w-50 col-md-3 h-auto text-center"
+                    :cover-image-links="image_links"
+                >
                 </carousel-component>
                 <div class="col-6 text-left p-4">
                     <font size="4px">
-                        <p> <i> Practical info: </i> {{ practical_info }}</p> <!-- in che senso? io non le metterei--->
-                        <p> <i> The event starts on: </i> {{ start_date }}</p>
-                        <p> <i> The event ends on: </i> {{ end_date }}</p>
-                        <p> <i> Address: </i> {{ address }}</p>
-                        <p> <i> Location:</i> <a href="/pois/5"> Palazzina di Caccia Stupinigi </a></p>
+                        <p><i> Practical info: </i> {{ practical_info }}</p>
+                        <!-- in che senso? io non le metterei--->
+                        <p><i> The event starts on: </i> {{ start_date }}</p>
+                        <p><i> The event ends on: </i> {{ end_date }}</p>
+                        <p><i> Address: </i> {{ address }}</p>
+                        <p>
+                            <i> Location:</i>
+                            <a href="/pois/5">
+                                Palazzina di Caccia Stupinigi
+                            </a>
+                        </p>
                         <!--link of a poi, ma non è dinamico cosi-->
                         <p>{{ season }}</p>
                     </font>
@@ -24,11 +36,11 @@
             </div>
             <div class="row justify-content-center mx-auto mt-2">
                 <font face="Arial" size="4px">
-                    <p> {{ description }} </p>
+                    <p>{{ description }}</p>
                 </font>
             </div>
             <div class="row justify-content-center mx-auto mt-2">
-                <p> Other event in this location </p>
+                <p>Other event in this location</p>
             </div>
         </div>
     </div>
@@ -59,5 +71,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
