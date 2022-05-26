@@ -22,7 +22,7 @@
                 <img :src="img" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Previous</h5>
-                </div> --> 
+                </div>
             </div>
         </div>
         <button
