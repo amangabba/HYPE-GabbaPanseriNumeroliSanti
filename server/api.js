@@ -91,7 +91,7 @@ async function runMainApi() {
                 address: element.address,
                 description: element.description,
                 image_links: element.image_links
-                //ToDo: ricordati di aggiungere i link
+                // ToDo: ricordati di aggiungere i link
             })
         }
         return res.json(filtered)
