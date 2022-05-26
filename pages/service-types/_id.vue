@@ -55,10 +55,16 @@
                                         <div class="col-3 my-auto">
                                             {{ day }}
                                         </div>
-                                        <div
-                                            class="col text-end my-auto"
-                                            v-html="formatHours(hours)"
-                                        ></div>
+                                        <div class="col text-end my-auto">
+                                            <div
+                                                v-for="(
+                                                    element, i
+                                                ) of formatHours(hours)"
+                                                :key="'openingHours' + i"
+                                            >
+                                                {{ element }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -67,27 +73,6 @@
                 </div>
             </div>
         </div>
-        <!--        <div class="row justify-content-center">-->
-        <!--            <h4>Other Service Types</h4>-->
-        <!--            <div class="col-3">-->
-        <!--                <div class="card flex-row align-items-center" style="width: 18rem;">-->
-        <!--                    <div class="col-1">-->
-        <!--                        <NuxtLink :to="`service-types/${previous.id}`">-->
-        <!--                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">-->
-        <!--                                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>-->
-        <!--                            </svg>-->
-        <!--                        </NuxtLink>-->
-        <!--                    </div>-->
-        <!--                    <div class="col">-->
-        <!--                        <img :src="previous.cover_link" class="card-img-top" :alt="previous.type">-->
-        <!--                        <div class="card-body">-->
-        <!--                            <h5 class="card-title">{{ previous.type }}</h5>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="col-3 align-self-end">{{next}}</div>-->
-        <!--        </div>-->
     </div>
 </template>
 
@@ -159,16 +144,15 @@ export default {
     },
     methods: {
         formatHours: (arr) => {
-            let res = ''
+            const res = []
             const padNum = (num) => {
                 const split = num.toFixed(2).split('.')
                 return split[0].padStart(2, '0') + ':' + split[1]
             }
             arr.forEach((subArr) => {
-                res += padNum(subArr[0]) + ' - ' + padNum(subArr[1]) + '<br>'
+                res.push(padNum(subArr[0]) + ' - ' + padNum(subArr[1]))
             })
-            if (res === '') res = 'Closed'
-            else res = res.slice(0, -4)
+            if (res.length === 0) res.push('Closed')
             return res
         }
     }
