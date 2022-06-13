@@ -10,12 +10,13 @@
         </div>
         <div id="content" class="container">
             <div class="row m-1">
+                <!--
                 <carousel-component
                     :id="'events'"
                     class="img-thumbnail w-50 col-md-3 h-auto text-center"
-                    :cover-image-links="image_links"
-                >
+                    :elements="image_links"
                 </carousel-component>
+                -->
                 <div class="col-6 text-left p-4">
                     <font size="4px">
                         <p><i> Practical info: </i> {{ practical_info }}</p>
@@ -47,10 +48,10 @@
 </template>
 
 <script>
-import CarouselComponent from '~/components/CustomCarousel'
+// import CarouselComponent from '~/components/CustomCarousel'
 export default {
     name: 'EventPage',
-    components: { CarouselComponent },
+    // components: { CarouselComponent },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/events/' + id)

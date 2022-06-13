@@ -34,20 +34,13 @@
                 />
             </div>
         </div>
-        <h3 class="title-row row m-2">See correlated Points of Interest:</h3>
-        <carousel-component
-            :id="'pois'"
-            class="w-25 mx-auto text-left"
-            :cover-image-links="image_links"
-        ></carousel-component>
         <h3 class="title-row row m-2">
             See Itineraries for this Point of Interest:
         </h3>
-        >
         <carousel-component
             :id="'itineraries'"
             class="w-25 mx-auto text-left"
-            :cover-image-links="image_links"
+            :elements="itineraries_links"
         ></carousel-component>
         <h3 class="title-row row m-2">
             See Events that will be host in this Point of Interest:
@@ -55,7 +48,7 @@
         <carousel-component
             :id="'events'"
             class="w-25 mx-auto text-left"
-            :cover-image-links="image_links"
+            :elements="events_links"
         ></carousel-component>
     </div>
 </template>
@@ -74,7 +67,10 @@ export default {
             visit_info: data.visit_info,
             address: data.address,
             description: data.description,
-            image_links: data.image_links
+            image_links: data.image_links,
+            itineraries_links: data.correlated_itineraries,
+            events_links: data.correlated_events,
+            pois_links: data.correlated_pois
         }
     },
     data() {

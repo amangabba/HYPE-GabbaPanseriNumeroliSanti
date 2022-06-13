@@ -6,7 +6,7 @@
     >
         <div class="carousel-indicators">
             <button
-                v-for="index of Array(coverImageLinks.length).keys()"
+                v-for="index of Array(elements.length).keys()"
                 :key="'button-'+index"
                 type="button"
                 :data-bs-target="'#'+id"
@@ -17,15 +17,36 @@
             ></button>
         </div>
         <div class="carousel-inner">
-            <div v-for="(img,index) of coverImageLinks" :key="'carousel-'+index" :class="index==0 ? 'carousel-item active' : 'carousel-item'" data-bs-interval="10000">
-                <img
-                    :src="img"
-                    class="d-block w-100"
-                    alt="..."
-                />
-                <div class="carousel-caption d-none d-md-block">
-                    <!--ToDo: metti a posto bottone per il carosello-->
-                    <button class="btn btn-primary" href="baseUrl + elements_id[index]" role="button">Open</button>
+            <div v-if="id == 'itineraries'">
+                <div v-for="(element,index) of elements"
+                     :key="'carousel-'+index"
+                     :class="index==0 ? 'carousel-item active' : 'carousel-item'" data-bs-interval="10000">
+                    <img
+                        :src="element.map_link"
+                        class="d-block w-100"
+                        alt="image"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <a class="btn btn-primary"
+                                :href="'/' + id + '/' + element.id"
+                                role="button">Open</a>
+                    </div>
+                </div>
+            </div>
+            <div v-if="id == 'events'">
+                <div v-for="(element,index) of elements"
+                     :key="'carousel-'+index"
+                     :class="index==0 ? 'carousel-item active' : 'carousel-item'" data-bs-interval="10000">
+                    <img
+                        :src="element.image_links[0]"
+                        class="d-block w-100"
+                        alt="image"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <a class="btn btn-primary"
+                           :href="'/' + id + '/' + element.id"
+                           role="button">Open</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,11 +79,7 @@ export default {
             type: String,
             required: true,
         },
-        coverImageLinks: {
-            type: Array,
-            required: true
-        },
-        elements_id: {
+        elements: {
             type: Array,
             required: true
         }
