@@ -49,6 +49,17 @@
                     </div>
                 </div>
             </div>
+            <div v-if="id == 'events-only-images'">
+                <div v-for="(element,index) of elements"
+                     :key="'carousel-'+index"
+                     :class="index==0 ? 'carousel-item active' : 'carousel-item'" data-bs-interval="10000">
+                    <img
+                        :src="element"
+                        class="d-block w-100"
+                        alt="image"
+                    />
+                </div>
+            </div>
         </div>
         <button
             class="carousel-control-prev"

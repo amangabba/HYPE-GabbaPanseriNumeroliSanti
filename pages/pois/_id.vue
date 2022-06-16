@@ -50,14 +50,19 @@
             class="w-25 mx-auto text-left"
             :elements="events_links"
         ></carousel-component>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import CarouselComponent from '~/components/CustomCarousel'
+import Footer from '~/components/Footer'
 export default {
     name: 'POIPage',
-    components: { CarouselComponent },
+    components: {
+        CarouselComponent,
+        Footer,
+    },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
