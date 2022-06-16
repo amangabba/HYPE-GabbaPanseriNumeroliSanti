@@ -233,14 +233,32 @@ async function runMainApi() {
 
     app.get('/events/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.Event.findOne({ where: { id } })
-        return res.json(result)
+        const result = await models.Event.findOne({
+            where: { id } ,
+            include: models.PointOfInterest
+        })
+        const correlatedPOI = []
+        correlatedPOI.push(result.point_of_interests)
+        return res.json({
+            id: result.id,
+            name: result.name,
+            address: result.address,
+            practical_info: result.practical_info,
+            description: result.description,
+            image_links: result.image_links,
+            season: result.season,
+            start_date: result.start_date,
+            end_date: result.end_date,
+            correlated_poi: correlatedPOI
+        })
     })
 
     app.get('/events', async (req, res) => {
         const result = await models.Event.findAll()
         const filtered = []
         for (const element of result) {
+            const correlatedPOI = []
+            correlatedPOI.push(result.point_of_interests)
             filtered.push({
                 id: element.id,
                 name: element.name,
@@ -250,7 +268,8 @@ async function runMainApi() {
                 image_links: element.image_links,
                 season: element.season,
                 start_date: element.start_date,
-                end_date: element.end_date
+                end_date: element.end_date,
+                correlated_poi: correlatedPOI
             })
         }
         return res.json(filtered)

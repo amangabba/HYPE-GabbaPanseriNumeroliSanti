@@ -15,7 +15,7 @@
                     :id="'events'"
                     class="img-thumbnail w-50 col-md-3 h-auto text-center"
                     :elements="image_links"
-                </carousel-component>
+                ></carousel-component>
                 -->
                 <div class="col-6 text-left p-4">
                     <font size="4px">
@@ -63,7 +63,8 @@ export default {
             image_links: data.image_links,
             season: data.season,
             start_date: data.start_date,
-            end_date: data.end_date
+            end_date: data.end_date,
+            pois_link: data.correlated_poi
         }
     },
     data() {
