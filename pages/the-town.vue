@@ -4,10 +4,8 @@
 
 <script>
 export default {
-    name: "the-town"
+    name: 'TheTown'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -4,10 +4,8 @@
 
 <script>
 export default {
-    name: "coronavirus-update"
+    name: 'CoronavirusUpdate'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

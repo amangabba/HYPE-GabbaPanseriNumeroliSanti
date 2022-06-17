@@ -1,5 +1,5 @@
 <template>
-<IntroductoryPage
+    <IntroductoryPage
         :title="title"
         :element-list="eventList"
         :cover-image="coverImage"
@@ -18,16 +18,16 @@ export default {
     async asyncData({ $axios }) {
         const { data } = await $axios.get('/api/events')
         const eventList = []
-       for (const event of data) {
-        if (event.season === 'Winter') {
-            eventList.push({
-                title: event.name,
-                subtitle: event.start_date + ' - ' + event.end_date,
-                imageLink: event.image_links[0],
-                description: event.description,
-                link: `/events/${event.id}`
-            })
-          }
+        for (const event of data) {
+            if (event.season === 'Winter') {
+                eventList.push({
+                    title: event.name,
+                    subtitle: event.start_date + ' - ' + event.end_date,
+                    imageLink: event.image_links[0],
+                    description: event.description,
+                    link: `/events/${event.id}`
+                })
+            }
         }
         return {
             eventList
@@ -42,4 +42,3 @@ export default {
     }
 }
 </script>
-</template>

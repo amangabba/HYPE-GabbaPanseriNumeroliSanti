@@ -1,8 +1,6 @@
 <template>
     <!-- Footer -->
-    <footer
-        class="text-center text-lg-start bg-primary"
-    >
+    <footer class="text-center text-lg-start bg-primary">
         <div class="container text-center text-md-start mt-1">
             <div class="row mt-3">
                 <div
@@ -21,7 +19,7 @@
 
 <script>
 export default {
-    name: "Footer",
+    name: 'Footer',
     data() {
         return {
             footerList: [
@@ -44,13 +42,11 @@ export default {
                 {
                     name: 'Coronavirus Update',
                     path: '/coronavirus-update'
-                },
+                }
             ]
         }
     }
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import BootstrapBreadcrumbs from "~/components/BootstrapBreadcrumbs";
+import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 
 function checkOpen(services) {
     const weekday = [
@@ -152,7 +152,7 @@ export default {
                 {
                     title: serviceTypeData.type,
                     link: `/service-types/${id}`
-                },
+                }
             ]
         }
     },
