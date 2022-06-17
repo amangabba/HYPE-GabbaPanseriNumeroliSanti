@@ -4,6 +4,7 @@
             <img :src="cover_link" :alt="title" width="150px" />
             <h1 class="display-4">{{ title }}</h1>
         </div>
+        <BootstrapBreadcrumbs :elements="breadcrumbs" />
         <div class="row mb-5 justify-content-center mt-2">
             <div id="service-accordion" class="accordion text-start">
                 <div
@@ -77,6 +78,8 @@
 </template>
 
 <script>
+import BootstrapBreadcrumbs from "~/components/BootstrapBreadcrumbs";
+
 function checkOpen(services) {
     const weekday = [
         'Sunday',
@@ -126,6 +129,7 @@ function getNextAndPrevious(serviceTypes, currentId) {
 
 export default {
     name: 'ServiceTypePage',
+    components: { BootstrapBreadcrumbs },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/service-types/' + id)
@@ -139,7 +143,17 @@ export default {
             serviceStatus: checkOpen(serviceTypeData.services),
             otherServiceTypes,
             next,
-            previous
+            previous,
+            breadcrumbs: [
+                {
+                    title: 'Main Services',
+                    link: '/all-service-types'
+                },
+                {
+                    title: serviceTypeData.type,
+                    link: `/service-types/${id}`
+                },
+            ]
         }
     },
     methods: {
