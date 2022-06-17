@@ -6,7 +6,7 @@
                 <Nuxt />
             </div>
         </div>
-        <Footer class="fixed-bottom"></Footer>
+        <Footer></Footer>
     </div>
 </template>
 

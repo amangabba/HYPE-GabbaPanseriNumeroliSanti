@@ -138,6 +138,7 @@ async function runMainApi() {
         })
     })
 
+    //ToDo: qui sicuramente posso cancellare qualcosa
     app.get('/pois', async (req, res) => {
         const result = await models.PointOfInterest.findAll({
             include: [
