@@ -83,7 +83,7 @@ function insertData(models) {
                 'https://www.museionline.info/images/gallerie/musantictorino/Foto_5.jpg',
                 'https://www.guidatorino.com/wp-content/uploads/2015/02/museo-archeologico-torino-interno.jpg'
             ],
-            season: 'Summer',
+            season: 'Winter',
             start_date: '2022-03-10',
             end_date: '2022-06-16',
             poiOfInterestId: 1
