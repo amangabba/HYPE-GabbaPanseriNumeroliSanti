@@ -112,19 +112,16 @@
                 </div>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Map from '~/components/Map'
-import Footer from '~/components/Footer'
 
 export default {
     name: 'ItineraryPage',
     components: {
-        Map,
-        Footer
+        Map
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params

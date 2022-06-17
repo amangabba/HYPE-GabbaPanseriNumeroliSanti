@@ -1,10 +1,10 @@
 <template>
-
+    <div>Travel Information</div>
 </template>
 
 <script>
 export default {
-    name: "TravelInfo"
+    name: "travel-information"
 }
 </script>
 

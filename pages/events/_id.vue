@@ -42,17 +42,14 @@
                 <p>Other event in this location</p>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import CarouselComponent from '~/components/CustomCarousel'
-import Footer from '~/components/Footer'
 export default {
     name: 'EventPage',
     components: {
-        Footer,
         CarouselComponent
     },
     async asyncData({ route, $axios }) {

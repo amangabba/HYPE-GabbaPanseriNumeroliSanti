@@ -1,10 +1,10 @@
 <template>
-
+    <div>Coronavirus Update</div>
 </template>
 
 <script>
 export default {
-    name: "Town"
+    name: "coronavirus-update"
 }
 </script>
 
