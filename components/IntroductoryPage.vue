@@ -18,19 +18,16 @@
                 :image-link="element.imageLink"
             />
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Card from '~/components/Card'
-import Footer from '~/components/Footer'
 
 export default {
     name: 'IntroductoryPage',
     components: {
-        Card,
-        Footer
+        Card
     },
     props: {
         title: {

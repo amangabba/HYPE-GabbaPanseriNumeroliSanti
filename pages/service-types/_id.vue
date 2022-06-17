@@ -73,12 +73,10 @@
                 </div>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
-import Footer from '~/components/Footer'
 function checkOpen(services) {
     const weekday = [
         'Sunday',
@@ -128,7 +126,6 @@ function getNextAndPrevious(serviceTypes, currentId) {
 
 export default {
     name: 'ServiceTypePage',
-    components: { Footer },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/service-types/' + id)
