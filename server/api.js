@@ -83,31 +83,26 @@ async function runMainApi() {
                 // models.PointOfInterest
             ]
         })
-        const filteredItineraries = []
+        const itineraryIDs = []
+        const itineraryNames = []
+        const itineraryFirstImages = []
         const correlatedItineraries = result.itineraries
         for (const itin of correlatedItineraries) {
-            filteredItineraries.push({
-                id: itin.id,
-                title: itin.title,
-                map_link: itin.map_link
-            })
+            itineraryIDs.push(itin.id)
+            itineraryNames.push(itin.title)
+            itineraryFirstImages.push(itin.map_link)
         }
-        const filteredEvents = []
+        const eventIDs = []
+        const eventNames = []
+        const eventFirstImages = []
         const correlatedEvents = await models.Event.findAll({
             where: {pointOfInterestId: id}
         })
         for (const event of correlatedEvents){
-            filteredEvents.push({
-                id: event.id,
-                name: event.name,
-                address: event.address,
-                image_links: event.image_links,
-                season: event.season,
-                start_date: event.start_date,
-                end_date: event.end_date
-            })
+            eventIDs.push(event.id)
+            eventNames.push(event.title)
+            eventFirstImages.push(event.image_links[0])
         }
-        console.log(filteredEvents)
         /*
         const filteredCorrelatedPOIs = []
         const correlatedPOIs = result.point_of_interests
@@ -123,8 +118,12 @@ async function runMainApi() {
             })
         }
          */
-        filteredItineraries.sort((a, b) => a.number - b.number)
-        filteredEvents.sort((a, b) => a.number - b.number)
+        itineraryIDs.sort((a, b) => a.number - b.number)
+        itineraryNames.sort((a, b) => a.number - b.number)
+        itineraryFirstImages.sort((a, b) => a.number - b.number)
+        eventIDs.sort((a, b) => a.number - b.number)
+        eventNames.sort((a, b) => a.number - b.number)
+        eventFirstImages.sort((a, b) => a.number - b.number)
         // filteredCorrelatedPOIs.sort((a, b) => a.number - b.number)
         return res.json({
             id: result.id,
@@ -134,8 +133,12 @@ async function runMainApi() {
             address: result.address,
             description: result.description,
             image_links: result.image_links,
-            correlated_itineraries: filteredItineraries,
-            correlated_events: filteredEvents
+            correlated_itinerary_IDs: itineraryIDs,
+            correlated_itinerary_names: itineraryNames,
+            correlated_itinerary_images: itineraryFirstImages,
+            correlated_event_IDs: eventIDs,
+            correlated_event_names: eventNames,
+            correlated_event_images: eventFirstImages,
             // correlated_pois: filteredCorrelatedPOIs
         })
     })
@@ -258,10 +261,7 @@ async function runMainApi() {
 
     app.get('/events', async (req, res) => {
         const result = await models.Event.findAll()
-        const filtered = []
         for (const element of result) {
-            const correlatedPOI = []
-            correlatedPOI.push(result.point_of_interests)
             filtered.push({
                 id: element.id,
                 name: element.name,
@@ -272,7 +272,6 @@ async function runMainApi() {
                 season: element.season,
                 start_date: element.start_date,
                 end_date: element.end_date,
-                correlated_poi: correlatedPOI
             })
         }
         return res.json(filtered)

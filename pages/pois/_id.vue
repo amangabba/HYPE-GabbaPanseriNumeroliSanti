@@ -8,9 +8,10 @@
         <div id="content" class="container">
             <div class="row m-1">
                 <carousel-component
-                    :id="'events-only-images'"
+                    :id="'pois'"
+                    :only_images="true"
                     class="img-thumbnail w-50 col-md-3 h-auto text-center"
-                    :elements="image_links"
+                    :images="image_links"
                 ></carousel-component>
                 <div class="col-6 text-left p-4">
                     <p><i>Visit Information</i>: {{ visit_info }}</p>
@@ -26,16 +27,22 @@
         </h3>
         <carousel-component
             :id="'itineraries'"
+            :only_images="false"
+            :id_sub-element="itinerary_ids"
+            :name="itinerary_names"
             class="w-25 mx-auto text-left"
-            :elements="itineraries_links"
+            :images="itinerary_images"
         ></carousel-component>
         <h3 class="title-row row m-2">
             See Events that will be host in this Point of Interest:
         </h3>
         <carousel-component
             :id="'events'"
+            :only_images="false"
+            :id_sub-element="event_ids"
+            :name="event_names"
             class="w-25 mx-auto text-left"
-            :elements="events_links"
+            :images="event_images"
         ></carousel-component>
     </div>
 </template>
@@ -57,9 +64,12 @@ export default {
             address: data.address,
             description: data.description,
             image_links: data.image_links,
-            itineraries_links: data.correlated_itineraries,
-            events_links: data.correlated_events,
-            pois_links: data.correlated_pois
+            itinerary_ids: data.correlated_itinerary_IDs,
+            itinerary_names: data.correlated_itinerary_names,
+            itinerary_images: data.correlated_itinerary_images,
+            event_ids: data.correlated_event_IDs,
+            event_names: data.correlated_event_names,
+            event_images: data.correlated_event_images,
         }
     },
     data() {

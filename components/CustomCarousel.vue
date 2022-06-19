@@ -2,7 +2,7 @@
     <div :id="id" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button
-                v-for="index of Array(elements.length).keys()"
+                v-for="index of Array(images.length).keys()"
                 :key="'button-' + index"
                 type="button"
                 :data-bs-target="'#' + id"
@@ -13,6 +13,29 @@
             ></button>
         </div>
         <div class="carousel-inner">
+            <div
+                v-for="(image, index) of images"
+                :key="'carousel-' + index"
+                :class="
+                        index == 0 ? 'carousel-item active' : 'carousel-item'
+                    "
+                data-bs-interval="10000"
+            >
+                <img
+                    :src="image"
+                    class="d-block w-100"
+                    alt="image"
+                />
+                <div v-if="only_images === false" class="carousel-caption d-none d-md-block">
+                    <a
+                        class="btn btn-primary"
+                        :href="'/' + id + '/' + id_subElement[index]"
+                        role="button"
+                    >Open</a
+                    >
+                </div>
+            </div>
+            <!--
             <div v-if="id == 'itineraries'">
                 <div
                     v-for="(element, index) of elements"
@@ -73,6 +96,7 @@
                     <img :src="element" class="d-block w-100" alt="image" />
                 </div>
             </div>
+            -->
         </div>
         <button
             class="carousel-control-prev"
@@ -103,9 +127,21 @@ export default {
             type: String,
             required: true
         },
-        elements: {
+        id_subElement: {
+            type: Array,
+            required: false
+        },
+        only_images: {
+            type: Boolean,
+            required: true
+        },
+        images: {
             type: Array,
             required: true
+        },
+        name: {
+            type: Array,
+            required: false
         }
     }
 }

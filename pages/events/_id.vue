@@ -11,9 +11,10 @@
         <div id="content" class="container">
             <div class="row m-1">
                 <carousel-component
-                    :id="'events-only-images'"
+                    :id="'events'"
+                    :only_images="true"
                     class="img-thumbnail w-50 col-md-3 h-auto text-center"
-                    :elements="image_links"
+                    :images="image_links"
                 ></carousel-component>
                 <div class="col-6 text-left p-4">
                     <font size="4px">
