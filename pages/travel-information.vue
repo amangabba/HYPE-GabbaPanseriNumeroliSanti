@@ -4,10 +4,8 @@
 
 <script>
 export default {
-    name: "travel-information"
+    name: 'TravelInformation'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

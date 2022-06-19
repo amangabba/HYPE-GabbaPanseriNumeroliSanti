@@ -14,7 +14,9 @@
                 ></carousel-component>
                 <div class="col-6 text-left p-4">
                     <p><i>Visit Information</i>: {{ visit_info }}</p>
-                    <p><i>Address of the Point of Interest</i>: {{ address }}</p>
+                    <p>
+                        <i>Address of the Point of Interest</i>: {{ address }}
+                    </p>
                     <p>{{ description }}</p>
                 </div>
             </div>
@@ -43,7 +45,7 @@ import CarouselComponent from '~/components/CustomCarousel'
 export default {
     name: 'POIPage',
     components: {
-        CarouselComponent,
+        CarouselComponent
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params

@@ -38,8 +38,10 @@
                     <p>{{ description }}</p>
                 </font>
             </div>
-            <div class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r">
-                <h2 class="display-5"> Other events in this location </h2>
+            <div
+                class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
+            >
+                <h2 class="display-5">Other events in this location</h2>
             </div>
         </div>
     </div>
