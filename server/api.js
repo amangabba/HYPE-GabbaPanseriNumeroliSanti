@@ -143,56 +143,10 @@ async function runMainApi() {
         })
     })
 
-    // ToDo: qui sicuramente posso cancellare qualcosa
     app.get('/pois', async (req, res) => {
-        const result = await models.PointOfInterest.findAll({
-            include: [
-                models.Itinerary,
-                models.Event
-                // models.PointOfInterest
-            ]
-        })
+        const result = await models.PointOfInterest.findAll()
         const filtered = []
         for (const element of result) {
-            const filteredItineraries = []
-            const itineraries = element.itineraries
-            for (const itin of itineraries) {
-                filteredItineraries.push({
-                    id: itin.id,
-                    title: itin.title,
-                    map_link: itin.map_link
-                })
-            }
-            const filteredEvents = []
-            const events = element.events
-            for (const event of events) {
-                filteredEvents.push({
-                    id: event.id,
-                    name: event.name,
-                    address: event.address,
-                    image_links: event.image_links,
-                    season: event.season,
-                    start_date: event.start_date,
-                    end_date: event.end_date
-                })
-            }
-            /* const filteredCorrelatedPOIs = []
-            const pois = element.point_of_interests
-            for (const poi of pois) {
-                filteredCorrelatedPOIs.push({
-                    id: poi.id,
-                    name: poi.name,
-                    type: poi.type,
-                    visit_info: poi.visit_info,
-                    address: poi.address,
-                    description: poi.description,
-                    image_links: poi.image_links
-                })
-            }
-             */
-            filteredItineraries.sort((a, b) => a.number - b.number)
-            filteredEvents.sort((a, b) => a.number - b.number)
-            // filteredCorrelatedPOIs.sort((a, b) => a.number - b.number)
             filtered.push({
                 id: element.id,
                 name: element.name,
@@ -201,9 +155,6 @@ async function runMainApi() {
                 address: element.address,
                 description: element.description,
                 image_links: element.image_links,
-                correlated_itineraries: filteredItineraries,
-                correlated_events: filteredEvents,
-                //correlated_pois: filteredCorrelatedPOIs
             })
         }
         return res.json(filtered)
@@ -261,6 +212,7 @@ async function runMainApi() {
 
     app.get('/events', async (req, res) => {
         const result = await models.Event.findAll()
+        const filtered = []
         for (const element of result) {
             filtered.push({
                 id: element.id,
