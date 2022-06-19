@@ -69,7 +69,7 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-03-19',
             end_date: '2022-10-08',
-            poiOfInterestId: 1
+            pointOfInterestId: 1
         },
         {
             name: 'Storie dal tornio',
@@ -86,7 +86,7 @@ function insertData(models) {
             season: 'Winter',
             start_date: '2022-03-10',
             end_date: '2022-06-16',
-            poiOfInterestId: 1
+            pointOfInterestId: 1
         },
         {
             name: 'Frida Kahlo',
@@ -102,7 +102,7 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-03-12',
             end_date: '2022-06-05',
-            poiOfInterestId: 1
+            pointOfInterestId: 1
         },
         {
             name: 'Passepartout',
@@ -119,7 +119,7 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-04-24',
             end_date: '2022-04-25',
-            poiOfInterestId: 1
+            pointOfInterestId: 1
         },
         {
             name: 'Lyric and musical',
@@ -136,7 +136,7 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-03-13',
             end_date: '2022-04-10',
-            poiOfInterestId: 1
+            pointOfInterestId: 1
         }
     ]
 

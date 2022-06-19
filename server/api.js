@@ -93,8 +93,10 @@ async function runMainApi() {
             })
         }
         const filteredEvents = []
-        const correlatedEvents = result.events
-        for (const event in correlatedEvents){
+        const correlatedEvents = await models.Event.findAll({
+            where: {pointOfInterestId: id}
+        })
+        for (const event of correlatedEvents){
             filteredEvents.push({
                 id: event.id,
                 name: event.name,
