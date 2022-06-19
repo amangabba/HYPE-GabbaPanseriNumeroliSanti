@@ -6,19 +6,19 @@
                 <Nuxt />
             </div>
         </div>
-        <Footer></Footer>
+        <footer-component></footer-component>
     </div>
 </template>
 
 <script>
 import TheHeader from '~/components/TheHeader.vue'
-import Footer from '~/components/Footer.vue'
+import FooterComponent from '~/components/FooterComponent.vue'
 
 export default {
     name: 'DefaultLayout',
     components: {
         TheHeader,
-        Footer
+        FooterComponent
     }
 }
 </script>

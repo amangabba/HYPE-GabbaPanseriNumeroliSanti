@@ -1,5 +1,34 @@
 <template>
-    <!-- Footer -->
+    <nav
+        class="navbar sticky-bottom shadow navbar-expand-lg navbar-light px-3 header bg-primary"
+    >
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarToggler" class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li
+                    v-for="(navItem, navItemIndex) of footerList"
+                    :key="`navItem${navItemIndex}`"
+                    class="nav-item text-primary"
+                >
+                    <nuxt-link :to="navItem.path" class="nav-link">
+                        {{ navItem.name }}
+                    </nuxt-link>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--
     <footer class="text-center text-lg-start bg-primary">
         <div class="container text-center text-md-start mt-1">
             <div class="row mt-3">
@@ -15,11 +44,12 @@
             </div>
         </div>
     </footer>
+    -->
 </template>
 
 <script>
 export default {
-    name: 'Footer',
+    name: 'FooterComponent',
     data() {
         return {
             footerList: [
@@ -37,7 +67,7 @@ export default {
                 },
                 {
                     name: 'Contacts',
-                    path: '/contacts'
+                    path: '/contacts-component'
                 },
                 {
                     name: 'Coronavirus Update',
