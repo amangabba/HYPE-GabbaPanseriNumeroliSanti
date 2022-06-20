@@ -27,19 +27,19 @@
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">Farmacia San Domenico</h5>
                         </div>
-                        <p class="mb-1">Corso Unione Sovietica, 585 (<a href="https://goo.gl/maps/2t2Fsp6RYjp2Tc1Z6">Get directions</a>)</p>
+                        <p class="mb-1">Corso Unione Sovietica, 585 (<a href="https://goo.gl/maps/2t2Fsp6RYjp2Tc1Z6" target="_blank">Get directions</a>)</p>
                     </div>
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">Farmacia Anedda</h5>
                         </div>
-                        <p class="mb-1">Corso Vittorio Emanuele II, 34/B (<a href="https://g.page/farmaciaanedda?share">Get directions</a>)</p>
+                        <p class="mb-1">Corso Vittorio Emanuele II, 34/B (<a href="https://g.page/farmaciaanedda?share" target="_blank">Get directions</a>)</p>
                     </div>
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">Farmacia Donato</h5>
                         </div>
-                        <p class="mb-1">Corso Francia, 385 (<a href="https://goo.gl/maps/6usm3f2YSvFQiNgi7">Get directions</a>)</p>
+                        <p class="mb-1">Corso Francia, 385 (<a href="https://goo.gl/maps/6usm3f2YSvFQiNgi7" target="_blank">Get directions</a>)</p>
                     </div>
             </div>
             <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
@@ -50,19 +50,19 @@
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Farmacia San Domenico</h5>
                     </div>
-                    <p class="mb-1">Corso Unione Sovietica, 585 (<a href="https://goo.gl/maps/2t2Fsp6RYjp2Tc1Z6">Get directions</a>)</p>
+                    <p class="mb-1">Corso Unione Sovietica, 585 (<a href="https://goo.gl/maps/2t2Fsp6RYjp2Tc1Z6" target="_blank">Get directions</a>)</p>
                 </div>
                 <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Farmacia Anedda</h5>
                     </div>
-                    <p class="mb-1">Corso Vittorio Emanuele II, 34/B (<a href="https://g.page/farmaciaanedda?share">Get directions</a>)</p>
+                    <p class="mb-1">Corso Vittorio Emanuele II, 34/B (<a href="https://g.page/farmaciaanedda?share" target="_blank">Get directions</a>)</p>
                 </div>
                 <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Farmacia Donato</h5>
                     </div>
-                    <p class="mb-1">Corso Francia, 385 (<a href="https://goo.gl/maps/6usm3f2YSvFQiNgi7">Get directions</a>)</p>
+                    <p class="mb-1">Corso Francia, 385 (<a href="https://goo.gl/maps/6usm3f2YSvFQiNgi7" target="_blank">Get directions</a>)</p>
                 </div>
             </div>
         </div>
