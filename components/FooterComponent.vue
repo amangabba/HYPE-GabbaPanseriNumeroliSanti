@@ -1,20 +1,20 @@
 <template>
     <nav
-        class="navbar sticky-bottom shadow navbar-expand-lg navbar-light px-3 header bg-primary"
+        class="navbar sticky-bottom shadow navbar-expand-lg navbar-light px-3 header bg-primary justify-content-lg-center"
     >
-        <button
+        <!--<button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarToggler"
+            data-bs-target="#navbarToggler1"
             aria-controls="navbarToggler"
             aria-expanded="false"
             aria-label="Toggle navigation"
         >
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button>-->
 
-        <div id="navbarToggler" class="collapse navbar-collapse justify-content-center">
+        <div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li
                     v-for="(navItem, navItemIndex) of footerList"

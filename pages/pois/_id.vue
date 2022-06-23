@@ -5,15 +5,16 @@
         >
             <h1>{{ name }}</h1>
         </div>
-        <div id="content" class="container">
+        <BootstrapBreadcrumbs :elements="breadcrumbs" />
+        <div id="content">
             <div class="row m-1">
                 <carousel-component
                     :id="'pois'"
                     :only_images="true"
-                    class="img-thumbnail w-50 col-md-3 h-auto text-center"
+                    class="img-thumbnail w-25 col-md-3 mx-auto"
                     :images="image_links"
                 ></carousel-component>
-                <div class="col-6 text-left p-4">
+                <div class="col-6 text-left p-5">
                     <p><i>Visit Information</i>: {{ visit_info }}</p>
                     <p>
                         <i>Address of the Point of Interest</i>: {{ address }}
@@ -49,10 +50,13 @@
 
 <script>
 import CarouselComponent from '~/components/CustomCarousel'
+import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs';
+
 export default {
     name: 'POIPage',
     components: {
-        CarouselComponent
+        CarouselComponent,
+        BootstrapBreadcrumbs
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params
@@ -70,6 +74,16 @@ export default {
             event_ids: data.correlated_event_IDs,
             event_names: data.correlated_event_names,
             event_images: data.correlated_event_images,
+            breadcrumbs: [
+                {
+                    title: 'All Points Of Interest',
+                    link: '/all-pois'
+                },
+                {
+                    title: data.type,
+                    link: `/pois/${id}`
+                }
+            ]
         }
     },
     data() {
