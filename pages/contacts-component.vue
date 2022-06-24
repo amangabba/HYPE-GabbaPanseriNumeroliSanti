@@ -1,28 +1,33 @@
 <template>
-    <div id="content" class="container">
+    <div id="content" class="justify-content-center container">
+        <div class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2">
+            <h1 class="display-4">Contacts</h1>
+        </div>
         <div class="row m-2">
-            <img class="col-md-6 h-auto" src="https://www.eventi.polimi.it/wp-content/uploads/2020/10/FAI_800x600.jpg" alt="Politecnico Milano">
-            <div class="col-6 text-left p-4">
-                <h1 class="mb-3"><b><i>Contact us:</i></b></h1>
-                <div class="mb-3">Email: lambrate.hypermedia@gmail.com</div>
-                <div class="mb-3">Phone number: +39 3451234567</div>
-                <div class="mb-3">Address: Piazza Leonardo da Vinci, 32</div>
-                <h3 class="mb-3"><i>Form</i></h3>
-                <form>
-                    <div class="mb-3">
+            <!--ToDo:chiedi come settare l'immagine, se h-auto o w-auto-->
+            <img class="img-fluid col-lg-7 h-auto mt-2" src="https://www.eventi.polimi.it/wp-content/uploads/2020/10/FAI_800x600.jpg" alt="Politecnico Milano">
+            <div class="col-lg-5 text-left p-2">
+                <div class="row bg-primary bg-opacity-10 text-center mb-2">
+                    <h2 ref="map-title" class="display-3">Our Information</h2>
+                </div>
+                <div class="mb-2"><b><i>Email:</i></b> lambrate.hypermedia@gmail.com</div>
+                <div class="mb-2"><b><i>Phone Number:</i></b> +39 3451234567</div>
+                <div class="mb-2"><b><i>Address:</i></b> Piazza Leonardo da Vinci, 32</div>
+                <h2 class="mb-2"><i>Form</i></h2>
+                <form class="justify-content-lg-center w-auto">
+                    <div class="mb-2">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control w-100">
+                        <input type="text" class="form-control">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control w-100">
+                        <input type="email" class="form-control">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label class="form-label">Message</label>
-                        <textarea class="form-control w-100" rows="4"></textarea>
+                        <textarea class="form-control" rows="4"></textarea>
                     </div>
-                    <!--ToDo: chiedi come si fa per implementare la funzione che restituisce la stringa di conferma-->
-                    <button type="submit" class="btn btn-primary" @click="submitForm()">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-4" @click="submitForm()">Submit</button>
                 </form>
             </div>
         </div>

@@ -23,9 +23,9 @@
                 </div>
             </div>
         </div>
-        <h3 class="title-row row m-2">
-            See Itineraries for this Point of Interest:
-        </h3>
+        <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
+            <h2 ref="map-title" class="display-3">See correlated Itineraries: </h2>
+        </div>
         <carousel-component
             :id="'itineraries'"
             :only_images="false"
@@ -34,9 +34,9 @@
             class="w-25 mx-auto text-left"
             :images="itinerary_images"
         ></carousel-component>
-        <h3 class="title-row row m-2">
-            See Events that will be host in this Point of Interest:
-        </h3>
+        <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
+            <h2 ref="map-title" class="display-3">See Events that will be host in this Point of Interest: </h2>
+        </div>
         <carousel-component
             :id="'events'"
             :only_images="false"
