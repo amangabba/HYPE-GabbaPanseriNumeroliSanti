@@ -24,7 +24,9 @@
             </div>
         </div>
         <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">See correlated Itineraries: </h2>
+            <h2 ref="map-title" class="display-3">
+                See correlated Itineraries:
+            </h2>
         </div>
         <carousel-component
             :id="'itineraries'"
@@ -35,7 +37,9 @@
             :images="itinerary_images"
         ></carousel-component>
         <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">See Events that will be host in this Point of Interest: </h2>
+            <h2 ref="map-title" class="display-3">
+                See Events that will be host in this Point of Interest:
+            </h2>
         </div>
         <carousel-component
             :id="'events'"
@@ -50,7 +54,7 @@
 
 <script>
 import CarouselComponent from '~/components/CustomCarousel'
-import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs';
+import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 
 export default {
     name: 'POIPage',
