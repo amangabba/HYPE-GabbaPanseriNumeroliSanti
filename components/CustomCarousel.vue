@@ -16,22 +16,19 @@
             <div
                 v-for="(image, index) of images"
                 :key="'carousel-' + index"
-                :class="
-                        index == 0 ? 'carousel-item active' : 'carousel-item'
-                    "
+                :class="index == 0 ? 'carousel-item active' : 'carousel-item'"
                 data-bs-interval="10000"
             >
-                <img
-                    :src="image"
-                    class="d-block w-100"
-                    alt="image"
-                />
-                <div v-if="only_images === false" class="carousel-caption d-none d-md-block">
+                <img :src="image" class="d-block w-100" alt="image" />
+                <div
+                    v-if="only_images === false"
+                    class="carousel-caption d-none d-md-block"
+                >
                     <a
                         class="btn btn-primary"
                         :href="'/' + id + '/' + id_subElement[index]"
                         role="button"
-                    >Open</a
+                        >Open</a
                     >
                 </div>
             </div>

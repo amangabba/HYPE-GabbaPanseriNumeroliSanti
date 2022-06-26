@@ -96,9 +96,9 @@ async function runMainApi() {
         const eventNames = []
         const eventFirstImages = []
         const correlatedEvents = await models.Event.findAll({
-            where: {pointOfInterestId: id}
+            where: { pointOfInterestId: id }
         })
-        for (const event of correlatedEvents){
+        for (const event of correlatedEvents) {
             eventIDs.push(event.id)
             eventNames.push(event.title)
             eventFirstImages.push(event.image_links[0])
@@ -138,7 +138,7 @@ async function runMainApi() {
             correlated_itinerary_images: itineraryFirstImages,
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
-            correlated_event_images: eventFirstImages,
+            correlated_event_images: eventFirstImages
             // correlated_pois: filteredCorrelatedPOIs
         })
     })
@@ -154,7 +154,7 @@ async function runMainApi() {
                 visit_info: element.visit_info,
                 address: element.address,
                 description: element.description,
-                image_links: element.image_links,
+                image_links: element.image_links
             })
         }
         return res.json(filtered)
@@ -223,7 +223,7 @@ async function runMainApi() {
                 image_links: element.image_links,
                 season: element.season,
                 start_date: element.start_date,
-                end_date: element.end_date,
+                end_date: element.end_date
             })
         }
         return res.json(filtered)
