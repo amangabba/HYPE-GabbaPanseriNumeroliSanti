@@ -1,20 +1,20 @@
 <template>
     <div class="justify-content-center container-fluid">
         <div
-            class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-5"
+            class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-1"
         >
-            <h1>{{ name }}</h1>
+            <h1 class="display-4">{{ name }}</h1>
         </div>
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
-        <div id="content">
-            <div class="row m-1">
+        <div id="content" class="container">
+            <div class="row m-2">
                 <carousel-component
                     :id="'pois'"
                     :only_images="true"
-                    class="img-thumbnail w-25 col-md-3 mx-auto"
+                    class="img-fluid h-auto col-md-3 p-3"
                     :images="image_links"
                 ></carousel-component>
-                <div class="col-6 text-left p-5">
+                <div class="col-md-9 text-left p-3">
                     <p><i>Visit Information</i>: {{ visit_info }}</p>
                     <p>
                         <i>Address of the Point of Interest</i>: {{ address }}
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
+        <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
             <h2 ref="map-title" class="display-3">See correlated Itineraries: </h2>
         </div>
         <carousel-component
@@ -31,10 +31,10 @@
             :only_images="false"
             :id_sub-element="itinerary_ids"
             :name="itinerary_names"
-            class="w-25 mx-auto text-left"
+            class="w-25 mx-auto text-left m-4"
             :images="itinerary_images"
         ></carousel-component>
-        <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
+        <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
             <h2 ref="map-title" class="display-3">See Events that will be host in this Point of Interest: </h2>
         </div>
         <carousel-component
@@ -42,7 +42,7 @@
             :only_images="false"
             :id_sub-element="event_ids"
             :name="event_names"
-            class="w-25 mx-auto text-left"
+            class="w-25 mx-auto text-left m-4"
             :images="event_images"
         ></carousel-component>
     </div>
