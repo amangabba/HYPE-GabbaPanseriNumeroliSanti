@@ -1,7 +1,9 @@
 <template>
     <div class="container text-center">
+        <!-- The row containing the title of the page -->
         <PageTitle class="title-row" :title="title" :icon-url="cover_link" />
 
+        <!-- The breadcrumbs for this page -->
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
 
         <div class="row mb-5 justify-content-center mt-2">
@@ -91,6 +93,11 @@ import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 import BootstrapCarousel from "~/components/BootstrapCarousel";
 import PageTitle from "~/components/PageTitle";
 
+/**
+ * Checks if each service is closed or open based on current system time
+ * @param services a list of services
+ * @returns {String[]} a list of human-readable strings that tell if the service is open or closed
+ */
 function checkOpen(services) {
     const weekday = [
         'Sunday',
@@ -123,6 +130,7 @@ export default {
         const { data } = await $axios.get('/api/service-types/' + id)
         const serviceTypeData = data.serviceType
 
+        // Build inputs for the carousel components to show all other service types
         const otherServiceTypeImages = []
         const otherServiceTypeNames = []
         const otherServiceTypeLinks = []
@@ -131,6 +139,7 @@ export default {
             otherServiceTypeNames.push(serviceType.type)
             otherServiceTypeLinks.push(`/service-types/${serviceType.id}`)
         }
+
         return {
             title: serviceTypeData.type,
             cover_link: serviceTypeData.cover_link,
