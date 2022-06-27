@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import TravelInfoButtons from "~/components/TravelInfoButtons";
+import TravelInfoButtons from '~/components/TravelInfoButtons'
 export default {
     name: 'TravelInformation',
-    components: {TravelInfoButtons}
+    components: { TravelInfoButtons }
 }
 </script>
 

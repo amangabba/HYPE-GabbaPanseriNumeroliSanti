@@ -23,7 +23,9 @@
             </div>
         </div>
         <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">See correlated Itineraries: </h2>
+            <h2 ref="map-title" class="display-3">
+                See correlated Itineraries:
+            </h2>
         </div>
         <BootstrapCarousel
             id="itineraries-carousel"
@@ -33,7 +35,9 @@
             class="w-25 mx-auto text-left m-4"
         />
         <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">See Events that will be host in this Point of Interest: </h2>
+            <h2 ref="map-title" class="display-3">
+                See Events that will be host in this Point of Interest:
+            </h2>
         </div>
         <BootstrapCarousel
             id="events-carousel"
@@ -47,7 +51,7 @@
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
-import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs';
+import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 
 export default {
     name: 'POIPage',
@@ -59,14 +63,14 @@ export default {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
 
-        const itinerary_links = []
+        const itineraryLinks = []
         for (const id of data.correlated_itinerary_IDs) {
-            itinerary_links.push(`/itineraries/${id}`)
+            itineraryLinks.push(`/itineraries/${id}`)
         }
 
-        const event_links = []
+        const eventLinks = []
         for (const id of data.correlated_event_IDs) {
-            event_links.push(`/events/${id}`)
+            eventLinks.push(`/events/${id}`)
         }
 
         return {
@@ -76,10 +80,10 @@ export default {
             address: data.address,
             description: data.description,
             image_links: data.image_links,
-            itinerary_links,
+            itineraryLinks,
             itinerary_names: data.correlated_itinerary_names,
             itinerary_images: data.correlated_itinerary_images,
-            event_links,
+            eventLinks,
             event_names: data.correlated_event_names,
             event_images: data.correlated_event_images,
             breadcrumbs: [

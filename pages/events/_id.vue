@@ -6,7 +6,7 @@
             <h2 class="display-5">{{ name }}</h2>
         </div>
         <div class="title-row row p-1 text-left bg-primary bg-opacity-10 mb-3">
-            <h6 class="display-7"> Evento </h6>
+            <h6 class="display-7">Evento</h6>
         </div>
         <div id="content" class="container">
             <div class="row m-1">

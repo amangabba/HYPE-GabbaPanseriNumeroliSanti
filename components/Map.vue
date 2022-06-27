@@ -28,7 +28,8 @@ export default {
     props: {
         id: {
             type: String,
-            required: false
+            required: false,
+            default: ''
         },
         height: {
             type: String,
@@ -56,11 +57,13 @@ export default {
         },
         marker_long: {
             type: Number,
-            required: false
+            required: false,
+            default: 0
         },
         marker_lat: {
             type: Number,
-            required: false
+            required: false,
+            default: 0
         }
     }
 }

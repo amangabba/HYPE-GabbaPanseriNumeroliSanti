@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: "PageTitle",
+    name: 'PageTitle',
     props: {
         title: {
             type: String,
@@ -28,6 +28,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

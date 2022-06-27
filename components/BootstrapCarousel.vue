@@ -23,20 +23,23 @@
                 data-bs-interval="10000"
             >
                 <!-- Image of the slide -->
-                <img :src="image" class="d-block w-100" :alt="titles ? titles[index] : `Slide ${index}`" />
+                <img
+                    :src="image"
+                    class="d-block w-100"
+                    :alt="titles ? titles[index] : `Slide ${index}`"
+                />
                 <!-- Caption for the slide, shown only if titles or links are available -->
                 <div
                     v-if="titles || links"
                     class="carousel-caption d-none d-md-block"
                 >
                     <!-- Title of the slide -->
-                    <h5 v-if="titles">{{titles[index]}}</h5>
+                    <h5 v-if="titles">{{ titles[index] }}</h5>
                     <!-- Link to see more about the slide -->
-                    <NuxtLink
-                        v-if="links"
-                        :to="links[index]"
-                    >
-                        <button type="button" class="btn btn-primary">See More</button>
+                    <NuxtLink v-if="links" :to="links[index]">
+                        <button type="button" class="btn btn-primary">
+                            See More
+                        </button>
                     </NuxtLink>
                 </div>
             </div>

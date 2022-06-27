@@ -83,15 +83,21 @@
         <div class="row justify-content-center">
             <h3>Other service types</h3>
             <!-- Links to other service types -->
-            <BootstrapCarousel id="service-types-carousel" :images="otherServiceTypeImages" :titles="otherServiceTypeNames" :links="otherServiceTypeLinks" class="w-25" />
+            <BootstrapCarousel
+                id="service-types-carousel"
+                :images="otherServiceTypeImages"
+                :titles="otherServiceTypeNames"
+                :links="otherServiceTypeLinks"
+                class="w-25"
+            />
         </div>
     </div>
 </template>
 
 <script>
 import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
-import BootstrapCarousel from "~/components/BootstrapCarousel";
-import PageTitle from "~/components/PageTitle";
+import BootstrapCarousel from '~/components/BootstrapCarousel'
+import PageTitle from '~/components/PageTitle'
 
 /**
  * Checks if each service is closed or open based on current system time

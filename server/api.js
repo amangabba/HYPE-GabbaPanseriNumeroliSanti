@@ -1,4 +1,4 @@
-import {Op} from "sequelize";
+import { Op } from 'sequelize'
 
 const express = require('express')
 const app = express()
