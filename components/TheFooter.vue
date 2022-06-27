@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="navbar sticky-bottom shadow navbar-expand-lg navbar-light px-3 header bg-primary justify-content-lg-center"
+        class="navbar shadow navbar-expand-lg navbar-light px-3 header bg-primary justify-content-lg-center"
     >
         <div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: 'FooterComponent',
+    name: 'TheFooter',
     data() {
         return {
             footerList: [
