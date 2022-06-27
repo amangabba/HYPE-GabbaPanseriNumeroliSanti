@@ -1,17 +1,18 @@
 <template>
     <div class="container text-center">
-        <div class="row justify-content-center p-5 bg-primary bg-opacity-50">
-            <img :src="cover_link" :alt="title" width="150px" />
-            <h1 class="display-4">{{ title }}</h1>
-        </div>
+        <PageTitle :title="title" :icon-url="cover_link" />
+
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
+
         <div class="row mb-5 justify-content-center mt-2">
+            <!-- Accordion containing services of the type -->
             <div id="service-accordion" class="accordion text-start">
                 <div
                     v-for="(service, index) of services"
                     :key="`service${index}`"
                     class="accordion-item"
                 >
+                    <!-- Header of accordion element -->
                     <div :id="`heading${index}`" class="accordion-header">
                         <div
                             class="accordion-button collapsed"
@@ -37,6 +38,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Collapse of accordion element -->
                     <div
                         :id="`collapse${index}`"
                         class="accordion-collapse collapse"
@@ -74,11 +77,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="row justify-content-center">
+            <!-- Links to other service types -->
+            <!-- <CustomCarousel id="" images="" :only_images="false" /> -->
+        </div>
     </div>
 </template>
 
 <script>
 import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
+import CustomCarousel from "~/components/CustomCarousel";
+import PageTitle from "~/components/PageTitle";
 
 function checkOpen(services) {
     const weekday = [
@@ -104,46 +114,20 @@ function checkOpen(services) {
     return result
 }
 
-function getNextAndPrevious(serviceTypes, currentId) {
-    currentId = parseInt(currentId)
-    const lastId = serviceTypes.length
-    let nextId, previousId
-
-    if (currentId <= 1) {
-        previousId = lastId
-    } else {
-        previousId = currentId - 1
-    }
-
-    if (currentId >= lastId) {
-        nextId = 1
-    } else {
-        nextId = currentId + 1
-    }
-
-    return {
-        next: serviceTypes[nextId - 1],
-        previous: serviceTypes[previousId - 1]
-    }
-}
-
 export default {
     name: 'ServiceTypePage',
-    components: { BootstrapBreadcrumbs },
+    components: { BootstrapBreadcrumbs, CustomCarousel, PageTitle },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/service-types/' + id)
         const serviceTypeData = data.serviceType
         const otherServiceTypes = data.otherServiceTypes
-        const { next, previous } = getNextAndPrevious(otherServiceTypes, id)
         return {
             title: serviceTypeData.type,
             cover_link: serviceTypeData.cover_link,
             services: serviceTypeData.services,
             serviceStatus: checkOpen(serviceTypeData.services),
             otherServiceTypes,
-            next,
-            previous,
             breadcrumbs: [
                 {
                     title: 'Main Services',
@@ -157,6 +141,12 @@ export default {
         }
     },
     methods: {
+        /**
+         * Formats opening hours from an array of float arrays to a human-readable string
+         * @param arr an array of arrays, each sub-array contains two floats that represent a time span when the
+         *            activity is open
+         * @returns {String[]} an array containing opening hours for each day of the week as human-readable strings
+         */
         formatHours: (arr) => {
             const res = []
             const padNum = (num) => {
