@@ -6,16 +6,15 @@
             <h2 class="display-5">{{ name }}</h2>
         </div>
         <div class="title-row row p-1 text-left bg-primary bg-opacity-10 mb-3">
-            <h6-small class="display-7"> Evento </h6-small>
+            <h6 class="display-7"> Evento </h6>
         </div>
         <div id="content" class="container">
             <div class="row m-1">
-                <carousel-component
-                    :id="'events'"
-                    :only_images="true"
-                    class="img-thumbnail w-50 col-md-3 h-auto text-center"
+                <BootstrapCarousel
+                    id="event-carousel"
                     :images="image_links"
-                ></carousel-component>
+                    class="img-thumbnail w-50 col-md-3 h-auto text-center"
+                />
                 <div class="col-6 text-left p-4">
                     <font size="4px">
                         <p><i> Practical info: </i> {{ practical_info }}</p>
@@ -49,11 +48,11 @@
 </template>
 
 <script>
-import CarouselComponent from '~/components/CustomCarousel'
+import BootstrapCarousel from '~/components/BootstrapCarousel'
 export default {
     name: 'EventPage',
     components: {
-        CarouselComponent
+        BootstrapCarousel
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params

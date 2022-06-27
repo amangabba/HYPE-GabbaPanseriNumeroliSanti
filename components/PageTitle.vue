@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center p-5 bg-primary bg-opacity-50">
-        <img v-if="iconUrl" :src="iconURL" :alt="title" width="150px" />
+        <img v-if="iconUrl" :src="iconUrl" :alt="title" />
         <h1 class="display-4">{{ title }}</h1>
         <span v-if="subtitle">{{ subtitle }}</span>
     </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="container text-center">
-        <PageTitle :title="title" :icon-url="cover_link" />
+        <PageTitle class="title-row" :title="title" :icon-url="cover_link" />
 
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
 
@@ -79,15 +79,16 @@
         </div>
 
         <div class="row justify-content-center">
+            <h3>Other service types</h3>
             <!-- Links to other service types -->
-            <!-- <CustomCarousel id="" images="" :only_images="false" /> -->
+            <BootstrapCarousel id="service-types-carousel" :images="otherServiceTypeImages" :titles="otherServiceTypeNames" :links="otherServiceTypeLinks" class="w-25" />
         </div>
     </div>
 </template>
 
 <script>
 import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
-import CustomCarousel from "~/components/CustomCarousel";
+import BootstrapCarousel from "~/components/BootstrapCarousel";
 import PageTitle from "~/components/PageTitle";
 
 function checkOpen(services) {
@@ -116,18 +117,28 @@ function checkOpen(services) {
 
 export default {
     name: 'ServiceTypePage',
-    components: { BootstrapBreadcrumbs, CustomCarousel, PageTitle },
+    components: { BootstrapBreadcrumbs, BootstrapCarousel, PageTitle },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/service-types/' + id)
         const serviceTypeData = data.serviceType
-        const otherServiceTypes = data.otherServiceTypes
+
+        const otherServiceTypeImages = []
+        const otherServiceTypeNames = []
+        const otherServiceTypeLinks = []
+        for (const serviceType of data.otherServiceTypes) {
+            otherServiceTypeImages.push(serviceType.cover_link)
+            otherServiceTypeNames.push(serviceType.type)
+            otherServiceTypeLinks.push(`/service-types/${serviceType.id}`)
+        }
         return {
             title: serviceTypeData.type,
             cover_link: serviceTypeData.cover_link,
             services: serviceTypeData.services,
             serviceStatus: checkOpen(serviceTypeData.services),
-            otherServiceTypes,
+            otherServiceTypeImages,
+            otherServiceTypeNames,
+            otherServiceTypeLinks,
             breadcrumbs: [
                 {
                     title: 'Main Services',
@@ -163,11 +174,14 @@ export default {
 }
 </script>
 
-<style scoped>
-img {
+<style>
+.title-row img {
     width: 150px;
 }
 #service-accordion {
     max-width: 600px;
+}
+#service-types-carousel img {
+    padding: 120px;
 }
 </style>

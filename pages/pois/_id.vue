@@ -8,12 +8,11 @@
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
         <div id="content" class="container">
             <div class="row m-2">
-                <carousel-component
-                    :id="'pois'"
-                    :only_images="true"
-                    class="img-fluid h-auto col-md-3 p-3"
+                <BootstrapCarousel
+                    id="poi-carousel"
                     :images="image_links"
-                ></carousel-component>
+                    class="img-fluid h-auto col-md-3 p-3"
+                />
                 <div class="col-md-9 text-left p-3">
                     <p><i>Visit Information</i>: {{ visit_info }}</p>
                     <p>
@@ -26,41 +25,50 @@
         <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
             <h2 ref="map-title" class="display-3">See correlated Itineraries: </h2>
         </div>
-        <carousel-component
-            :id="'itineraries'"
-            :only_images="false"
-            :id_sub-element="itinerary_ids"
-            :name="itinerary_names"
-            class="w-25 mx-auto text-left m-4"
+        <BootstrapCarousel
+            id="itineraries-carousel"
             :images="itinerary_images"
-        ></carousel-component>
+            :titles="itinerary_names"
+            :links="itinerary_links"
+            class="w-25 mx-auto text-left m-4"
+        />
         <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
             <h2 ref="map-title" class="display-3">See Events that will be host in this Point of Interest: </h2>
         </div>
-        <carousel-component
-            :id="'events'"
-            :only_images="false"
-            :id_sub-element="event_ids"
-            :name="event_names"
-            class="w-25 mx-auto text-left m-4"
+        <BootstrapCarousel
+            id="events-carousel"
             :images="event_images"
-        ></carousel-component>
+            :titles="event_names"
+            :links="event_links"
+            class="w-25 mx-auto text-left m-4"
+        />
     </div>
 </template>
 
 <script>
-import CarouselComponent from '~/components/CustomCarousel'
+import BootstrapCarousel from '~/components/BootstrapCarousel'
 import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs';
 
 export default {
     name: 'POIPage',
     components: {
-        CarouselComponent,
+        BootstrapCarousel,
         BootstrapBreadcrumbs
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
+
+        const itinerary_links = []
+        for (const id of data.correlated_itinerary_IDs) {
+            itinerary_links.push(`/itineraries/${id}`)
+        }
+
+        const event_links = []
+        for (const id of data.correlated_event_IDs) {
+            event_links.push(`/events/${id}`)
+        }
+
         return {
             name: data.name,
             type: data.type,
@@ -68,10 +76,10 @@ export default {
             address: data.address,
             description: data.description,
             image_links: data.image_links,
-            itinerary_ids: data.correlated_itinerary_IDs,
+            itinerary_links,
             itinerary_names: data.correlated_itinerary_names,
             itinerary_images: data.correlated_itinerary_images,
-            event_ids: data.correlated_event_IDs,
+            event_links,
             event_names: data.correlated_event_names,
             event_images: data.correlated_event_images,
             breadcrumbs: [
