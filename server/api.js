@@ -1,3 +1,5 @@
+import {Op} from "sequelize";
+
 const express = require('express')
 const app = express()
 const { initializeDatabaseConnection } = require('./database')
@@ -180,7 +182,9 @@ async function runMainApi() {
             include: models.Service
         })
         const otherServiceTypes = await models.ServiceType.findAll({
-            order: [['id', 'ASC']]
+            where: {
+                id: { [Op.ne]: id }
+            }
         })
         return res.json({
             serviceType,
