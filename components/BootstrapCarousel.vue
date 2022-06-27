@@ -38,7 +38,7 @@
                     <!-- Link to see more about the slide -->
                     <NuxtLink v-if="links" :to="links[index]">
                         <button type="button" class="btn btn-primary">
-                            See More
+                            See more
                         </button>
                     </NuxtLink>
                 </div>

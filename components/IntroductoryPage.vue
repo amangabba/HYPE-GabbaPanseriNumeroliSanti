@@ -8,7 +8,7 @@
             {{ subtitle }}
         </div>
         <div class="row mt-3 justify-content-center w-100">
-            <Card
+            <BootstrapCard
                 v-for="(element, index) of elementList"
                 :key="`card-${index}`"
                 :title="element.title"
@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
+import BootstrapCard from '~/components/BoostrapCard'
 
 export default {
     name: 'IntroductoryPage',
     components: {
-        Card
+        BootstrapCard
     },
     props: {
         title: {
