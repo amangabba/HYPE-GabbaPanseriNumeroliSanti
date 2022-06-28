@@ -20,25 +20,43 @@
 </template>
 
 <script>
+/**
+ * Component for a Boostrap card with an image, a title, a subtitle, a description and a link
+ */
 export default {
     name: 'BootstrapCard',
     props: {
+        /**
+         * Link to the image to show in the card
+         */
         imageLink: {
             type: String,
             required: true
         },
+        /**
+         * Title of the card
+         */
         title: {
             type: String,
             required: true
         },
+        /**
+         * Subtitle of the card
+         */
         subtitle: {
             type: String,
             default: ''
         },
+        /**
+         * Description of the card
+         */
         description: {
             type: String,
             required: true
         },
+        /**
+         * Link to the topic that the card is describing
+         */
         link: {
             type: String,
             required: true
@@ -50,5 +68,8 @@ export default {
 <style scoped>
 .custom-card:hover {
     border: 2px solid var(--bs-primary);
+}
+.custom-card {
+    border: 2px solid rgba(0, 0, 0, 0);
 }
 </style>

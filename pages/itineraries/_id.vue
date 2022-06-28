@@ -1,10 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">{{ title }}</h1>
-        </div>
         <div id="content" class="container">
             <div class="row m-2">
                 <img
@@ -120,12 +115,25 @@ import Map from '~/components/Map'
 
 export default {
     name: 'ItineraryPage',
-    components: {
-        Map
-    },
-    async asyncData({ route, $axios }) {
+    components: { Map },
+    layout: 'multiple-topic',
+    async asyncData({ route, store, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/itineraries/' + id)
+
+        const breadcrumbs = [
+            {
+                title: 'All Itineraries',
+                link: '/all-itineraries'
+            },
+            {
+                title: data.title,
+                link: `/itineraries/${id}`
+            }
+        ]
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', { title: data.title, breadcrumbs })
+
         return {
             title: data.title,
             duration: data.duration,

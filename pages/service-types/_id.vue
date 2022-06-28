@@ -1,11 +1,5 @@
 <template>
-    <div class="container text-center">
-        <!-- The row containing the title of the page -->
-        <PageTitle class="title-row" :title="title" :icon-url="cover_link" />
-
-        <!-- The breadcrumbs for this page -->
-        <BootstrapBreadcrumbs :elements="breadcrumbs" />
-
+    <div class="container-fluid text-center">
         <div class="row mb-5 justify-content-center mt-2">
             <!-- Accordion containing services of the type -->
             <div id="service-accordion" class="accordion text-start">
@@ -95,9 +89,7 @@
 </template>
 
 <script>
-import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 import BootstrapCarousel from '~/components/BootstrapCarousel'
-import PageTitle from '~/components/PageTitle'
 
 /**
  * Checks if each service is closed or open based on current system time
@@ -128,13 +120,34 @@ function checkOpen(services) {
     return result
 }
 
+/**
+ * Page containing a list of services of a given service type
+ */
 export default {
     name: 'ServiceTypePage',
-    components: { BootstrapBreadcrumbs, BootstrapCarousel, PageTitle },
-    async asyncData({ route, $axios }) {
+    components: { BootstrapCarousel },
+    layout: 'multiple-topic',
+    async asyncData({ route, store, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/service-types/' + id)
         const serviceTypeData = data.serviceType
+
+        const breadcrumbs = [
+            {
+                title: 'Main Services',
+                link: '/all-service-types'
+            },
+            {
+                title: serviceTypeData.type,
+                link: `/service-types/${id}`
+            }
+        ]
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', {
+            title: serviceTypeData.type,
+            imageUrl: serviceTypeData.cover_link,
+            breadcrumbs
+        })
 
         // Build inputs for the carousel components to show all other service types
         const otherServiceTypeImages = []
@@ -148,22 +161,12 @@ export default {
 
         return {
             title: serviceTypeData.type,
-            cover_link: serviceTypeData.cover_link,
+            coverLink: serviceTypeData.cover_link,
             services: serviceTypeData.services,
             serviceStatus: checkOpen(serviceTypeData.services),
             otherServiceTypeImages,
             otherServiceTypeNames,
-            otherServiceTypeLinks,
-            breadcrumbs: [
-                {
-                    title: 'Main Services',
-                    link: '/all-service-types'
-                },
-                {
-                    title: serviceTypeData.type,
-                    link: `/service-types/${id}`
-                }
-            ]
+            otherServiceTypeLinks
         }
     },
     methods: {
@@ -197,6 +200,6 @@ export default {
     max-width: 600px;
 }
 #service-types-carousel img {
-    padding: 120px;
+    padding: 0 120px 120px;
 }
 </style>

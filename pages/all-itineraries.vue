@@ -1,21 +1,17 @@
 <template>
-    <IntroductoryPage
-        :title="title"
-        :element-list="itineraryList"
-        :cover-image="coverImage"
-        :subtitle="subtitle"
-    >
-    </IntroductoryPage>
+    <div>
+        <!-- No content here: all introductory pages are equal, so the html for the content is directly in the layout -->
+    </div>
 </template>
 
 <script>
-import IntroductoryPage from '~/components/IntroductoryPage'
 export default {
     name: 'ItinerariesPage',
-    components: { IntroductoryPage },
-
-    async asyncData({ $axios }) {
+    layout: 'introductory',
+    async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/itineraries')
+
+        // Build a list of objects representing itineraries
         const itineraryList = []
         for (const elem of data) {
             const poiList = elem.poi_list
@@ -33,15 +29,17 @@ export default {
                     : ''
             })
         }
-        return {
-            itineraryList
-        }
-    },
-    data() {
-        return {
+
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', {
             title: 'All Itineraries',
             subtitle: 'Visit the city with different plans!',
-            coverImage: 'introductory-cover.png'
+            imageUrl: '/images/introductory-cover.png'
+        })
+        store.commit('setIntroductoryPageElements', itineraryList)
+
+        return {
+            itineraryList
         }
     }
 }

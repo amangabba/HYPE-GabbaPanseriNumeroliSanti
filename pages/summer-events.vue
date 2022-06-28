@@ -1,22 +1,17 @@
 <template>
-    <IntroductoryPage
-        :title="title"
-        :element-list="eventList"
-        :cover-image="coverImage"
-        :subtitle="subtitle"
-    >
-    </IntroductoryPage>
+    <div>
+        <!-- No content here: all introductory pages are equal, so the html for the content is directly in the layout -->
+    </div>
 </template>
 
 <script>
-import IntroductoryPage from '~/components/IntroductoryPage'
-
 export default {
     name: 'SummerEventsPage',
-    components: { IntroductoryPage },
-
-    async asyncData({ $axios }) {
+    layout: 'introductory',
+    async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/events')
+
+        // Build a list of objects representing events
         const eventList = []
         for (const event of data) {
             if (event.season === 'Summer') {
@@ -29,15 +24,17 @@ export default {
                 })
             }
         }
-        return {
-            eventList
-        }
-    },
-    data() {
-        return {
+
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', {
             title: 'Summer Events',
             subtitle: 'Discover the next summer events',
-            coverImage: 'introductory-cover.png'
+            imageUrl: '/images/introductory-cover.png'
+        })
+        store.commit('setIntroductoryPageElements', eventList)
+
+        return {
+            eventList
         }
     }
 }

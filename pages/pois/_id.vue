@@ -1,11 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-5 text-center bg-primary bg-opacity-50 mb-1"
-        >
-            <h1 class="display-4">{{ name }}</h1>
-        </div>
-        <BootstrapBreadcrumbs :elements="breadcrumbs" />
         <div id="content" class="container">
             <div class="row m-2">
                 <BootstrapCarousel
@@ -31,7 +25,7 @@
             id="itineraries-carousel"
             :images="itinerary_images"
             :titles="itinerary_names"
-            :links="itinerary_links"
+            :links="itineraryLinks"
             class="w-25 mx-auto text-left m-4"
         />
         <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
@@ -43,7 +37,7 @@
             id="events-carousel"
             :images="event_images"
             :titles="event_names"
-            :links="event_links"
+            :links="eventLinks"
             class="w-25 mx-auto text-left m-4"
         />
     </div>
@@ -51,17 +45,27 @@
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
-import BootstrapBreadcrumbs from '~/components/BootstrapBreadcrumbs'
 
 export default {
     name: 'POIPage',
-    components: {
-        BootstrapCarousel,
-        BootstrapBreadcrumbs
-    },
-    async asyncData({ route, $axios }) {
+    components: { BootstrapCarousel },
+    layout: 'multiple-topic',
+    async asyncData({ route, store, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/pois/' + id)
+
+        const breadcrumbs = [
+            {
+                title: 'All Points of Interest',
+                link: '/all-pois'
+            },
+            {
+                title: data.name,
+                link: `/pois/${id}`
+            }
+        ]
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', { title: data.name, breadcrumbs })
 
         const itineraryLinks = []
         for (const id of data.correlated_itinerary_IDs) {
@@ -85,21 +89,8 @@ export default {
             itinerary_images: data.correlated_itinerary_images,
             eventLinks,
             event_names: data.correlated_event_names,
-            event_images: data.correlated_event_images,
-            breadcrumbs: [
-                {
-                    title: 'All Points Of Interest',
-                    link: '/all-pois'
-                },
-                {
-                    title: data.type,
-                    link: `/pois/${id}`
-                }
-            ]
+            event_images: data.correlated_event_images
         }
-    },
-    data() {
-        return {}
     }
 }
 </script>

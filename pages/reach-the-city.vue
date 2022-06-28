@@ -8,10 +8,13 @@
         <div id="content" class="container">
             <div id="introduction" class="mx-auto">
                 <div>
-                    Turin is served by a small airport, Citta di Torino-Sandro Pertini, with flights to and from Europe.
-                    The closest airport for flights from the United States is in Milan, a little over an hour away by
-                    train. Trains and intercity buses provide transportation to and from Turin from other towns.
-                    <br>
+                    Turin is served by a small airport, Citta di Torino-Sandro
+                    Pertini, with flights to and from Europe. The closest
+                    airport for flights from the United States is in Milan, a
+                    little over an hour away by train. Trains and intercity
+                    buses provide transportation to and from Turin from other
+                    towns.
+                    <br />
                     The most common ways to reach Turin are listed below:
                 </div>
             </div>
@@ -27,10 +30,10 @@
                     </div>
                     <p class="mb-1">
                         Strada Aeroporto, 12, 10072 Caselle Torinese TO (<a
-                        href="https://goo.gl/maps/7cw8SDVdWGeh6LJS6"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/7cw8SDVdWGeh6LJS6"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
             </div>
@@ -46,10 +49,10 @@
                     </div>
                     <p class="mb-1">
                         10149 Torino TO (<a
-                        href="https://goo.gl/maps/5C3nQa4jcMdf17N49"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/5C3nQa4jcMdf17N49"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
                 <div
@@ -60,10 +63,10 @@
                     </div>
                     <p class="mb-1">
                         10127 Torino TO (<a
-                        href="https://goo.gl/maps/9Kdsc4TpW2BGjdiT8"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/9Kdsc4TpW2BGjdiT8"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
                 <div
@@ -74,10 +77,10 @@
                     </div>
                     <p class="mb-1">
                         Corso Vittorio Emanuele II, 58, 10121 Torino TO (<a
-                        href="https://goo.gl/maps/PHpKoQYPNr6DUM1U9"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/PHpKoQYPNr6DUM1U9"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
                 <div
@@ -88,10 +91,10 @@
                     </div>
                     <p class="mb-1">
                         Corso Bolzano, 10121 Torino TO (<a
-                        href="https://goo.gl/maps/DHnGGHXo9sVA9NkX9"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/DHnGGHXo9sVA9NkX9"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
                 <div
@@ -102,10 +105,10 @@
                     </div>
                     <p class="mb-1">
                         Via Fossata, 10147 Torino TO (<a
-                        href="https://goo.gl/maps/9Sj3Mb3xVvVacchY7"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/9Sj3Mb3xVvVacchY7"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
                 <div
@@ -116,10 +119,10 @@
                     </div>
                     <p class="mb-1">
                         Corso Romania, 501, 10156 Torino TO (<a
-                        href="https://goo.gl/maps/fqJ1SwoLugWFfTcKA"
-                        target="_blank"
-                    >Get directions</a
-                    >)
+                            href="https://goo.gl/maps/fqJ1SwoLugWFfTcKA"
+                            target="_blank"
+                            >Get directions</a
+                        >)
                     </p>
                 </div>
             </div>
@@ -133,27 +136,22 @@
                 </p>
                 <ul>
                     <li>A4 Trieste-Venezia-Milano-Torino</li>
-                    <li>
-                        T1/T2-A5 Tunnel Monte Bianco-Aosta-Torino
-                    </li>
-                    <li>
-                        A6 Savona-Torino
-                    </li>
-                    <li>
-                        A21 Piacenza-Torino
-                    </li>
-                    <li>
-                        T4-A32 Tunnel Fréjus-Torino
-                    </li>
+                    <li>T1/T2-A5 Tunnel Monte Bianco-Aosta-Torino</li>
+                    <li>A6 Savona-Torino</li>
+                    <li>A21 Piacenza-Torino</li>
+                    <li>T4-A32 Tunnel Fréjus-Torino</li>
                 </ul>
                 <p class="mt-2">
-                    There are a number of slip roads off the A55 ring road for the areas just outside the city (airport,
-                    Lingotto, Juventus Stadium, Rivoli, Venaria Reale, Stupinigi included).
-                    <br>
-                    For the town centre, the main exits are Corso Regina Margherita (North) and Corso Allamano (South).
-                    <br>
-                    An extensive road network connects Torino with the province and, from there, to the main national
-                    and trans-European roads.
+                    There are a number of slip roads off the A55 ring road for
+                    the areas just outside the city (airport, Lingotto, Juventus
+                    Stadium, Rivoli, Venaria Reale, Stupinigi included).
+                    <br />
+                    For the town centre, the main exits are Corso Regina
+                    Margherita (North) and Corso Allamano (South).
+                    <br />
+                    An extensive road network connects Torino with the province
+                    and, from there, to the main national and trans-European
+                    roads.
                 </p>
             </div>
         </div>
@@ -162,13 +160,11 @@
 </template>
 
 <script>
-import TravelInfoButtons from "~/components/TravelInfoButtons";
+import TravelInfoButtons from '~/components/TravelInfoButtons'
 export default {
-    name: "reachTheCity",
-    components: {TravelInfoButtons}
+    name: 'ReachTheCity',
+    components: { TravelInfoButtons }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

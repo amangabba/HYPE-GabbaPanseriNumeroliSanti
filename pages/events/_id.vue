@@ -1,13 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
-        >
-            <h2 class="display-5">{{ name }}</h2>
-        </div>
-        <div class="title-row row p-1 text-left bg-primary bg-opacity-10 mb-3">
-            <h6 class="display-7">Evento</h6>
-        </div>
         <div id="content" class="container">
             <div class="row m-1">
                 <BootstrapCarousel
@@ -15,28 +7,26 @@
                     :images="image_links"
                     class="img-thumbnail w-50 col-md-3 h-auto text-center"
                 />
-                <div class="col-6 text-left p-4">
-                    <font size="4px">
-                        <p><i> Practical info: </i> {{ practical_info }}</p>
-                        <!-- in che senso? io non le metterei--->
-                        <p><i> The event starts on: </i> {{ start_date }}</p>
-                        <p><i> The event ends on: </i> {{ end_date }}</p>
-                        <p><i> Address: </i> {{ address }}</p>
-                        <p>
-                            <i> Location:</i>
-                            <a href="/pois/5">
-                                Palazzina di Caccia Stupinigi
-                            </a>
-                        </p>
-                        <!--link of a poi, ma non è dinamico cosi-->
-                        <p>{{ season }}</p>
-                    </font>
+                <div class="event-info-container col-6 text-left p-4">
+                    <p><i> Practical info: </i> {{ practical_info }}</p>
+                    <!-- in che senso? io non le metterei--->
+                    <p><i> The event starts on: </i> {{ start_date }}</p>
+                    <p><i> The event ends on: </i> {{ end_date }}</p>
+                    <p><i> Address: </i> {{ address }}</p>
+                    <p>
+                        <i> Location:</i>
+                        <NuxtLink to="/pois/5">
+                            Palazzina di Caccia Stupinigi
+                        </NuxtLink>
+                    </p>
+                    <!--link of a poi, ma non è dinamico cosi-->
+                    <p>{{ season }}</p>
                 </div>
             </div>
-            <div class="row justify-content-center mx-auto mt-2">
-                <font face="Arial" size="4px">
-                    <p>{{ description }}</p>
-                </font>
+            <div
+                class="event-description row justify-content-center mx-auto mt-2"
+            >
+                <p>{{ description }}</p>
             </div>
             <div
                 class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
@@ -54,10 +44,38 @@ export default {
     components: {
         BootstrapCarousel
     },
-    async asyncData({ route, $axios }) {
+    layout: 'multiple-topic',
+    async asyncData({ route, store, from, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/events/' + id)
+
+        let prevPageTitle = 'All Events'
+        let prevPageLink = '/all-events'
+        // If the user is coming from the winter/summer events introductory page
+        // have the breadcrumbs point to that page
+        if (from?.name === 'winter-events' || from?.name === 'summer-events') {
+            let words = from.name.split('-')
+            words = words.map(
+                (word) => word[0].toUpperCase() + word.substring(1)
+            )
+            prevPageTitle = words.join(' ')
+            prevPageLink = from.path
+        }
+        const breadcrumbs = [
+            {
+                title: prevPageTitle,
+                link: prevPageLink
+            },
+            {
+                title: data.name,
+                link: `/events/${id}`
+            }
+        ]
+        // Set page information in store to render them in the page layout
+        store.commit('setPageInfo', { title: data.name, breadcrumbs })
+
         return {
+            from,
             name: data.name,
             practical_info: data.practical_info,
             description: data.description,
@@ -75,4 +93,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.event-info-container {
+}
+.event-description {
+}
+</style>
