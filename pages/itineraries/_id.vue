@@ -32,14 +32,14 @@
                     {{ poi_list[0].address }}
                 </h4>
             </div>
-            <Map
+            <OSMMap
                 ref="map"
-                :center_long="poi_list[0].longitude"
-                :center_lat="poi_list[0].latitude"
-                :marker_long="poi_list[0].longitude"
-                :marker_lat="poi_list[0].latitude"
+                :center-long="poi_list[0].longitude"
+                :center-lat="poi_list[0].latitude"
+                :marker-long="poi_list[0].longitude"
+                :marker-lat="poi_list[0].latitude"
             >
-            </Map>
+            </OSMMap>
             <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
                 <h2 class="display-3">List of Points of Interest</h2>
             </div>
@@ -111,11 +111,11 @@
 </template>
 
 <script>
-import Map from '~/components/Map'
+import OSMMap from '~/components/OSMMap'
 
 export default {
     name: 'ItineraryPage',
-    components: { Map },
+    components: { OSMMap },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params
@@ -124,7 +124,7 @@ export default {
         const breadcrumbs = [
             {
                 title: 'All Itineraries',
-                link: '/all-itineraries'
+                link: '/itineraries'
             },
             {
                 title: data.title,
@@ -154,11 +154,11 @@ export default {
         // Called to update the map, it's information and the selected grid card
         putMarker(key, lat, long, name, address) {
             // Update Map center
-            this.$refs.map.center_long = long
-            this.$refs.map.center_lat = lat
+            this.$refs.map.centerLong = long
+            this.$refs.map.centerLat = lat
             // Update Map marker
-            this.$refs.map.marker_long = long
-            this.$refs.map.marker_lat = lat
+            this.$refs.map.markerLong = long
+            this.$refs.map.markerLat = lat
 
             // Classes to update
             const selectedRowClasses = ['bg-opacity-10', 'bg-primary']

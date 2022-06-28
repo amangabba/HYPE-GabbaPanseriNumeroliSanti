@@ -50,7 +50,7 @@ export default {
         const { data } = await $axios.get('/api/events/' + id)
 
         let prevPageTitle = 'All Events'
-        let prevPageLink = '/all-events'
+        let prevPageLink = '/events'
         // If the user is coming from the winter/summer events introductory page
         // have the breadcrumbs point to that page
         if (from?.name === 'winter-events' || from?.name === 'summer-events') {

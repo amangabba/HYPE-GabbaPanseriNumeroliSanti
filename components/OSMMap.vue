@@ -1,66 +1,81 @@
 <template>
     <iframe
-        :id="id"
         class="row justify-content-center mx-auto mt-2"
         :height="height"
         :width="width"
         :src="
             'https://www.openstreetmap.org/export/embed.html?bbox=' +
-            String(center_long - diff_long) +
+            String(centerLong - diffLong) +
             '%2C' +
-            String(center_lat - diff_lat) +
+            String(centerLat - diffLat) +
             '%2C' +
-            String(center_long + diff_long) +
+            String(centerLong + diffLong) +
             '%2C' +
-            String(center_lat + diff_lat) +
+            String(centerLat + diffLat) +
             '&layer=mapnik&marker=' +
-            marker_lat +
+            markerLat +
             '%2C' +
-            marker_long
+            markerLong
         "
     >
     </iframe>
 </template>
 
 <script>
+/**
+ * Component to show an interactive OSM map centered on the given coordinates and with an optional marker
+ */
 export default {
-    name: 'CustomCard',
+    name: 'OSMMap',
     props: {
-        id: {
-            type: String,
-            required: false,
-            default: ''
-        },
+        /**
+         * The height of the IFrame containing the map
+         */
         height: {
             type: String,
             default: '300px'
         },
+        /**
+         * The width of the IFrame containing the map
+         */
         width: {
             type: String,
             default: '700px'
         },
-        center_long: {
+        /**
+         * The longitude of the center point
+         */
+        centerLong: {
             type: Number,
             required: true
         },
-        center_lat: {
+        /**
+         * The latitude of the center point
+         */
+        centerLat: {
             type: Number,
             required: true
         },
-        diff_long: {
+        diffLong: {
             type: Number,
             default: 0.0069
         },
-        diff_lat: {
+        diffLat: {
             type: Number,
             default: 0.00248
         },
-        marker_long: {
+        /**
+         * The longitude of the marker point
+         */
+        markerLong: {
             type: Number,
             required: false,
             default: 0
         },
-        marker_lat: {
+        /**
+         * The latitude of the marker point
+         */
+        markerLat: {
             type: Number,
             required: false,
             default: 0

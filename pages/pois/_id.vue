@@ -57,7 +57,7 @@ export default {
         const breadcrumbs = [
             {
                 title: 'All Points of Interest',
-                link: '/all-pois'
+                link: '/pois'
             },
             {
                 title: data.name,

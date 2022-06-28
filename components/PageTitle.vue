@@ -11,7 +11,7 @@
 <script>
 /**
  * Component for a row containing an icon, a title and a subtitle.
- * This is meant as the primary way to present the content of each page.
+ * This is meant as the cover for the pages.
  */
 export default {
     name: 'PageTitle',

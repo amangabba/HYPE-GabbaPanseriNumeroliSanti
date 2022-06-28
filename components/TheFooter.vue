@@ -9,9 +9,9 @@
                     :key="`navItem${navItemIndex}`"
                     class="nav-item text-primary"
                 >
-                    <nuxt-link :to="navItem.path" class="nav-link">
+                    <NuxtLink :to="navItem.path" class="nav-link">
                         {{ navItem.name }}
-                    </nuxt-link>
+                    </NuxtLink>
                 </li>
             </ul>
         </div>
@@ -19,10 +19,16 @@
 </template>
 
 <script>
+/**
+ * Component for the footer of the website
+ */
 export default {
     name: 'TheFooter',
     data() {
         return {
+            /**
+             * List of links to show in the footer
+             */
             footerList: [
                 {
                     name: 'The Town',

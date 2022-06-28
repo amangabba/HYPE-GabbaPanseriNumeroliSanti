@@ -1,6 +1,6 @@
 <template>
     <DefaultLayout>
-        <!-- The row containing the title of the page -->
+        <!-- Row containing the title of the page -->
         <PageTitle
             class="title-row"
             :title="title"
@@ -8,10 +8,10 @@
             :icon-url="iconUrl"
         />
 
-        <!-- The breadcrumbs for this page -->
+        <!-- Breadcrumbs for this page -->
         <BootstrapBreadcrumbs :elements="breadcrumbs" />
 
-        <!-- The content of this page -->
+        <!-- Content of this page -->
         <Nuxt />
     </DefaultLayout>
 </template>
@@ -20,7 +20,9 @@
 import DefaultLayout from '~/layouts/default'
 
 /**
- * Layout for multiple topic pages
+ * Layout for multiple topic pages.
+ * Data for the page title and breadcrumbs components must be set in the store when
+ * using this template.
  */
 export default {
     name: 'MultipleTopicLayout',

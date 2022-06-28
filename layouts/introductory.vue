@@ -1,12 +1,14 @@
 <template>
     <DefaultLayout>
         <div class="introductory-page">
+            <!-- Row containing the title of the page -->
             <PageTitle
                 :title="title"
                 :subtitle="subtitle"
                 class="title-row w-100 m-0"
                 :style="`background-image: url('${coverImage}');`"
             />
+
             <!-- Row containing cards generated from 'elementList' -->
             <div class="row mt-3 justify-content-center w-100">
                 <BootstrapCard
@@ -22,6 +24,7 @@
                 />
             </div>
 
+            <!-- Content of this page -->
             <Nuxt />
         </div>
     </DefaultLayout>
@@ -31,6 +34,11 @@
 import DefaultLayout from '~/layouts/default'
 import BootstrapCard from '~/components/BootstrapCard'
 
+/**
+ * Layout for introductory pages.
+ * Data for the page title component and data for generating the cards representing the multiple topic instances
+ * must be set in the store when using this template.
+ */
 export default {
     name: 'IntroductoryLayout',
     components: { DefaultLayout, BootstrapCard },

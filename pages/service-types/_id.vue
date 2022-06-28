@@ -135,7 +135,7 @@ export default {
         const breadcrumbs = [
             {
                 title: 'Main Services',
-                link: '/all-service-types'
+                link: '/service-types'
             },
             {
                 title: serviceTypeData.type,

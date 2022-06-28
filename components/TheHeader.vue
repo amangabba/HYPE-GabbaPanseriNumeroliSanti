@@ -2,7 +2,10 @@
     <nav
         class="navbar sticky-top shadow navbar-expand-lg navbar-light px-3 header bg-primary"
     >
-        <a class="navbar-brand" href="/">Lambrate</a>
+        <!-- Name of the website -->
+        <a class="navbar-brand" href="/">Torino</a>
+
+        <!-- Button to toggle the navbar, only visible on small screens -->
         <button
             class="navbar-toggler"
             type="button"
@@ -17,16 +20,18 @@
 
         <div id="navbarToggler" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <!-- Add navigation links defined in 'data' -->
                 <li
                     v-for="(navItem, navItemIndex) of headerList"
                     :key="`navItem${navItemIndex}`"
                     class="nav-item text-primary"
                 >
-                    <nuxt-link :to="navItem.path" class="nav-link">
+                    <NuxtLink :to="navItem.path" class="nav-link">
                         {{ navItem.name }}
-                    </nuxt-link>
+                    </NuxtLink>
                 </li>
 
+                <!-- Hardcoded navigation list for the events, because we need a dropdown -->
                 <li class="nav-item dropdown">
                     <a
                         id="navbarDropdownMenuLink"
@@ -44,18 +49,18 @@
                         aria-labelledby="navbarDropdownMenuLink"
                     >
                         <li>
-                            <a class="dropdown-item" href="all-events">
-                                All events</a
+                            <NuxtLink class="dropdown-item" to="/events">
+                                All events</NuxtLink
                             >
                         </li>
                         <li>
-                            <a class="dropdown-item" href="summer-events"
-                                >Summer events</a
+                            <NuxtLink class="dropdown-item" to="/summer-events"
+                                >Summer events</NuxtLink
                             >
                         </li>
                         <li>
-                            <a class="dropdown-item" href="winter-events"
-                                >Winter events</a
+                            <NuxtLink class="dropdown-item" to="/winter-events"
+                                >Winter events</NuxtLink
                             >
                         </li>
                     </ul>
@@ -66,22 +71,28 @@
 </template>
 
 <script>
+/**
+ * Component for the header (main navbar) of the website
+ */
 export default {
     name: 'TheHeader',
     data() {
         return {
+            /**
+             * List of links to show in the header
+             */
             headerList: [
                 {
                     name: 'All Itineraries',
-                    path: '/all-itineraries'
+                    path: '/itineraries'
                 },
                 {
                     name: 'All Point Of Interests',
-                    path: '/all-pois'
+                    path: '/pois'
                 },
                 {
                     name: 'Main Services',
-                    path: '/all-service-types'
+                    path: '/service-types'
                 }
             ]
         }
