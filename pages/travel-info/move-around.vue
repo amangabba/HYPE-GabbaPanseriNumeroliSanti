@@ -1,10 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">How to move around the city</h1>
-        </div>
         <div id="content" class="container">
             <div id="introduction" class="mx-auto">
                 <div>
@@ -109,15 +104,12 @@
                 </p>
             </div>
         </div>
-        <TravelInfoButtons></TravelInfoButtons>
     </div>
 </template>
 
 <script>
-import TravelInfoButtons from '~/components/TravelInfoButtons'
 export default {
-    name: 'MoveAround',
-    components: { TravelInfoButtons }
+    name: 'TravelInfoMovePage'
 }
 </script>
 <style scoped></style>

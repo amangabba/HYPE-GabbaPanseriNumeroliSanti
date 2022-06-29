@@ -1,10 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">Where to deposit your luggage</h1>
-        </div>
         <div id="content" class="container">
             <div id="introduction" class="mx-auto">
                 <div>
@@ -69,15 +64,12 @@
                 </div>
             </div>
         </div>
-        <TravelInfoButtons></TravelInfoButtons>
     </div>
 </template>
 
 <script>
-import TravelInfoButtons from '~/components/TravelInfoButtons'
 export default {
-    name: 'DepositLuggage',
-    components: { TravelInfoButtons }
+    name: 'TravelInfoLuggagePage'
 }
 </script>
 

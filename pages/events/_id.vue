@@ -19,21 +19,21 @@
                             Palazzina di Caccia Stupinigi
                         </NuxtLink>
                     </p>
-                    <p> <i> This event will be held in: </i> {{ season }}</p>
+                    <p><i> This event will be held in: </i> {{ season }}</p>
                     <!--link of a poi, ma non è dinamico cosi
                      Non so come fare la parte successiva -->
-            
-                       <p v-if = " season == 'Summer' ">
+
+                    <p v-if="season == 'Summer'">
                         <NuxtLink to="/summer-events">
                             More summer events
                         </NuxtLink>
-                        </p>
-                        <p v-else>
+                    </p>
+                    <p v-else>
                         <NuxtLink to="/winter-events">
                             More winter events
                         </NuxtLink>
-                        </p> 
-                <!-- non funziona il link e non capisco perchè-->
+                    </p>
+                    <!-- non funziona il link e non capisco perchè-->
                 </div>
             </div>
             <div

@@ -2,7 +2,7 @@
     <div class="main-page">
         <TheHeader />
         <div class="page-content container-fluid">
-            <div class="row">
+            <div class="row mb-2">
                 <!-- If this is used directly as a layout: display the page -->
                 <Nuxt v-if="!$slots.default" />
                 <!-- If this is used as the base template for a sub-template: display the content of the slot -->
@@ -35,12 +35,11 @@ export default {
     min-height: 100vh;
 }
 .page-content {
-    padding-bottom: 56px;
+    padding-bottom: 144px;
 }
 .page-footer {
     position: absolute;
     width: 100%;
-    height: 56px;
     bottom: 0;
 }
 </style>

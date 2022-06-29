@@ -3,7 +3,7 @@
         class="navbar sticky-top shadow navbar-expand-lg navbar-light px-3 header bg-primary"
     >
         <!-- Name of the website -->
-        <a class="navbar-brand" href="/">Torino</a>
+        <a class="navbar-brand" href="/">Turin</a>
 
         <!-- Button to toggle the navbar, only visible on small screens -->
         <button
@@ -82,6 +82,14 @@ export default {
              * List of links to show in the header
              */
             headerList: [
+                {
+                    name: 'The Town',
+                    path: '/the-town'
+                },
+                {
+                    name: 'Travel Info',
+                    path: '/travel-info'
+                },
                 {
                     name: 'All Itineraries',
                     path: '/itineraries'

@@ -1,20 +1,55 @@
 <template>
-    <div class="custom-card card mt-3 col-sm-2 m-2 shadow-sm">
-        <!-- Image of the card -->
-        <img :src="imageLink" class="card-img-top" :alt="title" />
-        <div class="card-body d-flex flex-column align-items-center">
-            <!-- Title of the card -->
-            <h5 class="card-title">{{ title }}</h5>
-            <!-- Subtitle of the card -->
-            <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
-            <!-- Description of the card -->
-            <p>
-                {{ description }}
-            </p>
-            <!-- Link to see more about the card -->
-            <NuxtLink :to="link" class="btn btn-primary mt-auto">
-                See more
-            </NuxtLink>
+    <div class="card-container">
+        <!-- Horizontal Bootstrap card -->
+        <div v-if="horizontal" class="custom-card card mb-3 m-2 shadow-sm">
+            <div class="row no-gutters">
+                <!-- Image of the card -->
+                <div class="col-md-4">
+                    <img :src="imageLink" class="card-img" :alt="title" />
+                </div>
+                <!-- Body of the card -->
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <!-- Title of the card -->
+                        <h5 class="card-title">{{ title }}</h5>
+
+                        <!-- Slot for customizing the content of the card -->
+                        <p class="card-text">
+                            <slot />
+                        </p>
+
+                        <!-- Link to see more about the card -->
+                        <NuxtLink :to="link" class="btn btn-primary mt-auto">
+                            See more
+                        </NuxtLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Bootstrap card -->
+        <div
+            v-else
+            class="custom-card custom-card-vertical card mt-3 m-2 shadow-sm"
+        >
+            <!-- Image of the card -->
+            <img :src="imageLink" class="card-img-top" :alt="title" />
+            <div class="card-body d-flex flex-column align-items-center">
+                <!-- Title of the card -->
+                <h5 class="card-title">{{ title }}</h5>
+                <!-- Subtitle of the card -->
+                <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
+
+                <!-- Slot for customizing the content of the card -->
+                <p class="card-text">
+                    <slot />
+                </p>
+
+                <!-- Link to see more about the card -->
+                <NuxtLink :to="link" class="btn btn-primary mt-auto">
+                    See more
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>
@@ -48,18 +83,16 @@ export default {
             default: ''
         },
         /**
-         * Description of the card
-         */
-        description: {
-            type: String,
-            required: true
-        },
-        /**
          * Link to the topic that the card is describing
          */
         link: {
             type: String,
             required: true
+        },
+        horizontal: {
+            type: Boolean,
+            required: false,
+            default: false
         }
     }
 }
@@ -71,5 +104,8 @@ export default {
 }
 .custom-card {
     border: 2px solid rgba(0, 0, 0, 0);
+}
+.custom-card-vertical {
+    height: 96%;
 }
 </style>

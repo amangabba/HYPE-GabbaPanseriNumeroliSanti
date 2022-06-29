@@ -7,7 +7,7 @@
  * Component to show an icon from the BootstrapIcon font
  */
 export default {
-    name: "BootstrapIcon",
+    name: 'BootstrapIcon',
     props: {
         /**
          * Name of the icon, this is the string in the class attribute when searching for
@@ -36,7 +36,7 @@ export default {
     },
     computed: {
         style() {
-            let style = ""
+            let style = ''
             if (this.size) style += `font-size: ${this.size};`
             if (this.color) style += ` color: ${this.color};`
             return style
@@ -46,5 +46,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
 </style>

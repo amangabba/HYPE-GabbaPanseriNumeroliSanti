@@ -9,19 +9,23 @@
                 :style="`background-image: url('${coverImage}');`"
             />
 
-            <!-- Row containing cards generated from 'elementList' -->
-            <div class="row mt-3 justify-content-center w-100">
-                <BootstrapCard
-                    v-for="(element, index) of elementList"
-                    :key="`card-${index}`"
-                    :title="element.title"
-                    :subtitle="element.subtitle"
-                    :description="
-                        element.description ? element.description : ''
-                    "
-                    :link="element.link"
-                    :image-link="element.imageLink"
-                />
+            <div class="container mt-3 mb-3">
+                <!-- Row containing cards generated from 'elementList' -->
+                <div
+                    class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center w-100"
+                >
+                    <BootstrapCard
+                        v-for="(element, index) of elementList"
+                        :key="`card-${index}`"
+                        :title="element.title"
+                        :subtitle="element.subtitle"
+                        :link="element.link"
+                        :image-link="element.imageLink"
+                        class="col"
+                    >
+                        {{ element.description ? element.description : '' }}
+                    </BootstrapCard>
+                </div>
             </div>
 
             <!-- Content of this page -->

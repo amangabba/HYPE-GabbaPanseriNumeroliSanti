@@ -31,20 +31,12 @@ export default {
              */
             footerList: [
                 {
-                    name: 'The Town',
-                    path: '/the-town'
-                },
-                {
-                    name: 'Travel Information',
-                    path: '/travel-information'
-                },
-                {
                     name: 'Privacy',
                     path: '/privacy'
                 },
                 {
                     name: 'Contacts',
-                    path: '/contacts-component'
+                    path: '/contacts'
                 },
                 {
                     name: 'Coronavirus Update',
