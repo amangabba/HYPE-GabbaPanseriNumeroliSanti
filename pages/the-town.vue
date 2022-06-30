@@ -1,10 +1,6 @@
 <template>
     <div id="content" class="justify-content-center container">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">The Town</h1>
-        </div>
+        <PageTitle title="The Town" />
         <div class="row m-2">
             <img
                 class="img-fluid col-lg-7 h-auto mt-2"

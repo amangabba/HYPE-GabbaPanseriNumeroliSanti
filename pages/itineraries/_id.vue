@@ -2,11 +2,13 @@
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
             <div class="row m-2">
+                <!-- Itinerary Map Picture -->
                 <img
                     class="col-md-3 h-auto text-center"
                     :src="map_link"
-                    alt="Interactive Map"
+                    alt="Itinerary Map Picture"
                 />
+                <!-- Itinerary Description -->
                 <div class="col-md-9 text-left p-3">
                     <p><i>Duration:</i> {{ duration }} minutes</p>
                     <p v-if="poi_list.length">
@@ -23,6 +25,7 @@
                     <p><i>Description:</i> {{ description }}</p>
                 </div>
             </div>
+            <!-- Itinerary Interactive Map -->
             <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
                 <h2 ref="map-title" class="display-3">Interactive Map</h2>
             </div>

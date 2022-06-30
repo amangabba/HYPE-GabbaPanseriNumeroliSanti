@@ -1,10 +1,6 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">Privacy Policy</h1>
-        </div>
+        <PageTitle title="Privacy Policy" />
         <div id="content" class="container">
             <div class="justify-content-md-center">
                 LAMbRate, in its quality of Data Controller (hereinafter,

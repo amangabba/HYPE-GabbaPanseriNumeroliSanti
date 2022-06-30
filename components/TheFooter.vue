@@ -1,9 +1,14 @@
 <template>
-    <nav class="navbar shadow navbar-expand-lg navbar-light px-3 header bg-primary justify-content-lg-center">
+    <nav
+        class="navbar shadow navbar-expand-lg navbar-light px-3 header bg-primary justify-content-lg-center"
+    >
         <div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li v-for="(navItem, navItemIndex) of footerList" :key="`navItem${navItemIndex}`"
-                    class="nav-item text-primary">
+                <li
+                    v-for="(navItem, navItemIndex) of footerList"
+                    :key="`navItem${navItemIndex}`"
+                    class="nav-item text-primary"
+                >
                     <NuxtLink :to="navItem.path" class="nav-link">
                         {{ navItem.name }}
                     </NuxtLink>
@@ -47,5 +52,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

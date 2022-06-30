@@ -1,10 +1,6 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">Coronavirus update</h1>
-        </div>
+        <PageTitle title="Coronavirus update" />
         <div id="content" class="container">
             <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
                 <h2 class="display-3">Vaccination and mask rules</h2>

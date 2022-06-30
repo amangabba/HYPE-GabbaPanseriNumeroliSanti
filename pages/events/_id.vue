@@ -38,9 +38,7 @@
             >
                 <p>{{ description }}</p>
             </div>
-            <div
-                class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2"
-            >
+            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
                 <h2 class="display-3">Other events in this location</h2>
             </div>
         </div>

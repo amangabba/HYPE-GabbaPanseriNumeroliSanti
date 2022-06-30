@@ -294,7 +294,7 @@ function insertData(models) {
             number: 4,
             itineraryId: 4,
             pointOfInterestId: 5
-        },
+        }
     ]
 
     models.Itinerary.bulkCreate(itineraryList).then(() =>

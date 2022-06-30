@@ -1,10 +1,6 @@
 <template>
     <div id="content" class="justify-content-center container">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">Contacts</h1>
-        </div>
+        <PageTitle title="Contacts" />
         <div class="row m-2">
             <!--ToDo:chiedi come settare l'immagine, se h-auto o w-auto-->
             <img
