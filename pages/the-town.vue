@@ -18,22 +18,20 @@
                     <h2 ref="map-title" class="display-3">Turin</h2>
                 </div>
                 <div class="mb-2 lh-lg">
-                    <i
-                        >Turin is the capital city of Piedmont and of the
-                        Metropolitan City of Turin, and was the first Italian
-                        capital from 1861 to 1865. The city has a rich culture
-                        and history, and it is known for its numerous art
-                        galleries, restaurants, churches, palaces, opera houses,
-                        piazzas, parks, gardens, theatres, libraries, museums
-                        and some of Italy's best universities, colleges,
-                        academies, lycea and gymnasia, such as the University of
-                        Turin, founded in the 15th century, and the Turin
-                        Polytechnic. Turin is also worldwide famous for icons
-                        like the gianduja, the Holy Shroud, the automobile brand
-                        FIAT and the association football club Juventus, which
-                        competes with its rival Torino in the Derby della Mole,
-                        the city's derby.
-                    </i>
+                    Turin is the capital city of Piedmont and of the
+                    Metropolitan City of Turin, and was the first Italian
+                    capital from 1861 to 1865. The city has a rich culture
+                    and history, and it is known for its numerous art
+                    galleries, restaurants, churches, palaces, opera houses,
+                    piazzas, parks, gardens, theatres, libraries, museums
+                    and some of Italy's best universities, colleges,
+                    academies, lycea and gymnasia, such as the University of
+                    Turin, founded in the 15th century, and the Turin
+                    Polytechnic. Turin is also worldwide famous for icons
+                    like the gianduja, the Holy Shroud, the automobile brand
+                    FIAT and the association football club Juventus, which
+                    competes with its rival Torino in the Derby della Mole,
+                    the city's derby.
                 </div>
             </div>
         </div>
