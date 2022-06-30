@@ -34,27 +34,21 @@
                     <p>{{ description }}</p>
                 </div>
                     <!-- non funziona il link e non capisco perchè-->
-                </div>
             </div>
-            <div
-                class="event-description row justify-content-center mx-auto mt-2"
-            >
-                <p>{{ description }}</p>
-            </div>
-            <div
-                class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
-            >
-                <h2 class="display-5">Other events in this location</h2>
-                <BootstrapCarousel
-                    id="events-carousel"
-                    :images="events_images"
-                    :titles="events_names"
-                    :links="eventLinks"
-                ></BootstrapCarousel>
-            </div>
-
-            <SectionTitle>Other events in this location</SectionTitle>
         </div>
+        <div
+            class="event-description row justify-content-center mx-auto mt-2"
+        >
+            <p>{{ description }}</p>
+        </div>
+        <SectionTitle>Other events in this location</SectionTitle>
+        <BootstrapCarousel
+            id="events-carousel"
+            :images="events_images"
+            :titles="events_names"
+            :links="eventLinks"
+            class="img-fluid h-auto col-md-3 p-3"
+        ></BootstrapCarousel>
     </div>
 </template>
 
