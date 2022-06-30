@@ -2,11 +2,13 @@
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
             <div class="row m-2">
+                <!-- Itinerary Map Picture -->
                 <img
                     class="col-md-3 h-auto text-center"
                     :src="map_link"
-                    alt="Interactive Map"
+                    alt="Itinerary Map Picture"
                 />
+                <!-- Itinerary Description -->
                 <div class="col-md-9 text-left p-3">
                     <p><i>Duration:</i> {{ duration }} minutes</p>
                     <p v-if="poi_list.length">
@@ -23,16 +25,19 @@
                     <p><i>Description:</i> {{ description }}</p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 ref="map-title" class="display-3">Interactive Map</h2>
-            </div>
+
+            <!-- Itinerary Interactive Map -->
+            <SectionTitle>Interactive Map</SectionTitle>
+
             <div class="row text-center">
-                <h4 ref="map-marker-info">
+                <h4 v-if="poi_list.length > 0" ref="map-marker-info">
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
                     {{ poi_list[0].address }}
                 </h4>
+                <h4 v-else>No points of interest in this itinerary, no map to show!</h4>
             </div>
             <OSMMap
+                v-if="poi_list.length > 0"
                 ref="map"
                 :center-long="poi_list[0].longitude"
                 :center-lat="poi_list[0].latitude"
@@ -40,10 +45,13 @@
                 :marker-lat="poi_list[0].latitude"
             >
             </OSMMap>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">List of Points of Interest</h2>
-            </div>
+
+            <SectionTitle>List of Points of Interest</SectionTitle>
+
             <div class="row justify-content-center mx-auto mt-2">
+                <div v-if="poi_list.length === 0" class="row text-center">
+                    <h4>No Point of Interest in this itinerary, nothing to see here!</h4>
+                </div>
                 <div
                     v-for="(poi, index) in poi_list"
                     :id="`grid-card-${poi.number}`"
@@ -112,10 +120,11 @@
 
 <script>
 import OSMMap from '~/components/OSMMap'
+import SectionTitle from '~/components/SectionTitle'
 
 export default {
     name: 'ItineraryPage',
-    components: { OSMMap },
+    components: { OSMMap, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params

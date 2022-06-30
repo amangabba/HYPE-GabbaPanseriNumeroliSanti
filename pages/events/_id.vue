@@ -1,15 +1,14 @@
 <template>
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
-            <div class="row m-1">
+            <div class="row m-2">
                 <BootstrapCarousel
                     id="event-carousel"
                     :images="image_links"
-                    class="img-thumbnail w-50 col-md-3 h-auto text-center"
+                    class="img-fluid h-auto col-md-3 p-3"
                 />
-                <div class="event-info-container col-6 text-left p-4">
+                <div class="col-md-9 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
-                    <!-- in che senso? io non le metterei--->
                     <p><i> The event starts on: </i> {{ start_date }}</p>
                     <p><i> The event ends on: </i> {{ end_date }}</p>
                     <p><i> Address: </i> {{ address }}</p>
@@ -20,10 +19,9 @@
                         </NuxtLink>
                     </p>
                     <p><i> This event will be held in: </i> {{ season }}</p>
-                    <!--link of a poi, ma non è dinamico cosi
-                     Non so come fare la parte successiva -->
+                    <!--link of a poi, ma non è dinamico cosi -->
 
-                    <p v-if="season == 'Summer'">
+                    <p v-if="season === 'Summer'">
                         <NuxtLink to="/summer-events">
                             More summer events
                         </NuxtLink>
@@ -33,6 +31,8 @@
                             More winter events
                         </NuxtLink>
                     </p>
+                    <p>{{ description }}</p>
+                </div>
                     <!-- non funziona il link e non capisco perchè-->
                 </div>
             </div>
@@ -52,17 +52,19 @@
                     :links="eventLinks"
                 ></BootstrapCarousel>
             </div>
+
+            <SectionTitle>Other events in this location</SectionTitle>
         </div>
     </div>
 </template>
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
     name: 'EventPage',
-    components: {
-        BootstrapCarousel
-    },
+    components: { BootstrapCarousel, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, from, $axios }) {
         const { id } = route.params
@@ -121,8 +123,4 @@ export default {
 </script>
 
 <style scoped>
-.event-info-container {
-}
-.event-description {
-}
 </style>

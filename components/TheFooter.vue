@@ -39,6 +39,10 @@ export default {
                     path: '/contacts'
                 },
                 {
+                    name: 'About us',
+                    path: '/About-us'
+                },
+                {
                     name: 'Coronavirus Update',
                     path: '/coronavirus-update'
                 }

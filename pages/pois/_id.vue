@@ -15,40 +15,37 @@
                     <p>{{ description }}</p>
                 </div>
             </div>
+
+            <SectionTitle>Correlated Itineraries:</SectionTitle>
+
+            <BootstrapCarousel
+                id="itineraries-carousel"
+                :images="itinerary_images"
+                :titles="itinerary_names"
+                :links="itineraryLinks"
+                class="w-25 mx-auto text-left m-4"
+            />
+
+            <SectionTitle>Events hosted here</SectionTitle>
+
+            <BootstrapCarousel
+                id="events-carousel"
+                :images="event_images"
+                :titles="event_names"
+                :links="eventLinks"
+                class="w-25 mx-auto text-left m-4"
+            />
         </div>
-        <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">
-                See correlated Itineraries:
-            </h2>
-        </div>
-        <BootstrapCarousel
-            id="itineraries-carousel"
-            :images="itinerary_images"
-            :titles="itinerary_names"
-            :links="itineraryLinks"
-            class="w-25 mx-auto text-left m-4"
-        />
-        <div class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2">
-            <h2 ref="map-title" class="display-3">
-                See Events that will be host in this Point of Interest:
-            </h2>
-        </div>
-        <BootstrapCarousel
-            id="events-carousel"
-            :images="event_images"
-            :titles="event_names"
-            :links="eventLinks"
-            class="w-25 mx-auto text-left m-4"
-        />
     </div>
 </template>
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
+import SectionTitle from '~/components/SectionTitle'
 
 export default {
     name: 'POIPage',
-    components: { BootstrapCarousel },
+    components: { BootstrapCarousel, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params

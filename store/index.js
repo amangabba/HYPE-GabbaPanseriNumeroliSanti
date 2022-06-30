@@ -7,7 +7,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-    setPageInfo(state, { title, subtitle, imageUrl, breadcrumbs }) {
+    setPageInfo(state, { title, subtitle, imageUrl, breadcrumbs = [] }) {
         state.pageTitle = title
         state.pageSubtitle = subtitle
         state.pageImageUrl = imageUrl

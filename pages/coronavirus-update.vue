@@ -1,14 +1,8 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <div
-            class="title-row row p-4 text-center bg-primary bg-opacity-50 mb-2"
-        >
-            <h1 class="display-4">Coronavirus update</h1>
-        </div>
         <div id="content" class="container">
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">Vaccination and mask rules</h2>
-            </div>
+            <SectionTitle>Vaccination and mask rules</SectionTitle>
+
             <div id="rules" class="mx-auto">
                 <h4 class="mt-2">Public spaces and services</h4>
                 <p>
@@ -38,9 +32,9 @@
                     your local ASL (Azienda Sanitaria Locale).
                 </p>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">Where to get tested</h2>
-            </div>
+
+            <SectionTitle>Where to get tested</SectionTitle>
+
             <div id="tests" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
@@ -85,9 +79,9 @@
                     </p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">Where to get vaccinated</h2>
-            </div>
+
+            <SectionTitle>Where to get vaccinated</SectionTitle>
+
             <div id="vaccinations" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
@@ -138,7 +132,11 @@
 
 <script>
 export default {
-    name: 'CoronavirusUpdate'
+    name: 'CoronavirusUpdate',
+    layout: 'single-topic',
+    created() {
+        this.$store.commit('setPageInfo', { title: 'Coronavirus update' })
+    }
 }
 </script>
 

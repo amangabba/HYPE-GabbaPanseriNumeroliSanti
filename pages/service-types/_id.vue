@@ -1,95 +1,100 @@
 <template>
     <div class="container-fluid text-center">
-        <div class="row mb-5 justify-content-center mt-2">
-            <!-- Accordion containing services of the type -->
-            <div id="service-accordion" class="accordion text-start">
-                <div
-                    v-for="(service, index) of services"
-                    :key="`service${index}`"
-                    class="accordion-item"
-                >
-                    <!-- Header of accordion element -->
-                    <div :id="`heading${index}`" class="accordion-header">
-                        <div
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            :data-bs-target="`#collapse${index}`"
-                            aria-expanded="false"
-                            :aria-controls="`collapse${index}`"
-                        >
-                            <div class="row w-100">
-                                <div class="col-8">
-                                    <span class="fw-bold">{{
-                                        service.name
-                                    }}</span>
-                                    <br />
-                                    <span class="text-muted">{{
-                                        service.address
-                                    }}</span>
-                                </div>
-                                <div class="col align-self-center">
-                                    {{ serviceStatus[index] }}
+        <div class="container">
+            <div class="row mb-5 justify-content-center mt-2">
+                <!-- Accordion containing services of the type -->
+                <div id="service-accordion" class="accordion text-start">
+                    <div
+                        v-for="(service, index) of services"
+                        :key="`service${index}`"
+                        class="accordion-item"
+                    >
+                        <!-- Header of accordion element -->
+                        <div :id="`heading${index}`" class="accordion-header">
+                            <div
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                :data-bs-target="`#collapse${index}`"
+                                aria-expanded="false"
+                                :aria-controls="`collapse${index}`"
+                            >
+                                <div class="row w-100">
+                                    <div class="col-8">
+                                        <span class="fw-bold">{{
+                                            service.name
+                                        }}</span>
+                                        <br />
+                                        <span class="text-muted">{{
+                                            service.address
+                                        }}</span>
+                                    </div>
+                                    <div class="col align-self-center">
+                                        {{ serviceStatus[index] }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Collapse of accordion element -->
-                    <div
-                        :id="`collapse${index}`"
-                        class="accordion-collapse collapse"
-                        :aria-labelledby="`heading${index}`"
-                        data-bs-parent="#service-accordion"
-                    >
-                        <div class="accordion-body">
-                            <ul class="list-group list-group-flush">
-                                <li
-                                    v-for="(
-                                        hours, day
-                                    ) in service.opening_hours"
-                                    :key="`${index}day${day}`"
-                                    class="list-group-item"
-                                >
-                                    <div class="row w-100 align-items-center">
-                                        <div class="col-3 my-auto">
-                                            {{ day }}
-                                        </div>
-                                        <div class="col text-end my-auto">
-                                            <div
-                                                v-for="(
-                                                    element, i
-                                                ) of formatHours(hours)"
-                                                :key="'openingHours' + i"
-                                            >
-                                                {{ element }}
+                        <!-- Collapse of accordion element -->
+                        <div
+                            :id="`collapse${index}`"
+                            class="accordion-collapse collapse"
+                            :aria-labelledby="`heading${index}`"
+                            data-bs-parent="#service-accordion"
+                        >
+                            <div class="accordion-body">
+                                <ul class="list-group list-group-flush">
+                                    <li
+                                        v-for="(
+                                            hours, day
+                                        ) in service.opening_hours"
+                                        :key="`${index}day${day}`"
+                                        class="list-group-item"
+                                    >
+                                        <div
+                                            class="row w-100 align-items-center"
+                                        >
+                                            <div class="col-3 my-auto">
+                                                {{ day }}
+                                            </div>
+                                            <div class="col text-end my-auto">
+                                                <div
+                                                    v-for="(
+                                                        element, i
+                                                    ) of formatHours(hours)"
+                                                    :key="'openingHours' + i"
+                                                >
+                                                    {{ element }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <h3>Other service types</h3>
-            <!-- Links to other service types -->
-            <BootstrapCarousel
-                id="service-types-carousel"
-                :images="otherServiceTypeImages"
-                :titles="otherServiceTypeNames"
-                :links="otherServiceTypeLinks"
-                class="w-25"
-            />
+            <div class="row justify-content-center">
+                <SectionTitle>Other service types</SectionTitle>
+                <!-- Links to other service types -->
+                <BootstrapCarousel
+                    id="service-types-carousel"
+                    :images="otherServiceTypeImages"
+                    :titles="otherServiceTypeNames"
+                    :links="otherServiceTypeLinks"
+                    class="w-25"
+                />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
+import SectionTitle from '~/components/SectionTitle'
 
 /**
  * Checks if each service is closed or open based on current system time
@@ -125,7 +130,7 @@ function checkOpen(services) {
  */
 export default {
     name: 'ServiceTypePage',
-    components: { BootstrapCarousel },
+    components: { BootstrapCarousel, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params

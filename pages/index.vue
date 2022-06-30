@@ -34,12 +34,15 @@
 
         <div class="row justify-content-center">
             <div class="homepage-card">
-                <h3>Discover the town with our featured itineraries</h3>
+                <SectionTitle
+                    >Discover the town with our featured
+                    itineraries</SectionTitle
+                >
                 Put itineraries here
             </div>
 
             <div class="homepage-card">
-                <h3>Next events</h3>
+                <SectionTitle>Next events</SectionTitle>
                 Put events here
             </div>
         </div>
@@ -49,10 +52,11 @@
 <script>
 import PageTitle from '~/components/PageTitle'
 import BootstrapCard from '~/components/BootstrapCard'
+import SectionTitle from '~/components/SectionTitle'
 
 export default {
     name: 'HomePage',
-    components: { PageTitle, BootstrapCard }
+    components: { PageTitle, BootstrapCard, SectionTitle }
 }
 </script>
 
