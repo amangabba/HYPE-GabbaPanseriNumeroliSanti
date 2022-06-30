@@ -174,6 +174,7 @@ function insertData(models) {
             name: 'Mole Antonelliana 1',
             type: 'TYPE 1',
             visit_info: 'Visit Info 1',
+            address: 'Via Giuseppe Verde 28',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut ' +
                 'labore et dolore magna aliqua.',
@@ -224,14 +225,76 @@ function insertData(models) {
         },
         {
             number: 2,
+            itineraryId: 1,
+            pointOfInterestId: 2
+        },
+        {
+            number: 3,
+            itineraryId: 1,
+            pointOfInterestId: 3
+        },
+        {
+            number: 1,
+            itineraryId: 2,
+            pointOfInterestId: 3
+        },
+        {
+            number: 2,
             itineraryId: 2,
             pointOfInterestId: 1
         },
         {
             number: 3,
+            itineraryId: 2,
+            pointOfInterestId: 4
+        },
+        {
+            number: 4,
+            itineraryId: 2,
+            pointOfInterestId: 5
+        },
+
+        {
+            number: 1,
+            itineraryId: 3,
+            pointOfInterestId: 4
+        },
+        {
+            number: 2,
             itineraryId: 3,
             pointOfInterestId: 1
-        }
+        },
+        {
+            number: 3,
+            itineraryId: 3,
+            pointOfInterestId: 2
+        },
+        {
+            number: 4,
+            itineraryId: 3,
+            pointOfInterestId: 3
+        },
+
+        {
+            number: 1,
+            itineraryId: 4,
+            pointOfInterestId: 2
+        },
+        {
+            number: 2,
+            itineraryId: 4,
+            pointOfInterestId: 1
+        },
+        {
+            number: 3,
+            itineraryId: 4,
+            pointOfInterestId: 6
+        },
+        {
+            number: 4,
+            itineraryId: 4,
+            pointOfInterestId: 5
+        },
     ]
 
     models.Itinerary.bulkCreate(itineraryList).then(() =>
