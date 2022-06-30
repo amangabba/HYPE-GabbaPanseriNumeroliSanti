@@ -13,9 +13,9 @@
                     The most common ways to reach Turin are listed below:
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Plane</h2>
-            </div>
+
+            <SectionTitle>By plane</SectionTitle>
+
             <div id="airports" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
@@ -32,9 +32,9 @@
                     </p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Train</h2>
-            </div>
+
+            <SectionTitle>By train</SectionTitle>
+
             <div id="train-stations" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
@@ -121,9 +121,9 @@
                     </p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Car</h2>
-            </div>
+
+            <SectionTitle>By car</SectionTitle>
+
             <div id="by-car" class="list-group mx-auto">
                 <p>
                     Five motorways come to the city via the ring road that runs
@@ -154,8 +154,11 @@
 </template>
 
 <script>
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
-    name: 'TravelInfoReachPage'
+    name: 'TravelInfoReachPage',
+    components: { SectionTitle }
 }
 </script>
 

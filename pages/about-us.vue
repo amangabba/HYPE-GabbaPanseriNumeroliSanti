@@ -1,6 +1,5 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <PageTitle title="About us" />
         <div id="content" class="container">
             <div id="info" class="mx-auto">
                 <p>
@@ -25,9 +24,9 @@
                     incentive travel, and business travel.
                 </p>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">Goals</h2>
-            </div>
+
+            <SectionTitle>Goals</SectionTitle>
+
             <div id="goals" class="mx-auto">
                 <p>
                     The organization has many objectives that aim to enhance the
@@ -55,9 +54,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">Actions</h2>
-            </div>
+
+            <SectionTitle>Actions</SectionTitle>
+
             <div id="actions" class="mx-auto">
                 <p>
                     This work consists of communication developing and producing
@@ -82,8 +81,15 @@
 </template>
 
 <script>
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
-    name: 'AboutUs'
+    name: 'AboutUs',
+    components: { SectionTitle },
+    layout: 'single-topic',
+    created() {
+        this.$store.commit('setPageInfo', { title: 'About us' })
+    }
 }
 </script>
 

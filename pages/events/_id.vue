@@ -5,7 +5,8 @@
                 <BootstrapCarousel
                     id="event-carousel"
                     :images="image_links"
-                    class="img-fluid h-auto col-md-3 p-3"/>
+                    class="img-fluid h-auto col-md-3 p-3"
+                />
                 <div class="col-md-9 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
                     <p><i> The event starts on: </i> {{ start_date }}</p>
@@ -20,7 +21,7 @@
                     <p><i> This event will be held in: </i> {{ season }}</p>
                     <!--link of a poi, ma non è dinamico cosi -->
 
-                    <p v-if="season == 'Summer'">
+                    <p v-if="season === 'Summer'">
                         <NuxtLink to="/summer-events">
                             More summer events
                         </NuxtLink>
@@ -33,22 +34,19 @@
                     <p>{{ description }}</p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 ref="map-title" class="display-3">
-                    Other events in this location
-                </h2>
-            </div>
+
+            <SectionTitle>Other events in this location</SectionTitle>
         </div>
     </div>
 </template>
 
 <script>
 import BootstrapCarousel from '~/components/BootstrapCarousel'
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
     name: 'EventPage',
-    components: {
-        BootstrapCarousel
-    },
+    components: { BootstrapCarousel, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, from, $axios }) {
         const { id } = route.params
@@ -99,7 +97,4 @@ export default {
 </script>
 
 <style scoped>
-.event-info-container {}
-
-.event-description {}
 </style>

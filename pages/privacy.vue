@@ -1,17 +1,14 @@
 <template>
     <div class="justify-content-center container-fluid">
-        <PageTitle title="Privacy Policy" />
         <div id="content" class="container">
             <div class="justify-content-md-center">
                 LAMbRate, in its quality of Data Controller (hereinafter,
                 "Owner"), informs You that Your personal data will be processed
                 in the following manner and for the following purposes:
             </div>
-            <div
-                class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2"
-            >
-                <h4 class="display-3">Processing of personal data</h4>
-            </div>
+
+            <SectionTitle>Processing of personal data</SectionTitle>
+
             <div id="data" class="mt-2 mb-2">
                 <div>
                     The Data Controller processes personal identification and
@@ -45,22 +42,18 @@
                     </ul>
                 </div>
             </div>
-            <div
-                class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2"
-            >
-                <h4 class="display-3">Acceptance and Consent</h4>
-            </div>
+
+            <SectionTitle>Acceptance and Consent</SectionTitle>
+
             <div id="acceptance" class="mt-2 mb-2">
                 The provision of data for service purposes is mandatory and
                 failure to provide it will prevent You from browsing the site or
                 requesting information. The provision of data for other purposes
                 is optional.
             </div>
-            <div
-                class="row bg-primary bg-opacity-10 p-2 bi-text-left mt-2 mb-2"
-            >
-                <h4 class="display-3">Data Retention</h4>
-            </div>
+
+            <SectionTitle>Data Retention</SectionTitle>
+
             <div id="storage" class="mt-2 mb-2">
                 The Data Controller will process the Personal Data for the time
                 necessary to fulfill the aforementioned purposes and in any case
@@ -74,8 +67,15 @@
 </template>
 
 <script>
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
-    name: 'PrivacyPage'
+    name: 'PrivacyPage',
+    components: { SectionTitle },
+    layout: 'single-topic',
+    created() {
+        this.$store.commit('setPageInfo', { title: 'Privacy policy' })
+    }
 }
 </script>
 

@@ -1,6 +1,5 @@
 <template>
     <div id="content" class="justify-content-center container">
-        <PageTitle title="Contacts" />
         <div class="row m-2">
             <!--ToDo:chiedi come settare l'immagine, se h-auto o w-auto-->
             <img
@@ -9,9 +8,8 @@
                 alt="Politecnico Milano"
             />
             <div class="col-lg-5 text-left p-2">
-                <div class="row bg-primary bg-opacity-10 text-center mb-2">
-                    <h2 ref="map-title" class="display-3">Our Information</h2>
-                </div>
+                <SectionTitle>Our Information</SectionTitle>
+
                 <div class="mb-2">
                     <b><i>Email:</i></b> lambrate.hypermedia@gmail.com
                 </div>
@@ -49,8 +47,15 @@
 </template>
 
 <script>
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
     name: 'ContactsComponent',
+    components: { SectionTitle },
+    layout: 'single-topic',
+    created() {
+        this.$store.commit('setPageInfo', { title: 'Contacts' })
+    },
     methods: {
         submitForm() {
             window.alert('Your message has been delivered')
