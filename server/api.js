@@ -193,13 +193,30 @@ async function runMainApi() {
     })
 
     app.get('/events/:id', async (req, res) => {
+        const { Op } = require("sequelize")
         const id = +req.params.id
         const result = await models.Event.findOne({
             where: { id },
             include: models.PointOfInterest
         })
-        const correlatedPOI = []
-        correlatedPOI.push(result.point_of_interests)
+        const correlatedEvents = await models.Event.findAll({
+            where: {
+                id: { [Op.not]: result.id },
+                pointOfInterestId: result.pointOfInterestId,
+                start_date: { [Op.gte]: result.start_date }
+            }
+        })
+        const eventIDs = []
+        const eventNames = []
+        const eventFirstImages = []
+        for (const event of correlatedEvents) {
+            eventIDs.push(event.id)
+            eventNames.push(event.name)
+            eventFirstImages.push(event.image_links[0])
+        }
+        eventIDs.sort((a, b) => a.number - b.number)
+        eventNames.sort((a, b) => a.number - b.number)
+        eventFirstImages.sort((a, b) => a.number - b.number)
         return res.json({
             id: result.id,
             name: result.name,
@@ -210,7 +227,10 @@ async function runMainApi() {
             season: result.season,
             start_date: result.start_date,
             end_date: result.end_date,
-            correlated_poi: correlatedPOI
+            correlated_poi: result.pointOfInterestId,
+            correlated_event_IDs: eventIDs,
+            correlated_event_names: eventNames,
+            correlated_event_images: eventFirstImages,
         })
     })
 

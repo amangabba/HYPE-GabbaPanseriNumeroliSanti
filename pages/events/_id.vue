@@ -15,7 +15,7 @@
                     <p><i> Address: </i> {{ address }}</p>
                     <p>
                         <i> Location:</i>
-                        <NuxtLink to="/pois/5">
+                        <NuxtLink :to="'/pois/' + pois_link" >
                             Palazzina di Caccia Stupinigi
                         </NuxtLink>
                     </p>
@@ -45,6 +45,12 @@
                 class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
             >
                 <h2 class="display-5">Other events in this location</h2>
+                <BootstrapCarousel
+                    id="events-carousel"
+                    :images="events_images"
+                    :titles="events_names"
+                    :links="eventLinks"
+                ></BootstrapCarousel>
             </div>
         </div>
     </div>
@@ -87,6 +93,11 @@ export default {
         // Set page information in store to render them in the page layout
         store.commit('setPageInfo', { title: data.name, breadcrumbs })
 
+        const eventLinks = []
+        for (const id of data.correlated_event_IDs) {
+            eventLinks.push(`/events/${id}`)
+        }
+
         return {
             from,
             name: data.name,
@@ -97,7 +108,10 @@ export default {
             season: data.season,
             start_date: data.start_date,
             end_date: data.end_date,
-            pois_link: data.correlated_poi
+            pois_link: data.correlated_poi,
+            eventLinks,
+            events_names: data.correlated_event_names,
+            events_images: data.correlated_event_images
         }
     },
     data() {
