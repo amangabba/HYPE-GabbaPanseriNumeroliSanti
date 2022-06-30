@@ -30,12 +30,14 @@
                 <h2 ref="map-title" class="display-3">Interactive Map</h2>
             </div>
             <div class="row text-center">
-                <h4 ref="map-marker-info">
+                <h4 v-if="poi_list.length > 0" ref="map-marker-info">
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
                     {{ poi_list[0].address }}
                 </h4>
+                <h4 v-else>No points of interest in this itinerary, no map to show!</h4>
             </div>
             <OSMMap
+                v-if="poi_list.length > 0"
                 ref="map"
                 :center-long="poi_list[0].longitude"
                 :center-lat="poi_list[0].latitude"
@@ -47,6 +49,9 @@
                 <h2 class="display-3">List of Points of Interest</h2>
             </div>
             <div class="row justify-content-center mx-auto mt-2">
+                <div v-if="poi_list.length === 0" class="row text-center">
+                    <h4>No Point of Interest in this itinerary, nothing to see here!</h4>
+                </div>
                 <div
                     v-for="(poi, index) in poi_list"
                     :id="`grid-card-${poi.number}`"
