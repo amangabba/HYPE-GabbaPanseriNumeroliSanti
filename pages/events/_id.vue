@@ -9,7 +9,6 @@
                 />
                 <div class="event-info-container col-6 text-left p-4">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
-                    <!-- in che senso? io non le metterei--->
                     <p><i> The event starts on: </i> {{ start_date }}</p>
                     <p><i> The event ends on: </i> {{ end_date }}</p>
                     <p><i> Address: </i> {{ address }}</p>
@@ -20,8 +19,7 @@
                         </NuxtLink>
                     </p>
                     <p><i> This event will be held in: </i> {{ season }}</p>
-                    <!--link of a poi, ma non è dinamico cosi
-                     Non so come fare la parte successiva -->
+                    <!--link of a poi, ma non è dinamico cosi -->
 
                     <p v-if="season == 'Summer'">
                         <NuxtLink to="/summer-events">
@@ -33,7 +31,6 @@
                             More winter events
                         </NuxtLink>
                     </p>
-                    <!-- non funziona il link e non capisco perchè-->
                 </div>
             </div>
             <div
@@ -42,9 +39,9 @@
                 <p>{{ description }}</p>
             </div>
             <div
-                class="title-row row p-3 text-center bg-primary bg-opacity-50 mb-5r"
+                class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2"
             >
-                <h2 class="display-5">Other events in this location</h2>
+                <h2 class="display-3">Other events in this location</h2>
             </div>
         </div>
     </div>
