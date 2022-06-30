@@ -8,10 +8,8 @@
                     class="img-fluid h-auto col-md-3 p-3"
                 />
                 <div class="col-md-9 text-left p-3">
-                    <p><i>Visit Information</i>: {{ visit_info }}</p>
-                    <p>
-                        <i>Address of the Point of Interest</i>: {{ address }}
-                    </p>
+                    <pre><i>Opening Hours:</i> {{ visit_info }}</pre>
+                    <pre><i>Address of the Point of Interest</i>: {{ address }}</pre>
                     <p>{{ description }}</p>
                 </div>
             </div>

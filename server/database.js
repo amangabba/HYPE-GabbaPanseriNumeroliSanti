@@ -41,7 +41,7 @@ async function initializeDatabaseConnection(dropTables = false) {
         type: DataTypes.STRING,
         visit_info: DataTypes.STRING,
         address: DataTypes.STRING,
-        description: DataTypes.STRING,
+        description: DataTypes.STRING(2048),
         image_links: DataTypes.ARRAY(DataTypes.STRING),
         latitude: DataTypes.DOUBLE,
         longitude: DataTypes.DOUBLE
