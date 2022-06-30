@@ -10,12 +10,12 @@
                     buses provide transportation to and from Turin from other
                     towns.
                     <br />
-                    The most common ways to reach Turin are listed below:
+                    The most common ways to move around Turin are listed below:
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Bus</h2>
-            </div>
+
+            <SectionTitle>Bus</SectionTitle>
+
             <div id="by-bus" class="list-group mx-auto">
                 <p>
                     Buses and trams are the easiest means of travelling in
@@ -46,9 +46,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Subway</h2>
-            </div>
+
+            <SectionTitle>Subway</SectionTitle>
+
             <div id="by-metro" class="list-group mx-auto">
                 <p>
                     Subway is surely the fastest way to get from A to B in
@@ -67,9 +67,9 @@
                     the gates of the metro station.
                 </p>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Taxi</h2>
-            </div>
+
+            <SectionTitle>Taxi</SectionTitle>
+
             <div id="by-taxi" class="list-group mx-auto">
                 <p>
                     You can grab a taxi in Turin at one of the designated taxi
@@ -78,9 +78,9 @@
                     sharing apps.
                 </p>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">By Car</h2>
-            </div>
+
+            <SectionTitle>Car</SectionTitle>
+
             <div id="by-car" class="list-group mx-auto">
                 <p>
                     Most of the city of Turin is accessible by car. The only
@@ -108,8 +108,11 @@
 </template>
 
 <script>
+import SectionTitle from '~/components/SectionTitle'
+
 export default {
-    name: 'TravelInfoMovePage'
+    name: 'TravelInfoMovePage',
+    components: { SectionTitle }
 }
 </script>
 <style scoped></style>

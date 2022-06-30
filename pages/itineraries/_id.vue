@@ -23,9 +23,9 @@
                     <p><i>Description:</i> {{ description }}</p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 ref="map-title" class="display-3">Interactive Map</h2>
-            </div>
+
+            <SectionTitle>Interactive Map</SectionTitle>
+
             <div class="row text-center">
                 <h4 ref="map-marker-info">
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
@@ -40,9 +40,9 @@
                 :marker-lat="poi_list[0].latitude"
             >
             </OSMMap>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 class="display-3">List of Points of Interest</h2>
-            </div>
+
+            <SectionTitle>List of Points of Interest</SectionTitle>
+
             <div class="row justify-content-center mx-auto mt-2">
                 <div
                     v-for="(poi, index) in poi_list"
@@ -112,10 +112,11 @@
 
 <script>
 import OSMMap from '~/components/OSMMap'
+import SectionTitle from '~/components/SectionTitle'
 
 export default {
     name: 'ItineraryPage',
-    components: { OSMMap },
+    components: { OSMMap, SectionTitle },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params

@@ -1,7 +1,5 @@
 <template>
     <div class="justify-content-center container">
-        <PageTitle title="Travel Info" />
-
         <div class="container">
             <ul class="nav nav-tabs mt-2">
                 <li class="nav-item">
@@ -43,7 +41,11 @@
 
 <script>
 export default {
-    name: 'TravelInfoPage'
+    name: 'TravelInfoPage',
+    layout: 'single-topic',
+    created() {
+        this.$store.commit('setPageInfo', { title: 'Travel info' })
+    }
 }
 </script>
 
