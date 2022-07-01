@@ -384,9 +384,9 @@ function insertData(models) {
             name: 'Santuario della Consolata',
             type: 'Shrine',
             visit_info: '\n' +
-                '7.45-19.45  from Monday to Friday\n' +
-                '7.45-19     on Saturday\n' +
-                '7.45-20.30  on Sunday',
+                        '7.45-19.45  from Monday to Friday\n' +
+                        '7.45-19     on Saturday\n' +
+                        '7.45-20.30  on Sunday',
             address: 'Piazza della Consolata, 10122 Torino TO',
             description:
                 'The sanctuary of Mary the Comforter, closely linked to the worship of the Virgin Mary, ' +
@@ -436,6 +436,152 @@ function insertData(models) {
             ],
             latitude: 45.06763172278214,
             longitude: 7.6829681336876385
+        },
+        {
+            name: 'La Basilica di Superga',
+            type: 'Church',
+            visit_info: '\n' +
+                        '10-17       from Monday to Friday\n' +
+                        '10-18.30    Saturday and Sunday',
+            address: 'Strada Basilica di Superga, 73, 10132 Torino TO',
+            description:
+                'Victor Amadeus II, Duke of Savoy, commissioned the Basilica of Superga on the site of a hilltop ' +
+                'chapel overlooking the city of Turin to celebrate the victory of Austrian troops—under the command ' +
+                'of Prince Eugene of Savoy—over Franco-Spanish invaders in 1706. It took 25 years to finish the ' +
+                'complex, which echoes a number of architectural elements of St. Peter\'s Basilica in Rome and ' +
+                'includes the church and cloister, royal crypt, and Hall of Popes. You\'ll marvel at the sheer scale, ' +
+                'as this imposing monument to Savoyard power can be seen from miles around.\n' +
+                'In addition to the church and crypt, visitors can tour the royal apartments and take the 131 ' +
+                'steps to the top of the dome for sweeping views as far as the Alps. The Basilica of Superga is one ' +
+                'of the most important churches in Turin, and a visit can easily be combined with a Turin walking ' +
+                'tour that takes in other city highlights such as the Royal Palace, Piazza Castello, and ' +
+                'Mole Antonelliana.',
+            image_links: [
+                'https://www.guidatorino.com/wp-content/uploads/2014/09/basilica-superga-torino-1.jpg',
+                'https://www.museotorino.it/images/dc/3d/d2/1c/dc3dd21c39b64abea053a4bbeb59b886-1.jpg?VSCL=100',
+                'https://www.museotorino.it/images/9f/22/a1/af/9f22a1afe1924f0295689f7a3dbaeac4-1.jpg?VSCL=100',
+                'https://caiframe.com/wp-content/uploads/2018/11/maxresdefault-1.jpg'
+            ],
+            latitude: 45.080821218410506,
+            longitude: 7.767671933688086
+        },
+        {
+            name: 'Il Duomo di Torino',
+            type: 'Church',
+            visit_info: '\n' +
+                '10–12:30, 16–19       from Monday to Friday\n' +
+                '09–13, 15–19:30       on Saturday' +
+                '09–13, 15–19:30       on Sunday',
+            address: 'P.za S. Giovanni, 10122 Torino TO',
+            description:
+                'Turin Cathedral (Cathedral of San Giovanni Battista) is a Roman Catholic cathedral in Turin, northern ' +
+                'Italy. Dedicated to Saint John the Baptist (San Giovanni Battista), it is the seat of the ' +
+                'Archbishops of Turin.\n' +
+                'It was built during 1491–98 and is adjacent to an earlier campanile built in 1470. ' +
+                'Designed by Guarino Guarini, the Chapel of the Holy Shroud (the current location of the Shroud of Turin) ' +
+                'was added to the structure in 1668–94.' +
+                'In 1667 Guarino Guarini was called in to complete the project. The dome, ' +
+                'whose works dragged for 28 years, was completed in 1694 under the direction of Marie Jeanne ' +
+                'of Savoy, Charles Emmanuel II\'s widow.' +
+                'The cathedral is the burial place of Blessed Pier Giorgio Frassati (1901–1925), Turin native, ' +
+                'avid athlete, and benefactor of the poor, called the "saint for youth of the Third Millennium." ' +
+                'He was beatified by John Paul II in 1990.',
+            image_links: [
+                'https://mole24.it/wp-content/uploads/2019/08/duomo-torino.jpg',
+                'https://www.metroitalia.info/img/place/duomo-di-torino.webp',
+                'https://upload.wikimedia.org/wikipedia/commons/e/ed/Torino%2C_duomo%2C_interno%2C_01.JPG',
+                'https://upload.wikimedia.org/wikipedia/commons/d/d3/DuomoTorino.jpg'
+            ],
+            latitude: 45.07339264416224,
+            longitude: 7.685221433687851
+        },
+        {
+            name: 'Villa della Regina',
+            type: 'Palace',
+            visit_info: '\n' +
+                        'closed      on Monday' +
+                        '10–18       from Monday to Thursday\n' +
+                        '10-20       on Friday and Saturday' +
+                        '10-21       on Sunday',
+            address: 'Strada Comunale Santa Margherita, 79, 10131 Torino TO',
+            description:
+                'Villa della Regina was built in 1615 by Cardinal Maurizio di Savoia, son of Duke Carlo Emanuele I, ' +
+                'for his young wife Ludovica di Savoia. During the summer months the couple loved to plunge into the ' +
+                'silence of the hills, woods and gardens as it was a way to escape from Turin’s city  crowd. Here, the ' +
+                'Royal family used to organize gatherings on art, science, philosophy and mathematics with many famous ' +
+                'people and intellectuals of the time.\n' +
+                'Like most 17th century buildings, the Villa was constructed symmetrically, following a theme that ' +
+                'all things on the right also have to be on the left. In fact, there are two apartments: the King’s ' +
+                'and the Queen’s apartment, with rooms to be used during daytime opening towards the gardens and ' +
+                'rooms during the night looking towards the city.\n' +
+                'Today visitors are lead, as were visitors in ancient times, by this fictive guiding line through ' +
+                'an extremely scenic path through the building encountering symmetric staircases, fountains with ' +
+                'water games, the Grand Dance Hall opening towards the Grand Garden, which has the form of an ' +
+                'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to ' +
+                'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps.',
+            image_links: [
+                'https://upload.wikimedia.org/wikipedia/commons/b/b8/Villa_della_Regina_-_belvedere_superiore18_36_56_488000.jpeg',
+                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/a7/74/20160814-123129-largejpg.jpg?w=1200&h=-1&s=1',
+                'https://www.consultaditorino.it/static/media/uploads/realizzazioni/2008%20Villa%20della%20Regina%20Mostra%20Giaquinto/2008-villa-della-regina-mostra-giaquinto-galleria.jpg',
+                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/villa-della-regina-cosa-vedere.jpg'
+            ],
+            latitude: 45.05802506221488,
+            longitude: 7.708311433687335
+        },
+        {
+            name: 'Cappella della Sacra Sindone',
+            type: 'Church',
+            visit_info: '\n' +
+                'closed      on Monday' +
+                '9-19        on all other days',
+            address: 'Piazza San Giovanni, 10122 Torino TO',
+            description:
+                'The task of designing and creating the Chapel to house the Holy Shroud was entrusted in 1667 to ' +
+                'Guarino Guarini, one of the leading architects of Baroque in Piedmont, who concluded the work in 1690. ' +
+                'The project was based on the idea of the Shroud as the extreme evidence of the mystery of Redemption, ' +
+                'death and resurrection of Jesus Christ. Architecture itself thus becomes the experience of "ascending ' +
+                'within death" to the light of divine glory.\n' +
+                'From 1694 until the early nineties of the twentieth century, the Chapel of the Holy Shroud has guarded ' +
+                'the precious relic, now preserved in the transept of Turin’s Cathedral.\n' +
+                'During the night between 11 and 12 April 1997, the Chapel was affected by a large ' +
+                'fire which seriously damaged the building.',
+            image_links: [
+                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/cappella-sacra-sindone-torino.jpg',
+                'https://www.architetti.com/wp-content/uploads/2018/10/IMG_6129_crediti-Daniele-Bottallo-1024x683.jpg',
+                'https://www.tripguru.it/wp-content/uploads/2019/08/duomo-di-torino.jpg',
+                'https://www.ilvaloreitaliano.it/wp-content/uploads/2021/03/Altare-Cappella-della-Sindone_03_Credits-Musei-Reali-Torino.jpg'
+            ],
+            latitude: 45.07318449073021,
+            longitude: 7.685854033687847
+        },
+        {
+            name: 'Piazza Castello',
+            type: 'Square',
+            visit_info: 'Always Open',
+            address: 'Piazza Castello, 10122 Torino TO',
+            description:
+                'Turin’s most central square, dating back to the 14th century, it takes it’s name \'castello\' from ' +
+                'the \'Palazzo Madama\' an ancient castle located in the square itself.\n' +
+                'The busiest phase in developing the square and the buildings enclosing it was the 16th - 18th centuries. ' +
+                'Porticoed buildings line the western perimeter, redesigned extensively by Ascanio Vittozzi. ' +
+                'Architects Amedeo di Castellamonte and Filippo Juvarra played their parts too, the latter redesigning ' +
+                'the castle’s façade in a Baroque style (completed in 1721) under the instruction of Marie Jeanne ' +
+                'of Savoy, who was known as \'Madama Reale\', and for whom the building is named. The Palazzo Madama ' +
+                'now hosts the Museo Civico d’Arte Antica.\n' +
+                'Found in and around the square are major opera house Teatro Regio, the Armeria Reale ' +
+                '(one of the world’s most important collections of armoury amassed by the Savoy family), ' +
+                'Palazzo Reale (the royal palace built for Carlo Emanuele II in the mid-1600s including ' +
+                'the Royal Gardens), via Po (an elegant arcaded street connecting the square to the river) ' +
+                'and nearby the church of San Lorenzo. Take a break from sightseeing and indulge in a yummy ' +
+                'ice cream or dessert at Gelateria Abela (Piazza Castello, n. 70).',
+            image_links: [
+                'https://www.yourlocalguides.net/wp-content/uploads/Piazza-Castello-1024x685.jpg',
+                'https://mywowo.net/media/images/cache/torino_piazza_castello_01_introduzione_jpg_1200_630_cover_85.jpg',
+                'https://www.museotorino.it/images/12/9b/0d/9e/129b0d9eafc24a2aa57c71e977489b10-1.jpg?VSCL=100',
+                'https://img.grouponcdn.com/seocms/epQE88T1ZwPkJNTvXaAFsh/Palazzo_reale-1600x1069-1600x1069.jpeg'
+            ],
+            latitude: 45.07070853003831,
+            longitude: 7.685113762523864
         },
     ]
 
