@@ -190,7 +190,7 @@ function insertData(models) {
             longitude: 7.685898362523839
         },
         {
-            name: 'Palazzina di Caccia di Stupinigi\n',
+            name: 'Palazzina di Caccia di Stupinigi',
             type: 'Palace',
             visit_info: '\n' +
                         'closed      on Monday\n' +

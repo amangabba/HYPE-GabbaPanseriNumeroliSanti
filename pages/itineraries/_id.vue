@@ -27,8 +27,7 @@
             </div>
 
             <!-- Itinerary Interactive Map -->
-            <SectionTitle>Interactive Map</SectionTitle>
-
+            <SectionTitle ref="map-title">Interactive Map</SectionTitle>
             <div class="row text-center">
                 <h4 v-if="poi_list.length > 0" ref="map-marker-info">
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
@@ -46,8 +45,8 @@
             >
             </OSMMap>
 
+            <!-- List of POIs -->
             <SectionTitle>List of Points of Interest</SectionTitle>
-
             <div class="row justify-content-center mx-auto mt-2">
                 <div v-if="poi_list.length === 0" class="row text-center">
                     <h4>No Point of Interest in this itinerary, nothing to see here!</h4>
@@ -62,10 +61,10 @@
                             ? 'card mb-3 bg-primary bg-opacity-10'
                             : 'card mb-3'
                     "
-                    style="max-width: 80%"
+
                 >
                     <div class="row g-0">
-                        <div class="col-md-3 my-auto p-3">
+                        <div class="col-md-4 my-auto p-3">
                             <img
                                 :src="
                                     poi.image_links.length
@@ -78,7 +77,7 @@
                                 "
                             />
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <div class="card-body d-flex flex-column h-100">
                                 <h5 class="card-title">
                                     ({{ poi.number }}/{{ poi_list.length }}) -
@@ -89,11 +88,13 @@
                                 </p>
                                 <p class="card-text">{{ poi.description }}</p>
                                 <div class="row justify-content-end mt-auto">
-                                    <a
-                                        class="col-md-2 btn btn-primary m-1 p-1"
-                                        :href="'/pois/' + poi.id"
-                                        >See Details</a
-                                    >
+
+                                    <!-- Open the page regarding the POI -->
+                                    <a class="col-md-2 btn btn-primary m-1 p-1" :href="'/pois/' + poi.id">
+                                        See Details
+                                    </a>
+
+                                    <!-- Button to show on map the selected POI and Scroll the map into view -->
                                     <button
                                         class="col-md-2 btn btn-primary m-1 p-1"
                                         @click="
@@ -130,6 +131,7 @@ export default {
         const { id } = route.params
         const { data } = await $axios.get('/api/itineraries/' + id)
 
+        // Breadcrumbs for the page
         const breadcrumbs = [
             {
                 title: 'All Itineraries',
@@ -152,6 +154,7 @@ export default {
         }
     },
     data() {
+        // Default map information
         return {
             map_center: [45.07654, 7.68372],
             map_marker: [],
@@ -185,7 +188,7 @@ export default {
                 '(' + key + ') ' + name + ' - ' + address
 
             // Scroll into view the map
-            this.$refs['map-title'].scrollIntoView()
+            this.$refs['map-title'].$el.scrollIntoView()
         }
     }
 }
