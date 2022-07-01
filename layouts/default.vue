@@ -1,15 +1,16 @@
 <template>
     <div class="main-page">
         <TheHeader />
-        <div class="page-content container-fluid">
-            <div class="row mb-2">
-                <!-- If this is used directly as a layout: display the page -->
-                <Nuxt v-if="!$slots.default" />
-                <!-- If this is used as the base template for a sub-template: display the content of the slot -->
-                <slot />
-            </div>
+        <div
+            class="page-content container-fluid"
+            :style="`padding-bottom: ${footerHeight}px`"
+        >
+            <!-- If this is used directly as a layout: display the page -->
+            <Nuxt v-if="!$slots.default" />
+            <!-- If this is used as the base template for a sub-template: display the content of the slot -->
+            <slot />
         </div>
-        <TheFooter class="page-footer" />
+        <TheFooter ref="footer" class="page-footer" />
     </div>
 </template>
 
@@ -25,6 +26,14 @@ export default {
     components: {
         TheHeader,
         TheFooter
+    },
+    data() {
+        return {
+            footerHeight: 0
+        }
+    },
+    mounted() {
+        this.footerHeight = this.$refs.footer.$el.offsetHeight
     }
 }
 </script>
@@ -33,9 +42,6 @@ export default {
 .main-page {
     position: relative;
     min-height: 100vh;
-}
-.page-content {
-    padding-bottom: 144px;
 }
 .page-footer {
     position: absolute;
