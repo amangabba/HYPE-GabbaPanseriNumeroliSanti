@@ -193,7 +193,7 @@ async function runMainApi() {
     })
 
     app.get('/events/:id', async (req, res) => {
-        const { Op } = require("sequelize")
+        const { Op } = require('sequelize')
         const id = +req.params.id
         const result = await models.Event.findOne({
             where: { id },
@@ -230,7 +230,7 @@ async function runMainApi() {
             correlated_poi: result.pointOfInterestId,
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
-            correlated_event_images: eventFirstImages,
+            correlated_event_images: eventFirstImages
         })
     })
 

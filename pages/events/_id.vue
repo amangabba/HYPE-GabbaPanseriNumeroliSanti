@@ -2,7 +2,11 @@
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
             <div class="row m-2">
-                <BootstrapCarousel id="event-carousel" :images="image_links" class="img-fluid h-auto col-md-6 p-3 max-width"/>
+                <BootstrapCarousel
+                    id="event-carousel"
+                    :images="image_links"
+                    class="img-fluid h-auto col-md-6 p-3 max-width"
+                />
                 <div class="col-md-6 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
                     <p><i> The event starts on: </i> {{ start_date }}</p>
@@ -10,7 +14,7 @@
                     <p><i> Address: </i> {{ address }}</p>
                     <p>
                         <i> Location:</i>
-                        <NuxtLink :to="'/pois/' + pois_link" >
+                        <NuxtLink :to="'/pois/' + pois_link">
                             Palazzina di Caccia Stupinigi
                         </NuxtLink>
                     </p>
@@ -30,23 +34,19 @@
                     <p>{{ description }}</p>
                 </div>
             </div>
-            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
-                <h2 ref="map-title" class="display-3"> Other events in this location </h2>
+
+            <div class="row justify-content-center">
+                <SectionTitle>Other events in this location</SectionTitle>
+
+                <BootstrapCarousel
+                    id="events-carousel"
+                    :images="events_images"
+                    :titles="events_names"
+                    :links="eventLinks"
+                    class="img-fluid h-auto col-md-3 p-3"
+                />
             </div>
         </div>
-        <div
-            class="event-description row justify-content-center mx-auto mt-2"
-        >
-            <p>{{ description }}</p>
-        </div>
-        <SectionTitle>Other events in this location</SectionTitle>
-        <BootstrapCarousel
-            id="events-carousel"
-            :images="events_images"
-            :titles="events_names"
-            :links="eventLinks"
-            class="img-fluid h-auto col-md-3 p-3"
-        ></BootstrapCarousel>
     </div>
 </template>
 
@@ -114,5 +114,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

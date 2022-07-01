@@ -34,7 +34,9 @@
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
                     {{ poi_list[0].address }}
                 </h4>
-                <h4 v-else>No points of interest in this itinerary, no map to show!</h4>
+                <h4 v-else>
+                    No points of interest in this itinerary, no map to show!
+                </h4>
             </div>
             <OSMMap
                 v-if="poi_list.length > 0"
@@ -50,7 +52,10 @@
 
             <div class="row justify-content-center mx-auto mt-2">
                 <div v-if="poi_list.length === 0" class="row text-center">
-                    <h4>No Point of Interest in this itinerary, nothing to see here!</h4>
+                    <h4>
+                        No Point of Interest in this itinerary, nothing to see
+                        here!
+                    </h4>
                 </div>
                 <div
                     v-for="(poi, index) in poi_list"

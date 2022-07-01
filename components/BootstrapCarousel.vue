@@ -1,5 +1,5 @@
 <template>
-    <div :id="id" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div :id="id" class="carousel slide p-0" data-bs-ride="carousel">
         <!-- Indicators to quickly navigate between non-adjacent slides -->
         <div class="carousel-indicators">
             <button
@@ -15,7 +15,7 @@
         </div>
 
         <!-- Slides of the carousel -->
-        <div class="carousel-inner">
+        <div ref="carouselImageContainer" class="carousel-inner">
             <div
                 v-for="(image, index) of images"
                 :key="'carousel-' + index"
@@ -24,15 +24,13 @@
             >
                 <!-- Image of the slide -->
                 <img
+                    ref="carouselImages"
                     :src="image"
-                    class="d-block w-100"
+                    class="d-block w-100 carousel-image"
                     :alt="titles ? titles[index] : `Slide ${index}`"
                 />
                 <!-- Caption for the slide, shown only if titles or links are available -->
-                <div
-                    v-if="titles || links"
-                    class="carousel-caption d-none d-md-block"
-                >
+                <div v-if="titles || links" class="carousel-caption">
                     <!-- Title of the slide -->
                     <h5 v-if="titles">{{ titles[index] }}</h5>
                     <!-- Link to see more about the slide -->
@@ -100,8 +98,40 @@ export default {
             required: false,
             default: null
         }
+    },
+    mounted() {
+        // Set the height of the slide container to the height of the first image
+        // to prevent resizing when images have different heights.
+        // Taller images will be cropped to fit in this height
+        const firstSlideImg = this.$refs.carouselImages[0]
+        firstSlideImg.onload = () => {
+            this.$refs.carouselImageContainer.style.height = `${firstSlideImg.offsetHeight}px`
+        }
     }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.carousel-inner {
+    height: 100%;
+}
+.carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-control-prev {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-caption h5 {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    margin: auto auto 5px;
+}
+</style>

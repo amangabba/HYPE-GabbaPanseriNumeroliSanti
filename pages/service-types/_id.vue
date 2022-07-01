@@ -77,15 +77,16 @@
                 </div>
             </div>
 
+            <SectionTitle>Other service types</SectionTitle>
+
             <div class="row justify-content-center">
-                <SectionTitle>Other service types</SectionTitle>
                 <!-- Links to other service types -->
                 <BootstrapCarousel
                     id="service-types-carousel"
                     :images="otherServiceTypeImages"
                     :titles="otherServiceTypeNames"
                     :links="otherServiceTypeLinks"
-                    class="w-25"
+                    class="col-md-4"
                 />
             </div>
         </div>
@@ -205,6 +206,8 @@ export default {
     max-width: 600px;
 }
 #service-types-carousel img {
-    padding: 0 120px 120px;
+    width: 150px !important;
+    padding-bottom: 130px;
+    margin: auto;
 }
 </style>
