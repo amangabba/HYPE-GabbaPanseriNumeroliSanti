@@ -3,6 +3,7 @@
         <div id="content" class="container">
             <div class="row m-2">
                 <BootstrapCarousel
+                    v-if="image_links.length"
                     id="poi-carousel"
                     :images="image_links"
                     class="col-md-3"
@@ -14,8 +15,8 @@
                 </div>
             </div>
 
+            <div v-if="itinerary_images.length">
             <SectionTitle>Correlated Itineraries:</SectionTitle>
-
             <div class="row justify-content-center">
                 <BootstrapCarousel
                     id="itineraries-carousel"
@@ -25,9 +26,10 @@
                     class="col-md-4 text-left m-4"
                 />
             </div>
+            </div>
 
+            <div v-if="event_images.length">
             <SectionTitle>Events hosted here</SectionTitle>
-
             <div class="row justify-content-center">
                 <BootstrapCarousel
                     id="events-carousel"
@@ -37,6 +39,7 @@
                     class="col-md-4 text-left m-4"
                 />
             </div>
+        </div>
         </div>
     </div>
 </template>

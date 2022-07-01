@@ -9,10 +9,11 @@ const serviceTypes = require('./db-data/service-types')
 function insertData(models) {
     const itineraryList = [
         {
-            title: 'Itinerary 1',
+            id: '1',
+            title: 'I palazzi di Torino',
             duration: '141',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+                `L'itinerario include cinque magici palazzi della città di Torino. Partendo dal 'Palazzo Madama' `,
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
@@ -593,17 +594,27 @@ function insertData(models) {
         {
             number: 1,
             itineraryId: 1,
-            pointOfInterestId: 1
+            pointOfInterestId: 2
         },
         {
             number: 2,
             itineraryId: 1,
-            pointOfInterestId: 2
+            pointOfInterestId: 3
         },
         {
             number: 3,
             itineraryId: 1,
-            pointOfInterestId: 3
+            pointOfInterestId: 4
+        },
+        {
+            number: 4,
+            itineraryId: 1,
+            pointOfInterestId: 10
+        },
+        {
+            number: 5,
+            itineraryId: 1,
+            pointOfInterestId: 15
         },
         {
             number: 1,

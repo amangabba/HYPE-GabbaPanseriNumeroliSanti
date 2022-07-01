@@ -10,7 +10,7 @@ export default {
     layout: 'introductory',
     head() {
         return {
-            title: 'Turin - Service Types',
+            title: 'Turin - Main Services',
             meta: [
                 {
                     hid: "description",
