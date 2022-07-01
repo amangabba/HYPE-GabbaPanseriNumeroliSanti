@@ -82,6 +82,24 @@ async function runMainApi() {
         })
     })
 
+    app.get('/featured-itineraries', async (req, res) => {
+        const limit = req.params.limit ? req.params.limit : 5
+        const result = await models.Itinerary.findAll({
+            attributes: ['id', 'title', 'map_link'],
+            limit
+        })
+
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                title: element.title,
+                map_link: element.map_link
+            })
+        }
+        return res.json(filtered)
+    })
+
     app.get('/pois/:id', async (req, res) => {
         const id = +req.params.id
         const result = await models.PointOfInterest.findOne({
@@ -259,6 +277,25 @@ async function runMainApi() {
                 end_date: element.end_date,
                 start_date_string: dateToString(element.start_date),
                 end_date_string: dateToString(element.end_date)
+            })
+        }
+        return res.json(filtered)
+    })
+
+    app.get('/next-events', async (req, res) => {
+        const limit = req.params.limit ? req.params.limit : 5
+        const result = await models.Event.findAll({
+            attributes: ['id', 'name', 'image_links'],
+            limit,
+            order: [['start_date', 'DESC']]
+        })
+
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                name: element.name,
+                image_links: element.image_links
             })
         }
         return res.json(filtered)
