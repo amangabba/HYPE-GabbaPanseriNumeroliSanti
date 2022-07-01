@@ -1,7 +1,7 @@
 <template>
     <div class="justify-content-center container">
         <div class="container">
-            <ul class="nav nav-tabs mt-2">
+            <ul class="nav nav-pills mt-2">
                 <li class="nav-item">
                     <NuxtLink
                         ref="navLinks"
@@ -33,6 +33,8 @@
                     </NuxtLink>
                 </li>
             </ul>
+
+            <hr />
         </div>
 
         <NuxtChild class="mt-3" />

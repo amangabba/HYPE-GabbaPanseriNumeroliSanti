@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div>
         <PageTitle
             class="title-row align-content-center mb-2"
             title="Welcome to Turin"
@@ -34,10 +34,7 @@
 
         <div class="row justify-content-center">
             <div class="homepage-card">
-                <SectionTitle
-                    >Discover the town with our featured
-                    itineraries</SectionTitle
-                >
+                <SectionTitle>Featured itineraries</SectionTitle>
                 Put itineraries here
             </div>
 
