@@ -289,6 +289,154 @@ function insertData(models) {
             latitude: 45.031902252410255,
             longitude: 7.6735669336864625
         },
+        {
+            name: 'Parco del Valentino',
+            type: 'Tower',
+            visit_info: 'Always open',
+            address: 'Corso Massimo d\'Azeglio, 10126 Torino TO',
+            description:
+                'The Parco del Valentino is located on the banks of the Po river a few kilometers south of Turin.\n ' +
+                'It hosts famous attractions such as a medieval village, called Borgo Medievale which has been\n ' +
+                'transformed into an open-air museum where you can immerse yourself in the magic of centuries past.\n ' +
+                'The sight was recreated in the 19th century for an expo in the medieval style and resembles an\n' +
+                'archaeological site from the 15th century. Borgo Medievale has a couple of small medieval boutiques\n' +
+                'selling wrought iron, basketry and wines. It’s especially nice to sit in the bar on the riverside.\n' +
+                'The wrought iron tree in the courtyard and the exhibitions on medieval paper scooping and forging\n ' +
+                'techniques are well worth seeing. At the weekends, guided tours are offered to visit the Castello,\n' +
+                'del Valentino, the former residence of the Savoy royal family, which was modeled on the castles\n ' +
+                'from Piedmont. Finally, the fountain of the twelve months and the beautiful botanical and rock\n' +
+                'garden represent two unmissable attractions in the Parco del Valentino.',
+            image_links: [
+                'https://www.giovanigenitori.it/wp-content/uploads/2018/03/Parco-del-valentino1.jpg',
+                'https://www.guidatorino.com/wp-content/uploads/2019/02/torino-parco-valentino-pedonalizzazione.jpg',
+                'https://www.welcometoitalia.com/wp-content/uploads/2021/01/Parco-e-Castello-del-Valentino.jpg',
+                'https://www.quotidianopiemontese.it/wp-content/2022/03/2-PARCO-DEL-VALENTINO_TORINO.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Torino%2C_parco_del_Valentino_%2802%29.jpg/1200px-Torino%2C_parco_del_Valentino_%2802%29.jpg',
+                'https://www.museotorino.it/images/39/ea/86/32/39ea863280a746178492c11ee66d563f-1.jpg?VSCL=100'
+            ],
+            latitude: 45.054843089514605,
+            longitude: 7.686730733687203
+        },
+        {
+            name: 'Musei Reali',
+            type: 'Museum',
+            visit_info: '\n' +
+                        'closed      on Monsday\n' +
+                        '10-19       from Tuesday to Friday\n' +
+                        '10-21       on Saturday and Sunday',
+            address: 'Piazzetta Reale, 1',
+            description:
+                'The Royal Museums of Turin (Musei Reali di Torino) were established in 2014 under the name of' +
+                '“Polo Reale di Torino” and subsequently denominated “Musei Reali” in 2016. The Royal Museums are an' +
+                'institute of the Italian Ministry of Culture and Tourism that has special' +
+                '(scientific, financial, accounting, administrative) autonomy.\n' +
+                'The Royal Museums are a museum complex equal, in terms of size and value of its collections, ' +
+                'to the most famous royal residences of Europe. We offer an itinerary that comprises history, arts ' +
+                'and natural environments and that develops through a path of 3 kilometers and on 30,000 square ' +
+                'meters of exhibition spaces and 7 hectares of park.\n' +
+                'The Royal Museums merge five State institutes whose heritage originates from the legacy of dynastic ' +
+                'collection of the Savoia family: Royal Palace, Royal Armory, Royal Library, Galleria Sabauda, and ' +
+                'Museum of Antiquities. The Royal Museums develop around the area of the Royal Palace, and they ' +
+                'include also some of the environments around the Museum of Antiquities, as well as the Orangeries, ' +
+                'the Royal Park, the exhibition hall in Palazzo Chiablese and the Sacra Sindone Chapel.',
+            image_links: [
+                'https://www.guidatorino.com/wp-content/uploads/2020/09/musei-reali-torino-aperture-straordinarie-settembre-2020.jpg',
+                'https://martinaway.com/wp-content/uploads/2021/11/Musei-Reali-di-Torino.jpg',
+                'https://artemagazine.it/wp-content/uploads/2021/04/9acda34517f879d836deddcda3e271bc.jpg',
+                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/palazzo-reale-torino-4.jpg'
+            ],
+            latitude: 45.07410129682033,
+            longitude: 7.686117673254131
+        },
+        {
+            name: 'Mole Antonelliana',
+            type: 'Park',
+            visit_info: '\n' +
+                'closed      on Tuesday\n' +
+                '9-21        on Monday, Wednesday, Thursday and Sunday\n' +
+                '9-20        on Friday and Saturday',
+            address: 'Via Montebello, 20, 10124 Torino TO',
+            description:
+                'An architectural landmark of the city of Turin, it was initially conceived as a synagogue,\n' +
+                'before being bought by the Municipality of Turin and made into a monument to national unity.\n ' +
+                'Planned and begun by architect Alessandro Antonelli in 1863, it was only completed in 1889.\n ' +
+                'With a height of 167.5 metres, it was the tallest brick building in Europe at the time.\n ' +
+                'The panoramic lift was inaugurated in 1961, during the celebrations for the centenary of the Italian\n ' +
+                'Unification and it was renovated in 1999. Today it still allows visitors to go up to the panoramic\n ' +
+                'terrace which is 85 metres high and take in the amazing views of the city and the surrounding Alps.\n ' +
+                'Visitors can also climb on foot along the cavity of the dome stairs, up to the panoramic terrace.\n' +
+                'Mole Antonelliana also hosts the National Museum of Cinema. The exhibits begin with gadgets that\n ' +
+                'pre-date films, like shadow puppets, magic lanterns, and zoetropes. There are film sets to explore,\n ' +
+                'movie posters, photographs, and film clips to admire and lots of masks, costumes, and other memorabilia.\n' +
+                'The collection is so big that true film nerds will need a whole afternoon to explore.',
+            image_links: [
+                'https://www.latitudeslife.com/wp-content/uploads/Mole_antonelliana_Torino.jpg',
+                'https://www.inthera.it/wp-content/uploads/2017/05/31-marzo-2017-panorama-d-italia.jpg',
+                'https://www.viaggimust.it/wp-content/uploads/2022/01/mole-antonelliana-1.jpg',
+                'https://www.torinofree.it/wp-content/uploads/2013/01/mole-antonelliana-torino.jpg',
+                'https://www.inexhibit.com/wp-content/uploads/2014/01/Museo-Nazionale-Cinema-Mole-Antonelliana-Torino-Inexhibit-3-870x580.jpg',
+                'https://siviaggia.it/wp-content/uploads/sites/2/2020/07/la_mole_antonelliana.jpg'
+            ],
+            latitude: 45.06905771317454,
+            longitude: 7.693314433687716
+        },
+        {
+            name: 'Santuario della Consolata',
+            type: 'Shrine',
+            visit_info: '\n' +
+                '7.45-19.45  from Monday to Friday\n' +
+                '7.45-19     on Saturday\n' +
+                '7.45-20.30  on Sunday',
+            address: 'Piazza della Consolata, 10122 Torino TO',
+            description:
+                'The sanctuary of Mary the Comforter, closely linked to the worship of the Virgin Mary, ' +
+                'has very ancient origins. Dedicated originally to Sant’Andrea, it was already in existence in ' +
+                'the 10th century. Of the medieval period there remain the bell-tower and perhaps the underground ' +
+                'chapel of Madonna delle Grazie. The radical extensions were designed by Guarino Guarini (1678), ' +
+                'while Filippo Juvarra added the oval presbytery (1729). The neoclassical facade dates from 1860; ' +
+                'further additions were made in 1899-1904 under the guidance of Carlo Ceppi. The interior is designed ' +
+                'to enhance the sumptuous high altar by Juvarra on which there are two adoring angels in white marble ' +
+                'by Carlo Antonio Tantardini and the painting of the miraculous Virgin Mary. The church serves as ' +
+                'a burial place for a number of saints affiliated with Turin: Giuseppe Cafasso and Leonardo Murialdo, ' +
+                'as well as the Blessed Giuseppe Allamano, rector (1880-1926) and founder of the Mission Institute of ' +
+                'the Consolata. Every June 20, a procession of the icon of the Virgin takes place in the ' +
+                'streets of the city.',
+            image_links: [
+                'https://www.museotorino.it/images/11/1d/51/cf/111d51cf3060427fbfc242a3ecf44bfe-1.jpg?VSCL=100',
+                'https://vocetempo.it/vt2018/wp-content/uploads/2020/06/2020.06.20.Messa_.Consolata.Santuario.della_.Consolata-Torino-0364.jpg',
+                'https://www.museotorino.it/images/34/a9/a4/13/34a9a41381ae483e81610ffeeea9cd9c-1.jpg',
+                'https://www.guidatorino.com/wp-content/uploads/2014/09/santuario-consolata-torino.jpg'
+            ],
+            latitude: 45.07688431102633,
+            longitude: 7.67915967786841
+        },
+        {
+            name: 'Piazza San Carlo',
+            type: 'Square',
+            visit_info: 'Always Open',
+            address: 'Piazza San Carlo',
+            description:
+                'The most beautiful square of Turin that preserves the harmonious and uniform seventeenth century look ' +
+                'given by the royal architect Carlo di Castellamonte (1642-1650).\n' +
+                'In the center you can see the equestrian statue of Emanuele Filiberto, represented by Carlo ' +
+                'Marocchetti (1838) in the act of sheathe the sword after the battle of San Quintino in 1557, ' +
+                'one of the most significant statues of the early nineteenth century (nicknamed El Caval d’brons) .\n' +
+                'The short side of the square, to the south-west, is bordered by the facades of almost twin churches ' +
+                'of Santa Cristina and San Carlo.\n' +
+                'Many palaces overlooking Piazza San Carlo, among which should be mentioned at n. 183, the building ' +
+                'Solaro del Borgo, home of the Philharmonic Accademy from 1839, in which was joined in 1947 the Circolo ' +
+                'del Whist, founded in 1841 by Camillo Benso, the Count of Cavour.\n' +
+                'You don’t forget to visit the traditional Caffè San Carlo, which opened in 1842, the Caffè Torino and ' +
+                'the pastry Fratelli Stratta, with the original furnishings of 1836, also famous for its chocolate.',
+            image_links: [
+                'https://upload.wikimedia.org/wikipedia/commons/2/27/Turin_piazza_san_carlo_2009.JPG',
+                'https://www.filodiritto.com/sites/default/files/styles/lg/public/2019-05/torino.jpg?itok=BnLglJ5w',
+                'https://www.quotidianopiemontese.it/wp-content/2019/02/piazza-san-carlo-torino-qp.jpg',
+                'https://www.museotorino.it/images/6b/c0/4e/34/6bc04e34fd6541709ee258553089cf90-1.jpg'
+            ],
+            latitude: 45.06763172278214,
+            longitude: 7.6829681336876385
+        },
     ]
 
     const involvedList = [
@@ -362,7 +510,7 @@ function insertData(models) {
         {
             number: 3,
             itineraryId: 4,
-            pointOfInterestId: 3
+            pointOfInterestId: 6
         },
         {
             number: 4,
