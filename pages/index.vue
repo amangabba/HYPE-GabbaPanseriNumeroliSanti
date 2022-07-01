@@ -86,7 +86,7 @@ export default {
     async asyncData({ $axios }) {
         const { data: eventsData } = await $axios.get('/api/next-events')
         const { data: itinerariesData } = await $axios.get('/api/featured-itineraries')
-
+        console.log(eventsData)
         const eventsNames = []
         const eventsLinks = []
         const eventsImages = []
@@ -101,7 +101,7 @@ export default {
         const itinerariesImages = []
         for (const itinerary of itinerariesData) {
             itinerariesNames.push(itinerary.title)
-            itinerariesLinks.push(`/events/${itinerary.id}`)
+            itinerariesLinks.push(`/itineraries/${itinerary.id}`)
             itinerariesImages.push(itinerary.map_link)
         }
 

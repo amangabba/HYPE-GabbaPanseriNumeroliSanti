@@ -291,7 +291,7 @@ async function runMainApi() {
             attributes: ['id', 'name', 'image_links'],
             where : {
                 start_date: {
-                    [Op.gt]: new DATEONLY()
+                    [Op.gt]: 2022
                 }
             },
             limit,
