@@ -40,8 +40,8 @@ export default {
             title: 'Turin - The Town',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `Everything you need to know about the capital city of Piedmont, Turin!`
                 }
             ]

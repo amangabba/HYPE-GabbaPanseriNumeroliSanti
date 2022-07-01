@@ -78,8 +78,8 @@ export default {
             title: 'Turin - Privacy policy',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `How your data is collected, processed and stored.`
                 }
             ]

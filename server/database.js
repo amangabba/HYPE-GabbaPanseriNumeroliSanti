@@ -71,7 +71,7 @@ async function initializeDatabaseConnection(dropTables = false) {
             type: DataTypes.INTEGER,
             unique: 'title_duration'
         },
-        description: DataTypes.STRING,
+        description: DataTypes.STRING(2048),
         map_link: DataTypes.STRING
     })
     const ServiceType = database.define('service_type', {

@@ -50,8 +50,8 @@ export default {
             title: 'Turin - Travel Information',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `Everything you need to know about how to reach and move around the city of Turin`
                 }
             ]

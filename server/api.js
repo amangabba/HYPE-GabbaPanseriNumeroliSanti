@@ -1,4 +1,4 @@
-import {DATEONLY, Op} from 'sequelize'
+import { DATEONLY, Op } from 'sequelize'
 
 const express = require('express')
 const app = express()
@@ -9,9 +9,9 @@ const { initializeDatabaseConnection } = require('./database')
 app.use(express.json())
 
 // Function to format DATEONLY in a human-friendly form
-function dateToString (date) {
-    const event = new Date(date);
-    const dateElems = event.toDateString().split(' ').slice(1);
+function dateToString(date) {
+    const event = new Date(date)
+    const dateElems = event.toDateString().split(' ').slice(1)
     return dateElems[1] + ' ' + dateElems[0] + ' ' + dateElems[2]
 }
 
@@ -232,7 +232,7 @@ async function runMainApi() {
             }
         })
         const correlatedPOI = await models.PointOfInterest.findOne({
-            where: {id: result.pointOfInterestId}
+            where: { id: result.pointOfInterestId }
         })
         const eventIDs = []
         const eventNames = []
@@ -289,7 +289,7 @@ async function runMainApi() {
         const limit = req.params.limit ? req.params.limit : 5
         const result = await models.Event.findAll({
             attributes: ['id', 'name', 'image_links'],
-            where : {
+            where: {
                 start_date: {
                     [Op.gt]: 2022
                 }

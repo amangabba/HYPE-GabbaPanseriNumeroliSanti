@@ -92,8 +92,8 @@ export default {
             title: 'Turin - About Us',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `Who are we? Our goals and our actions.`
                 }
             ]

@@ -66,26 +66,16 @@
 import PageTitle from '~/components/PageTitle'
 import BootstrapCard from '~/components/BootstrapCard'
 import SectionTitle from '~/components/SectionTitle'
-import BootstrapCarousel from "~/components/BootstrapCarousel";
+import BootstrapCarousel from '~/components/BootstrapCarousel'
 
 export default {
     name: 'HomePage',
     components: { PageTitle, BootstrapCard, SectionTitle, BootstrapCarousel },
-    head() {
-        return {
-            title: 'Welcome to Turin!',
-            meta: [
-                {
-                    hid: "description",
-                    name: "description",
-                    content: `Visit Turin, all of it's magical places and everything it has to offer: through different itineraries and multiple events!`
-                }
-            ]
-        }
-    },
     async asyncData({ $axios }) {
         const { data: eventsData } = await $axios.get('/api/next-events')
-        const { data: itinerariesData } = await $axios.get('/api/featured-itineraries')
+        const { data: itinerariesData } = await $axios.get(
+            '/api/featured-itineraries'
+        )
         console.log(eventsData)
         const eventsNames = []
         const eventsLinks = []
@@ -112,6 +102,18 @@ export default {
             itinerariesNames,
             itinerariesLinks,
             itinerariesImages
+        }
+    },
+    head() {
+        return {
+            title: 'Welcome to Turin!',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `Visit Turin, all of it's magical places and everything it has to offer: through different itineraries and multiple events!`
+                }
+            ]
         }
     }
 }

@@ -8,18 +8,6 @@
 export default {
     name: 'WinterEventsPage',
     layout: 'introductory',
-    head() {
-        return {
-            title: 'Turin - Winter Events',
-            meta: [
-                {
-                    hid: "description",
-                    name: "description",
-                    content: `Discover the next Winter events in Turin!`
-                }
-            ]
-        }
-    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/events')
 
@@ -29,7 +17,8 @@ export default {
             if (event.season === 'Winter') {
                 eventList.push({
                     title: event.name,
-                    subtitle: event.start_date_string + ' - ' + event.end_date_string,
+                    subtitle:
+                        event.start_date_string + ' - ' + event.end_date_string,
                     imageLink: event.image_links[0],
                     description: event.description,
                     link: `/events/${event.id}`
@@ -47,6 +36,18 @@ export default {
 
         return {
             eventList
+        }
+    },
+    head() {
+        return {
+            title: 'Turin - Winter Events',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `Discover the next Winter events in Turin!`
+                }
+            ]
         }
     }
 }

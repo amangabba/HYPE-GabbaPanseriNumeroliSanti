@@ -139,8 +139,8 @@ export default {
             title: 'Turin - Coronavirus Update',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `What to do and not to do while visiting the city during the pandemic, where to get tested and vaccinated.`
                 }
             ]

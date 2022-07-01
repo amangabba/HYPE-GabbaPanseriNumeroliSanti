@@ -14,8 +14,8 @@
                     <p><i> Address: </i> {{ address }}</p>
                     <p>
                         <i> Location:</i>
-                        <NuxtLink :to="'/pois/' + pois_link.id" >
-                            {{pois_link.name}}
+                        <NuxtLink :to="'/pois/' + pois_link.id">
+                            {{ pois_link.name }}
                         </NuxtLink>
                     </p>
                     <p><i> This event will be held in: </i> {{ season }}</p>

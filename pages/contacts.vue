@@ -60,8 +60,8 @@ export default {
             title: 'Turin - Contacts',
             meta: [
                 {
-                    hid: "description",
-                    name: "description",
+                    hid: 'description',
+                    name: 'description',
                     content: `How to contact us: phone, email and address...`
                 }
             ]

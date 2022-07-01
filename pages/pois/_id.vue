@@ -16,30 +16,30 @@
             </div>
 
             <div v-if="itinerary_images.length">
-            <SectionTitle>Correlated Itineraries:</SectionTitle>
-            <div class="row justify-content-center">
-                <BootstrapCarousel
-                    id="itineraries-carousel"
-                    :images="itinerary_images"
-                    :titles="itinerary_names"
-                    :links="itineraryLinks"
-                    class="col-md-4 text-left m-4"
-                />
-            </div>
+                <SectionTitle>Correlated Itineraries:</SectionTitle>
+                <div class="row justify-content-center">
+                    <BootstrapCarousel
+                        id="itineraries-carousel"
+                        :images="itinerary_images"
+                        :titles="itinerary_names"
+                        :links="itineraryLinks"
+                        class="col-md-4 text-left m-4"
+                    />
+                </div>
             </div>
 
             <div v-if="event_images.length">
-            <SectionTitle>Events hosted here</SectionTitle>
-            <div class="row justify-content-center">
-                <BootstrapCarousel
-                    id="events-carousel"
-                    :images="event_images"
-                    :titles="event_names"
-                    :links="eventLinks"
-                    class="col-md-4 text-left m-4"
-                />
+                <SectionTitle>Events hosted here</SectionTitle>
+                <div class="row justify-content-center">
+                    <BootstrapCarousel
+                        id="events-carousel"
+                        :images="event_images"
+                        :titles="event_names"
+                        :links="eventLinks"
+                        class="col-md-4 text-left m-4"
+                    />
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </template>

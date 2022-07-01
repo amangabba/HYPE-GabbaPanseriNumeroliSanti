@@ -8,18 +8,6 @@
 export default {
     name: 'PoisPage',
     layout: 'introductory',
-    head() {
-        return {
-            title: 'Turin - Points Of Interest',
-            meta: [
-                {
-                    hid: "description",
-                    name: "description",
-                    content: `All the magical places in Turin!`
-                }
-            ]
-        }
-    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/pois')
 
@@ -44,6 +32,18 @@ export default {
 
         return {
             poiList
+        }
+    },
+    head() {
+        return {
+            title: 'Turin - Points Of Interest',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `All the magical places in Turin!`
+                }
+            ]
         }
     }
 }

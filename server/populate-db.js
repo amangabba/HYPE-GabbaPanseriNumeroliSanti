@@ -9,11 +9,9 @@ const serviceTypes = require('./db-data/service-types')
 function insertData(models) {
     const itineraryList = [
         {
-            id: '1',
             title: 'I palazzi di Torino',
-            duration: '141',
-            description:
-                `L'itinerario include cinque magici palazzi della città di Torino. Partendo dal 'Palazzo Madama' `,
+            duration: '292',
+            description: `The itinerary includes five magical palaces of Turin. Starting from 'Palazzo Madama', then 'Palazzina di Caccia di Stupingi', 'Palazzo Reale di Torino', 'Piazza San Carlo' and ending in the 'Piazza Castello'.`,
             map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         },
         {
@@ -298,7 +296,7 @@ function insertData(models) {
             name: 'Parco del Valentino',
             type: 'Tower',
             visit_info: 'Always open',
-            address: 'Corso Massimo d\'Azeglio, 10126 Torino TO',
+            address: "Corso Massimo d'Azeglio, 10126 Torino TO",
             description:
                 'The Parco del Valentino is located on the banks of the Po river a few kilometers south of Turin.\n ' +
                 'It hosts famous attractions such as a medieval village, called Borgo Medievale which has been\n ' +
@@ -325,10 +323,11 @@ function insertData(models) {
         {
             name: 'Musei Reali',
             type: 'Museum',
-            visit_info: '\n' +
-                        'closed      on Monsday\n' +
-                        '10-19       from Tuesday to Friday\n' +
-                        '10-21       on Saturday and Sunday',
+            visit_info:
+                '\n' +
+                'closed      on Monsday\n' +
+                '10-19       from Tuesday to Friday\n' +
+                '10-21       on Saturday and Sunday',
             address: 'Piazzetta Reale, 1',
             description:
                 'The Royal Museums of Turin (Musei Reali di Torino) were established in 2014 under the name of' +
@@ -356,7 +355,8 @@ function insertData(models) {
         {
             name: 'Mole Antonelliana',
             type: 'Park',
-            visit_info: '\n' +
+            visit_info:
+                '\n' +
                 'closed      on Tuesday\n' +
                 '9-21        on Monday, Wednesday, Thursday and Sunday\n' +
                 '9-20        on Friday and Saturday',
@@ -388,10 +388,11 @@ function insertData(models) {
         {
             name: 'Santuario della Consolata',
             type: 'Shrine',
-            visit_info: '\n' +
-                        '7.45-19.45  from Monday to Friday\n' +
-                        '7.45-19     on Saturday\n' +
-                        '7.45-20.30  on Sunday',
+            visit_info:
+                '\n' +
+                '7.45-19.45  from Monday to Friday\n' +
+                '7.45-19     on Saturday\n' +
+                '7.45-20.30  on Sunday',
             address: 'Piazza della Consolata, 10122 Torino TO',
             description:
                 'The sanctuary of Mary the Comforter, closely linked to the worship of the Virgin Mary, ' +
@@ -445,16 +446,17 @@ function insertData(models) {
         {
             name: 'La Basilica di Superga',
             type: 'Church',
-            visit_info: '\n' +
-                        '10-17       from Monday to Friday\n' +
-                        '10-18.30    Saturday and Sunday',
+            visit_info:
+                '\n' +
+                '10-17       from Monday to Friday\n' +
+                '10-18.30    Saturday and Sunday',
             address: 'Strada Basilica di Superga, 73, 10132 Torino TO',
             description:
                 'Victor Amadeus II, Duke of Savoy, commissioned the Basilica of Superga on the site of a hilltop ' +
                 'chapel overlooking the city of Turin to celebrate the victory of Austrian troops—under the command ' +
                 'of Prince Eugene of Savoy—over Franco-Spanish invaders in 1706. It took 25 years to finish the ' +
-                'complex, which echoes a number of architectural elements of St. Peter\'s Basilica in Rome and ' +
-                'includes the church and cloister, royal crypt, and Hall of Popes. You\'ll marvel at the sheer scale, ' +
+                "complex, which echoes a number of architectural elements of St. Peter's Basilica in Rome and " +
+                "includes the church and cloister, royal crypt, and Hall of Popes. You'll marvel at the sheer scale, " +
                 'as this imposing monument to Savoyard power can be seen from miles around.\n' +
                 'In addition to the church and crypt, visitors can tour the royal apartments and take the 131 ' +
                 'steps to the top of the dome for sweeping views as far as the Alps. The Basilica of Superga is one ' +
@@ -473,7 +475,8 @@ function insertData(models) {
         {
             name: 'Il Duomo di Torino',
             type: 'Church',
-            visit_info: '\n' +
+            visit_info:
+                '\n' +
                 '10–12:30, 16–19       from Monday to Friday\n' +
                 '09–13, 15–19:30       on Saturday' +
                 '09–13, 15–19:30       on Sunday',
@@ -487,7 +490,7 @@ function insertData(models) {
                 'was added to the structure in 1668–94.' +
                 'In 1667 Guarino Guarini was called in to complete the project. The dome, ' +
                 'whose works dragged for 28 years, was completed in 1694 under the direction of Marie Jeanne ' +
-                'of Savoy, Charles Emmanuel II\'s widow.' +
+                "of Savoy, Charles Emmanuel II's widow." +
                 'The cathedral is the burial place of Blessed Pier Giorgio Frassati (1901–1925), Turin native, ' +
                 'avid athlete, and benefactor of the poor, called the "saint for youth of the Third Millennium." ' +
                 'He was beatified by John Paul II in 1990.',
@@ -503,11 +506,12 @@ function insertData(models) {
         {
             name: 'Villa della Regina',
             type: 'Palace',
-            visit_info: '\n' +
-                        'closed      on Monday' +
-                        '10–18       from Monday to Thursday\n' +
-                        '10-20       on Friday and Saturday' +
-                        '10-21       on Sunday',
+            visit_info:
+                '\n' +
+                'closed      on Monday' +
+                '10–18       from Monday to Thursday\n' +
+                '10-20       on Friday and Saturday' +
+                '10-21       on Sunday',
             address: 'Strada Comunale Santa Margherita, 79, 10131 Torino TO',
             description:
                 'Villa della Regina was built in 1615 by Cardinal Maurizio di Savoia, son of Duke Carlo Emanuele I, ' +
@@ -536,7 +540,8 @@ function insertData(models) {
         {
             name: 'Cappella della Sacra Sindone',
             type: 'Church',
-            visit_info: '\n' +
+            visit_info:
+                '\n' +
                 'closed      on Monday' +
                 '9-19        on all other days',
             address: 'Piazza San Giovanni, 10122 Torino TO',
@@ -565,13 +570,13 @@ function insertData(models) {
             visit_info: 'Always Open',
             address: 'Piazza Castello, 10122 Torino TO',
             description:
-                'Turin’s most central square, dating back to the 14th century, it takes it’s name \'castello\' from ' +
-                'the \'Palazzo Madama\' an ancient castle located in the square itself.\n' +
+                "Turin’s most central square, dating back to the 14th century, it takes it’s name 'castello' from " +
+                "the 'Palazzo Madama' an ancient castle located in the square itself.\n" +
                 'The busiest phase in developing the square and the buildings enclosing it was the 16th - 18th centuries. ' +
                 'Porticoed buildings line the western perimeter, redesigned extensively by Ascanio Vittozzi. ' +
                 'Architects Amedeo di Castellamonte and Filippo Juvarra played their parts too, the latter redesigning ' +
                 'the castle’s façade in a Baroque style (completed in 1721) under the instruction of Marie Jeanne ' +
-                'of Savoy, who was known as \'Madama Reale\', and for whom the building is named. The Palazzo Madama ' +
+                "of Savoy, who was known as 'Madama Reale', and for whom the building is named. The Palazzo Madama " +
                 'now hosts the Museo Civico d’Arte Antica.\n' +
                 'Found in and around the square are major opera house Teatro Regio, the Armeria Reale ' +
                 '(one of the world’s most important collections of armoury amassed by the Savoy family), ' +
@@ -587,7 +592,7 @@ function insertData(models) {
             ],
             latitude: 45.07070853003831,
             longitude: 7.685113762523864
-        },
+        }
     ]
 
     const involvedList = [

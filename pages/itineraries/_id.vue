@@ -10,7 +10,7 @@
                 />
                 <!-- Itinerary Description -->
                 <div class="col-md-9 text-left p-3">
-                    <p><i>Duration:</i> {{ duration }} minutes</p>
+                    <p><i>Duration:</i> {{ duration }} min</p>
                     <p v-if="poi_list.length">
                         <i>Starting point:</i> {{ poi_list[0].name }} ({{
                             poi_list[0].type

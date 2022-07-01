@@ -8,18 +8,6 @@
 export default {
     name: 'EventsPage',
     layout: 'introductory',
-    head() {
-        return {
-            title: 'Turin - Events',
-            meta: [
-                {
-                    hid: "description",
-                    name: "description",
-                    content: `Discover the next exciting events in Turin!`
-                }
-            ]
-        }
-    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/events')
 
@@ -28,7 +16,8 @@ export default {
         for (const event of data) {
             eventList.push({
                 title: event.name,
-                subtitle: event.start_date_string + ' - ' + event.end_date_string,
+                subtitle:
+                    event.start_date_string + ' - ' + event.end_date_string,
                 imageLink: event.image_links[0],
                 description: event.description,
                 link: `/events/${event.id}`
@@ -45,6 +34,18 @@ export default {
 
         return {
             eventList
+        }
+    },
+    head() {
+        return {
+            title: 'Turin - Events',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `Discover the next exciting events in Turin!`
+                }
+            ]
         }
     }
 }
