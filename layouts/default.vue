@@ -33,7 +33,7 @@ export default {
         }
     },
     mounted() {
-        this.footerHeight = this.$refs.footer.$el.offsetHeight
+        this.footerHeight = this.$refs.footer.$el.offsetHeight + 10
     }
 }
 </script>

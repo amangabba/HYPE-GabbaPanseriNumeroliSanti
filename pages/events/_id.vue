@@ -5,7 +5,7 @@
                 <BootstrapCarousel
                     id="event-carousel"
                     :images="image_links"
-                    class="img-fluid h-auto col-md-6 p-3 max-width"
+                    class="col-md-6"
                 />
                 <div class="col-md-6 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
@@ -43,7 +43,7 @@
                     :images="events_images"
                     :titles="events_names"
                     :links="eventLinks"
-                    class="img-fluid h-auto col-md-3 p-3"
+                    class="col-md-4"
                 />
             </div>
         </div>
