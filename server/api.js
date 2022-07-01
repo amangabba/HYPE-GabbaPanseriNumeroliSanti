@@ -1,4 +1,4 @@
-import { Op } from 'sequelize'
+import {DATEONLY, Op} from 'sequelize'
 
 const express = require('express')
 const app = express()
@@ -286,6 +286,11 @@ async function runMainApi() {
         const limit = req.params.limit ? req.params.limit : 5
         const result = await models.Event.findAll({
             attributes: ['id', 'name', 'image_links'],
+            where : {
+                start_date: {
+                    [Op.gt]: new DATEONLY()
+                }
+            },
             limit,
             order: [['start_date', 'DESC']]
         })
