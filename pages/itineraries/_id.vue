@@ -59,19 +59,28 @@
                 <BootstrapGridCardPOI
                     v-for="(poi, index) in poi_list"
                     ref="grid-cards"
-                    :cardId="`grid-card-${poi.number}`"
                     :key="'grid-card-' + index"
-                    :active="poi.number === 1 ? true : false"
-                    :imageLink="poi.image_links.length ? poi.image_links[0] : ''"
-                    :imageText="poi.name + 'image'"
-                    :title="'(' + poi.number + '/ ' + poi_list.length + ') - ' + poi.name"
+                    :card-id="`grid-card-${poi.number}`"
+                    :active="poi.number === 1"
+                    :image-link="
+                        poi.image_links.length ? poi.image_links[0] : ''
+                    "
+                    :image-text="poi.name + 'image'"
+                    :title="
+                        '(' +
+                        poi.number +
+                        '/ ' +
+                        poi_list.length +
+                        ') - ' +
+                        poi.name
+                    "
                     :subtitle="poi.address"
                     :content="poi.description"
                     :link="'/pois/' + poi.id"
-                    linkText="See Details"
-                    @putMarker="putMarker"
-                    buttonText="Show on Map"
+                    link-text="See Details"
+                    button-text="Show on Map"
                     :poi="poi"
+                    @putMarker="putMarker"
                 />
             </div>
         </div>
@@ -81,11 +90,11 @@
 <script>
 import OSMMap from '~/components/OSMMap'
 import SectionTitle from '~/components/SectionTitle'
-import BootstrapGridCardPOI from "~/components/BootstrapGridCardPOI";
+import BootstrapGridCardPOI from '~/components/BootstrapGridCardPOI'
 
 export default {
     name: 'ItineraryPage',
-    components: { OSMMap, SectionTitle, BootstrapGridCardPOI},
+    components: { OSMMap, SectionTitle, BootstrapGridCardPOI },
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params
@@ -114,7 +123,7 @@ export default {
             centerLong: data.poi_list[0].longitude,
             centerLat: data.poi_list[0].latitude,
             markerLong: data.poi_list[0].longitude,
-            markerLat: data.poi_list[0].latitude,
+            markerLat: data.poi_list[0].latitude
         }
     },
     data() {

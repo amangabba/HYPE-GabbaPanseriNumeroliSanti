@@ -45,7 +45,7 @@
 
 <script>
 export default {
-    name: "BootstrapGridCardPOI",
+    name: 'BootstrapGridCardPOI',
     props: {
         cardId: {
             type: String,
@@ -94,8 +94,9 @@ export default {
         }
     },
     methods: {
-        callParentFunction () {
-            this.$emit('putMarker',
+        callParentFunction() {
+            this.$emit(
+                'putMarker',
                 this.poi.number,
                 this.poi.latitude,
                 this.poi.longitude,
@@ -108,5 +109,10 @@ export default {
 </script>
 
 <style scoped>
-
+.card:hover {
+    border: 2px solid var(--bs-primary);
+}
+.card {
+    border: 2px solid rgba(229, 229, 229, 1);
+}
 </style>
