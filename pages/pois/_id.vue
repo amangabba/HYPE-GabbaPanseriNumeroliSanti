@@ -6,14 +6,16 @@
                     v-if="image_links.length"
                     id="poi-carousel"
                     :images="image_links"
-                    class="col-md-3"
+                    class="col-md-8"
                 />
-                <div class="col-md-9 text-left p-3">
-                    <pre><i>Opening Hours:</i> {{ visit_info }}</pre>
-                    <pre><i>Address of the Point of Interest</i>: {{ address }}</pre>
-                    <p>{{ description }}</p>
+                <div class="col-md-4 text-left p-3">
+                    <p><i><b>Opening Hours:</b></i></p>
+                    <p v-html="visit_info"></p>
+                    <br><br><br>
+                    <p><i><b>Address:</b></i><br><br>{{ address }}</p>
                 </div>
             </div>
+            <div class="row m-2 mt-4 mb-4" v-html="description"></div>
 
             <div v-if="itinerary_images.length">
                 <SectionTitle>Correlated Itineraries:</SectionTitle>
@@ -79,12 +81,16 @@ export default {
             eventLinks.push(`/events/${id}`)
         }
 
+        const temp1 = data.visit_info.replace(/\n/g, "<br />")
+        const visitWithBr = temp1.replace(/\t/g, "&nbsp")
+        const descriptionWithBr = data.description.replace(/\n/g, "<br />")
+
         return {
             name: data.name,
             type: data.type,
-            visit_info: data.visit_info,
+            visit_info: visitWithBr,
             address: data.address,
-            description: data.description,
+            description: descriptionWithBr,
             image_links: data.image_links,
             itineraryLinks,
             itinerary_names: data.correlated_itinerary_names,
