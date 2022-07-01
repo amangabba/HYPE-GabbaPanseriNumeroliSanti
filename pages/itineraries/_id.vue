@@ -40,10 +40,10 @@
             <OSMMap
                 v-if="poi_list.length > 0"
                 ref="map"
-                :center-long="poi_list[0].longitude"
-                :center-lat="poi_list[0].latitude"
-                :marker-long="poi_list[0].longitude"
-                :marker-lat="poi_list[0].latitude"
+                :center-long="centerLong"
+                :center-lat="centerLat"
+                :marker-long="markerLong"
+                :marker-lat="markerLat"
             >
             </OSMMap>
 
@@ -56,70 +56,23 @@
                         here!
                     </h4>
                 </div>
-                <div
+                <BootstrapGridCardPOI
                     v-for="(poi, index) in poi_list"
-                    :id="`grid-card-${poi.number}`"
                     ref="grid-cards"
+                    :cardId="`grid-card-${poi.number}`"
                     :key="'grid-card-' + index"
-                    :class="
-                        poi.number === 1
-                            ? 'card mb-3 bg-primary bg-opacity-10'
-                            : 'card mb-3'
-                    "
-                >
-                    <div class="row g-0">
-                        <div class="col-md-4 my-auto p-3">
-                            <img
-                                :src="
-                                    poi.image_links.length
-                                        ? poi.image_links[0]
-                                        : ''
-                                "
-                                class="img-fluid rounded-start rounded-2"
-                                :alt="
-                                    'Point of Interest ' + poi.name + ' image'
-                                "
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body d-flex flex-column h-100">
-                                <h5 class="card-title">
-                                    ({{ poi.number }}/{{ poi_list.length }}) -
-                                    {{ poi.name }}
-                                </h5>
-                                <p class="card-text text-muted">
-                                    {{ poi.address }}
-                                </p>
-                                <p class="card-text">{{ poi.description }}</p>
-                                <div class="row justify-content-end mt-auto">
-                                    <!-- Open the page regarding the POI -->
-                                    <a
-                                        class="col-md-2 btn btn-primary m-1 p-1"
-                                        :href="'/pois/' + poi.id"
-                                    >
-                                        See Details
-                                    </a>
-
-                                    <!-- Button to show on map the selected POI and Scroll the map into view -->
-                                    <button
-                                        class="col-md-2 btn btn-primary m-1 p-1"
-                                        @click="
-                                            putMarker(
-                                                poi.number,
-                                                poi.latitude,
-                                                poi.longitude,
-                                                poi.name,
-                                                poi.address
-                                            )
-                                        "
-                                    >
-                                        Show on Map
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    :active="poi.number === 1 ? true : false"
+                    :imageLink="poi.image_links.length ? poi.image_links[0] : ''"
+                    :imageText="poi.name + 'image'"
+                    :title="'(' + poi.number + '/ ' + poi_list.length + ') - ' + poi.name"
+                    :subtitle="poi.address"
+                    :content="poi.description"
+                    :link="'/pois/' + poi.id"
+                    linkText="See Details"
+                    @putMarker="putMarker"
+                    buttonText="Show on Map"
+                    :poi="poi"
+                />
             </div>
         </div>
     </div>
@@ -128,10 +81,11 @@
 <script>
 import OSMMap from '~/components/OSMMap'
 import SectionTitle from '~/components/SectionTitle'
+import BootstrapGridCardPOI from "~/components/BootstrapGridCardPOI";
 
 export default {
     name: 'ItineraryPage',
-    components: { OSMMap, SectionTitle },
+    components: { OSMMap, SectionTitle, BootstrapGridCardPOI},
     layout: 'multiple-topic',
     async asyncData({ route, store, $axios }) {
         const { id } = route.params
@@ -156,7 +110,11 @@ export default {
             duration: data.duration,
             description: data.description,
             map_link: data.map_link,
-            poi_list: data.poi_list
+            poi_list: data.poi_list,
+            centerLong: data.poi_list[0].longitude,
+            centerLat: data.poi_list[0].latitude,
+            markerLong: data.poi_list[0].longitude,
+            markerLat: data.poi_list[0].latitude,
         }
     },
     data() {
@@ -172,20 +130,21 @@ export default {
         // Called to update the map, it's information and the selected grid card
         putMarker(key, lat, long, name, address) {
             // Update Map center
-            this.$refs.map.centerLong = long
-            this.$refs.map.centerLat = lat
+            this.centerLong = long
+            this.centerLat = lat
             // Update Map marker
-            this.$refs.map.markerLong = long
-            this.$refs.map.markerLat = lat
+            this.markerLong = long
+            this.markerLat = lat
 
             // Classes to update
             const selectedRowClasses = ['bg-opacity-10', 'bg-primary']
             for (const row of this.$refs['grid-cards']) {
+                const rowElem = row.$el
                 // Remove classes from all the grid cards
-                row.classList.remove(...selectedRowClasses)
-                if (row.id === `grid-card-${key}`) {
+                rowElem.classList.remove(...selectedRowClasses)
+                if (rowElem.id === `grid-card-${key}`) {
                     // Add classes to the selected grid card
-                    row.classList.add(...selectedRowClasses)
+                    rowElem.classList.add(...selectedRowClasses)
                 }
             }
 
