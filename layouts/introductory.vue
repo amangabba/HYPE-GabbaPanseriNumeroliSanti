@@ -5,7 +5,7 @@
             <PageTitle
                 :title="title"
                 :subtitle="subtitle"
-                class="title-row w-100 m-0"
+                class="title-row"
                 :style="`background-image: url('${coverImage}');`"
             />
 

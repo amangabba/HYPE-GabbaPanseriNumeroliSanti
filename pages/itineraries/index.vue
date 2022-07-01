@@ -14,12 +14,14 @@ export default {
         // Build a list of objects representing itineraries
         const itineraryList = []
         for (const elem of data) {
-            const poiList = elem.poi_list
+            // const poiList = elem.poi_list
             itineraryList.push({
                 title: elem.title,
                 subtitle: 'Duration: ' + elem.duration + ' min',
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
+                description: elem.description
+                /*
                 description: poiList.length
                     ? 'From "' +
                       poiList[0].name +
@@ -27,6 +29,7 @@ export default {
                       poiList[poiList.length - 1].name +
                       '"'
                     : ''
+                */
             })
         }
 

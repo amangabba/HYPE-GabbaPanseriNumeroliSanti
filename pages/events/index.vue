@@ -16,7 +16,7 @@ export default {
         for (const event of data) {
             eventList.push({
                 title: event.name,
-                subtitle: event.start_date + ' - ' + event.end_date,
+                subtitle: event.start_date_string + ' - ' + event.end_date_string,
                 imageLink: event.image_links[0],
                 description: event.description,
                 link: `/events/${event.id}`

@@ -5,9 +5,9 @@
                 <BootstrapCarousel
                     id="event-carousel"
                     :images="image_links"
-                    class="img-fluid h-auto col-md-3 p-3"
+                    class="col-md-6"
                 />
-                <div class="col-md-9 text-left p-3">
+                <div class="col-md-6 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
                     <p><i> The event starts on: </i> {{ start_date }}</p>
                     <p><i> The event ends on: </i> {{ end_date }}</p>
@@ -33,22 +33,20 @@
                     </p>
                     <p>{{ description }}</p>
                 </div>
-                    <!-- non funziona il link e non capisco perchè-->
+            </div>
+
+            <div class="row justify-content-center">
+                <SectionTitle>Other events in this location</SectionTitle>
+
+                <BootstrapCarousel
+                    id="events-carousel"
+                    :images="events_images"
+                    :titles="events_names"
+                    :links="eventLinks"
+                    class="col-md-4"
+                />
             </div>
         </div>
-        <div
-            class="event-description row justify-content-center mx-auto mt-2"
-        >
-            <p>{{ description }}</p>
-        </div>
-        <SectionTitle>Other events in this location</SectionTitle>
-        <BootstrapCarousel
-            id="events-carousel"
-            :images="events_images"
-            :titles="events_names"
-            :links="eventLinks"
-            class="img-fluid h-auto col-md-3 p-3"
-        ></BootstrapCarousel>
     </div>
 </template>
 
@@ -102,8 +100,8 @@ export default {
             address: data.address,
             image_links: data.image_links,
             season: data.season,
-            start_date: data.start_date,
-            end_date: data.end_date,
+            start_date: data.start_date_string,
+            end_date: data.end_date_string,
             pois_link: data.correlated_poi,
             eventLinks,
             events_names: data.correlated_event_names,
@@ -116,5 +114,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

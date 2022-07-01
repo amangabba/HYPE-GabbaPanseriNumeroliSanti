@@ -5,7 +5,7 @@
                 <BootstrapCarousel
                     id="poi-carousel"
                     :images="image_links"
-                    class="img-fluid h-auto col-md-3 p-3"
+                    class="col-md-3"
                 />
                 <div class="col-md-9 text-left p-3">
                     <pre><i>Opening Hours:</i> {{ visit_info }}</pre>
@@ -16,23 +16,27 @@
 
             <SectionTitle>Correlated Itineraries:</SectionTitle>
 
-            <BootstrapCarousel
-                id="itineraries-carousel"
-                :images="itinerary_images"
-                :titles="itinerary_names"
-                :links="itineraryLinks"
-                class="w-25 mx-auto text-left m-4"
-            />
+            <div class="row justify-content-center">
+                <BootstrapCarousel
+                    id="itineraries-carousel"
+                    :images="itinerary_images"
+                    :titles="itinerary_names"
+                    :links="itineraryLinks"
+                    class="col-md-4 text-left m-4"
+                />
+            </div>
 
             <SectionTitle>Events hosted here</SectionTitle>
 
-            <BootstrapCarousel
-                id="events-carousel"
-                :images="event_images"
-                :titles="event_names"
-                :links="eventLinks"
-                class="w-25 mx-auto text-left m-4"
-            />
+            <div class="row justify-content-center">
+                <BootstrapCarousel
+                    id="events-carousel"
+                    :images="event_images"
+                    :titles="event_names"
+                    :links="eventLinks"
+                    class="col-md-4 text-left m-4"
+                />
+            </div>
         </div>
     </div>
 </template>

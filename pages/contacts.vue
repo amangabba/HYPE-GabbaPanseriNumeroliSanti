@@ -19,7 +19,9 @@
                 <div class="mb-2">
                     <b><i>Address:</i></b> Piazza Leonardo da Vinci, 32
                 </div>
-                <h2 class="mb-2"><i>Form</i></h2>
+
+                <SectionTitle>Contact Us</SectionTitle>
+
                 <form class="justify-content-lg-center w-auto">
                     <div class="mb-2">
                         <label class="form-label">Name</label>

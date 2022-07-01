@@ -1,4 +1,4 @@
-import { Op } from 'sequelize'
+import {DATEONLY, Op} from 'sequelize'
 
 const express = require('express')
 const app = express()
@@ -7,6 +7,13 @@ const { initializeDatabaseConnection } = require('./database')
 // With this line, our server will know how to parse any incoming request
 // that contains some JSON in the body
 app.use(express.json())
+
+// Function to format DATEONLY in a human-friendly form
+function dateToString (date) {
+    const event = new Date(date);
+    const dateElems = event.toDateString().split(' ').slice(1);
+    return dateElems[1] + ' ' + dateElems[0] + ' ' + dateElems[2]
+}
 
 async function runMainApi() {
     const models = await initializeDatabaseConnection()
@@ -73,6 +80,24 @@ async function runMainApi() {
             map_link: result.map_link,
             poi_list: filteredPOIs
         })
+    })
+
+    app.get('/featured-itineraries', async (req, res) => {
+        const limit = req.params.limit ? req.params.limit : 5
+        const result = await models.Itinerary.findAll({
+            attributes: ['id', 'title', 'map_link'],
+            limit
+        })
+
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                title: element.title,
+                map_link: element.map_link
+            })
+        }
+        return res.json(filtered)
     })
 
     app.get('/pois/:id', async (req, res) => {
@@ -193,7 +218,7 @@ async function runMainApi() {
     })
 
     app.get('/events/:id', async (req, res) => {
-        const { Op } = require("sequelize")
+        const { Op } = require('sequelize')
         const id = +req.params.id
         const result = await models.Event.findOne({
             where: { id },
@@ -231,9 +256,11 @@ async function runMainApi() {
             start_date: result.start_date,
             end_date: result.end_date,
             correlated_poi: correlatedPOI,
+            start_date_string: dateToString(result.start_date),
+            end_date_string: dateToString(result.end_date),
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
-            correlated_event_images: eventFirstImages,
+            correlated_event_images: eventFirstImages
         })
     })
 
@@ -250,7 +277,33 @@ async function runMainApi() {
                 image_links: element.image_links,
                 season: element.season,
                 start_date: element.start_date,
-                end_date: element.end_date
+                end_date: element.end_date,
+                start_date_string: dateToString(element.start_date),
+                end_date_string: dateToString(element.end_date)
+            })
+        }
+        return res.json(filtered)
+    })
+
+    app.get('/next-events', async (req, res) => {
+        const limit = req.params.limit ? req.params.limit : 5
+        const result = await models.Event.findAll({
+            attributes: ['id', 'name', 'image_links'],
+            where : {
+                start_date: {
+                    [Op.gt]: new DATEONLY()
+                }
+            },
+            limit,
+            order: [['start_date', 'DESC']]
+        })
+
+        const filtered = []
+        for (const element of result) {
+            filtered.push({
+                id: element.id,
+                name: element.name,
+                image_links: element.image_links
             })
         }
         return res.json(filtered)

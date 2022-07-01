@@ -128,9 +128,10 @@ function insertData(models) {
         {
             name: 'Museo Egizio',
             type: 'Museum',
-            visit_info: '\n' +
-                        '9-18.30     from Tuesday to Sunday\n' +
-                        '9-14        on Monday' ,
+            visit_info:
+                '\n' +
+                '9-18.30     from Tuesday to Sunday\n' +
+                '9-14        on Monday',
             address: 'Via Accademia delle Scienze, 6, 10123 Torino TO',
             description:
                 'The origins of the museum trace back to 1630, when Charles Emmanuel I, Duke of Savoy, assembled a small\n' +
@@ -151,7 +152,6 @@ function insertData(models) {
                 'https://api.museoegizio.it/wp-content/uploads/2021/04/Sala-con-pubblico_New_2021.jpg',
                 'https://www.torinofree.it/wp-content/uploads/2013/01/sfinge-museo-egizio-Torino.jpg',
                 'https://www.rsi.ch/rete-due/programmi/cultura/oggi-la-storia/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG-4617094.html/ALTERNATES/LANDSCAPE_1300/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG'
-
             ],
             latitude: 45.068493986677595,
             longitude: 7.684330920195937
@@ -159,9 +159,10 @@ function insertData(models) {
         {
             name: 'Palazzo Madama',
             type: 'Palace',
-            visit_info: '\n' +
-                        'closed      on Tuesday\n' +
-                        '10-18       on all other days' ,
+            visit_info:
+                '\n' +
+                'closed      on Tuesday\n' +
+                '10-18       on all other days',
             address: 'P.za Castello, 10122 Torino TO',
             description:
                 'Palazzo Madama was the first Senate of the Kingdom of Italy, and takes its traditional name from the embellishments\n' +
@@ -190,12 +191,13 @@ function insertData(models) {
             longitude: 7.685898362523839
         },
         {
-            name: 'Palazzina di Caccia di Stupinigi\n',
+            name: 'Palazzina di Caccia di Stupinigi',
             type: 'Palace',
-            visit_info: '\n' +
-                        'closed      on Monday\n' +
-                        '10-17.30    from Tuesday to Friday\n' +
-                        '10-18.30    Saturday and Sunday',
+            visit_info:
+                '\n' +
+                'closed      on Monday\n' +
+                '10-17.30    from Tuesday to Friday\n' +
+                '10-18.30    Saturday and Sunday',
             address: 'Piazza Principe Amedeo, 7, 10042 Stupinigi, Nichelino TO',
             description:
                 'A hunting lodge for a European Court, a place of leisure and hunting, during the 18th and 19th ' +
@@ -204,7 +206,7 @@ function insertData(models) {
                 'Building began in 1729 according to a project by Filippo Juvarra and continued up to the end of the ' +
                 '19th century, with further extension and completion projects by Benedetto Alfieri and other architects. ' +
                 'The structure is composed of a central core with a large hall from which four lower arms form a cross ' +
-                'of Sant\'Andrea where the royal apartments and accommodation for guests are located. The fulcrum of ' +
+                "of Sant'Andrea where the royal apartments and accommodation for guests are located. The fulcrum of " +
                 'the building is the magnificent elliptical salon where a large fresco, the work of the Valeriani ' +
                 'brothers, represents the myth of Diana, goddess of hunting. From the elliptical salon you pass to ' +
                 'the Anticamera della Regina, frescoed by the artists Corsato and Casolo, with four large paintings ' +
@@ -227,9 +229,10 @@ function insertData(models) {
         {
             name: 'Palazzo Reale di Torino',
             type: 'Palace',
-            visit_info: '\n' +
-                        'closed      on Monday\n' +
-                        '8.30-18     on all other days',
+            visit_info:
+                '\n' +
+                'closed      on Monday\n' +
+                '8.30-18     on all other days',
             address: 'Piazzetta Reale, 1, 10122 Torino TO',
             description:
                 'The Royal Palace of Turin (Palazzo Reale di Torino) is a sixteenth-century palace constructed for the ' +
@@ -257,12 +260,13 @@ function insertData(models) {
             longitude: 7.686283418343486
         },
         {
-            name: 'Museo dell\'Automobile di Torino',
+            name: "Museo dell'Automobile di Torino",
             type: 'Museum',
-            visit_info: '\n' +
-                        '10-14       on Monday\n' +
-                        '10-19       on all other days',
-            address: 'Corso Unità d\'Italia, 40, 10126 Torino TO',
+            visit_info:
+                '\n' +
+                '10-14       on Monday\n' +
+                '10-19       on all other days',
+            address: "Corso Unità d'Italia, 40, 10126 Torino TO",
             description:
                 'The MAUTO - National Automobile Museum, which covers an area of 19.000 square meters, was founded ' +
                 'in 1932 by an idea of Cesare Goria Gatti and Roberto Biscaretti di Ruffia (first President of the ' +
