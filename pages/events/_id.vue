@@ -2,12 +2,8 @@
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
             <div class="row m-2">
-                <BootstrapCarousel
-                    id="event-carousel"
-                    :images="image_links"
-                    class="img-fluid h-auto col-md-3 p-3"
-                />
-                <div class="col-md-9 text-left p-3">
+                <BootstrapCarousel id="event-carousel" :images="image_links" class="img-fluid h-auto col-md-6 p-3 max-width"/>
+                <div class="col-md-6 text-left p-3">
                     <p><i> Practical info: </i> {{ practical_info }}</p>
                     <p><i> The event starts on: </i> {{ start_date }}</p>
                     <p><i> The event ends on: </i> {{ end_date }}</p>
@@ -33,7 +29,9 @@
                     </p>
                     <p>{{ description }}</p>
                 </div>
-                    <!-- non funziona il link e non capisco perchè-->
+            </div>
+            <div class="row bg-primary bg-opacity-10 p-2 text-center mt-2 mb-2">
+                <h2 ref="map-title" class="display-3"> Other events in this location </h2>
             </div>
         </div>
         <div
