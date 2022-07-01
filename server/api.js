@@ -8,6 +8,13 @@ const { initializeDatabaseConnection } = require('./database')
 // that contains some JSON in the body
 app.use(express.json())
 
+// Function to format DATEONLY in a human-friendly form
+function dateToString (date) {
+    const event = new Date(date);
+    const dateElems = event.toDateString().split(' ').slice(1);
+    return dateElems[1] + ' ' + dateElems[0] + ' ' + dateElems[2]
+}
+
 async function runMainApi() {
     const models = await initializeDatabaseConnection()
 
@@ -227,6 +234,8 @@ async function runMainApi() {
             season: result.season,
             start_date: result.start_date,
             end_date: result.end_date,
+            start_date_string: dateToString(result.start_date),
+            end_date_string: dateToString(result.end_date),
             correlated_poi: result.pointOfInterestId,
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
@@ -247,7 +256,9 @@ async function runMainApi() {
                 image_links: element.image_links,
                 season: element.season,
                 start_date: element.start_date,
-                end_date: element.end_date
+                end_date: element.end_date,
+                start_date_string: dateToString(element.start_date),
+                end_date_string: dateToString(element.end_date)
             })
         }
         return res.json(filtered)
