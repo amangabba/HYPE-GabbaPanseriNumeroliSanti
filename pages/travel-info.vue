@@ -45,6 +45,18 @@
 export default {
     name: 'TravelInfoPage',
     layout: 'single-topic',
+    head() {
+        return {
+            title: 'Turin - Travel Information',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Everything you need to know about how to reach and move around the city of Turin`
+                }
+            ]
+        }
+    },
     created() {
         this.$store.commit('setPageInfo', { title: 'Travel info' })
     }

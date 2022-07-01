@@ -87,6 +87,18 @@ export default {
     name: 'AboutUs',
     components: { SectionTitle },
     layout: 'single-topic',
+    head() {
+        return {
+            title: 'Turin - About Us',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Who are we? Our goals and our actions.`
+                }
+            ]
+        }
+    },
     created() {
         this.$store.commit('setPageInfo', { title: 'About us' })
     }

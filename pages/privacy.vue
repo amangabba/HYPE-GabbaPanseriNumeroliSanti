@@ -73,6 +73,18 @@ export default {
     name: 'PrivacyPage',
     components: { SectionTitle },
     layout: 'single-topic',
+    head() {
+        return {
+            title: 'Turin - Privacy policy',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `How your data is collected, processed and stored.`
+                }
+            ]
+        }
+    },
     created() {
         this.$store.commit('setPageInfo', { title: 'Privacy policy' })
     }
