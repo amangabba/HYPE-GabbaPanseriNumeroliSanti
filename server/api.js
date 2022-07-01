@@ -206,6 +206,9 @@ async function runMainApi() {
                 start_date: { [Op.gte]: result.start_date }
             }
         })
+        const correlatedPOI = await models.PointOfInterest.findOne({
+            where: {id: result.pointOfInterestId}
+        })
         const eventIDs = []
         const eventNames = []
         const eventFirstImages = []
@@ -227,7 +230,7 @@ async function runMainApi() {
             season: result.season,
             start_date: result.start_date,
             end_date: result.end_date,
-            correlated_poi: result.pointOfInterestId,
+            correlated_poi: correlatedPOI,
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
             correlated_event_images: eventFirstImages,
