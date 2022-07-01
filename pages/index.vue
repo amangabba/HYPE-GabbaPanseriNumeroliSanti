@@ -35,12 +35,28 @@
         <div class="row justify-content-center">
             <div class="homepage-card">
                 <SectionTitle>Featured itineraries</SectionTitle>
-                Put itineraries here
+                <div class="row justify-content-center">
+                    <BootstrapCarousel
+                        id="itineraries-carousel"
+                        :images="itinerariesImages"
+                        :titles="itinerariesNames"
+                        :links="itinerariesLinks"
+                        class="col-md-4"
+                    />
+                </div>
             </div>
 
             <div class="homepage-card">
                 <SectionTitle>Next events</SectionTitle>
-                Put events here
+                <div class="row justify-content-center">
+                    <BootstrapCarousel
+                        id="events-carousel"
+                        :images="eventsImages"
+                        :titles="eventsNames"
+                        :links="eventsLinks"
+                        class="col-md-4"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -50,10 +66,42 @@
 import PageTitle from '~/components/PageTitle'
 import BootstrapCard from '~/components/BootstrapCard'
 import SectionTitle from '~/components/SectionTitle'
+import BootstrapCarousel from "~/components/BootstrapCarousel";
 
 export default {
     name: 'HomePage',
-    components: { PageTitle, BootstrapCard, SectionTitle }
+    components: { PageTitle, BootstrapCard, SectionTitle, BootstrapCarousel },
+    async asyncData({ $axios }) {
+        const { data: eventsData } = await $axios.get('/api/next-events')
+        const { data: itinerariesData } = await $axios.get('/api/featured-itineraries')
+
+        const eventsNames = []
+        const eventsLinks = []
+        const eventsImages = []
+        for (const event of eventsData) {
+            eventsNames.push(event.name)
+            eventsLinks.push(`/events/${event.id}`)
+            eventsImages.push(event.image_links[0])
+        }
+
+        const itinerariesNames = []
+        const itinerariesLinks = []
+        const itinerariesImages = []
+        for (const itinerary of itinerariesData) {
+            itinerariesNames.push(itinerary.title)
+            itinerariesLinks.push(`/events/${itinerary.id}`)
+            itinerariesImages.push(itinerary.map_link)
+        }
+
+        return {
+            eventsNames,
+            eventsLinks,
+            eventsImages,
+            itinerariesNames,
+            itinerariesLinks,
+            itinerariesImages
+        }
+    }
 }
 </script>
 
