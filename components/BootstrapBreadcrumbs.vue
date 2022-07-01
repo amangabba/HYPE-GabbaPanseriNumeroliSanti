@@ -12,7 +12,8 @@
                 <NuxtLink
                     v-if="i !== elements.length - 1"
                     class="breadcrumb-link"
-                    :to="el.link">{{ el.title}}
+                    :to="el.link"
+                    >{{ el.title }}
                 </NuxtLink>
                 <span v-else>{{ el.title }}</span>
             </li>
@@ -39,7 +40,6 @@ export default {
 </script>
 
 <style scoped>
-
 nav {
     --bs-breadcrumb-divider: '>';
 }
@@ -49,9 +49,9 @@ nav {
     padding: 2px 5px 2px 5px;
     border-radius: 3px;
     text-decoration: none;
-    background-color: rgba(0,0,0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .breadcrumb-link:hover {
-    background-color: rgba(0,0,0, 0.35);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 </style>

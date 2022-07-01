@@ -33,7 +33,9 @@
                     ({{ poi_list[0].number }}) {{ poi_list[0].name }} -
                     {{ poi_list[0].address }}
                 </h4>
-                <h4 v-else>No points of interest in this itinerary, no map to show!</h4>
+                <h4 v-else>
+                    No points of interest in this itinerary, no map to show!
+                </h4>
             </div>
             <OSMMap
                 v-if="poi_list.length > 0"
@@ -49,7 +51,10 @@
             <SectionTitle>List of Points of Interest</SectionTitle>
             <div class="row justify-content-center mx-auto mt-2">
                 <div v-if="poi_list.length === 0" class="row text-center">
-                    <h4>No Point of Interest in this itinerary, nothing to see here!</h4>
+                    <h4>
+                        No Point of Interest in this itinerary, nothing to see
+                        here!
+                    </h4>
                 </div>
                 <div
                     v-for="(poi, index) in poi_list"
@@ -61,7 +66,6 @@
                             ? 'card mb-3 bg-primary bg-opacity-10'
                             : 'card mb-3'
                     "
-
                 >
                     <div class="row g-0">
                         <div class="col-md-4 my-auto p-3">
@@ -88,9 +92,11 @@
                                 </p>
                                 <p class="card-text">{{ poi.description }}</p>
                                 <div class="row justify-content-end mt-auto">
-
                                     <!-- Open the page regarding the POI -->
-                                    <a class="col-md-2 btn btn-primary m-1 p-1" :href="'/pois/' + poi.id">
+                                    <a
+                                        class="col-md-2 btn btn-primary m-1 p-1"
+                                        :href="'/pois/' + poi.id"
+                                    >
                                         See Details
                                     </a>
 

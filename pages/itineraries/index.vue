@@ -20,7 +20,7 @@ export default {
                 subtitle: 'Duration: ' + elem.duration + ' min',
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
-                description: elem.description,
+                description: elem.description
                 /*
                 description: poiList.length
                     ? 'From "' +
@@ -30,7 +30,6 @@ export default {
                       '"'
                     : ''
                 */
-
             })
         }
 
