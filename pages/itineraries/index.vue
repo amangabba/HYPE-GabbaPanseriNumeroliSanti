@@ -8,6 +8,18 @@
 export default {
     name: 'ItinerariesPage',
     layout: 'introductory',
+    head() {
+        return {
+            title: 'Turin - Itineraries',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Visit Turin through multiple itineraries!`
+                }
+            ]
+        }
+    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/itineraries')
 

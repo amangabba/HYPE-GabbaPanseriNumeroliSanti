@@ -8,6 +8,18 @@
 export default {
     name: 'SummerEventsPage',
     layout: 'introductory',
+    head() {
+        return {
+            title: 'Turin - Summer Events',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Discover the next Summer events in Turin!`
+                }
+            ]
+        }
+    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/events')
 

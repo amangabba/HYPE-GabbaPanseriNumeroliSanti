@@ -35,6 +35,18 @@ export default {
     name: 'TheTown',
     components: { SectionTitle },
     layout: 'single-topic',
+    head() {
+        return {
+            title: 'Turin - The Town',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Everything you need to know about the capital city of Piedmont, Turin!`
+                }
+            ]
+        }
+    },
     created() {
         this.$store.commit('setPageInfo', { title: 'The town' })
     }

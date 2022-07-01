@@ -55,6 +55,18 @@ export default {
     name: 'ContactsComponent',
     components: { SectionTitle },
     layout: 'single-topic',
+    head() {
+        return {
+            title: 'Turin - Contacts',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `How to contact us: phone, email and address...`
+                }
+            ]
+        }
+    },
     created() {
         this.$store.commit('setPageInfo', { title: 'Contacts' })
     },

@@ -8,6 +8,18 @@
 export default {
     name: 'ServiceTypesPage',
     layout: 'introductory',
+    head() {
+        return {
+            title: 'Turin - Service Types',
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: `Discover the main services present in Turin!`
+                }
+            ]
+        }
+    },
     async asyncData({ store, $axios }) {
         const { data } = await $axios.get('/api/service-types')
 
