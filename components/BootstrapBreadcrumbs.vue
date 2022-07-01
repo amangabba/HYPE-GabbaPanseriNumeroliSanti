@@ -42,8 +42,12 @@ export default {
 <style scoped>
 nav {
     --bs-breadcrumb-divider: '>';
+    border-bottom: 1px solid var(--bs-primary);
 }
 /* Da togliere se non convince */
+.breadcrumb {
+    margin-bottom: 2px;
+}
 .breadcrumb-link {
     color: black;
     padding: 2px 5px 2px 5px;
