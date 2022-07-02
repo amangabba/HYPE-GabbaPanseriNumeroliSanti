@@ -38,8 +38,24 @@ function insertData(models) {
     ]
     const eventList = [
         {
+            name: 'Invitation to Pompeii',
+            practical_info: 'Exhibition Invitation to Pompeii, curated by the Parco Archeologico of Pompeii and by Palazzo Madama.',
+            description:
+                'An invitation to enter into the homes of Pompeii, to discover their atmospheres, their furnishings, the objects used daily by their inhabitants, their decorations and embellishments, through a journey into the Pompeiian world.',// The exhibition itinerary, in the majestic Sala del Senato, where Italy was founded, unfolds across the environments that best represent the most lavish dwellings in Pompeii from the first century AD. The Roman domus, for the first time in Turin, opens its doors wide to visitors, welcoming them into the domestic intimacy and displaying ordinary daily life on the slopes of the Vesuvius. A plunge into the past, which offers the opportunity to experience those environments where the eruption of the Vesuvius in 79 AD suddenly extinguished the life of its inhabitants. Today’s Pompeii is nothing but a mere memory of the ancient city, stripped of all forms of life caused by the natural disaster and emptied of those objects that could allow us to imagine it as it once was.',
+            address: 'Piazza Castello, TO',
+            image_links: [
+                'https://www.artislineblog.com/wp-content/uploads/2022/04/po-scaled.jpg',
+                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0514.jpg',
+                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0522.jpg',
+            ],
+            season: 'Summer',
+            start_date: '2022-04-08',
+            end_date: '2022-09-29',
+            pointOfInterestId: 2
+        },
+        {
             name: 'Leggere il giardino',
-            practical_info: 'practical info about event 1',
+            practical_info: 'Reservation required. Cost of the ticket: 13 euro',
             description:
                 'Guided tour of parco della Palazzina di Caccia di Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
@@ -52,12 +68,15 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-03-19',
             end_date: '2022-10-08',
-            pointOfInterestId: 1
+            pointOfInterestId: 3
         },
         {
             name: 'Storie dal tornio',
             practical_info:
-                '10 May from 17.00 to 18.30. The ceramic of Greeks. 14 April from 17.00 to 18.30. The ceramic of Cipro. 12 May dalle  17:00 The ceramic of Etruscans',
+            '\n'+
+            '10 May from 17.00 to 18.30. The ceramic of Greeks.\n'+
+            '14 April from 17.00 to 18.30. The ceramic of Cipro.\n'+
+            '12 May dalle  17:00 The ceramic of Etruscans\n',
             description:
                 'Stories from the lathe. The ceramics of the Museum of Antiquities a new cycle of meetings and workshops to learn about and deepen the archaeological collections of the Royal Museums!', // Ceramics had in ancient times a diffusion comparable to that of todays plastic, but with a much greater environmental sustainability!', //troppo lungo se no All archaeological museums are overflowing with vases, distinguishable by appearance, shape, function, decoration...Do you already know what bucchero is? What is the difference between black-figure and red-figure vases? What does sealed earth mean? How was the slat polishing made? If yes, welcome colleague! Otherwise you can participate in the series of meetings Stories from the lathe and discover it together with the archaeologists of the Royal Museums.Each event includes an interactive behind-the-scenes workshop to familiarize yourself with techniques and materials used for the main ceramic classes of the Mediterranean, and a guided tour in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
             address: 'Piazzetta Reale 1, TO',
@@ -69,11 +88,11 @@ function insertData(models) {
             season: 'Winter',
             start_date: '2022-03-10',
             end_date: '2022-06-16',
-            pointOfInterestId: 1
+            pointOfInterestId: 4
         },
         {
             name: 'Frida Kahlo',
-            practical_info: 'practical info',
+            practical_info: 'Opening hours: 10.00 a.m.-6.00 p.m. Cost of the ticket: 16 euro',
             description:
                 'The most beautiful picture from Nickolas Muray come back to Palazzina di Caccia Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
@@ -85,11 +104,56 @@ function insertData(models) {
             season: 'Summer',
             start_date: '2022-03-12',
             end_date: '2022-06-05',
+            pointOfInterestId: 3
+        },
+        {
+            name: 'The Flora of Ancient Egypt',
+            practical_info: 'From Thursday to Saturday, starting at 10 p.m. until midnight. Four video mapping performances per hour are scheduled, each lasting about 8 minutes.',
+            description:
+                'One of the facades of the inner courtyard of the Museum and its garden will turn into a dynamic screen. With a video-mapping technique, flowers and plants of ancient Egypt will bloom.', //three trees will recount a love lyric, and lastly, the fauna of ancient Egypt will populate the garden, all this to the rhythm of an engaging melody.',
+            address: 'Via Accademia delle Scienze 6, TO',
+            image_links: [
+                'https://api.museoegizio.it/wp-content/uploads/2022/06/GiardinoEgizio2706-376_-1920x1080.jpg',
+                'https://mediterraneoantico.it/wp-content/uploads/2022/06/DSC_2413.jpg',
+            ],
+            season: 'Summer',
+            start_date: '2022-06-30',
+            end_date: '2022-07-30',
+            pointOfInterestId: 1
+        },
+        {
+            name: 'The table by Ugo Da Capri for the altar of the holy face',
+            practical_info: 'It will be possible to take guided tours only on sunday.',
+            description:
+                'The work is exhibited to the general public thanks to the support of Reale Mutua and the technical contribution of Targetti Sankey Spa', //through lighting technologies with diversified ignition for a combined visual narration. In the prestigious exhibition space of Palazzo Madama, visitors will be able to admire the altarpiece by Ugo da Carpi with Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul- a work of extraordinary importance for art and faith',
+            address: 'Piazza Castello, TO',
+            image_links: [
+                'https://www.italpress.com/wp-content/uploads/2022/06/20220615_1840-630x420.jpg',
+                'https://www.osservatoreromano.va/content/dam/or/images/it/2022/06/134/varobj12321419obj2035841.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
+            ],
+            season: 'Winter',
+            start_date: '2022-12-08',
+            end_date: '2022-12-24',
+            pointOfInterestId: 2
+        },
+        {
+            name: 'Objective identities',
+            practical_info: 'On Tuesday and Wednesday. at 6 p.m. Lecture held by Bettina Bader',
+            description:
+                'This talk will raise awareness of somewhat hidden prejudices and preconceived ideas about the identities of ancient people, based on material culture in various forms.', // Often such ideas cannot really be substantiated from current knowledge of objects, and textual references, if they exist, are also not as straight forward as we would wish. Firstly, individuals may have had more identities than immediately apparent and not each one is easily recognisable in the archaeological record. Further, research shows that some ideas about ancient Egypt and its inhabitants are rooted in antiquated culture-historical paradigms, which go back to ideological narratives. It is time to highlight those problems and avoid simplistic historical narratives in favour of more complex reconstructions. The lecture will provide some theoretical background of archaeological thinking with a proposal to reconstruct ancient life’s circumstances and realities, with a case study set in the late Middle Kingdom (c. 1800-1700 BC). ',
+            address: 'Via Accademia delle Scienze 6, TO',
+            image_links: [
+                'https://i.pinimg.com/originals/ca/f3/3c/caf33c5308f68b083fcd7b317e3bcad9.jpg',
+                'https://souvenirdiviaggio.it/wp-content/uploads/2020/10/tomba-degli-ignoti-museo-egizio-di-torino-scaled-e1603637115965.jpg',
+            ],
+            season: 'Summer',
+            start_date: '2022-06-07',
+            end_date: '2022-07-07',
             pointOfInterestId: 1
         },
         {
             name: 'Passepartout',
-            practical_info: 'practical info',
+            practical_info: 'The guided tours will start at 10.30 a.m., 12.00 p.m, 2.30 p.m and 4.00 p.m.',
             description:
                 'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
@@ -100,15 +164,24 @@ function insertData(models) {
                 'https://i.pinimg.com/originals/c8/5b/36/c85b3619fbca762ade57930d34b254d8.jpg'
             ],
             season: 'Summer',
-            start_date: '2022-04-24',
-            end_date: '2022-04-25',
-            pointOfInterestId: 1
+            start_date: '2022-08-24',
+            end_date: '2022-08-25',
+            pointOfInterestId: 3
         },
         {
             name: 'Lyric and musical',
-            practical_info: 'practical info',
+            practical_info:
+            '\n'+
+            '13th June: Il flauto magico.\n' +
+            '4th July: Rigoletto.\n' +
+            '8th July: Genitori e figli.\n' +
+            '22th July: Luci e Ombre.\n',
+
             description:
-                'the Salone of Onour of the Palazzina di Caccia di Stupinigi will host five appointments of the Sunday review of the Teatro Superga with the great opera and musicals that have made history',
+                'the Salone of Onour of the Palazzina di Caccia di Stupinigi will host four appointments of the Sunday review of the Teatro Superga',
+               //* 'with the great opera and musicals that have made history. The winning singers of the prestigious AsLiCo Competition perform the most \n' +
+                //'beautiful arias of the operatic repertoire on the notes of Mozart, Bellini, Puccini, Donizetti and Verdi. Solo arias and concerted duets, \n' +
+                //'the most beautiful pieces of themes dear to the composers of the Italian tradition, accompanied live by the piano of Giorgio Martano.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',
@@ -117,9 +190,41 @@ function insertData(models) {
                 'https://www.guidatorino.com/wp-content/uploads/2019/07/una-notte-palazzina-caccia-stupinigi-2019.jpg'
             ],
             season: 'Summer',
-            start_date: '2022-03-13',
-            end_date: '2022-04-10',
+            start_date: '2022-06-13',
+            end_date: '2022-07-22',
+            pointOfInterestId: 3
+        },
+        {
+            name: 'Transforming the Egyptian Museum in Cairo.',
+            practical_info: 'Lecture held  held by Heba Abd el Gawad, Corinna Rossi and Irene Morfini, starting at 5 p.m.',
+            description:
+                'The project Transforming the Egyptian Museum in Cairo saw Museo Egizio leading a consortium of European museums including the Ägyptische Papyrussamlung of Berlin, the British Museum, the Louvre and the Rijksmuseum van Oudheden of Leiden.', //to draw a compherensive masterplan to support the re-organisation of the iconic Tahrir museum.',
+            address: 'Via Accademia delle Scienze 6, TO',
+            image_links: [
+                'https://miprendoemiportovia.it/wp-content/uploads/2020/07/torino-museo-egizio-interno.jpg',
+                'https://www.viaggiaescopri.it/wp-content/uploads/2015/07/Suggestiva-sala-delle-statue-al-Museo-Egizio-di-Torino.jpg',
+                'https://martinaway.com/wp-content/uploads/2021/07/Museo-Egizio-di-Torino.jpg',
+            ],
+            season: 'Winter',
+            start_date: '2023-01-27',
+            end_date: '2023-01-28',
             pointOfInterestId: 1
+        },
+        {
+            name: 'Cycle of conferences: Splendors of the table',
+            practical_info:
+                '13 January:The silverware service of Charle Odiot. 10 February: The food of the Gods. 7 March: Public lunches and private lunches.',
+            description:
+                'The practices related to the lunches in use in the House of Savoy between the kingdoms of Vittorio Amedeo II and Carlo Alberto change over time. The meeting explores the theme on the basis of archival documents.',
+            address: 'Piazzetta Reale 1, TO',
+            image_links: [
+                'https://maifermarsi.it/wp-content/uploads/2019/03/Sala-da-pranzo-1024x576.jpg',
+                'https://i.pinimg.com/474x/cf/e5/9d/cfe59db0ba5eba93fbd06761a4cb3483.jpg'
+            ],
+            season: 'Winter',
+            start_date: '2022-01-13',
+            end_date: '2022-03-07',
+            pointOfInterestId: 4
         }
     ]
 

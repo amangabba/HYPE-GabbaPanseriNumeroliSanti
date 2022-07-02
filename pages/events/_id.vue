@@ -3,23 +3,23 @@
         <div id="content" class="container">
             <div class="row m-2">
                 <BootstrapCarousel
+                    v-if="image_links.length"
                     id="event-carousel"
                     :images="image_links"
                     class="col-md-6"
                 />
                 <div class="col-md-6 text-left p-3">
-                    <p><i> Practical info: </i> {{ practical_info }}</p>
-                    <p><i> The event starts on: </i> {{ start_date }}</p>
-                    <p><i> The event ends on: </i> {{ end_date }}</p>
-                    <p><i> Address: </i> {{ address }}</p>
+                    <p><i> <b> The event starts on: </b> </i> {{ start_date }}</p>
+                    <p><i><b> The event ends on: </b> </i> {{ end_date }}</p>
+                    <p v-html="practical_info"></p>
+                    <p><i><b> Address: </b></i> {{ address }}</p>
                     <p>
-                        <i> Location:</i>
+                        <i><b> Location: </b></i>
                         <NuxtLink :to="'/pois/' + pois_link.id">
                             {{ pois_link.name }}
                         </NuxtLink>
                     </p>
-                    <p><i> This event will be held in: </i> {{ season }}</p>
-                    <!--link of a poi, ma non è dinamico cosi -->
+                    <p><i><b> This event will be held in: </b> </i> {{ season }}</p>
 
                     <p v-if="season === 'Summer'">
                         <NuxtLink to="/summer-events">
@@ -31,9 +31,12 @@
                             More winter events
                         </NuxtLink>
                     </p>
-                    <p>{{ description }}</p>
                 </div>
             </div>
+
+            <SectionTitle class="row m-2 mt-4 mb-4">Description</SectionTitle>
+            <div class="row m-2 mt-4 mb-4" v-html="description"></div>
+
             <div v-if="events_images.length">
                 <div class="row justify-content-center">
                     <SectionTitle>Other events in this location</SectionTitle>
@@ -92,12 +95,16 @@ export default {
         for (const id of data.correlated_event_IDs) {
             eventLinks.push(`/events/${id}`)
         }
+        
+        const temp1 = data.practical_info.replace(/\n/g, "<br />")
+        const infoWithBr = temp1.replace(/\t/g, "&nbsp")
+        const descriptionWithBr = data.description.replace(/\n/g, "<br />")
 
         return {
             from,
             name: data.name,
-            practical_info: data.practical_info,
-            description: data.description,
+            practical_info: infoWithBr,
+            description: descriptionWithBr,
             address: data.address,
             image_links: data.image_links,
             season: data.season,
