@@ -66,11 +66,11 @@
                     :image-link="
                         poi.image_links.length ? poi.image_links[0] : ''
                     "
-                    :image-text="poi.name + 'image'"
+                    :image-text="poi.name + ' image'"
                     :title="
                         '(' +
                         poi.number +
-                        '/ ' +
+                        '/' +
                         poi_list.length +
                         ') - ' +
                         poi.name

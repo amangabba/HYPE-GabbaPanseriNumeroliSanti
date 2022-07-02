@@ -16,24 +16,17 @@ function insertData(models) {
         },
         {
             title: 'Church and monuments',
-            duration: '235',
+            duration: '375',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+                `The itinerary starts from Santuario della Consolata, in the center of the city and moves towards 'La Basilica di Superga', visiting the famous 'Duomo di Torino', 'Cappella della Sacra Sindone' and 'Mole Antonelliana'`,
             map_link: '/images/itinerary-church.png'
         },
         {
-            title: 'Museums',
-            duration: '143',
+            title: 'Museums and History',
+            duration: '320',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
+                `The city of Turin offers to visitors more than 40 museums, some of which are of world importance. We'll visit: The Egyptian Museum, second for importance and quantity of pieces after that of Cairo, Museo dell'Automobile, Parco del Valentino, Musei Reali and Villa della Regina.`,
             map_link: '/images/itinerary-museums.png'
-        },
-        {
-            title: 'Itinerary 4',
-            duration: '144',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
-            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
         }
     ]
     const eventList = [
@@ -938,7 +931,7 @@ function insertData(models) {
         {
             number: 1,
             itineraryId: 3,
-            pointOfInterestId: 1
+            pointOfInterestId: 6
         },
         {
             number: 2,
@@ -948,7 +941,7 @@ function insertData(models) {
         {
             number: 3,
             itineraryId: 3,
-            pointOfInterestId: 6
+            pointOfInterestId: 1
         },
         {
             number: 4,
@@ -959,27 +952,6 @@ function insertData(models) {
             number: 5,
             itineraryId: 3,
             pointOfInterestId: 13
-        },
-
-        {
-            number: 1,
-            itineraryId: 4,
-            pointOfInterestId: 2
-        },
-        {
-            number: 2,
-            itineraryId: 4,
-            pointOfInterestId: 1
-        },
-        {
-            number: 3,
-            itineraryId: 4,
-            pointOfInterestId: 6
-        },
-        {
-            number: 4,
-            itineraryId: 4,
-            pointOfInterestId: 5
         }
     ]
 
