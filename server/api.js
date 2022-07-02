@@ -40,6 +40,7 @@ async function runMainApi() {
                 id: element.id,
                 title: element.title,
                 duration: element.duration,
+                duration_string: Math.floor(element.duration/60) + ' hours ' + element.duration%60 +  ' minutes',
                 description: element.description,
                 map_link: element.map_link,
                 poi_list: filteredPOIs
@@ -76,6 +77,7 @@ async function runMainApi() {
             id: result.id,
             title: result.title,
             duration: result.duration,
+            duration_string: Math.floor(result.duration/60) + ' hours ' + result.duration%60 +  ' minutes',
             description: result.description,
             map_link: result.map_link,
             poi_list: filteredPOIs

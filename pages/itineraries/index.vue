@@ -17,7 +17,7 @@ export default {
             // const poiList = elem.poi_list
             itineraryList.push({
                 title: elem.title,
-                subtitle: 'Duration: ' + elem.duration + ' min',
+                subtitle: 'Duration: ' + elem.duration_string,
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
                 description: elem.description

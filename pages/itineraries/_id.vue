@@ -4,13 +4,14 @@
             <div class="row m-2">
                 <!-- Itinerary Map Picture -->
                 <img
+                    id="map-image"
                     class="col-md-3 h-auto text-center"
                     :src="map_link"
-                    alt="Itinerary Map Picture"
+                    alt="Itinerary Map Image"
                 />
                 <!-- Itinerary Description -->
                 <div class="col-md-9 text-left p-3">
-                    <p><i>Duration:</i> {{ duration }} min</p>
+                    <p><i>Duration:</i> {{ duration }}</p>
                     <p v-if="poi_list.length">
                         <i>Starting point:</i> {{ poi_list[0].name }} ({{
                             poi_list[0].type
@@ -75,7 +76,6 @@
                         poi.name
                     "
                     :subtitle="poi.address"
-                    :content="poi.description"
                     :link="'/pois/' + poi.id"
                     link-text="See Details"
                     button-text="Show on Map"
@@ -116,7 +116,7 @@ export default {
 
         return {
             title: data.title,
-            duration: data.duration,
+            duration: data.duration_string,
             description: data.description,
             map_link: data.map_link,
             poi_list: data.poi_list,
@@ -171,5 +171,9 @@ export default {
 <style scoped>
 .row > * {
     padding: 0;
+}
+#map-image {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 </style>

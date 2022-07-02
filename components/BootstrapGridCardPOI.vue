@@ -4,14 +4,14 @@
         :class="active ? 'card mb-3 bg-primary bg-opacity-10' : 'card mb-3'"
     >
         <div class="row g-0">
-            <div class="col-md-4 my-auto p-3">
+            <div class="col-md-3 my-auto p-3">
                 <img
                     class="img-fluid rounded-start rounded-2"
                     :src="imageLink"
                     :alt="imageText"
                 />
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="card-body d-flex flex-column h-100">
                     <h5 class="card-title">
                         {{ title }}
@@ -19,8 +19,9 @@
                     <p class="card-text text-muted">
                         {{ subtitle }}
                     </p>
-                    <p class="card-text">{{ content }}</p>
-                    <div class="row justify-content-end mt-auto">
+
+                    <p v-if="content !== ''" class="card-text">{{ content }}</p>
+                    <div class="row justify-content-start mt-auto">
                         <!-- Open the page regarding the POI -->
                         <a
                             class="col-md-2 btn btn-primary m-1 p-1"
@@ -74,7 +75,8 @@ export default {
         },
         content: {
             type: String,
-            required: true
+            required: false,
+            default: ''
         },
         link: {
             type: String,
@@ -114,5 +116,6 @@ export default {
 }
 .card {
     border: 2px solid rgba(229, 229, 229, 1);
+    max-width: 80%;
 }
 </style>

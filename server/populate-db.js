@@ -9,24 +9,24 @@ const serviceTypes = require('./db-data/service-types')
 function insertData(models) {
     const itineraryList = [
         {
-            title: 'I palazzi di Torino',
+            title: 'Palaces and Squares of Turin',
             duration: '292',
             description: `The itinerary includes five magical palaces of Turin. Starting from 'Palazzo Madama', then 'Palazzina di Caccia di Stupingi', 'Palazzo Reale di Torino', 'Piazza San Carlo' and ending in the 'Piazza Castello'.`,
-            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
+            map_link: '/images/itinerary-palaces.png'
         },
         {
-            title: 'Itinerary 2',
-            duration: '142',
+            title: 'Church and monuments',
+            duration: '235',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
-            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
+            map_link: '/images/itinerary-church.png'
         },
         {
-            title: 'Itinerary 3',
+            title: 'Museums',
             duration: '143',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eget magna euismod tempor. Sed non lacus nec urna tincidunt suscipit a vel sem.',
-            map_link: 'https://www.ricksteves.com/italy-itinerary.jpg'
+            map_link: '/images/itinerary-museums.png'
         },
         {
             title: 'Itinerary 4',
@@ -624,43 +624,53 @@ function insertData(models) {
         {
             number: 1,
             itineraryId: 2,
-            pointOfInterestId: 3
+            pointOfInterestId: 9
         },
         {
             number: 2,
             itineraryId: 2,
-            pointOfInterestId: 1
+            pointOfInterestId: 12
         },
         {
             number: 3,
             itineraryId: 2,
-            pointOfInterestId: 4
+            pointOfInterestId: 14
         },
         {
             number: 4,
             itineraryId: 2,
-            pointOfInterestId: 5
+            pointOfInterestId: 8
+        },
+        {
+            number: 5,
+            itineraryId: 2,
+            pointOfInterestId: 11
         },
 
         {
             number: 1,
             itineraryId: 3,
-            pointOfInterestId: 4
+            pointOfInterestId: 1
         },
         {
             number: 2,
             itineraryId: 3,
-            pointOfInterestId: 1
+            pointOfInterestId: 5
         },
         {
             number: 3,
             itineraryId: 3,
-            pointOfInterestId: 2
+            pointOfInterestId: 6
         },
         {
             number: 4,
             itineraryId: 3,
-            pointOfInterestId: 3
+            pointOfInterestId: 7
+        },
+        {
+            number: 5,
+            itineraryId: 3,
+            pointOfInterestId: 13
         },
 
         {
