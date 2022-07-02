@@ -128,21 +128,20 @@ function insertData(models) {
             name: 'Museo Egizio',
             type: 'Museum',
             visit_info:
-                '\n' +
-                '9-18.30     from Tuesday to Sunday\n' +
-                '9-14        on Monday',
+                '9-18.30\t\t\t\t\tfrom Tuesday to Sunday\n' +
+                '9-14\t\t\t\t\t\t\t\ton Monday',
             address: 'Via Accademia delle Scienze, 6, 10123 Torino TO',
             description:
-                'The origins of the museum trace back to 1630, when Charles Emmanuel I, Duke of Savoy, assembled a small\n' +
-                'collection of Egyptian antiquities; the collection was thereafter expanded during the 18th century through\n' +
-                'archaeological expeditions and acquisitions, and publicly displayed since 1824 into the new Museum of\n' +
-                'Egyptian Antiquities in Turin. The museum is housed in the Palazzo dell’Accademia delle Scienze.\n\n ' +
-                'One of the most interesting characteristics of this museum is the great diversity of the artifact on\n' +
-                'view, including a series of mummies of the 5th Dynasty wrapped in linen clothes; the Toilet Box of\n' +
-                'Merit, still retaining the original ointments inside their alabaster and glass vessels; the Anthropoid\n' +
-                'Sarcophagus of Butehamon, the Canopic Vessels of Wah-ib-ra, once containing internal organs removed\n' +
-                'during mummification; the entire content of the Tomb of Kha and of Merit; a large monument from the\n' +
-                'Temple of Ellesyia; the famous Turin Papyrus Map; the Bembine Table of Isis bronze tablet, and the\n' +
+                'The origins of the museum trace back to 1630, when Charles Emmanuel I, Duke of Savoy, assembled a small' +
+                'collection of Egyptian antiquities. The collection was thereafter expanded during the 18th century through' +
+                'archaeological expeditions and acquisitions, and publicly displayed since 1824 into the new Museum of' +
+                'Egyptian Antiquities in Turin. The museum is housed in the Palazzo dell’Accademia delle Scienze.' +
+                'One of the most interesting characteristics of this museum is the great diversity of the artifacts on' +
+                'view, including:\n· a series of mummies of the 5th Dynasty wrapped in linen clothes;\n· the Toilet Box of' +
+                'Merit, still retaining the original ointments inside their alabaster and glass vessels;\n· the Anthropoid' +
+                'Sarcophagus of Butehamon, the Canopic Vessels of Wah-ib-ra, once containing internal organs removed' +
+                'during mummification;\n· the entire content of the Tomb of Kha and of Merit;\n· a large monument from the' +
+                'Temple of Ellesyia;\n· the famous Turin Papyrus Map;\n· the Bembine Table of Isis bronze tablet, and the' +
                 'oldest known version of the Egyptian Book of the Dead, among many others.',
             image_links: [
                 'https://api.museoegizio.it/wp-content/uploads/2021/11/DSF2001-1920x1080.jpg',
@@ -159,22 +158,21 @@ function insertData(models) {
             name: 'Palazzo Madama',
             type: 'Palace',
             visit_info:
-                '\n' +
-                'closed      on Tuesday\n' +
-                '10-18       on all other days',
+                'closed\t\t\t\t\t\ton Tuesday\n' +
+                '10-18\t\t\t\t\t\t\ton all other days',
             address: 'P.za Castello, 10122 Torino TO',
             description:
-                'Palazzo Madama was the first Senate of the Kingdom of Italy, and takes its traditional name from the embellishments\n' +
+                'Palazzo Madama was the first Senate of the Kingdom of Italy, and takes its traditional name from the embellishments' +
                 'it received under two queens (madama) of the House of Savoy.\n' +
-                'It is a large historic building that now houses the collections of the Museo Civico d’Arte Antica\n' +
-                'which covers four floors: in the basement, down by the Roman foundations, there is the Lapidario\n ' +
-                'Medievale – the medieval stonework collection – with stone sculptures and jewellery.\n ' +
-                'From there you can reach the Medieval Garden, a heaven of nature and silence in the heart of Turin.\n' +
-                'The ground floor is mainly devoted to the fifteenth-century castle and to the art of the Middle Ages\n' +
-                'and of the Renaissance. In the Treasure Tower, you will find the Portrait of a Man by Antonello da Messina.\n ' +
-                'The Baroque rooms on the first floor contain the art of the seventeenth and eighteenth centuries,\n ' +
-                'with paintings and with furniture by Pifetti and Prunotto in lavishly decorated settings.\n ' +
-                'Lastly, on the second floor, you will be able to see the decorative arts of all ages:\n ' +
+                'It is a large historic building that now houses the collections of the Museo Civico d’Arte Antica' +
+                'which covers four floors: in the basement, down by the Roman foundations, there is the Lapidario ' +
+                'Medievale – the medieval stonework collection – with stone sculptures and jewellery.' +
+                'From there you can reach the Medieval Garden, a heaven of nature and silence in the heart of Turin.' +
+                'The ground floor is mainly devoted to the fifteenth-century castle and to the art of the Middle Ages' +
+                'and of the Renaissance. In the Treasure Tower, you will find the Portrait of a Man by Antonello da Messina.' +
+                'The Baroque rooms on the first floor contain the art of the seventeenth and eighteenth centuries,' +
+                'with paintings and with furniture by Pifetti and Prunotto in lavishly decorated settings.' +
+                'Lastly, on the second floor, you will be able to see the decorative arts of all ages:' +
                 'ceramics, ivories, jewellery, fabrics, glasswork, and much more besides.\n' +
                 'The Museum was set up in 1861 by the City of Turin to bring together and house the heritage of Piedmont.',
 
@@ -193,15 +191,14 @@ function insertData(models) {
             name: 'Palazzina di Caccia di Stupinigi',
             type: 'Palace',
             visit_info:
-                '\n' +
-                'closed      on Monday\n' +
-                '10-17.30    from Tuesday to Friday\n' +
-                '10-18.30    Saturday and Sunday',
+                'closed\t\t\t\t\t\ton Monday\n' +
+                '10-17.30\t\t\t\tfrom Tuesday to Friday\n' +
+                '10-18.30\t\t\t\tSaturday and Sunday',
             address: 'Piazza Principe Amedeo, 7, 10042 Stupinigi, Nichelino TO',
             description:
-                'A hunting lodge for a European Court, a place of leisure and hunting, during the 18th and 19th ' +
+                'A hunting lodge for a European Court, a place of leisure and hunting. During the 18th and 19th ' +
                 'centuries this was the favourite spot of the Savoy family for spectacular parties and solemn ' +
-                'marriages, as well as being the residence of Napoleon in the early 19th century.' +
+                'marriages, as well as being the residence of Napoleon in the early 19th century.\n' +
                 'Building began in 1729 according to a project by Filippo Juvarra and continued up to the end of the ' +
                 '19th century, with further extension and completion projects by Benedetto Alfieri and other architects. ' +
                 'The structure is composed of a central core with a large hall from which four lower arms form a cross ' +
@@ -229,17 +226,16 @@ function insertData(models) {
             name: 'Palazzo Reale di Torino',
             type: 'Palace',
             visit_info:
-                '\n' +
-                'closed      on Monday\n' +
-                '8.30-18     on all other days',
+                'closed\t\t\t\t\t\ton Monday\n' +
+                '8.30-18\t\t\t\t\ton all other days',
             address: 'Piazzetta Reale, 1, 10122 Torino TO',
             description:
-                'The Royal Palace of Turin (Palazzo Reale di Torino) is a sixteenth-century palace constructed for the ' +
+                'The Royal Palace of Turin (Palazzo Reale di Torino) is a sixteenth-century palace built for the ' +
                 'House of Savoy, which ruled Turin until the late nineteenth century. ' +
                 'Originally built in the 16th century, it was modernized by Christine Marie of France in the 17th ' +
                 'century with designs by Baroque architect Filippo Juvarra.' +
                 'In 1946, the palace was claimed by the ' +
-                'Italian Republic and turned into a "Museum of the Life and Works of the House of Savoy". Its rooms ' +
+                'Italian Republic and turned into a "Museum of the Life and Works of the House of Savoy".\nIts rooms ' +
                 'are decorated with rich tapestries and a collection of Chinese and Japanese vases. The Royal Armoury ' +
                 'houses an extensive array of arms, including examples from the 16th and 17th centuries.' +
                 'The palace houses the Scala delle Forbici, a staircase by Filippo Juvarra. The Chapel of the Holy ' +
@@ -262,9 +258,8 @@ function insertData(models) {
             name: "Museo dell'Automobile di Torino",
             type: 'Museum',
             visit_info:
-                '\n' +
-                '10-14       on Monday\n' +
-                '10-19       on all other days',
+                '10-14\t\t\t\t\t\t\ton Monday\n' +
+                '10-19\t\t\t\t\t\t\ton all other days',
             address: "Corso Unità d'Italia, 40, 10126 Torino TO",
             description:
                 'The MAUTO - National Automobile Museum, which covers an area of 19.000 square meters, was founded ' +
@@ -273,14 +268,14 @@ function insertData(models) {
                 '2011 and introduced in 2013 by the English newspaper The Times in the ranking of the 50 best in the ' +
                 'world, is spread over three floors. A journey through the history of the automotive to tell its ' +
                 'evolution, a bridge between the past and the present, with one of the most rare and interesting ' +
-                'collections of its kind, consisting of over 200 original cars of 80 different brands.' +
+                'collections of its kind, consisting of over 200 original cars of 80 different brands.\n' +
                 'At the museum exhibition, in addition to the large Open Garage that can be visited by appointment, ' +
                 'which houses the cars that are not in the permanent collection and is the heart of the ' +
                 'MAUTO Restoration Center, there is an area dedicated to temporary exhibitions, an event space, a' +
-                ' convention center, educational center, the bookshop, the café-restaurant and the Documentation ' +
+                'convention center, educational center, the bookshop, the café-restaurant and the Documentation ' +
                 'Center which is among the most precious in Europe for the importance of its collections. The enormous ' +
-                'wealth of data, historical insights, archival images, technical data on cars and coachbuilders are in ' +
-                'fact available throughout the visit through smartphone through the app of the Museum.\n',
+                'wealth of data, historical insights, archival images, technical data on cars and coach-builders are in ' +
+                'fact available throughout the visit through smartphone through the app of the Museum.',
             image_links: [
                 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/02/28/9f/esterno.jpg?w=1200&h=-1&s=1',
                 'https://mole24.it/wp-content/uploads/2016/07/mauto6.jpg',
@@ -298,16 +293,16 @@ function insertData(models) {
             visit_info: 'Always open',
             address: "Corso Massimo d'Azeglio, 10126 Torino TO",
             description:
-                'The Parco del Valentino is located on the banks of the Po river a few kilometers south of Turin.\n ' +
-                'It hosts famous attractions such as a medieval village, called Borgo Medievale which has been\n ' +
-                'transformed into an open-air museum where you can immerse yourself in the magic of centuries past.\n ' +
-                'The sight was recreated in the 19th century for an expo in the medieval style and resembles an\n' +
-                'archaeological site from the 15th century. Borgo Medievale has a couple of small medieval boutiques\n' +
-                'selling wrought iron, basketry and wines. It’s especially nice to sit in the bar on the riverside.\n' +
-                'The wrought iron tree in the courtyard and the exhibitions on medieval paper scooping and forging\n ' +
-                'techniques are well worth seeing. At the weekends, guided tours are offered to visit the Castello,\n' +
-                'del Valentino, the former residence of the Savoy royal family, which was modeled on the castles\n ' +
-                'from Piedmont. Finally, the fountain of the twelve months and the beautiful botanical and rock\n' +
+                'The Parco del Valentino is located on the banks of the Po river a few kilometers south of Turin.' +
+                'It hosts famous attractions such as a medieval village, called Borgo Medievale which has been' +
+                'transformed into an open-air museum where you can immerse yourself in the magic of centuries past.' +
+                'The sight was recreated in the 19th century for an expo in the medieval style and resembles an' +
+                'archaeological site from the 15th century. Borgo Medievale has a couple of small medieval boutiques' +
+                'selling wrought iron, basketry and wines. It’s especially nice to sit in the bar on the riverside.' +
+                'The wrought iron tree in the courtyard and the exhibitions on medieval paper scooping and forging' +
+                'techniques are well worth seeing. At the weekends, guided tours are offered to visit the Castello,' +
+                'del Valentino, the former residence of the Savoy royal family, which was modeled on the castles' +
+                'from Piedmont. Finally, the fountain of the twelve months and the beautiful botanical and rock' +
                 'garden represent two unmissable attractions in the Parco del Valentino.',
             image_links: [
                 'https://www.giovanigenitori.it/wp-content/uploads/2018/03/Parco-del-valentino1.jpg',
@@ -324,10 +319,9 @@ function insertData(models) {
             name: 'Musei Reali',
             type: 'Museum',
             visit_info:
-                '\n' +
-                'closed      on Monsday\n' +
-                '10-19       from Tuesday to Friday\n' +
-                '10-21       on Saturday and Sunday',
+                'closed\t\t\t\t\t\ton Monday\n' +
+                '10-19\t\t\t\t\t\t\tfrom Tuesday to Friday\n' +
+                '10-21\t\t\t\t\t\t\ton Saturday and Sunday',
             address: 'Piazzetta Reale, 1',
             description:
                 'The Royal Museums of Turin (Musei Reali di Torino) were established in 2014 under the name of' +
@@ -335,7 +329,7 @@ function insertData(models) {
                 'institute of the Italian Ministry of Culture and Tourism that has special' +
                 '(scientific, financial, accounting, administrative) autonomy.\n' +
                 'The Royal Museums are a museum complex equal, in terms of size and value of its collections, ' +
-                'to the most famous royal residences of Europe. We offer an itinerary that comprises history, arts ' +
+                'to the most famous royal residences of Europe. It offers an itinerary that comprises history, arts ' +
                 'and natural environments and that develops through a path of 3 kilometers and on 30,000 square ' +
                 'meters of exhibition spaces and 7 hectares of park.\n' +
                 'The Royal Museums merge five State institutes whose heritage originates from the legacy of dynastic ' +
@@ -356,22 +350,21 @@ function insertData(models) {
             name: 'Mole Antonelliana',
             type: 'Park',
             visit_info:
-                '\n' +
-                'closed      on Tuesday\n' +
-                '9-21        on Monday, Wednesday, Thursday and Sunday\n' +
-                '9-20        on Friday and Saturday',
+                'closed\t\t\t\t\t\ton Tuesday\n' +
+                '9-21\t\t\t\t\t\t\t\ton Monday, Wednesday, Thursday and Sunday\n' +
+                '9-20\t\t\t\t\t\t\t\ton Friday and Saturday',
             address: 'Via Montebello, 20, 10124 Torino TO',
             description:
-                'An architectural landmark of the city of Turin, it was initially conceived as a synagogue,\n' +
-                'before being bought by the Municipality of Turin and made into a monument to national unity.\n ' +
-                'Planned and begun by architect Alessandro Antonelli in 1863, it was only completed in 1889.\n ' +
-                'With a height of 167.5 metres, it was the tallest brick building in Europe at the time.\n ' +
-                'The panoramic lift was inaugurated in 1961, during the celebrations for the centenary of the Italian\n ' +
-                'Unification and it was renovated in 1999. Today it still allows visitors to go up to the panoramic\n ' +
-                'terrace which is 85 metres high and take in the amazing views of the city and the surrounding Alps.\n ' +
+                'An architectural landmark of the city of Turin, it was initially conceived as a synagogue,' +
+                'before being bought by the Municipality of Turin and made into a monument to national unity.' +
+                'Planned and begun by architect Alessandro Antonelli in 1863, it was only completed in 1889.' +
+                'With a height of 167.5 metres, it was the tallest brick building in Europe at the time.' +
+                'The panoramic lift was inaugurated in 1961, during the celebrations for the centenary of the Italian' +
+                'Unification and it was renovated in 1999. Today it still allows visitors to go up to the panoramic' +
+                'terrace which is 85 metres high and take in the amazing views of the city and the surrounding Alps.' +
                 'Visitors can also climb on foot along the cavity of the dome stairs, up to the panoramic terrace.\n' +
-                'Mole Antonelliana also hosts the National Museum of Cinema. The exhibits begin with gadgets that\n ' +
-                'pre-date films, like shadow puppets, magic lanterns, and zoetropes. There are film sets to explore,\n ' +
+                'Mole Antonelliana also hosts the National Museum of Cinema. The exhibits begin with gadgets that' +
+                'pre-date films, like shadow puppets, magic lanterns, and zoetropes. There are film sets to explore,' +
                 'movie posters, photographs, and film clips to admire and lots of masks, costumes, and other memorabilia.\n' +
                 'The collection is so big that true film nerds will need a whole afternoon to explore.',
             image_links: [
@@ -389,20 +382,19 @@ function insertData(models) {
             name: 'Santuario della Consolata',
             type: 'Shrine',
             visit_info:
-                '\n' +
-                '7.45-19.45  from Monday to Friday\n' +
-                '7.45-19     on Saturday\n' +
-                '7.45-20.30  on Sunday',
+                '7.45-19.45\t\tfrom Monday to Friday\n' +
+                '7.45-19\t\t\t\t\ton Saturday\n' +
+                '7.45-20.30\t\ton Sunday',
             address: 'Piazza della Consolata, 10122 Torino TO',
             description:
-                'The sanctuary of Mary the Comforter, closely linked to the worship of the Virgin Mary, ' +
+                'The sanctuary of Mary the Comforter, closely linked to the worship of the Virgin Mary,' +
                 'has very ancient origins. Dedicated originally to Sant’Andrea, it was already in existence in ' +
                 'the 10th century. Of the medieval period there remain the bell-tower and perhaps the underground ' +
                 'chapel of Madonna delle Grazie. The radical extensions were designed by Guarino Guarini (1678), ' +
-                'while Filippo Juvarra added the oval presbytery (1729). The neoclassical facade dates from 1860; ' +
-                'further additions were made in 1899-1904 under the guidance of Carlo Ceppi. The interior is designed ' +
+                'while Filippo Juvarra added the oval presbytery (1729). The neoclassical facade dates from 1860. ' +
+                'Further additions were made in 1899-1904 under the guidance of Carlo Ceppi. The interior is designed ' +
                 'to enhance the sumptuous high altar by Juvarra on which there are two adoring angels in white marble ' +
-                'by Carlo Antonio Tantardini and the painting of the miraculous Virgin Mary. The church serves as ' +
+                'by Carlo Antonio Tantardini and the painting of the miraculous Virgin Mary.\nThe church serves as ' +
                 'a burial place for a number of saints affiliated with Turin: Giuseppe Cafasso and Leonardo Murialdo, ' +
                 'as well as the Blessed Giuseppe Allamano, rector (1880-1926) and founder of the Mission Institute of ' +
                 'the Consolata. Every June 20, a procession of the icon of the Virgin takes place in the ' +
@@ -426,13 +418,13 @@ function insertData(models) {
                 'given by the royal architect Carlo di Castellamonte (1642-1650).\n' +
                 'In the center you can see the equestrian statue of Emanuele Filiberto, represented by Carlo ' +
                 'Marocchetti (1838) in the act of sheathe the sword after the battle of San Quintino in 1557, ' +
-                'one of the most significant statues of the early nineteenth century (nicknamed El Caval d’brons) .\n' +
+                'one of the most significant statues of the early nineteenth century (nicknamed El Caval d’brons).\n' +
                 'The short side of the square, to the south-west, is bordered by the facades of almost twin churches ' +
                 'of Santa Cristina and San Carlo.\n' +
-                'Many palaces overlooking Piazza San Carlo, among which should be mentioned at n. 183, the building ' +
+                'There are many palaces overlooking Piazza San Carlo, among which the building ' +
                 'Solaro del Borgo, home of the Philharmonic Accademy from 1839, in which was joined in 1947 the Circolo ' +
                 'del Whist, founded in 1841 by Camillo Benso, the Count of Cavour.\n' +
-                'You don’t forget to visit the traditional Caffè San Carlo, which opened in 1842, the Caffè Torino and ' +
+                'Don’t forget to visit the traditional Caffè San Carlo, which opened in 1842, the Caffè Torino and ' +
                 'the pastry Fratelli Stratta, with the original furnishings of 1836, also famous for its chocolate.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/2/27/Turin_piazza_san_carlo_2009.JPG',
@@ -447,9 +439,8 @@ function insertData(models) {
             name: 'La Basilica di Superga',
             type: 'Church',
             visit_info:
-                '\n' +
-                '10-17       from Monday to Friday\n' +
-                '10-18.30    Saturday and Sunday',
+                '10-17\t\t\t\t\t\t\tfrom Monday to Friday\n' +
+                '10-18.30\t\t\t\tSaturday and Sunday',
             address: 'Strada Basilica di Superga, 73, 10132 Torino TO',
             description:
                 'Victor Amadeus II, Duke of Savoy, commissioned the Basilica of Superga on the site of a hilltop ' +
@@ -476,10 +467,9 @@ function insertData(models) {
             name: 'Il Duomo di Torino',
             type: 'Church',
             visit_info:
-                '\n' +
-                '10–12:30, 16–19       from Monday to Friday\n' +
-                '09–13, 15–19:30       on Saturday' +
-                '09–13, 15–19:30       on Sunday',
+                '10–12:30, 16–19\t\t\tfrom Monday to Friday\n' +
+                '09–13, 15–19:30\t\t\ton Saturday\n' +
+                '09–13, 15–19:30\t\t\ton Sunday',
             address: 'P.za S. Giovanni, 10122 Torino TO',
             description:
                 'Turin Cathedral (Cathedral of San Giovanni Battista) is a Roman Catholic cathedral in Turin, northern ' +
@@ -490,7 +480,7 @@ function insertData(models) {
                 'was added to the structure in 1668–94.' +
                 'In 1667 Guarino Guarini was called in to complete the project. The dome, ' +
                 'whose works dragged for 28 years, was completed in 1694 under the direction of Marie Jeanne ' +
-                "of Savoy, Charles Emmanuel II's widow." +
+                "of Savoy, Charles Emmanuel II's widow.\n" +
                 'The cathedral is the burial place of Blessed Pier Giorgio Frassati (1901–1925), Turin native, ' +
                 'avid athlete, and benefactor of the poor, called the "saint for youth of the Third Millennium." ' +
                 'He was beatified by John Paul II in 1990.',
@@ -507,26 +497,25 @@ function insertData(models) {
             name: 'Villa della Regina',
             type: 'Palace',
             visit_info:
-                '\n' +
-                'closed      on Monday' +
-                '10–18       from Monday to Thursday\n' +
-                '10-20       on Friday and Saturday' +
-                '10-21       on Sunday',
+                'closed\t\t\t\t\t\ton Monday' +
+                '10–18\t\t\t\t\t\t\tfrom Monday to Thursday\n' +
+                '10-20\t\t\t\t\t\t\ton Friday and Saturday\n' +
+                '10-21\t\t\t\t\t\t\ton Sunday\n',
             address: 'Strada Comunale Santa Margherita, 79, 10131 Torino TO',
             description:
-                'Villa della Regina was built in 1615 by Cardinal Maurizio di Savoia, son of Duke Carlo Emanuele I, ' +
-                'for his young wife Ludovica di Savoia. During the summer months the couple loved to plunge into the ' +
-                'silence of the hills, woods and gardens as it was a way to escape from Turin’s city  crowd. Here, the ' +
-                'Royal family used to organize gatherings on art, science, philosophy and mathematics with many famous ' +
+                'Villa della Regina was built in 1615 by Cardinal Maurizio di Savoia, son of Duke Carlo Emanuele I,' +
+                'for his young wife Ludovica di Savoia. During the summer months the couple loved to plunge into the' +
+                'silence of the hills, woods and gardens as it was a way to escape from Turin’s city  crowd. Here, the' +
+                'Royal family used to organize gatherings on art, science, philosophy and mathematics with many famous' +
                 'people and intellectuals of the time.\n' +
-                'Like most 17th century buildings, the Villa was constructed symmetrically, following a theme that ' +
-                'all things on the right also have to be on the left. In fact, there are two apartments: the King’s ' +
-                'and the Queen’s apartment, with rooms to be used during daytime opening towards the gardens and ' +
+                'Like most 17th century buildings, the Villa was constructed symmetrically, following a theme that' +
+                'all things on the right also have to be on the left. In fact, there are two apartments: the King’s' +
+                'and the Queen’s apartment, with rooms to be used during daytime opening towards the gardens and' +
                 'rooms during the night looking towards the city.\n' +
-                'Today visitors are lead, as were visitors in ancient times, by this fictive guiding line through ' +
-                'an extremely scenic path through the building encountering symmetric staircases, fountains with ' +
-                'water games, the Grand Dance Hall opening towards the Grand Garden, which has the form of an ' +
-                'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to ' +
+                'Today visitors are lead, as were visitors in ancient times, by this fictive guiding line through' +
+                'an extremely scenic path through the building encountering symmetric staircases, fountains with' +
+                'water games, the Grand Dance Hall opening towards the Grand Garden, which has the form of an' +
+                'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to' +
                 'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps.',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Villa_della_Regina_-_belvedere_superiore18_36_56_488000.jpeg',
@@ -541,19 +530,18 @@ function insertData(models) {
             name: 'Cappella della Sacra Sindone',
             type: 'Church',
             visit_info:
-                '\n' +
-                'closed      on Monday' +
-                '9-19        on all other days',
+                'closed\t\t\t\t\t\ton Monday' +
+                '9-19\t\t\t\t\t\t\t\ton all other days',
             address: 'Piazza San Giovanni, 10122 Torino TO',
             description:
-                'The task of designing and creating the Chapel to house the Holy Shroud was entrusted in 1667 to ' +
-                'Guarino Guarini, one of the leading architects of Baroque in Piedmont, who concluded the work in 1690. ' +
-                'The project was based on the idea of the Shroud as the extreme evidence of the mystery of Redemption, ' +
-                'death and resurrection of Jesus Christ. Architecture itself thus becomes the experience of "ascending ' +
+                'The task of designing and creating the Chapel to house the Holy Shroud was entrusted in 1667 to' +
+                'Guarino Guarini, one of the leading architects of Baroque in Piedmont, who concluded the work in 1690.' +
+                'The project was based on the idea of the Shroud as the extreme evidence of the mystery of Redemption,' +
+                'death and resurrection of Jesus Christ. Architecture itself thus becomes the experience of "ascending' +
                 'within death" to the light of divine glory.\n' +
                 'From 1694 until the early nineties of the twentieth century, the Chapel of the Holy Shroud has guarded ' +
                 'the precious relic, now preserved in the transept of Turin’s Cathedral.\n' +
-                'During the night between 11 and 12 April 1997, the Chapel was affected by a large ' +
+                'During the night between 11 and 12 April 1997, the Chapel was affected by a large' +
                 'fire which seriously damaged the building.',
             image_links: [
                 'https://museireali.beniculturali.it/wp-content/uploads/2017/07/cappella-sacra-sindone-torino.jpg',
