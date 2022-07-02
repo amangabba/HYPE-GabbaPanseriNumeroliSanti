@@ -8,7 +8,7 @@ export default {
         }
     ],
     head: {
-        title: 'lambrate-hypermedia',
+        title: 'Turin',
         htmlAttrs: {
             lang: 'en'
         },
