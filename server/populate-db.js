@@ -43,8 +43,8 @@ function insertData(models) {
                 'Today’s Pompeii is nothing but a mere memory of the ancient city, stripped of all forms of life caused by the natural disaster and emptied of those objects that could allow us to imagine it as it once was./n' +
                 'The exhibition opens with the beautiful model of the late nineteenth century of the House of the Tragic Poet, one of those that have most stimulated the imagination of travelers and artists of the Grand Tour,' +
                 'so as to be the setting of many scenes of the novel The last days of Pompeii by Edward Bulwer-Lytton, which inspired the work of Federico Maldarelli Ione and Nidia of the Museum of Antiquities – Royal Museums of Turin, that closes the path.\n'+
-                'Una ricca selezione di oltre 120 opere, tra arredi, statue, gioielli, bronzi, vetri e apparati decorativi, è presentata al visitatore in un itinerario tra gli spazi domestici'+
-                '(l’atrio, il triclinio, il peristilio con il giardino, le stanze da letto), che termina con i drammatici calchi di alcune vittime.',
+                'A rich selection of over 120 works, including furnishings, statues, jewelry, bronzes, glass and decorative equipment, is presented to the visitor in an itinerary through the domestic spaces'+
+                '(the atrium, the triclinium, the peristyle with the garden, the bedrooms), ending with the dramatic casts of some victims.',
             address: 'Piazza Castello, TO',
             image_links: [
                 'https://www.artislineblog.com/wp-content/uploads/2022/04/po-scaled.jpg',
@@ -276,7 +276,7 @@ function insertData(models) {
 
             description:
             'Until July 10, 2022, in the Hall of Honor of the Palazzina di Caccia di Stupinigi, the appointments with the lyric Opera and Musical at Court are in place.'+
-            'The festival is four appointments with the great opera and musicals that have made history. Below is the complete calendar:\n'+
+            'The festival is four appointments with the great opera and musicals that have made history. Below is the complete program:\n'+
             '\n'+
             'ABBA MUSICAL\n'+
             'It was inevitable that ABBA would enter the musical galaxy'+
@@ -363,8 +363,8 @@ function insertData(models) {
                 'history of Italian agri-food products. Gigi is a professional journalist, for 30 years at La Stampa; Clara is a historian of cuisine and a gastronomic storyteller.\n'+
                 '\n'+
                 'Public lunches and private lunches.\n'+
-                'Le pratiche connesse ai pranzi in uso in Casa Savoia fra i regni di Vittorio Amedeo II a Carlo Alberto mutano nel corso del tempo.'+
-                'L’incontro approfondisce il tema sulla base dei documenti d’archivio.\n'+
+                'The practices related to the lunches in use in the House of Savoy between the reigns of Vittorio Amedeo II and Carlo Alberto change over time.' +
+                'The meeting explores the theme on the basis of archival documents.n'+
                 '\n'+
                 'The theater of the table.\n'+
                 'Esperta di buone maniere e di storia del galateo, Barbara Ronchi della Rocca ha pubblicato vari titoli di successo. Insegna all’Università La Sapienza di Roma e tiene corsi di galateo aziendale e arte del ricevere.',
