@@ -45,6 +45,19 @@
                     />
                 </div>
             </div>
+
+            <div v-if="poi_images.length">
+                <SectionTitle>Similar Points of Interest</SectionTitle>
+                <div class="row justify-content-center">
+                    <BootstrapCarousel
+                        id="pois-carousel"
+                        :images="poi_images"
+                        :titles="poi_names"
+                        :links="poiLinks"
+                        class="col-md-4 text-left m-4"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -84,6 +97,11 @@ export default {
             eventLinks.push(`/events/${id}`)
         }
 
+        const poiLinks = []
+        for (const id of data.correlated_poi_IDs) {
+            poiLinks.push(`/pois/${id}`)
+        }
+
         const temp1 = data.visit_info.replace(/\n/g, "<br />")
         const visitWithBr = temp1.replace(/\t/g, "&nbsp")
         const descriptionWithBr = data.description.replace(/\n/g, "<br />")
@@ -100,7 +118,10 @@ export default {
             itinerary_images: data.correlated_itinerary_images,
             eventLinks,
             event_names: data.correlated_event_names,
-            event_images: data.correlated_event_images
+            event_images: data.correlated_event_images,
+            poiLinks,
+            poi_names: data.correlated_poi_names,
+            poi_images: data.correlated_poi_images
         }
     }
 }

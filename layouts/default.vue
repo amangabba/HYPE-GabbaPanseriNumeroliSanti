@@ -2,6 +2,7 @@
     <div class="main-page">
         <TheHeader />
         <div
+            ref="content"
             class="page-content container-fluid"
             :style="`padding-bottom: ${footerHeight}px`"
         >
@@ -33,7 +34,18 @@ export default {
         }
     },
     mounted() {
-        this.footerHeight = this.$refs.footer.$el.offsetHeight + 10
+        const contentElement = this.$refs.content
+        const footerElement = this.$refs.footer.$el
+
+        // Set the bottom padding of the content container to the total height of the footer to prevent
+        // overlapping
+        const setContentPadding = () => {
+            contentElement.style.paddingBottom = `${footerElement.offsetHeight + 10}px`
+        }
+
+        // Calculate the padding on page load and whenever the window is resized
+        setContentPadding()
+        window.onresize = setContentPadding
     }
 }
 </script>
