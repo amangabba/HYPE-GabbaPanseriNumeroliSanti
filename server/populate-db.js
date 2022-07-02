@@ -297,7 +297,7 @@ function insertData(models) {
             'PAGLIACCI\n'+
             'The work of Ruggero Leoncavallo Pagliacci represents the ideal completion of the verist experience in Italian music of the late nineteenth century.'+
             'Set in the world of street theater, the dramatic story tells of suspicions, betrayals and revelations that result in an honor killing, consumed between'+
-            'fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
+            ' fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',
