@@ -96,7 +96,7 @@ export default {
         for (const id of data.correlated_event_IDs) {
             eventLinks.push(`/events/${id}`)
         }
-        
+
         const temp1 = data.practical_info.replace(/\n/g, "<br />")
         const infoWithBr = temp1.replace(/\t/g, "&nbsp")
         const descriptionWithBr = data.description.replace(/\n/g, "<br />")
@@ -119,6 +119,11 @@ export default {
     },
     data() {
         return {}
+    },
+    head() {
+        return {
+            title: 'Turin - Events: ' + this.name
+        }
     }
 }
 </script>

@@ -135,6 +135,11 @@ export default {
             long_diff: 0.0069
         }
     },
+    head() {
+        return {
+            title: 'Turin - Itineraries: ' + this.title
+        }
+    },
     methods: {
         // Called to update the map, it's information and the selected grid card
         putMarker(key, lat, long, name, address) {
