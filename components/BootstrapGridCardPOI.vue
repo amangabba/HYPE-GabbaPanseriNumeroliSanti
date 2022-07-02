@@ -21,10 +21,10 @@
                     </p>
 
                     <p v-if="content !== ''" class="card-text">{{ content }}</p>
-                    <div class="row justify-content-start mt-auto">
+                    <div id="links" class="row mt-auto p-1">
                         <!-- Open the page regarding the POI -->
                         <a
-                            class="col-md-2 btn btn-primary m-1 p-1"
+                            class="col-md-2 btn btn-primary p-1"
                             :href="link"
                         >
                             {{ linkText }}
@@ -32,7 +32,7 @@
 
                         <!-- Button to show on map the selected POI and Scroll the map into view -->
                         <button
-                            class="col-md-2 btn btn-primary m-1 p-1"
+                            class="col-md-2 btn btn-primary p-1"
                             @click="callParentFunction"
                         >
                             {{ buttonText }}
@@ -117,5 +117,8 @@ export default {
 .card {
     border: 2px solid rgba(229, 229, 229, 1);
     max-width: 80%;
+}
+#links > * {
+    margin: 2px 2px 2px 2px;
 }
 </style>
