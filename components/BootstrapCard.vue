@@ -9,7 +9,7 @@
                 </div>
                 <!-- Body of the card -->
                 <div class="col-md-8">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column h-100">
                         <!-- Title of the card -->
                         <h5 class="card-title">{{ title }}</h5>
 
@@ -19,7 +19,7 @@
                         </p>
 
                         <!-- Link to see more about the card -->
-                        <NuxtLink :to="link" class="btn btn-primary mt-auto">
+                        <NuxtLink :to="link" class="btn btn-primary mt-auto align-self-center">
                             See more
                         </NuxtLink>
                     </div>
@@ -107,5 +107,8 @@ export default {
 }
 .custom-card-vertical {
     height: 96%;
+}
+.custom-card .card-body .btn {
+    max-width: 150px;
 }
 </style>

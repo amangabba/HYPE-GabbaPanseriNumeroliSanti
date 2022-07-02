@@ -76,7 +76,7 @@ export default {
         const { data: itinerariesData } = await $axios.get(
             '/api/featured-itineraries'
         )
-        console.log(eventsData)
+
         const eventsNames = []
         const eventsLinks = []
         const eventsImages = []
