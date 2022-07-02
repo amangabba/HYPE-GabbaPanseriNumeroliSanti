@@ -104,9 +104,14 @@ export default {
         // to prevent resizing when images have different heights.
         // Taller images will be cropped to fit in this height
         const firstSlideImg = this.$refs.carouselImages[0]
-        firstSlideImg.onload = () => {
+
+        const resizeCarouselImageContainer = () => {
             this.$refs.carouselImageContainer.style.height = `${firstSlideImg.offsetHeight}px`
         }
+
+        // Resize the container when the page is loaded and whenever the window is resized
+        firstSlideImg.onload = resizeCarouselImageContainer
+        window.onresize = resizeCarouselImageContainer
     }
 }
 </script>
