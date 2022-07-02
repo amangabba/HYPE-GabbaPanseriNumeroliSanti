@@ -8,6 +8,7 @@
                     class="col-md-3"
                 />
                 <div class="col-md-9 text-left p-3">
+                    <i>Type:</i> {{type}} <br>
                     <pre><i>Opening Hours:</i> {{ visit_info }}</pre>
                     <pre><i>Address of the Point of Interest</i>: {{ address }}</pre>
                     <p>{{ description }}</p>
