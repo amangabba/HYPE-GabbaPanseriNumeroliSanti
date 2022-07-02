@@ -9,6 +9,7 @@
                     class="col-md-8"
                 />
                 <div class="col-md-4 text-left p-3">
+                    <p><i><b>Type: </b></i><br>{{ type }}</p>
                     <p><i><b>Opening Hours:</b></i></p>
                     <p v-html="visit_info"></p>
                     <br><br><br>

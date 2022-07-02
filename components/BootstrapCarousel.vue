@@ -133,5 +133,6 @@ export default {
     background-color: rgba(0, 0, 0, 0.8);
     width: fit-content;
     margin: auto auto 5px;
+    padding: 5px;
 }
 </style>
