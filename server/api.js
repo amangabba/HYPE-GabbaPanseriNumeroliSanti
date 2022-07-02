@@ -131,12 +131,29 @@ async function runMainApi() {
             eventNames.push(event.name)
             eventFirstImages.push(event.image_links[0])
         }
+        const poiIDs = []
+        const poiNames = []
+        const poiFirstImages = []
+        const correlatedPOIs = await models.PointOfInterest.findAll({
+            where: {
+                id: { [Op.not]: result.id },
+                type: result.type
+            }
+        })
+        for (const poi of correlatedPOIs) {
+            poiIDs.push(poi.id)
+            poiNames.push(poi.name)
+            poiFirstImages.push(poi.image_links[0])
+        }
         itineraryIDs.sort((a, b) => a.number - b.number)
         itineraryNames.sort((a, b) => a.number - b.number)
         itineraryFirstImages.sort((a, b) => a.number - b.number)
         eventIDs.sort((a, b) => a.number - b.number)
         eventNames.sort((a, b) => a.number - b.number)
         eventFirstImages.sort((a, b) => a.number - b.number)
+        poiIDs.sort((a, b) => a.number - b.number)
+        poiNames.sort((a, b) => a.number - b.number)
+        poiFirstImages.sort((a, b) => a.number - b.number)
         return res.json({
             id: result.id,
             name: result.name,
@@ -150,7 +167,10 @@ async function runMainApi() {
             correlated_itinerary_images: itineraryFirstImages,
             correlated_event_IDs: eventIDs,
             correlated_event_names: eventNames,
-            correlated_event_images: eventFirstImages
+            correlated_event_images: eventFirstImages,
+            correlated_poi_IDs: poiIDs,
+            correlated_poi_names: poiNames,
+            correlated_poi_images: poiFirstImages
         })
     })
 
