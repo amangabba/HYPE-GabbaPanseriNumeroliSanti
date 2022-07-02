@@ -530,31 +530,34 @@ function insertData(models) {
             name: 'Villa della Regina',
             type: 'Palace',
             visit_info:
-                'closed\t\t\t\t\t\ton Monday' +
+                'closed\t\t\t\t\t\ton Monday\n' +
                 '10–18\t\t\t\t\t\t\tfrom Monday to Thursday\n' +
                 '10-20\t\t\t\t\t\t\ton Friday and Saturday\n' +
                 '10-21\t\t\t\t\t\t\ton Sunday\n',
             address: 'Strada Comunale Santa Margherita, 79, 10131 Torino TO',
             description:
                 'Villa della Regina was built in 1615 by Cardinal Maurizio di Savoia, son of Duke Carlo Emanuele I,' +
-                'for his young wife Ludovica di Savoia. During the summer months the couple loved to plunge into the' +
-                'silence of the hills, woods and gardens as it was a way to escape from Turin’s city  crowd. Here, the' +
-                'Royal family used to organize gatherings on art, science, philosophy and mathematics with many famous' +
+                'for his young wife Ludovica di Savoia. During the summer months the couple loved to plunge into the ' +
+                'silence of the hills, woods and gardens as it was a way to escape from Turin’s city  crowd. Here, the ' +
+                'Royal family used to organize gatherings on art, science, philosophy and mathematics with many famous ' +
                 'people and intellectuals of the time.\n' +
-                'Like most 17th century buildings, the Villa was constructed symmetrically, following a theme that' +
-                'all things on the right also have to be on the left. In fact, there are two apartments: the King’s' +
-                'and the Queen’s apartment, with rooms to be used during daytime opening towards the gardens and' +
+                'Like most 17th century buildings, the Villa was constructed symmetrically, following a theme that ' +
+                'all things on the right also have to be on the left. In fact, there are two apartments: the King’s ' +
+                'and the Queen’s apartment, with rooms to be used during daytime opening towards the gardens and ' +
                 'rooms during the night looking towards the city.\n' +
-                'Today visitors are lead, as were visitors in ancient times, by this fictive guiding line through' +
-                'an extremely scenic path through the building encountering symmetric staircases, fountains with' +
-                'water games, the Grand Dance Hall opening towards the Grand Garden, which has the form of an' +
-                'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to' +
-                'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps.',
+                'Today visitors are lead, as were visitors in ancient times, by this fictive guiding line through ' +
+                'an extremely scenic path through the building encountering symmetric staircases, fountains with ' +
+                'water games, the Grand Dance Hall opening towards the Grand Garden, which has the form of an ' +
+                'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to ' +
+                'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps. ',
             image_links: [
                 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Villa_della_Regina_-_belvedere_superiore18_36_56_488000.jpeg',
-                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/a7/74/20160814-123129-largejpg.jpg?w=1200&h=-1&s=1',
+                'https://www.cosediviaggio.it/wp-content/uploads/2020/12/torino-villa-della-regina.jpg',
                 'https://www.consultaditorino.it/static/media/uploads/realizzazioni/2008%20Villa%20della%20Regina%20Mostra%20Giaquinto/2008-villa-della-regina-mostra-giaquinto-galleria.jpg',
-                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/villa-della-regina-cosa-vedere.jpg'
+                'https://media.beniculturali.it/mibac/files/boards/99c11a910aad48e66d038671de790e5a/GEP%202021/vdr%20-%20galleria%20dei%20musici.jpg',
+                'https://www.tpnews.it/wp-content/gallery/villa-della-regina/IMG_3865.jpg',
+                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/villa-della-regina-cosa-vedere.jpg',
+                'https://www.gitefuoriportainpiemonte.it/wp-content/uploads/2021/04/villa-regina-torino.jpg'
             ],
             latitude: 45.05802506221488,
             longitude: 7.708311433687335
@@ -563,24 +566,25 @@ function insertData(models) {
             name: 'Cappella della Sacra Sindone',
             type: 'Church',
             visit_info:
-                'closed\t\t\t\t\t\ton Monday' +
+                'closed\t\t\t\t\t\ton Monday\n' +
                 '9-19\t\t\t\t\t\t\t\ton all other days',
             address: 'Piazza San Giovanni, 10122 Torino TO',
             description:
-                'The task of designing and creating the Chapel to house the Holy Shroud was entrusted in 1667 to' +
-                'Guarino Guarini, one of the leading architects of Baroque in Piedmont, who concluded the work in 1690.' +
-                'The project was based on the idea of the Shroud as the extreme evidence of the mystery of Redemption,' +
-                'death and resurrection of Jesus Christ. Architecture itself thus becomes the experience of "ascending' +
+                'The task of designing and creating the Chapel to house the Holy Shroud was entrusted in 1667 to ' +
+                'Guarino Guarini, one of the leading architects of Baroque in Piedmont, who concluded the work in 1690. ' +
+                'The project was based on the idea of the Shroud as the extreme evidence of the mystery of Redemption, ' +
+                'death and resurrection of Jesus Christ. Architecture itself thus becomes the experience of "ascending ' +
                 'within death" to the light of divine glory.\n' +
                 'From 1694 until the early nineties of the twentieth century, the Chapel of the Holy Shroud has guarded ' +
                 'the precious relic, now preserved in the transept of Turin’s Cathedral.\n' +
-                'During the night between 11 and 12 April 1997, the Chapel was affected by a large' +
+                'During the night between 11 and 12 April 1997, the Chapel was affected by a large ' +
                 'fire which seriously damaged the building.',
             image_links: [
                 'https://museireali.beniculturali.it/wp-content/uploads/2017/07/cappella-sacra-sindone-torino.jpg',
                 'https://www.architetti.com/wp-content/uploads/2018/10/IMG_6129_crediti-Daniele-Bottallo-1024x683.jpg',
-                'https://www.tripguru.it/wp-content/uploads/2019/08/duomo-di-torino.jpg',
-                'https://www.ilvaloreitaliano.it/wp-content/uploads/2021/03/Altare-Cappella-della-Sindone_03_Credits-Musei-Reali-Torino.jpg'
+                'https://www.piemonteitalia.eu/sites/default/files/musei/immagini/MUSEI_REALI_DI_TORINO-CAPPELLA_DELLA_SACRA_SINDONE.jpg',
+                'https://www.ilvaloreitaliano.it/wp-content/uploads/2021/03/Altare-Cappella-della-Sindone_03_Credits-Musei-Reali-Torino.jpg',
+                'https://www.diocesi.torino.it/wp-content/uploads/2018/03/Duomo-di-Torino.jpg'
             ],
             latitude: 45.07318449073021,
             longitude: 7.685854033687847
