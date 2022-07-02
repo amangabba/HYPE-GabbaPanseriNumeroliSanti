@@ -19,7 +19,6 @@ export default {
                 subtitle:
                     event.start_date_string + ' - ' + event.end_date_string,
                 imageLink: event.image_links[0],
-                description: event.description,
                 link: `/events/${event.id}`
             })
         }
