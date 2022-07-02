@@ -32,7 +32,8 @@ function insertData(models) {
     const eventList = [
         {
             name: 'Invitation to Pompeii',
-            practical_info: 'Monday, and from Wednesday to Sunday: 10.00 a.m - 18.00 p.m. Closed on Tuesday.',
+            practical_info: 'Monday, and from Wednesday to Sunday: 10.00 a.m - 18.00 p.m.\n'
+            +'Closed on Tuesday.',
             description:
                 'Exhibition Invitation to Pompeii, curated by the Parco Archeologico of Pompeii and by Palazzo Madama.\n'+
                 'An invitation to enter into the homes of Pompeii, to discover their atmospheres, their furnishings, the objects used daily by their inhabitants, their decorations and embellishments, through a journey into the Pompeiian world.\n'+
@@ -59,12 +60,12 @@ function insertData(models) {
             name: 'Read the garden',
             practical_info: 'Reservation required.\n' + 
             'PROGRAM:\n' +
-            '2nd April, 10.30 am \n'+
-            '21th May, 10.30 am \n'+
-            '5th June, 3.30 pm \n'+
-            '18th June, 10.30 am \n'+
-            '17th September, 10.30 am \n'+
-            '8th October, 10.30 am',
+            '2nd April, 10:30 am \n'+
+            '21th May, 10:30 am \n'+
+            '5th June, 3:30 pm \n'+
+            '18th June, 10:30 am \n'+
+            '17th September, 10:30 am \n'+
+            '8th October, 10:30 am',
             description:
                 'Guided tour of parco della Palazzina di Caccia di Stupinigi'+
                 'once a month on Saturday morning, the Mauritian Order Foundation with "Reading the garden" '+
@@ -116,15 +117,15 @@ function insertData(models) {
                 'https://www.guidatorino.com/wp-content/uploads/2015/02/museo-archeologico-torino-interno.jpg'
             ],
             season: 'Winter',
-            start_date: '2022-01-10',
-            end_date: '2022-02-16',
+            start_date: '2023-01-10',
+            end_date: '2023-02-16',
             pointOfInterestId: 4
         },
         {
             name: 'Frida Kahlo',
             practical_info: 'Opening hours:\n'+
-            'From Monday to Thursday: 10.00 a.m.-6.00 p.m.\n'+
-            'From Friday to Sunday: 10.00 a.m.-20.00 p.m.\n'+
+            'From Monday to Thursday: 10:00 a.m.-6:00 p.m.\n'+
+            'From Friday to Sunday: 10:00 a.m.-20:00 p.m.\n'+
             'Cost of the ticket: 16€',
             description:
                 ' The exhibition, presented for the first time in Europe, promoted by Next Exhibition and ONO arte,'+
@@ -153,7 +154,7 @@ function insertData(models) {
         },
         {
             name: 'The Flora of Ancient Egypt',
-            practical_info: 'From Thursday to Saturday, starting at 10 p.m. until midnight.\n'+
+            practical_info: 'From Thursday to Saturday, starting at 10:00 p.m. until midnight.\n'+
             'Four video mapping performances per hour are scheduled, each lasting about 8 minutes.',
             description:
                 'One of the facades of the inner courtyard of the Museum and its garden will turn into a dynamic screen. With a video-mapping technique, flowers and plants of ancient Egypt will bloom.'+
@@ -175,7 +176,7 @@ function insertData(models) {
         },
         {
             name: 'The table by Ugo Da Capri for the altar of the holy face',
-            practical_info: 'It will be possible to take guided tours only on sunday at 3.00 p.m.\n'+
+            practical_info: 'It will be possible to take guided tours only on sunday at 3:00 p.m.\n'+
            'Duration: 1h\n'+
            'Cost of the ticket: 4.00€ + guided visit: 6.00€',
             description:
@@ -202,7 +203,7 @@ function insertData(models) {
         },
         {
             name: 'Objective identities',
-            practical_info: 'On Tuesday and Wednesday. at 6:00 p.m.\n'+
+            practical_info: 'On Tuesday and Wednesday. At 6:00 p.m.\n'+
             'Lecture held by Bettina Bader.\n'+
             'Conference in English.',
             description:
@@ -235,7 +236,7 @@ function insertData(models) {
             '28th,29th of May\n'+
             '24th,25th of September\n'+
             '29th, 30th Octtober\n'+
-            'starting at 10.30 a.m., 12.00 p.m, 2.30 p.m and 4.00 p.m.',
+            'starting at 10:30 a.m., 12:00 p.m, 2:30 p.m and 4:00 p.m.',
             description:
                 'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi'+
                 'With six appointments, one weekend a month, from March to November, the Mauritian Order Foundation organizes extraordinary guided tours to (re)discover the secret spaces,'+
@@ -294,7 +295,7 @@ function insertData(models) {
             'or for the setting of the stories. I Fantasmi dell Opera compares the two compositions\n'+
             '\n'+
             'PAGLIACCI\n'+
-            'the work of Ruggero Leoncavallo Pagliacci represents the ideal completion of the verist experience in Italian music of the late nineteenth century.'+
+            'The work of Ruggero Leoncavallo Pagliacci represents the ideal completion of the verist experience in Italian music of the late nineteenth century.'+
             'Set in the world of street theater, the dramatic story tells of suspicions, betrayals and revelations that result in an honor killing, consumed between'+
             'fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
