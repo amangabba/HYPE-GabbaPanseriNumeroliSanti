@@ -52,7 +52,7 @@ async function initializeDatabaseConnection(dropTables = false) {
             unique: 'name_date'
         },
         practical_info: DataTypes.STRING,
-        description: DataTypes.STRING,
+        description: DataTypes.STRING (2048),
         address: DataTypes.STRING,
         image_links: DataTypes.ARRAY(DataTypes.STRING),
         season: DataTypes.ENUM('Summer', 'Winter'),

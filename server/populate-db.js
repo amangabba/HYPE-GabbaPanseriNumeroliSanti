@@ -41,16 +41,16 @@ function insertData(models) {
             name: 'Invitation to Pompeii',
             practical_info: 'Monday, and from Wednesday to Sunday: 10.00 a.m - 18.00 p.m. Closed on Tuesday.',
             description:
-                'Exhibition Invitation to Pompeii, curated by the Parco Archeologico of Pompeii and by Palazzo Madama.',
-                // 'An invitation to enter into the homes of Pompeii, to discover their atmospheres, their furnishings, the objects used daily by their inhabitants, their decorations and embellishments, through a journey into the Pompeiian world.',
-                // 'The exhibition itinerary, in the majestic Sala del Senato, where Italy was founded, unfolds across the environments that best represent the most lavish dwellings in Pompeii from the first century AD.'+
-                // 'The Roman domus, for the first time in Turin, opens its doors wide to visitors, welcoming them into the domestic intimacy and displaying ordinary daily life on the slopes of the Vesuvius.'+ 
-                // 'A plunge into the past, which offers the opportunity to experience those environments where the eruption of the Vesuvius in 79 AD suddenly extinguished the life of its inhabitants.' +
-                // 'Today’s Pompeii is nothing but a mere memory of the ancient city, stripped of all forms of life caused by the natural disaster and emptied of those objects that could allow us to imagine it as it once was./n' +
-                // 'The exhibition opens with the beautiful model of the late nineteenth century of the House of the Tragic Poet, one of those that have most stimulated the imagination of travelers and artists of the Grand Tour,' +
-                // 'so as to be the setting of many scenes of the novel The last days of Pompeii by Edward Bulwer-Lytton, which inspired the work of Federico Maldarelli Ione and Nidia of the Museum of Antiquities – Royal Museums of Turin, that closes the path./n' +
-                // 'Una ricca selezione di oltre 120 opere, tra arredi, statue, gioielli, bronzi, vetri e apparati decorativi, è presentata al visitatore in un itinerario tra gli spazi domestici' +
-                // '(l’atrio, il triclinio, il peristilio con il giardino, le stanze da letto), che termina con i drammatici calchi di alcune vittime.',
+                'Exhibition Invitation to Pompeii, curated by the Parco Archeologico of Pompeii and by Palazzo Madama.\n'+
+                'An invitation to enter into the homes of Pompeii, to discover their atmospheres, their furnishings, the objects used daily by their inhabitants, their decorations and embellishments, through a journey into the Pompeiian world.\n'+
+                'The exhibition itinerary, in the majestic Sala del Senato, where Italy was founded, unfolds across the environments that best represent the most lavish dwellings in Pompeii from the first century AD.\n'+
+                'The Roman domus, for the first time in Turin, opens its doors wide to visitors, welcoming them into the domestic intimacy and displaying ordinary daily life on the slopes of the Vesuvius.\n'+ 
+                'A plunge into the past, which offers the opportunity to experience those environments where the eruption of the Vesuvius in 79 AD suddenly extinguished the life of its inhabitants.\n' +
+                'Today’s Pompeii is nothing but a mere memory of the ancient city, stripped of all forms of life caused by the natural disaster and emptied of those objects that could allow us to imagine it as it once was./n' +
+                'The exhibition opens with the beautiful model of the late nineteenth century of the House of the Tragic Poet, one of those that have most stimulated the imagination of travelers and artists of the Grand Tour,' +
+                'so as to be the setting of many scenes of the novel The last days of Pompeii by Edward Bulwer-Lytton, which inspired the work of Federico Maldarelli Ione and Nidia of the Museum of Antiquities – Royal Museums of Turin, that closes the path.\n'+
+                'Una ricca selezione di oltre 120 opere, tra arredi, statue, gioielli, bronzi, vetri e apparati decorativi, è presentata al visitatore in un itinerario tra gli spazi domestici'+
+                '(l’atrio, il triclinio, il peristilio con il giardino, le stanze da letto), che termina con i drammatici calchi di alcune vittime.',
             address: 'Piazza Castello, TO',
             image_links: [
                 'https://www.artislineblog.com/wp-content/uploads/2022/04/po-scaled.jpg',
@@ -63,7 +63,7 @@ function insertData(models) {
             pointOfInterestId: 2
         },
         {
-            name: 'Leggere il giardino',
+            name: 'Read the garden',
             practical_info: 'Reservation required.\n' + 
             'PROGRAM:\n' +
             '2nd April, 10.30 am \n'+
@@ -73,14 +73,19 @@ function insertData(models) {
             '17th September, 10.30 am \n'+
             '8th October, 10.30 am',
             description:
-                'Guided tour of parco della Palazzina di Caccia di Stupinigi',
-                //'once a month on Saturday morning, the Mauritian Order Foundation with "Reading the garden" ' +
-                //' exceptionally opens to the public the gates of the large park of the Palazzina di Caccia di Stupinigi.' +
-                //' Equipped with a protective helmet, visitors can visit the gardens of Stupinigi, from the courtyard of honor,' +
-                //' to the central pavilion, to the eastern garden, to discover the evolution of the park inside the Palazzina.'+
-                //'Through maps and historical documents the walks will retrace the phases and styles of the garden, from taste' +
-                //' to French of the eighteenth century to the evolution of romantic taste, up to the twentieth-century' +
-                //' garden dating back to the holiday period of Queen Margherita.',
+                'Guided tour of parco della Palazzina di Caccia di Stupinigi'+
+                'once a month on Saturday morning, the Mauritian Order Foundation with "Reading the garden" '+
+                ' exceptionally opens to the public the gates of the large park of the Palazzina di Caccia di Stupinigi.' +
+                ' Equipped with a protective helmet, visitors can visit the gardens of Stupinigi, from the courtyard of honor,' +
+                ' to the central pavilion, to the eastern garden, to discover the evolution of the park inside the Palazzina.'+
+                'Through maps and historical documents the walks will retrace the phases and styles of the garden, from taste' +
+                ' to French of the eighteenth century to the evolution of romantic taste, up to the twentieth-century' +
+                ' garden dating back to the holiday period of Queen Margherita.\n'+
+                'The garden of the Palazzina di Caccia di Stupinigi was designed on the model French in 1740 by Michel Bénard,'+
+                'director of the Royal Gardens, who managed to elaborate the Juvarrian thought of aulic space dynamically connected'+
+                'with the surrounding hunting environment. In the nineteenth century it adapted to the new romantic taste of landscape park,'+
+                'without losing the original geometric structure. Paths were created with a sinuous course, a pond with an island with a belvedere,'+
+                'a wooden bridge and even a greenhouse was built in the eastern part.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/stupinigi-un-gioiello-rococo-dedicato-a-diana/castello-di-stupinigi-veduta-aerea.jpg',
@@ -94,7 +99,7 @@ function insertData(models) {
             pointOfInterestId: 3
         },
         {
-            name: 'Storie dal tornio',
+            name: 'Stories from the lathe',
             practical_info:
             '10 January from 17:00 to 18:30: The ceramic of Greeks.\n'+
             '14 January from 17:00 to 18:30: The ceramic of Cipro.\n'+
@@ -102,15 +107,15 @@ function insertData(models) {
             '16 February 17:00: The ceramic of Romans.\n'+
             'Duration 90 minutes, max 20 people.\n',
             description:
-                'Stories from the lathe. The ceramics of the Museum of Antiquities a new cycle of meetings and workshops to learn about and deepen the archaeological collections of the Royal Museums!',
-                //'Ceramics had in ancient times a diffusion comparable to that of todays plastic, but with a much greater environmental sustainability!'+
-                //' All archaeological museums are overflowing with vases, distinguishable by appearance, shape, function, decoration...' +
-                //'Do you already know what bucchero is? What is the difference between black-figure and red-figure vases? What does sealed earth mean?'+
-                //' How was the slat polishing made? If yes, welcome colleague! Otherwise you can participate in the series of meetings Stories from'+
-                //' the lathe and discover it together with the archaeologists of the Royal Museums.\n' +
-                //'Each event includes an interactive behind-the-scenes' +
-                //'workshop to familiarize yourself with techniques and materials used for the main ceramic classes of the Mediterranean, and a guided tour' + 
-                //'in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
+                'Stories from the lathe. The ceramics of the Museum of Antiquities a new cycle of meetings and workshops to learn about and deepen the archaeological collections of the Royal Museums!'+
+                'Ceramics had in ancient times a diffusion comparable to that of todays plastic, but with a much greater environmental sustainability!'+
+                'All archaeological museums are overflowing with vases, distinguishable by appearance, shape, function, decoration...' +
+                'Do you already know what bucchero is? What is the difference between black-figure and red-figure vases? What does sealed earth mean?'+
+                'How was the slat polishing made? If yes, welcome colleague! Otherwise you can participate in the series of meetings Stories from'+
+                'the lathe and discover it together with the archaeologists of the Royal Museums.\n' +
+                'Each event includes an interactive behind-the-scenes' +
+                'workshop to familiarize yourself with techniques and materials used for the main ceramic classes of the Mediterranean, and a guided tour' + 
+                'in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
                 'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
@@ -129,13 +134,19 @@ function insertData(models) {
             'From Friday to Sunday: 10.00 a.m.-20.00 p.m.\n'+
             'Cost of the ticket: 16€',
             description:
-                'The most beautiful picture from Nickolas Muray come back to Palazzina di Caccia Stupinigi',
-                //'The path, whose heart consists of sixty shots in which Nickolas Muray immortalized Frida Kahlo,'+
-                //'allows the public to get to know the woman behind the artist, to know her essence, made of strength,' +
-                //'courage, talent and immense love.\n' +
-                //'Photographs, letters, furnishings, reproductions of clothes and jewelry, combined with important'+
-                //'multimedia elements make up a unique exhibition for its strong artistic value and high emotional value.', 
-
+                ' The exhibition, presented for the first time in Europe, promoted by Next Exhibition and ONO arte,'+
+                'organized by the Nickolas Muray archive through Guest Curator Traveling Exhibitions, LLC,'+
+                'consists of 60 photographs and tells, following the chronology of Nickolas Murays photos,'+
+                'the professional and personal path of Frida Kahlo, starting from the 1937 shots in Tizapan in Mexico,'+
+                'to close with those of 1948 in Pedregal and Coyoacan.\n'+
+                'In this period of time some of the most important photos ever taken of Frida Kahlo were born, such as'+
+                'those taken in 1939 in Murays studio and in 1946 in New York, exhibited in the exhibition as if to reconstruct a family photo album.\n'+
+                'The exhibition presents, compared to the previous edition, further and interesting contents: the visitor will have the opportunity to immerse'+
+                'himself in the feelings and emotions that have characterized the path of the artist. Reproductions of environments, clothes, jewelry and correspondence with the beloved Nickolas Muray.\n'+
+                'allows the public to get to know the woman behind the artist, to know her essence, made of strength,' +
+                'courage, talent and immense love.\n' +
+                'Photographs, letters, furnishings, reproductions of clothes and jewelry, combined with important'+
+                'multimedia elements make up a unique exhibition for its strong artistic value and high emotional value.', 
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.themammothreflex.com/wp-content/uploads/2020/02/frida-khalo-foto-Nickolas-Muray-mostra-torino-1-5.jpg',
@@ -149,16 +160,16 @@ function insertData(models) {
         },
         {
             name: 'The Flora of Ancient Egypt',
-            practical_info: 'From Thursday to Saturday, starting at 10 p.m. until midnight.',
-            // 'Four video mapping performances per hour are scheduled, each lasting about 8 minutes.',
+            practical_info: 'From Thursday to Saturday, starting at 10 p.m. until midnight.\n'+
+            'Four video mapping performances per hour are scheduled, each lasting about 8 minutes.',
             description:
-                'One of the facades of the inner courtyard of the Museum and its garden will turn into a dynamic screen. With a video-mapping technique, flowers and plants of ancient Egypt will bloom.', 
-                //'three trees will recount a love lyric, and lastly, the fauna of ancient Egypt will populate the garden, all this to the rhythm of an engaging melody.\n'+
-                //'video contributions made through the videomapping technique will be projected, capable of enriching the sensory perception of the observer.' +
-                //' To the rhythm of an engaging melody, the garden, as if by magic, will also seem to be populated by typical specimens of the fauna of Ancient Egypt.\n'
-                //'Furthermore in view of the bicentenary in 2024, the Egyptian Museum of Turin presents Cortile aperto: Flora dell'antico Egitto, a green space accessible'+
-                //' to all (free admission, for the entire month of July) located in the courtyard of the Collegio dei Nobili. An intervention conceived and realized by the' +
-                //'international group of Egyptologists of the museum composed of Johannes Auenmüller, Divina Centore and Cédric Gobeil.
+                'One of the facades of the inner courtyard of the Museum and its garden will turn into a dynamic screen. With a video-mapping technique, flowers and plants of ancient Egypt will bloom.'+
+                'three trees will recount a love lyric, and lastly, the fauna of ancient Egypt will populate the garden, all this to the rhythm of an engaging melody.\n'+
+                'video contributions made through the videomapping technique will be projected, capable of enriching the sensory perception of the observer.' +
+                ' To the rhythm of an engaging melody, the garden, as if by magic, will also seem to be populated by typical specimens of the fauna of Ancient Egypt.\n'+
+                'Furthermore in view of the bicentenary in 2024, the Egyptian Museum of Turin presents Cortile aperto: Flora dell antico Egitto, a green space accessible'+
+                ' to all (free admission, for the entire month of July) located in the courtyard of the Collegio dei Nobili. An intervention conceived and realized by the' +
+                'international group of Egyptologists of the museum composed of Johannes Auenmüller, Divina Centore and Cédric Gobeil.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
                 'https://api.museoegizio.it/wp-content/uploads/2022/06/GiardinoEgizio2706-376_-1920x1080.jpg',
@@ -171,14 +182,21 @@ function insertData(models) {
         },
         {
             name: 'The table by Ugo Da Capri for the altar of the holy face',
-            practical_info: 'It will be possible to take guided tours only on sunday at 3.00 p.m.\n',
-           // 'Duration: 1h\n'+
-           // 'Cost of the ticket: 4.00€ + guided visit: 6.00€',
+            practical_info: 'It will be possible to take guided tours only on sunday at 3.00 p.m.\n'+
+           'Duration: 1h\n'+
+           'Cost of the ticket: 4.00€ + guided visit: 6.00€',
             description:
-                'The work is exhibited to the general public thanks to the support of Reale Mutua and the technical contribution of Targetti Sankey Spa', 
-                //'through lighting technologies with diversified ignition for a combined visual narration. In the prestigious exhibition space of Palazzo Madama,' +
-                //' visitors will be able to admire the altarpiece by Ugo da Carpi with Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul-' +
-                //' a work of extraordinary importance for art and faith',
+                'The work is exhibited to the general public thanks to the support of Reale Mutua and the technical contribution of Targetti Sankey Spa'+
+                'through lighting technologies with diversified ignition for a combined visual narration. In the prestigious exhibition space of Palazzo Madama,' +
+                ' visitors will be able to admire the altarpiece by Ugo da Carpi with Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul-' +
+                ' a work of extraordinary importance for art and faith.\n'+
+                'In the city of the Shroud comes a table made for the altar of the Holy Face in the Vatican Basilica by Ugo da Carpi, a skilled carver of woodcut matrices.'+
+                'Giorgio Vasari quotes it and had the opportunity to see it together with Michelangelo: he describes it by reporting a particular detail,'+
+                ' already specified by the artist next to his signature: "painted in oil without using a brush".\n'+
+                'The visit offers numerous ideas: from the scientific analyses conducted in the Vatican laboratories, to the insights on the techniques of execution,'+
+                'up to the comparison with other prestigious works united by the iconography of the True Icon, including, to mention, the woodcut of 1510 by Albrecht Dürer.'+
+                'The setting is engaging: you are immersed in the imposing architecture of the ancient Vatican basilica. In the center, and in direct relation to the Shroud'+
+                'fresco of the Medieval Court, there is the protagonist work: Ugo da Carpi. Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul. Holy Year 1525.',
             address: 'Piazza Castello, TO',
             image_links: [
                 'https://www.italpress.com/wp-content/uploads/2022/06/20220615_1840-630x420.jpg',
@@ -191,9 +209,21 @@ function insertData(models) {
         },
         {
             name: 'Objective identities',
-            practical_info: 'On Tuesday and Wednesday. at 6 p.m. Lecture held by Bettina Bader',
+            practical_info: 'On Tuesday and Wednesday. at 6:00 p.m.\n'+
+            'Lecture held by Bettina Bader.\n'+
+            'Conference in English.',
             description:
-                'This talk will raise awareness of somewhat hidden prejudices and preconceived ideas about the identities of ancient people, based on material culture in various forms.', // Often such ideas cannot really be substantiated from current knowledge of objects, and textual references, if they exist, are also not as straight forward as we would wish. Firstly, individuals may have had more identities than immediately apparent and not each one is easily recognisable in the archaeological record. Further, research shows that some ideas about ancient Egypt and its inhabitants are rooted in antiquated culture-historical paradigms, which go back to ideological narratives. It is time to highlight those problems and avoid simplistic historical narratives in favour of more complex reconstructions. The lecture will provide some theoretical background of archaeological thinking with a proposal to reconstruct ancient life’s circumstances and realities, with a case study set in the late Middle Kingdom (c. 1800-1700 BC). ',
+                'This talk will raise awareness of somewhat hidden prejudices and preconceived ideas about the identities of ancient people, based on material culture in various forms.'+
+                'Often such ideas cannot really be substantiated from current knowledge of objects, and textual references, if they exist, are also not as straight forward as we would wish.\n'+
+                'Firstly, individuals may have had more identities than immediately apparent and not each one is easily recognisable in the archaeological record.'+
+                'Further, research shows that some ideas about ancient Egypt and its inhabitants are rooted in antiquated culture-historical paradigms, which go back to ideological narratives.\n'+
+                'It is time to highlight those problems and avoid simplistic historical narratives in favour of more complex reconstructions. The lecture will provide some theoretical background'+
+                'of archaeological thinking with a proposal to reconstruct ancient life’s circumstances and realities, with a case study set in the late Middle Kingdom (c. 1800-1700 BC).\n'+
+                'Bettina Bader is head of the research group Archaeology in Egypt and Sudan, Department of Prehistory and Archaeology of West Asia and Northeast Africa, Austrian Academy of Sciences.\n'+
+               'After finishing his doctorate (2004) at the Institute of Egyptology, University of Vienna, he continued with several post-docs funded by the Austrian Scientific Fund,'+
+                'the Austrian National Bank and the European Commission (2004-2009).'+
+                'Since 2015 she is principal researcher of the START-project Beyond Politics: Material Culture of Second Intermediate Period Egypt and Nubia (FWF, Y754-G19)'+
+                'culture in Egypt and Nubia. Since 2021 he is head of the research group of Archaeology in Egypt and Sudan, Department of Prehistory and Archaeology of West Asia and Northeast Africa, Austrian Academy of Sciences.\n',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
                 'https://i.pinimg.com/originals/ca/f3/3c/caf33c5308f68b083fcd7b317e3bcad9.jpg',
@@ -206,9 +236,28 @@ function insertData(models) {
         },
         {
             name: 'Passepartout',
-            practical_info: 'The guided tours will start at 10.30 a.m., 12.00 p.m, 2.30 p.m and 4.00 p.m.',
+            practical_info: 'The guided tours will be on:\n'+
+            '27th,28th of March\n'+
+            '24th,25 April\n'+
+            '28th,29th of May\n'+
+            '24th,25th of September\n'+
+            '29th, 30th Octtober\n'+
+            'starting at 10.30 a.m., 12.00 p.m, 2.30 p.m and 4.00 p.m.',
             description:
-                'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi',
+                'Passepartout is the program of extraordinary guided tours to the discovery of the secret spaces, normally closed to the public, of the Palazzina di Caccia di Stupinigi'+
+                'With six appointments, one weekend a month, from March to November, the Mauritian Order Foundation organizes extraordinary guided tours to (re)discover the secret spaces,'+
+                'normally closed public, of the Palazzina di Caccia di Stupinigi. The apartment of Ponente, the rooms of the servants and the Juvarrian dome are the spaces of the court,'+
+                'in some cases open for the first time to visitors, which tell the story of the Palazzina in its different housing phases and the architectural project at the base of its construction.\n'+
+                '\n'+
+                'It starts on March 26-27 with the first guided tour entitled The closed rooms of the king, which opens the doors of the royal rooms then expanded under the direction of Benedetto Alfieri'+
+                'in the eighteenth century to accommodate the rooms of Vittorio Emanuele, Duke of Aosta and son of King Vittorio Amedeo III.\n'+
+                '\n'+
+                'It continues with: Behind the secret doors, on 24-25 April and 29-30 October: the visit leads right behind the secret doors, in the hidden spaces where the servants moved and where there'+
+                'is still the picture of automatic bells that allows you to closely understand the functioning of a residence like that of Stupinigi.\n'+
+                '\n'+
+                'Finally with: Under the deer, scheduled for 28-29 May and 24-25 September: from the grandiose central hall you walk 50 steps to reach the characteristic balcony and finally arrive,'+
+                'through a narrow spiral staircase of a further 50 steps, to the top of the Juvarrian dome.',
+
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://i.pinimg.com/originals/6e/e1/cf/6ee1cfba97cbfe5d1ac5be5b2f905707.jpg',
@@ -217,24 +266,44 @@ function insertData(models) {
                 'https://i.pinimg.com/originals/c8/5b/36/c85b3619fbca762ade57930d34b254d8.jpg'
             ],
             season: 'Summer',
-            start_date: '2022-08-24',
-            end_date: '2022-08-25',
+            start_date: '2022-03-26',
+            end_date: '2022-10-30',
             pointOfInterestId: 3
         },
         {
             name: 'Lyric and musical',
             practical_info:
             '\n'+
-            '13th June: Il flauto magico.\n' +
-            '4th July: Rigoletto.\n' +
-            '8th July: Genitori e figli.\n' +
-            '22th July: Luci e Ombre.\n',
+            '20th June: ABBA musical.\n' +
+            '27th June: Cavalleria Rusticana.\n' +
+            '8th July: I fantasmi dell opera.\n' +
+            '10th July : Pagliacci.\n'+
+            'The shows start at 7:00 p.m',
 
             description:
-                'the Salone of Onour of the Palazzina di Caccia di Stupinigi will host four appointments of the Sunday review of the Teatro Superga',
-               // 'with the great opera and musicals that have made history. The winning singers of the prestigious AsLiCo Competition perform the most \n',
-                //'beautiful arias of the operatic repertoire on the notes of Mozart, Bellini, Puccini, Donizetti and Verdi. Solo arias and concerted duets, \n' +
-                //'the most beautiful pieces of themes dear to the composers of the Italian tradition, accompanied live by the piano of Giorgio Martano.',
+            'Until July 10, 2022, in the Hall of Honor of the Palazzina di Caccia di Stupinigi, the appointments with the lyric Opera and Musical at Court are in place.'+
+            'The festival is four appointments with the great opera and musicals that have made history. Below is the complete calendar:\n'+
+            '\n'+
+            'ABBA MUSICAL\n'+
+            'It was inevitable that ABBA would enter the musical galaxy'+
+            'for the infallibility of the melodies, the variety in the arrangements, the ambivalence between disco hedonism and Bergmanian gloom,'+
+            'the alternation of soloist-duet-chorus that opens up multiple narrative possibilities.\n'+
+            '\n'+
+            'CAVALLERIA RUSTICANA\n'+
+            'Cavalleria rusticana (Rome, Teatro Costanzi, 1890) is the first and most famous work by Pietro Mascagni, winner of the Sonzogno Prize for'+
+            'young composers of 1888. The dramatic story, taken from the homonymous novel by Giovanni Verga, sets to music the rawness of jealousy and'+
+            'revenge that characterized the human relationships of the harsh agricultural and wild world of nineteenth-century Sicily.\n'+
+            '\n'+
+            'I FANTASMI DELL OPERA\n'+
+            'In the 80s, at the height of the worldwide expansion of mega-musicals born in London'+
+            '- Les Miserables, Starlight Express... -  - the need to reconnect to the operatic world has returned, for gigantism and luxury in productions, for'+
+            'the elimination of spoken lines in honor of a continuous song, for the stories told (Miss Saigon is in fact a remake of Madama Butterfly as Rent will be of Bohème)'+
+            'or for the setting of the stories. I Fantasmi dell Opera compares the two compositions\n'+
+            '\n'+
+            'PAGLIACCI\n'+
+            'the work of Ruggero Leoncavallo Pagliacci represents the ideal completion of the verist experience in Italian music of the late nineteenth century.'+
+            'Set in the world of street theater, the dramatic story tells of suspicions, betrayals and revelations that result in an honor killing, consumed between'+
+            'fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
                 'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',
@@ -243,15 +312,30 @@ function insertData(models) {
                 'https://www.guidatorino.com/wp-content/uploads/2019/07/una-notte-palazzina-caccia-stupinigi-2019.jpg'
             ],
             season: 'Summer',
-            start_date: '2022-06-13',
-            end_date: '2022-07-22',
+            start_date: '2022-06-20',
+            end_date: '2022-07-10',
             pointOfInterestId: 3
         },
         {
             name: 'Transforming the Egyptian Museum in Cairo.',
-            practical_info: 'Lecture held  held by Heba Abd el Gawad, Corinna Rossi and Irene Morfini, starting at 5 p.m.',
+            practical_info: 'Lecture held  held by Heba Abd el Gawad, Corinna Rossi and Irene Morfini, starting at 6:00 p.m.'+
+            'The conference will be held in english.',
             description:
-                'The project Transforming the Egyptian Museum in Cairo saw Museo Egizio leading a consortium of European museums including the Ägyptische Papyrussamlung of Berlin, the British Museum, the Louvre and the Rijksmuseum van Oudheden of Leiden.', //to draw a compherensive masterplan to support the re-organisation of the iconic Tahrir museum.',
+                'Heba Abd el Gawad, Corinna Rossi and Irene Morfini guide us to discover the reorganization project of the Egyptian Museum in Cairo.\n'+
+                'The imminent opening of the Grand Egyptian Museum and other regional museums in Egypt has caused a redistribution of objects, affecting the installations of the Cairo Museum.'+
+                'This circumstance proved to be an opportunity to reflect on the future of this Museum and to identify suitable directions for its development.\n'+
+                'Each museum participating in the project was assigned a gallery with the aim of partially renovating it: the Egyptian Museum focused on the section of the Old Kingdom.\n'+
+                'Heba Abd el Gawad, Irene Morfini and Corinna Rossi will present this work that has almost reached completion, the challenges that the project has had to face, the criteria'+ 
+                'identified to suggest the rearrangement project and the preliminary results of conservation performed on selected objects.\n'+
+                '\n'+
+                'Heba Abd el Gawad is an Egyptologist and curator/coordinator of the Transforming the Egyptian Museum project in Cairo for the Egyptian Museum in Turin.'+
+                'Recently she was guest curator for the exhibition Listen to her! Turning up the Volume on Egypt Ordinary Women at the Petrie Museum of Egyptian and Sudanese Archaeology.\n'+
+                '\n'+
+                'Corinna Rossi is Associate Professor of Egyptology at the Politecnico di Milano and is Director of the Italian archaeological mission at um al-Dabadib (Kharga Oasis).'+
+                'She is director of the LIFE project focused on the archaeological site of um al-Dabadib based at the Politecnico di Milano in partnership with the University of Naples Federico I\n'+
+                '\n'+
+                'Irene Morfini is an Egyptologist and archaeologist. Since 2013 she has been co-director of the Min Project in Luxor. Since 2011 he has been vice-president of the Canarian Association of'+
+                'Egyptology and since 2017 he has been part of the staff of CAMNES. He has been working within the Transforming the Egyptian Museum project in Cairo since 2019.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
                 'https://miprendoemiportovia.it/wp-content/uploads/2020/07/torino-museo-egizio-interno.jpg',
@@ -260,23 +344,44 @@ function insertData(models) {
             ],
             season: 'Winter',
             start_date: '2023-01-27',
-            end_date: '2023-01-28',
+            end_date: '2023-01-29',
             pointOfInterestId: 1
         },
         {
             name: 'Cycle of conferences: Splendors of the table',
-            practical_info:
-                '13 January:The silverware service of Charle Odiot. 10 February: The food of the Gods. 7 March: Public lunches and private lunches.',
+            practical_info:'PROGRAM:\n'+
+                '13th January:The silverware service of Charle Odiot.'+
+                '10th February: The food of the Gods.'+
+                '7th March: Public lunches and private lunches.'+
+                '13th March:The theater of the table.'+
+                '\n'+
+                'Opening hours: from 5:00 p.m to 7:00 p.m',
             description:
-                'The practices related to the lunches in use in the House of Savoy between the kingdoms of Vittorio Amedeo II and Carlo Alberto change over time. The meeting explores the theme on the basis of archival documents.',
+                'The practices related to the lunches in use in the House of Savoy between the kingdoms of Vittorio Amedeo II and Carlo Alberto change over time. The meeting explores the theme on the basis of archival documents.\n'+
+                '\n'+
+                'The silverware service of Charle Odiot.\n'+
+                'Author of numerous studies, he identified in Charles-Nicolas Odiot the silversmith who created for Carlo Alberto the precious service exhibited in the Dining Room of palazzo Reale for the exhibition Splendori della Tavola.\n'+
+                'The catalogue edited by Enrica Pagella and Franco Gualano for silvana Editoriale, will be presented during the meeting.\n'+
+                '\n'+
+                'The food of the Gods.\n'+
+                'Defined as the "dark couple of Italian food writing", Clara and Gigi Padovani are the authors of over twenty titles dedicated'+
+                'to the material culture of food, translated into six languages: from chocolate, to street food, to tiramisu, to hazelnut, to the'+
+                'history of Italian agri-food products. Gigi is a professional journalist, for 30 years at La Stampa; Clara is a historian of cuisine and a gastronomic storyteller.\n'+
+                '\n'+
+                'Public lunches and private lunches.\n'+
+                'Le pratiche connesse ai pranzi in uso in Casa Savoia fra i regni di Vittorio Amedeo II a Carlo Alberto mutano nel corso del tempo.'+
+                'L’incontro approfondisce il tema sulla base dei documenti d’archivio.\n'+
+                '\n'+
+                'The theater of the table.\n'+
+                'Esperta di buone maniere e di storia del galateo, Barbara Ronchi della Rocca ha pubblicato vari titoli di successo. Insegna all’Università La Sapienza di Roma e tiene corsi di galateo aziendale e arte del ricevere.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
                 'https://maifermarsi.it/wp-content/uploads/2019/03/Sala-da-pranzo-1024x576.jpg',
                 'https://i.pinimg.com/474x/cf/e5/9d/cfe59db0ba5eba93fbd06761a4cb3483.jpg'
             ],
             season: 'Winter',
-            start_date: '2022-01-13',
-            end_date: '2022-03-07',
+            start_date: '2023-01-13',
+            end_date: '2023-03-13',
             pointOfInterestId: 4
         }
     ]
