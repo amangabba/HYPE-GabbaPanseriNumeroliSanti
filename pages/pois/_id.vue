@@ -9,13 +9,15 @@
                     class="col-md-8"
                 />
                 <div class="col-md-4 text-left p-3">
-                    <p><i><b>Type: </b></i><br>{{ type }}</p>
+                    <p><i><b>Type: </b></i><br><br>{{ type }}</p>
+                    <br><br>
                     <p><i><b>Opening Hours:</b></i></p>
                     <p v-html="visit_info"></p>
-                    <br><br><br>
+                    <br><br>
                     <p><i><b>Address:</b></i><br><br>{{ address }}</p>
                 </div>
             </div>
+            <SectionTitle class="row m-2 mt-4 mb-4">Description</SectionTitle>
             <div class="row m-2 mt-4 mb-4" v-html="description"></div>
 
             <div v-if="itinerary_images.length">

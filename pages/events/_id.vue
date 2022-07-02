@@ -34,17 +34,18 @@
                     <p>{{ description }}</p>
                 </div>
             </div>
+            <div v-if="events_images.length">
+                <div class="row justify-content-center">
+                    <SectionTitle>Other events in this location</SectionTitle>
 
-            <div class="row justify-content-center">
-                <SectionTitle>Other events in this location</SectionTitle>
-
-                <BootstrapCarousel
-                    id="events-carousel"
-                    :images="events_images"
-                    :titles="events_names"
-                    :links="eventLinks"
-                    class="col-md-4"
-                />
+                    <BootstrapCarousel
+                        id="events-carousel"
+                        :images="events_images"
+                        :titles="events_names"
+                        :links="eventLinks"
+                        class="col-md-4"
+                    />
+                </div>
             </div>
         </div>
     </div>
