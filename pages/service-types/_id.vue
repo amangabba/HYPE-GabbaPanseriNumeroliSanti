@@ -175,6 +175,11 @@ export default {
             otherServiceTypeLinks
         }
     },
+    head() {
+        return {
+            title: 'Turin - Main Services: ' + this.title
+        }
+    },
     methods: {
         /**
          * Formats opening hours from an array of float arrays to a human-readable string

@@ -123,6 +123,11 @@ export default {
             poi_names: data.correlated_poi_names,
             poi_images: data.correlated_poi_images
         }
+    },
+    head() {
+        return {
+            title: 'Turin - Points Of Interest: ' + this.name
+        }
     }
 }
 </script>
