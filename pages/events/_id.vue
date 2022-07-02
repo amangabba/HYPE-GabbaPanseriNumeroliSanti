@@ -11,6 +11,7 @@
                 <div class="col-md-6 text-left p-3">
                     <p><i> <b> The event starts on: </b> </i> {{ start_date }}</p>
                     <p><i><b> The event ends on: </b> </i> {{ end_date }}</p>
+                    <p><i><b> Practical information: </b></i> </p>
                     <p v-html="practical_info"></p>
                     <p><i><b> Address: </b></i> {{ address }}</p>
                     <p>
