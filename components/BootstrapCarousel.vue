@@ -1,5 +1,5 @@
 <template>
-    <div :id="id" class="carousel slide p-0" data-bs-ride="carousel">
+    <div :id="id" ref="carousel" class="carousel slide p-0" data-bs-ride="carousel">
         <!-- Indicators to quickly navigate between non-adjacent slides -->
         <div class="carousel-indicators">
             <button
@@ -19,7 +19,7 @@
             <div
                 v-for="(image, index) of images"
                 :key="'carousel-' + index"
-                :class="index === 0 ? 'carousel-item active' : 'carousel-item'"
+                :class="'h-100 position-relative ' + (index === 0 ? 'carousel-item active' : 'carousel-item')"
                 data-bs-interval="10000"
             >
                 <!-- Image of the slide -->
@@ -106,7 +106,7 @@ export default {
         const firstSlideImg = this.$refs.carouselImages[0]
 
         const resizeCarouselImageContainer = () => {
-            this.$refs.carouselImageContainer.style.height = `${firstSlideImg.offsetHeight}px`
+            this.$refs.carousel.style.height = `${firstSlideImg.offsetHeight}px`
         }
 
         // Resize the container when the page is loaded and whenever the window is resized
@@ -124,6 +124,9 @@ export default {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .carousel-indicators {
     background-color: rgba(0, 0, 0, 0.8);
