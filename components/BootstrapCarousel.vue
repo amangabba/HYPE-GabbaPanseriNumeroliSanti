@@ -23,11 +23,13 @@
                 data-bs-interval="10000"
             >
                 <!-- Image of the slide -->
-                <img
+                <nuxt-img
                     ref="carouselImages"
                     :src="image"
                     class="d-block w-100 carousel-image"
                     :alt="titles ? titles[index] : `Slide ${index}`"
+                    format="webp"
+                    loading="lazy"
                 />
                 <!-- Caption for the slide, shown only if titles or links are available -->
                 <div v-if="titles || links" class="carousel-caption">
@@ -111,7 +113,7 @@ export default {
         // Set the height of the slide container to the height of the first image
         // to prevent resizing when images have different heights.
         // Taller images will be cropped to fit in this height
-        const firstSlideImg = this.$refs.carouselImages[0]
+        const firstSlideImg = this.$refs.carouselImages[0].$el
 
         const resizeCarouselImageContainer = () => {
             // Need to check if the carousel element is still defined because this will be called by the
@@ -128,10 +130,11 @@ export default {
             // Center the image vertically if it is not tall enough to fill the container
             // We need to do this when the image is loaded to ensure correct positioning
             for (const image of this.$refs.carouselImages) {
-                image.addEventListener('load', () => {
-                    image.style.position = 'absolute';
-                    image.style.top = '50%';
-                    image.style.transform = 'translateY(-50%)';
+                const imgEl = image.$el
+                imgEl.addEventListener('load', () => {
+                    imgEl.style.position = 'absolute';
+                    imgEl.style.top = '50%';
+                    imgEl.style.transform = 'translateY(-50%)';
                 })
             }
         }

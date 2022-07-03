@@ -5,7 +5,7 @@
             <div class="row no-gutters">
                 <!-- Image of the card -->
                 <div class="col-md-4">
-                    <img :src="imageLink" class="card-img" :alt="title" />
+                    <nuxt-img :src="imageLink" class="card-img" :alt="title" format="webp" loading="lazy" />
                 </div>
                 <!-- Body of the card -->
                 <div class="col-md-8">
@@ -33,7 +33,7 @@
             class="custom-card custom-card-vertical card mt-3 m-2 shadow-sm"
         >
             <!-- Image of the card -->
-            <img :src="imageLink" class="card-img-top" :alt="title" />
+            <nuxt-img :src="imageLink" class="card-img-top" :alt="title" format="webp" loading="lazy" />
             <div class="card-body d-flex flex-column align-items-center">
                 <!-- Title of the card -->
                 <h5 class="card-title">{{ title }}</h5>
