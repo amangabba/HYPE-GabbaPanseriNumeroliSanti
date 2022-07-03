@@ -23,9 +23,9 @@
                     <p v-if="content !== ''" class="card-text">{{ content }}</p>
                     <div id="links" class="row mt-auto p-1">
                         <!-- Open the page regarding the POI -->
-                        <a class="col-md-2 btn btn-primary p-1" :href="link">
+                        <NuxtLink :to="link" class="col-md-2 btn btn-primary p-1">
                             {{ linkText }}
-                        </a>
+                        </NuxtLink>
 
                         <!-- Button to show on map the selected POI and Scroll the map into view -->
                         <button
