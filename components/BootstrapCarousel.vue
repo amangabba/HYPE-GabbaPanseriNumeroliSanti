@@ -34,7 +34,7 @@
                 <!-- Caption for the slide, shown only if titles or links are available -->
                 <div v-if="titles || links" class="carousel-caption">
                     <!-- Title of the slide -->
-                    <h5 v-if="titles">{{ titles[index] }}</h5>
+                    <h3 class="h5" v-if="titles">{{ titles[index] }}</h3>
                     <!-- Link to see more about the slide -->
                     <NuxtLink v-if="links" :to="links[index]">
                         <button type="button" class="btn btn-primary">
