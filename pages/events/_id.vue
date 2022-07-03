@@ -40,7 +40,7 @@
 
             <div v-if="events_images.length">
                 <div class="row justify-content-center">
-                    <SectionTitle>Other events in this location</SectionTitle>
+                    <SectionTitle>Next events in this location</SectionTitle>
 
                     <BootstrapCarousel
                         id="events-carousel"
