@@ -1,5 +1,10 @@
 <template>
-    <div :id="id" ref="carousel" class="carousel slide p-0" data-bs-ride="carousel">
+    <div
+        :id="id"
+        ref="carousel"
+        class="carousel slide p-0"
+        data-bs-ride="carousel"
+    >
         <!-- Indicators to quickly navigate between non-adjacent slides -->
         <div class="carousel-indicators">
             <button
@@ -19,7 +24,10 @@
             <div
                 v-for="(image, index) of images"
                 :key="'carousel-' + index"
-                :class="'h-100 position-relative ' + (index === 0 ? 'carousel-item active' : 'carousel-item')"
+                :class="
+                    'h-100 position-relative ' +
+                    (index === 0 ? 'carousel-item active' : 'carousel-item')
+                "
                 data-bs-interval="10000"
             >
                 <!-- Image of the slide -->
@@ -34,7 +42,7 @@
                 <!-- Caption for the slide, shown only if titles or links are available -->
                 <div v-if="titles || links" class="carousel-caption">
                     <!-- Title of the slide -->
-                    <h3 class="h5" v-if="titles">{{ titles[index] }}</h3>
+                    <h3 v-if="titles" class="h5">{{ titles[index] }}</h3>
                     <!-- Link to see more about the slide -->
                     <NuxtLink v-if="links" :to="links[index]">
                         <button type="button" class="btn btn-primary">
@@ -88,9 +96,9 @@ export default {
          * Flag to vertically align images that are not tall enough to fill the carousel slide
          */
         centerImages: {
-          type: Boolean,
-          required: false,
-          default: true
+            type: Boolean,
+            required: false,
+            default: true
         },
         /**
          * Optional list of titles for the images
@@ -132,9 +140,9 @@ export default {
             for (const image of this.$refs.carouselImages) {
                 const imgEl = image.$el
                 imgEl.addEventListener('load', () => {
-                    imgEl.style.position = 'absolute';
-                    imgEl.style.top = '50%';
-                    imgEl.style.transform = 'translateY(-50%)';
+                    imgEl.style.position = 'absolute'
+                    imgEl.style.top = '50%'
+                    imgEl.style.transform = 'translateY(-50%)'
                 })
             }
         }
@@ -150,7 +158,6 @@ export default {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-
 }
 .carousel-indicators {
     background-color: rgba(0, 0, 0, 0.8);

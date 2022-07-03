@@ -33,7 +33,11 @@
                     </div>
                     <div class="mb-2">
                         <label class="form-label" for="message">Message</label>
-                        <textarea id="message" class="form-control" rows="4"></textarea>
+                        <textarea
+                            id="message"
+                            class="form-control"
+                            rows="4"
+                        ></textarea>
                     </div>
                     <button
                         type="submit"
@@ -57,7 +61,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - Contacts',
+            title: 'Contacts - Turin',
             meta: [
                 {
                     hid: 'description',

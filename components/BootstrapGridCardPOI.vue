@@ -23,10 +23,7 @@
                     <p v-if="content !== ''" class="card-text">{{ content }}</p>
                     <div id="links" class="row mt-auto p-1">
                         <!-- Open the page regarding the POI -->
-                        <a
-                            class="col-md-2 btn btn-primary p-1"
-                            :href="link"
-                        >
+                        <a class="col-md-2 btn btn-primary p-1" :href="link">
                             {{ linkText }}
                         </a>
 

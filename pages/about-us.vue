@@ -89,7 +89,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - About Us',
+            title: 'About Us - Turin',
             meta: [
                 {
                     hid: 'description',

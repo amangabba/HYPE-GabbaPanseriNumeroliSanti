@@ -39,7 +39,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Winter Events',
+            title: 'Winter Events - Turin',
             meta: [
                 {
                     hid: 'description',

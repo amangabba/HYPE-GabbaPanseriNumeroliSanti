@@ -47,7 +47,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - Travel Information',
+            title: 'Travel Information - Turin',
             meta: [
                 {
                     hid: 'description',

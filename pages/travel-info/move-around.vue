@@ -112,7 +112,19 @@ import SectionTitle from '~/components/SectionTitle'
 
 export default {
     name: 'TravelInfoMovePage',
-    components: { SectionTitle }
+    components: { SectionTitle },
+    head() {
+        return {
+            title: 'Travel Info - Turin',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `How to move around the city.`
+                }
+            ]
+        }
+    }
 }
 </script>
 <style scoped></style>

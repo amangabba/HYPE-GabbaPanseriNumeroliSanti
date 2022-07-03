@@ -21,15 +21,6 @@ export default {
                 imageLink: elem.map_link,
                 link: `/itineraries/${elem.id}`,
                 description: elem.description
-                /*
-                description: poiList.length
-                    ? 'From "' +
-                      poiList[0].name +
-                      '" to "' +
-                      poiList[poiList.length - 1].name +
-                      '"'
-                    : ''
-                */
             })
         }
 
@@ -47,7 +38,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Itineraries',
+            title: 'Itineraries - Turin',
             meta: [
                 {
                     hid: 'description',

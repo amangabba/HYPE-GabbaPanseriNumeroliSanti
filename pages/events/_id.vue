@@ -9,18 +9,29 @@
                     class="col-md-6"
                 />
                 <div class="col-md-6 text-left p-3">
-                    <p><i> <b> The event starts on: </b> </i> {{ start_date }}</p>
-                    <p><i><b> The event ends on: </b> </i> {{ end_date }}</p>
-                    <p><i><b> Practical information: </b></i> </p>
+                    <p>
+                        <i> <b> The event starts on: </b> </i> {{ start_date }}
+                    </p>
+                    <p>
+                        <i><b> The event ends on: </b> </i> {{ end_date }}
+                    </p>
+                    <p>
+                        <i><b> Practical information: </b></i>
+                    </p>
                     <p v-html="practical_info"></p>
-                    <p><i><b> Address: </b></i> {{ address }}</p>
+                    <p>
+                        <i><b> Address: </b></i> {{ address }}
+                    </p>
                     <p>
                         <i><b> Location: </b></i>
                         <NuxtLink :to="'/pois/' + pois_link.id">
                             {{ pois_link.name }}
                         </NuxtLink>
                     </p>
-                    <p><i><b> This event will be held in: </b> </i> {{ season }}</p>
+                    <p>
+                        <i><b> This event will be held in: </b> </i>
+                        {{ season }}
+                    </p>
 
                     <p v-if="season === 'Summer'">
                         <NuxtLink to="/summer-events">
@@ -97,9 +108,9 @@ export default {
             eventLinks.push(`/events/${id}`)
         }
 
-        const temp1 = data.practical_info.replace(/\n/g, "<br />")
-        const infoWithBr = temp1.replace(/\t/g, "&nbsp")
-        const descriptionWithBr = data.description.replace(/\n/g, "<br />")
+        const temp1 = data.practical_info.replace(/\n/g, '<br />')
+        const infoWithBr = temp1.replace(/\t/g, '&nbsp')
+        const descriptionWithBr = data.description.replace(/\n/g, '<br />')
 
         return {
             from,
@@ -122,7 +133,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Events: ' + this.name
+            title: this.name + ' - Events in Turin'
         }
     }
 }

@@ -5,7 +5,13 @@
             <div class="row no-gutters">
                 <!-- Image of the card -->
                 <div class="col-md-4">
-                    <nuxt-img :src="imageLink" class="card-img" :alt="title" format="webp" loading="lazy" />
+                    <nuxt-img
+                        :src="imageLink"
+                        class="card-img"
+                        :alt="title"
+                        format="webp"
+                        loading="lazy"
+                    />
                 </div>
                 <!-- Body of the card -->
                 <div class="col-md-8">
@@ -19,7 +25,10 @@
                         </p>
 
                         <!-- Link to see more about the card -->
-                        <NuxtLink :to="link" class="btn btn-primary mt-auto align-self-center">
+                        <NuxtLink
+                            :to="link"
+                            class="btn btn-primary mt-auto align-self-center"
+                        >
                             See more
                         </NuxtLink>
                     </div>
@@ -33,7 +42,13 @@
             class="custom-card custom-card-vertical card mt-3 m-2 shadow-sm"
         >
             <!-- Image of the card -->
-            <nuxt-img :src="imageLink" class="card-img-top" :alt="title" format="webp" loading="lazy" />
+            <nuxt-img
+                :src="imageLink"
+                class="card-img-top"
+                :alt="title"
+                format="webp"
+                loading="lazy"
+            />
             <div class="card-body d-flex flex-column align-items-center">
                 <!-- Title of the card -->
                 <h3 class="h5 card-title">{{ title }}</h3>

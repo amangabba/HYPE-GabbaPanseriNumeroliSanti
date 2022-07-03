@@ -36,7 +36,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Points Of Interest',
+            title: 'Points Of Interest - Turin',
             meta: [
                 {
                     hid: 'description',

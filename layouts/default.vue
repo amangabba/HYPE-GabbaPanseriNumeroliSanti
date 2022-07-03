@@ -40,7 +40,9 @@ export default {
         // Set the bottom padding of the content container to the total height of the footer to prevent
         // overlapping
         const setContentPadding = () => {
-            contentElement.style.paddingBottom = `${footerElement.offsetHeight + 10}px`
+            contentElement.style.paddingBottom = `${
+                footerElement.offsetHeight + 10
+            }px`
         }
 
         // Calculate the padding on page load and whenever the window is resized

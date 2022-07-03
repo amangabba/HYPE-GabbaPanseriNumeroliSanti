@@ -137,7 +137,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Itineraries: ' + this.title
+            title: this.title + ' - Itineraries in Turin'
         }
     },
     methods: {
