@@ -6,7 +6,7 @@
                 :title="title"
                 :subtitle="subtitle"
                 class="title-row"
-                :style="`background-image: url('${coverImage}');`"
+                :style="coverImage ? `background-image: url('${coverImage}');` : ''"
             />
 
             <div class="container mt-3 mb-3">
