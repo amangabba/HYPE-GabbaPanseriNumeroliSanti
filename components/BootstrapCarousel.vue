@@ -161,7 +161,7 @@ export default {
 .carousel-control-prev {
     background-color: rgba(0, 0, 0, 0.8);
 }
-.carousel-caption h5 {
+.carousel-caption h3 {
     background-color: rgba(0, 0, 0, 0.8);
     width: fit-content;
     margin: auto auto 5px;
