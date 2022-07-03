@@ -743,12 +743,12 @@ function insertData(models) {
                 'tour that takes in other city highlights such as the Royal Palace, Piazza Castello, and ' +
                 'Mole Antonelliana.',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2014/09/basilica-superga-torino-1.jpg',
-                'https://www.museotorino.it/images/dc/3d/d2/1c/dc3dd21c39b64abea053a4bbeb59b886-1.jpg?VSCL=100',
-                'https://caiframe.com/wp-content/uploads/2018/11/maxresdefault-1.jpg',
-                'https://media.beniculturali.it/mibac/files/boards/99c11a910aad48e66d038671de790e5a/GEP%202020/superga.jpg',
-                'https://www.museotorino.it/images/9f/22/a1/af/9f22a1afe1924f0295689f7a3dbaeac4-1.jpg?VSCL=100',
-                'https://mywowo.net/media/images/cache/torino_basilica-superga_01_visita_jpg_1200_630_cover_85.jpg'
+                '/images/poi-superga1.png',
+                '/images/poi-superga2.png',
+                '/images/poi-superga3.png',
+                '/images/poi-superga4.png',
+                '/images/poi-superga5.png',
+                '/images/poi-superga6.png'
             ],
             latitude: 45.080821218410506,
             longitude: 7.767671933688086
@@ -775,12 +775,12 @@ function insertData(models) {
                 'avid athlete, and benefactor of the poor, called the "saint for youth of the Third Millennium." ' +
                 'He was beatified by John Paul II in 1990.',
             image_links: [
-                'https://mole24.it/wp-content/uploads/2019/08/duomo-torino.jpg',
-                'https://www.metroitalia.info/img/place/duomo-di-torino.webp',
-                'https://upload.wikimedia.org/wikipedia/commons/d/d3/DuomoTorino.jpg',
-                'https://www.lorenzotaccioli.it/wp-content/uploads/2019/09/Il-duomo-di-Torino-visto-dagli-scavi-archeologici-intorno-alla-Porta-Palatina.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/e/ed/Torino%2C_duomo%2C_interno%2C_01.JPG',
-                'https://www.museotorino.it/images/c3/dd/8c/68/c3dd8c68fd8642a1b443301569d458d9-1.jpg'
+                '/images/poi-duomo1.png',
+                '/images/poi-duomo2.png',
+                '/images/poi-duomo3.png',
+                '/images/poi-duomo4.png',
+                '/images/poi-duomo5.png',
+                '/images/poi-duomo6.png',
             ],
             latitude: 45.07339264416224,
             longitude: 7.685221433687851
@@ -810,13 +810,13 @@ function insertData(models) {
                 'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to ' +
                 'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps. ',
             image_links: [
-                'https://upload.wikimedia.org/wikipedia/commons/b/b8/Villa_della_Regina_-_belvedere_superiore18_36_56_488000.jpeg',
-                'https://www.cosediviaggio.it/wp-content/uploads/2020/12/torino-villa-della-regina.jpg',
-                'https://www.consultaditorino.it/static/media/uploads/realizzazioni/2008%20Villa%20della%20Regina%20Mostra%20Giaquinto/2008-villa-della-regina-mostra-giaquinto-galleria.jpg',
-                'https://media.beniculturali.it/mibac/files/boards/99c11a910aad48e66d038671de790e5a/GEP%202021/vdr%20-%20galleria%20dei%20musici.jpg',
-                'https://www.tpnews.it/wp-content/gallery/villa-della-regina/IMG_3865.jpg',
-                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/villa-della-regina-cosa-vedere.jpg',
-                'https://www.gitefuoriportainpiemonte.it/wp-content/uploads/2021/04/villa-regina-torino.jpg'
+                '/images/poi-regina1.png',
+                '/images/poi-regina2.png',
+                '/images/poi-regina3.png',
+                '/images/poi-regina4.png',
+                '/images/poi-regina5.png',
+                '/images/poi-regina6.png',
+                '/images/poi-regina7.png'
             ],
             latitude: 45.05802506221488,
             longitude: 7.708311433687335
@@ -839,11 +839,11 @@ function insertData(models) {
                 'During the night between 11 and 12 April 1997, the Chapel was affected by a large ' +
                 'fire which seriously damaged the building.',
             image_links: [
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/cappella-sacra-sindone-torino.jpg',
-                'https://www.architetti.com/wp-content/uploads/2018/10/IMG_6129_crediti-Daniele-Bottallo-1024x683.jpg',
-                'https://www.piemonteitalia.eu/sites/default/files/musei/immagini/MUSEI_REALI_DI_TORINO-CAPPELLA_DELLA_SACRA_SINDONE.jpg',
-                'https://www.ilvaloreitaliano.it/wp-content/uploads/2021/03/Altare-Cappella-della-Sindone_03_Credits-Musei-Reali-Torino.jpg',
-                'https://www.diocesi.torino.it/wp-content/uploads/2018/03/Duomo-di-Torino.jpg'
+                '/images/poi-sindone1.png',
+                '/images/poi-sindone2.png',
+                '/images/poi-sindone3.png',
+                '/images/poi-sindone4.png',
+                '/images/poi-sindone5.png'
             ],
             latitude: 45.07318449073021,
             longitude: 7.685854033687847
@@ -869,10 +869,10 @@ function insertData(models) {
                 'and nearby the church of San Lorenzo. Take a break from sightseeing and indulge in a yummy ' +
                 'ice cream or dessert at Gelateria Abela (Piazza Castello, n. 70).',
             image_links: [
-                'https://www.yourlocalguides.net/wp-content/uploads/Piazza-Castello-1024x685.jpg',
-                'https://mywowo.net/media/images/cache/torino_piazza_castello_01_introduzione_jpg_1200_630_cover_85.jpg',
-                'https://www.museotorino.it/images/12/9b/0d/9e/129b0d9eafc24a2aa57c71e977489b10-1.jpg?VSCL=100',
-                'https://img.grouponcdn.com/seocms/epQE88T1ZwPkJNTvXaAFsh/Palazzo_reale-1600x1069-1600x1069.jpeg'
+                '/images/poi-castello1.png',
+                '/images/poi-castello2.png',
+                '/images/poi-castello3.png',
+                '/images/poi-castello4.png',
             ],
             latitude: 45.07070853003831,
             longitude: 7.685113762523864
