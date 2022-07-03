@@ -69,7 +69,19 @@
 
 <script>
 export default {
-    name: 'TravelInfoLuggagePage'
+    name: 'TravelInfoLuggagePage',
+    head() {
+        return {
+            title: 'Travel Info - Turin',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: `Where to deposit the luggages in Turin.`
+                }
+            ]
+        }
+    }
 }
 </script>
 

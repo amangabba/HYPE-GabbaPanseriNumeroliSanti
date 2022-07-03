@@ -75,7 +75,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - Privacy policy',
+            title: 'Privacy policy - Turin',
             meta: [
                 {
                     hid: 'description',

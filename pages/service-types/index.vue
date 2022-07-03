@@ -35,7 +35,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Main Services',
+            title: 'Main Services - Turin',
             meta: [
                 {
                     hid: 'description',

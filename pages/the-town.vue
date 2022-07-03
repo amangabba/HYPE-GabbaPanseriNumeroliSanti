@@ -37,7 +37,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - The Town',
+            title: 'The Town - Turin',
             meta: [
                 {
                     hid: 'description',

@@ -178,7 +178,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Main Services: ' + this.title
+            title: this.title + ' - Main Services in Turin'
         }
     },
     methods: {

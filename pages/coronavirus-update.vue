@@ -4,7 +4,6 @@
             <SectionTitle>Vaccination and mask rules</SectionTitle>
 
             <div id="rules" class="mx-auto">
-
                 <h4 class="mt-2">Public spaces and services</h4>
                 <p>
                     Until at least 30 September, the use of FFP2 masks are
@@ -22,7 +21,12 @@
                         and care homes
                     </li>
                 </ul>
-                <p>However, starting from June 01 2022, it is no longer required to show the Green pass (i.e. Anti-COVID 19 vaccination certificate or recovery certificate, or a negative swab test).</p>
+                <p>
+                    However, starting from June 01 2022, it is no longer
+                    required to show the Green pass (i.e. Anti-COVID 19
+                    vaccination certificate or recovery certificate, or a
+                    negative swab test).
+                </p>
                 <h4 class="mt-2">
                     Developing symptoms of COVID-19 while in Italy
                 </h4>
@@ -138,7 +142,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - Coronavirus Update',
+            title: 'Coronavirus Update - Turin',
             meta: [
                 {
                     hid: 'description',

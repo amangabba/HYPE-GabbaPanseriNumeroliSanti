@@ -17,7 +17,6 @@
             '%2C' +
             markerLong
         "
-        alt="Open Street Map"
     >
     </iframe>
 </template>

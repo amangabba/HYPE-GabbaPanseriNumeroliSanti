@@ -24,16 +24,20 @@
 
                 <form class="justify-content-lg-center w-auto">
                     <div class="mb-2">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control" />
+                        <label class="form-label" for="name">Name</label>
+                        <input id="name" type="text" class="form-control" />
                     </div>
                     <div class="mb-2">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" />
+                        <label class="form-label" for="email">Email</label>
+                        <input id="email" type="email" class="form-control" />
                     </div>
                     <div class="mb-2">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="4"></textarea>
+                        <label class="form-label" for="message">Message</label>
+                        <textarea
+                            id="message"
+                            class="form-control"
+                            rows="4"
+                        ></textarea>
                     </div>
                     <button
                         type="submit"
@@ -57,7 +61,7 @@ export default {
     layout: 'single-topic',
     head() {
         return {
-            title: 'Turin - Contacts',
+            title: 'Contacts - Turin',
             meta: [
                 {
                     hid: 'description',

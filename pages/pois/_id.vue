@@ -9,12 +9,19 @@
                     class="col-md-8"
                 />
                 <div class="col-md-4 text-left p-3">
-                    <p><i><b>Type: </b></i><br><br>{{ type }}</p>
-                    <br><br>
-                    <p><i><b>Opening Hours:</b></i></p>
+                    <p>
+                        <i><b>Type: </b></i><br /><br />{{ type }}
+                    </p>
+                    <br /><br />
+                    <p>
+                        <i><b>Opening Hours:</b></i>
+                    </p>
                     <p v-html="visit_info"></p>
-                    <br><br>
-                    <p><i><b>Address:</b></i><br><br>{{ address }}</p>
+                    <br /><br />
+                    <p>
+                        <i><b>Address:</b></i
+                        ><br /><br />{{ address }}
+                    </p>
                 </div>
             </div>
             <SectionTitle class="row m-2 mt-4 mb-4">Description</SectionTitle>
@@ -102,9 +109,9 @@ export default {
             poiLinks.push(`/pois/${id}`)
         }
 
-        const temp1 = data.visit_info.replace(/\n/g, "<br />")
-        const visitWithBr = temp1.replace(/\t/g, "&nbsp")
-        const descriptionWithBr = data.description.replace(/\n/g, "<br />")
+        const temp1 = data.visit_info.replace(/\n/g, '<br />')
+        const visitWithBr = temp1.replace(/\t/g, '&nbsp')
+        const descriptionWithBr = data.description.replace(/\n/g, '<br />')
 
         return {
             name: data.name,
@@ -126,7 +133,7 @@ export default {
     },
     head() {
         return {
-            title: 'Turin - Points Of Interest: ' + this.name
+            title: this.name + ' - Points Of Interest in Turin'
         }
     }
 }
