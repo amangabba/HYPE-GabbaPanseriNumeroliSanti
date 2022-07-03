@@ -11,7 +11,7 @@
                 <div class="col-md-8">
                     <div class="card-body d-flex flex-column h-100">
                         <!-- Title of the card -->
-                        <h5 class="card-title">{{ title }}</h5>
+                        <h3 class="h5 card-title">{{ title }}</h3>
 
                         <!-- Slot for customizing the content of the card -->
                         <p class="card-text">
@@ -36,9 +36,9 @@
             <nuxt-img :src="imageLink" class="card-img-top" :alt="title" format="webp" loading="lazy" />
             <div class="card-body d-flex flex-column align-items-center">
                 <!-- Title of the card -->
-                <h5 class="card-title">{{ title }}</h5>
+                <h3 class="h5 card-title">{{ title }}</h3>
                 <!-- Subtitle of the card -->
-                <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
+                <h4 class="h6 card-subtitle mb-2 text-muted">{{ subtitle }}</h4>
 
                 <!-- Slot for customizing the content of the card -->
                 <p class="card-text">
