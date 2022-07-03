@@ -112,6 +112,16 @@ export default {
         // Resize the container when the page is loaded and whenever the window is resized
         firstSlideImg.onload = resizeCarouselImageContainer
         window.onresize = resizeCarouselImageContainer
+
+        // Center the image vertically if it is not tall enough to fill the container
+        // We need to do this when the image is loaded to ensure correct positioning
+        for (const image of this.$refs.carouselImages) {
+            image.addEventListener('load', () => {
+                image.style.position = 'absolute';
+                image.style.top = '50%';
+                image.style.transform = 'translateY(-50%)';
+            })
+        }
     }
 }
 </script>
@@ -124,9 +134,7 @@ export default {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
 }
 .carousel-indicators {
     background-color: rgba(0, 0, 0, 0.8);
