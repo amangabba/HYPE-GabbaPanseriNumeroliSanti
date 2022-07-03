@@ -408,15 +408,15 @@ function insertData(models) {
                 'Temple of Ellesyia;\n· the famous Turin Papyrus Map;\n· the Bembine Table of Isis bronze tablet, and the ' +
                 'oldest known version of the Egyptian Book of the Dead, among many others.',
             image_links: [
-                'https://api.museoegizio.it/wp-content/uploads/2021/11/DSF2001-1920x1080.jpg',
-                'https://www.icis.it/wp-content/uploads/2017/09/museo-egizio-34-1600x900.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/07/Museo-Egizio-di-Torino.jpg',
-                'https://api.museoegizio.it/wp-content/uploads/2021/04/Sala-con-pubblico_New_2021.jpg',
-                'https://www.torinofree.it/wp-content/uploads/2013/01/sfinge-museo-egizio-Torino.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/d/d0/-_001_mummia_%28Museo_Egizio_Torino%29.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/5/55/-_01_Torino%2C_Museo_egizio_Sarcofagi_faraonici_in_legno_ricoperti_d%27oro.jpg',
-                'https://www.rsi.ch/rete-due/programmi/cultura/oggi-la-storia/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG-4617094.html/ALTERNATES/LANDSCAPE_1300/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG',
-                'https://mediterraneoantico.it/wp-content/uploads/2019/04/Libro-dei-Morti-di-Taysnakht-figlia-di-Taymes_Cyperus-papyrus.-Epoca-Tolemaica-332-30-a.C..-Tebe_Collezione-Drovetti-1824.-C.-1833_Pesatura-del-cuore-Copia.jpg'
+                '/images/poi-museoegizio1.png',
+                '/images/poi-museoegizio2.png',
+                '/images/poi-museoegizio3.png',
+                '/images/poi-museoegizio4.png',
+                '/images/poi-museoegizio5.png',
+                '/images/poi-museoegizio6.png',
+                '/images/poi-museoegizio7.png',
+                '/images/poi-museoegizio8.png',
+                '/images/poi-museoegizio9.png'
             ],
             latitude: 45.068493986677595,
             longitude: 7.684330920195937
@@ -444,14 +444,14 @@ function insertData(models) {
                 'The Museum was set up in 1861 by the City of Turin to bring together and house the heritage of Piedmont.',
 
             image_links: [
-                'https://mole24.it/wp-content/uploads/2019/07/Torino_Palazzo_Madama-1.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/9/9c/Torino_-_Palazzo_Madama.jpg',
-                'https://lasottilelineadombrablog.files.wordpress.com/2015/06/palazzo-madama-torino1.jpg?w=1024',
-                'https://www.torinorete.it/wp-content/uploads/2021/03/palazzo-madama-interni-scaled.jpg',
-                'https://1890056479.rsc.cdn77.org/rivista/immagini/2022/1905/camera-di-madama-reale.jpg',
-                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/pala-madama-2.jpg',
-                'https://www.museotorino.it/images/01/9d/17/df/019d17dfe5f04300bbe521a2108def9f-1.jpg?VSCL=100',
-                'https://www.palazzomadamatorino.it/sites/default/files/preview/DSC_7611%20sito.jpg'
+                '/images/poi-madama1.png',
+                '/images/poi-madama2.png',
+                '/images/poi-madama3.png',
+                '/images/poi-madama4.png',
+                '/images/poi-madama5.png',
+                '/images/poi-madama6.png',
+                '/images/poi-madama7.png',
+                '/images/poi-madama8.png'
             ],
             latitude: 45.07100820681161,
             longitude: 7.685898362523839
@@ -481,14 +481,14 @@ function insertData(models) {
                 'dual function of bookcase and desk, presents classicist style furniture in contrast with the Baroque ' +
                 'style and presents stuccos and frescoes by Pietro Domenico Olivero and Giovanni Battista Alberoni.',
             image_links: [
-                'https://siviaggia.it/wp-content/uploads/sites/2/2019/05/cosa-visitare-allinterno-della-palazzina-stupinigi-a-torino.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/4/40/Palazzina_di_caccia_di_Stupinigi_con_la_cancellata%2C_ingresso.jpg',
-                'https://i.pinimg.com/originals/17/bc/25/17bc2543410c8abaebd64944f66a6dff.jpg',
-                'https://www.colazionedaaugusta.it/wp-content/uploads/2015/06/palazzina-di-caccia-di-stupinigi.jpg',
-                'https://c2.staticflickr.com/4/3872/14490748272_4e61973199_b.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Palazzina_di_Stupinigi_-_Salone_centrale_03.jpg/1280px-Palazzina_di_Stupinigi_-_Salone_centrale_03.jpg',
-                'https://www.lastampa.it/image/contentid/policy:1.34235680:1560890663/Copia%20di%202-40136-U11003236488140g6C-U11003236488140j8F-1400x788@LaStampa.it.jpg?f=gallery_1280&h=702&w=1280&$p$f$h$w=8c1f075',
-                'https://www.histouring.com/data/cch/addon_gallery/13621280x1024xy/schermata%202016-07-06%20alle%2023.16.07_6.png'
+                '/images/poi-stupinigi1.png',
+                '/images/poi-stupinigi2.png',
+                '/images/poi-stupinigi3.png',
+                '/images/poi-stupinigi4.png',
+                '/images/poi-stupinigi5.png',
+                '/images/poi-stupinigi6.png',
+                '/images/poi-stupinigi7.png',
+                '/images/poi-stupinigi8.png'
             ],
             latitude: 44.99535401434939,
             longitude: 7.604519933685234
@@ -515,14 +515,14 @@ function insertData(models) {
                 'which belonged to the family from 1453 until 1946. The royal gates of the palace have a golden ' +
                 'Medusa symbol embossed on them, in order to fend off intruders.',
             image_links: [
-                'https://www.piemonteitalia.eu/sites/default/files/musei/immagini/MUSEI_REALI_DI_TORINO-PALAZZO_REALE.jpg',
-                'https://mywowo.net/media/images/cache/torino_polo_reale_02_palazzo_reale_esterno_jpg_1200_630_cover_85.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/Palazzo-Reale-Torino-visita-alle-sale.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/palazzo-reale-torino-13.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2019/01/mrt_pr_salapranzo_DSC6352.jpg',
-                'https://www.somewhere.it/public/foto/SomeWhere-Tour-UnaFiabaDaRe-13.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/09/Torino-Palazzo-Reale-scala-della-Forbice.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/4/48/Galleria_Beaumont.jpg'
+                '/images/poi-palazzoreale1.png',
+                '/images/poi-palazzoreale2.png',
+                '/images/poi-palazzoreale3.png',
+                '/images/poi-palazzoreale4.png',
+                '/images/poi-palazzoreale5.png',
+                '/images/poi-palazzoreale6.png',
+                '/images/poi-palazzoreale7.png',
+                '/images/poi-palazzoreale8.png'
             ],
             latitude: 45.07291323526096,
             longitude: 7.686283418343486
@@ -550,14 +550,14 @@ function insertData(models) {
                 'wealth of data, historical insights, archival images, technical data on cars and coach-builders are in ' +
                 'fact available throughout the visit through smartphone through the app of the Museum.',
             image_links: [
-                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/02/28/9f/esterno.jpg?w=1200&h=-1&s=1',
-                'https://mole24.it/wp-content/uploads/2016/07/mauto6.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2021/02/museo-automobile-torino-riapertura-febbraio-2021.jpg',
-                'https://immagini.alvolante.it/sites/default/files/styles/image_gallery_big/public/news_galleria/2020/07/mauto-guardia-di-finanza_13.jpg?itok=UqYHIoQE',
-                'https://zero-media.s3.amazonaws.com/uploads/2019/10/museo-dell-automobile-mauto-torino.jpg',
-                'https://lp-cms-production.imgix.net/2019-06/7fd206b78473a149bcd9cf01f6c94527-museo-nazionale-dell-automobile.jpg',
-                'https://www.museoauto.com/wp-content/uploads/2019/10/084-mauto_all2.jpg',
-                'https://mole24.it/wp-content/uploads/2021/11/Museo-dellAutomobile-Torino-la-storia-dellauto-in-un-museo-4-1024x682.jpg'
+                '/images/poi-auto1.png',
+                '/images/poi-auto2.png',
+                '/images/poi-auto3.png',
+                '/images/poi-auto4.png',
+                '/images/poi-auto5.png',
+                '/images/poi-auto6.png',
+                '/images/poi-auto7.png',
+                '/images/poi-auto8.png'
             ],
             latitude: 45.031902252410255,
             longitude: 7.6735669336864625
@@ -580,14 +580,14 @@ function insertData(models) {
                 'from Piedmont. Finally, the fountain of the twelve months and the beautiful botanical and rock ' +
                 'garden represent two unmissable attractions in the Parco del Valentino.',
             image_links: [
-                'https://www.giovanigenitori.it/wp-content/uploads/2018/03/Parco-del-valentino1.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/02/torino-parco-valentino-pedonalizzazione.jpg',
-                'https://www.welcometoitalia.com/wp-content/uploads/2021/01/Parco-e-Castello-del-Valentino.jpg',
-                'https://www.quotidianopiemontese.it/wp-content/2022/03/2-PARCO-DEL-VALENTINO_TORINO.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Torino%2C_parco_del_Valentino_%2802%29.jpg/1200px-Torino%2C_parco_del_Valentino_%2802%29.jpg',
-                'https://www.museotorino.it/images/39/ea/86/32/39ea863280a746178492c11ee66d563f-1.jpg?VSCL=100',
-                'https://www.storiamito.it/wp-content/uploads/2021/02/fontana_dodici_mesi14-scaled.jpg',
-                'https://www.museotorino.it/images/c4/ee/4f/57/c4ee4f571b824925bb4b6d2076194918-1.jpg?VSCL=100'
+                '/images/poi-valentino1.png',
+                '/images/poi-valentino2.png',
+                '/images/poi-valentino3.png',
+                '/images/poi-valentino4.png',
+                '/images/poi-valentino5.png',
+                '/images/poi-valentino6.png',
+                '/images/poi-valentino7.png',
+                '/images/poi-valentino8.png'
             ],
             latitude: 45.054843089514605,
             longitude: 7.686730733687203
@@ -615,14 +615,14 @@ function insertData(models) {
                 'include also some of the environments around the Museum of Antiquities, as well as the Orangeries, ' +
                 'the Royal Park, the exhibition hall in Palazzo Chiablese and the Sacra Sindone Chapel.',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2020/09/musei-reali-torino-aperture-straordinarie-settembre-2020.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/11/Musei-Reali-di-Torino.jpg',
-                'https://artemagazine.it/wp-content/uploads/2021/04/9acda34517f879d836deddcda3e271bc.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/palazzo-reale-torino-4.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/biblioteca-reale-torino-2.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-4.jpg',
-                'https://www.fctp.it/media/locations/photos/f0/5bb78278e34bb.jpg'
+                '/images/poi-museo1.png',
+                '/images/poi-museo2.png',
+                '/images/poi-museo3.png',
+                '/images/poi-museo4.png',
+                '/images/poi-museo5.png',
+                '/images/poi-museo6.png',
+                '/images/poi-museo7.png',
+                '/images/poi-museo8.png'
             ],
             latitude: 45.07410129682033,
             longitude: 7.686117673254131
@@ -649,14 +649,14 @@ function insertData(models) {
                 'movie posters, photographs, and film clips to admire and lots of masks, costumes, and other memorabilia.\n' +
                 'The collection is so big that true film nerds will need a whole afternoon to explore.',
             image_links: [
-                'https://www.latitudeslife.com/wp-content/uploads/Mole_antonelliana_Torino.jpg',
-                'https://www.inthera.it/wp-content/uploads/2017/05/31-marzo-2017-panorama-d-italia.jpg',
-                'https://siviaggia.it/wp-content/uploads/sites/2/2020/07/la_mole_antonelliana.jpg',
-                'https://www.viaggimust.it/wp-content/uploads/2022/01/mole-antonelliana-1.jpg',
-                'https://www.torinofree.it/wp-content/uploads/2013/01/mole-antonelliana-torino.jpg',
-                'https://www.inexhibit.com/wp-content/uploads/2014/01/Museo-Nazionale-Cinema-Mole-Antonelliana-Torino-Inexhibit-3-870x580.jpg',
-                'https://www.piemonteitalia.eu/sites/default/files/styles/ingrandimento/public/musei/immagini/MUSEO_NAZIONALE_DEL_CINEMA.jpg?itok=s75urpxB',
-                'https://buonissimatorino.it/wp-content/uploads/2021/09/01-MDC-00069.jpg'
+                '/images/poi-mole1.png',
+                '/images/poi-mole2.png',
+                '/images/poi-mole3.png',
+                '/images/poi-mole4.png',
+                '/images/poi-mole5.png',
+                '/images/poi-mole6.png',
+                '/images/poi-mole7.png',
+                '/images/poi-mole8.png'
             ],
             latitude: 45.06905771317454,
             longitude: 7.693314433687716
@@ -683,12 +683,12 @@ function insertData(models) {
                 'the Consolata. Every June 20, a procession of the icon of the Virgin takes place in the ' +
                 'streets of the city.',
             image_links: [
-                'https://www.museotorino.it/images/11/1d/51/cf/111d51cf3060427fbfc242a3ecf44bfe-1.jpg?VSCL=100',
-                'https://www.guidatorino.com/wp-content/uploads/2014/09/santuario-consolata-torino.jpg',
-                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/eb/ff/b6/photo0jpg.jpg?w=1200&h=1200&s=1',
-                'https://vocetempo.it/vt2018/wp-content/uploads/2020/06/2020.06.20.Messa_.Consolata.Santuario.della_.Consolata-Torino-0364.jpg',
-                'https://www.museotorino.it/images/34/a9/a4/13/34a9a41381ae483e81610ffeeea9cd9c-1.jpg',
-                'https://www.italiadascoprire.net/piemonte/wp-content/uploads/sites/29/torino-santuario-consolata-interni.jpg'
+                '/images/poi-consolata1.png',
+                '/images/poi-consolata2.png',
+                '/images/poi-consolata3.png',
+                '/images/poi-consolata4.png',
+                '/images/poi-consolata5.png',
+                '/images/poi-consolata6.png'
             ],
             latitude: 45.07688431102633,
             longitude: 7.67915967786841
@@ -712,13 +712,13 @@ function insertData(models) {
                 'Don’t forget to visit the traditional Caffè San Carlo, which opened in 1842, the Caffè Torino and ' +
                 'the pastry Fratelli Stratta, with the original furnishings of 1836, also famous for its chocolate.',
             image_links: [
-                'https://upload.wikimedia.org/wikipedia/commons/2/27/Turin_piazza_san_carlo_2009.JPG',
-                'https://www.filodiritto.com/sites/default/files/styles/lg/public/2019-05/torino.jpg?itok=BnLglJ5w',
-                'https://www.quotidianopiemontese.it/wp-content/2019/02/piazza-san-carlo-torino-qp.jpg',
-                'https://www.museotorino.it/images/6b/c0/4e/34/6bc04e34fd6541709ee258553089cf90-1.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/2/2a/Torino_-_Caval_%C3%ABd_Brons_latoB_particolare_statua.jpg',
-                'https://www.museotorino.it/images/29/39/be/4c/2939be4c5b4a40a981087d551e837423-1.jpg?VSCL=100',
-                'https://www.museotorino.it/images/ec/e9/be/d7/ece9bed7a102497c96ddf8b8ba106760-1.jpg?VSCL=100'
+                '/images/poi-sancarlo1.png',
+                '/images/poi-sancarlo2.png',
+                '/images/poi-sancarlo3.png',
+                '/images/poi-sancarlo4.png',
+                '/images/poi-sancarlo5.png',
+                '/images/poi-sancarlo6.png',
+                '/images/poi-sancarlo7.png'
             ],
             latitude: 45.06763172278214,
             longitude: 7.6829681336876385
