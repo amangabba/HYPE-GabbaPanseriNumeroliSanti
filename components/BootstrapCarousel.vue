@@ -114,7 +114,10 @@ export default {
         const firstSlideImg = this.$refs.carouselImages[0]
 
         const resizeCarouselImageContainer = () => {
-            this.$refs.carousel.style.height = `${firstSlideImg.offsetHeight}px`
+            // Need to check if the carousel element is still defined because this will be called by the
+            // load event listener even when switching pages before that the image has finished loading
+            if (this.$refs.carousel)
+                this.$refs.carousel.style.height = `${firstSlideImg.offsetHeight}px`
         }
 
         // Resize the container when the page is loaded and whenever the window is resized
