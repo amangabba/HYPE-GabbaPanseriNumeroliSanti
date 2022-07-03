@@ -20,16 +20,6 @@
 
         <div id="navbarToggler" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <!-- Add navigation links defined in 'data' -->
-                <li
-                    v-for="(navItem, navItemIndex) of headerList"
-                    :key="`navItem${navItemIndex}`"
-                    class="nav-item text-primary"
-                >
-                    <NuxtLink :to="navItem.path" class="nav-link">
-                        {{ navItem.name }}
-                    </NuxtLink>
-                </li>
 
                 <!-- Hardcoded navigation list for the events, because we need a dropdown -->
                 <li class="nav-item dropdown">
@@ -65,6 +55,17 @@
                         </li>
                     </ul>
                 </li>
+
+                <!-- Add navigation links defined in 'data' -->
+                <li
+                    v-for="(navItem, navItemIndex) of headerList"
+                    :key="`navItem${navItemIndex}`"
+                    class="nav-item text-primary"
+                >
+                    <NuxtLink :to="navItem.path" class="nav-link">
+                        {{ navItem.name }}
+                    </NuxtLink>
+                </li>
             </ul>
         </div>
     </nav>
@@ -83,14 +84,6 @@ export default {
              */
             headerList: [
                 {
-                    name: 'The Town',
-                    path: '/the-town'
-                },
-                {
-                    name: 'Travel Info',
-                    path: '/travel-info'
-                },
-                {
                     name: 'All Itineraries',
                     path: '/itineraries'
                 },
@@ -101,6 +94,14 @@ export default {
                 {
                     name: 'Main Services',
                     path: '/service-types'
+                },
+                {
+                    name: 'The Town',
+                    path: '/the-town'
+                },
+                {
+                    name: 'Travel Info',
+                    path: '/travel-info'
                 }
             ]
         }
