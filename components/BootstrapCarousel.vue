@@ -8,7 +8,7 @@
                 type="button"
                 :data-bs-target="'#' + id"
                 :data-bs-slide-to="index"
-                class="active"
+                :class="index === 0 ? 'active' : ''"
                 aria-current="true"
                 :aria-label="'Slide ' + index"
             ></button>
