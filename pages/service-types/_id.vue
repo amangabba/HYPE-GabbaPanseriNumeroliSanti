@@ -84,6 +84,7 @@
                 <BootstrapCarousel
                     id="service-types-carousel"
                     :images="otherServiceTypeImages"
+                    :center-images="false"
                     :titles="otherServiceTypeNames"
                     :links="otherServiceTypeLinks"
                     class="col-md-4"

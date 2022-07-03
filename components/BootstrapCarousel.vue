@@ -83,6 +83,14 @@ export default {
             required: true
         },
         /**
+         * Flag to vertically align images that are not tall enough to fill the carousel slide
+         */
+        centerImages: {
+          type: Boolean,
+          required: false,
+          default: true
+        },
+        /**
          * Optional list of titles for the images
          */
         titles: {
@@ -113,14 +121,16 @@ export default {
         firstSlideImg.onload = resizeCarouselImageContainer
         window.onresize = resizeCarouselImageContainer
 
-        // Center the image vertically if it is not tall enough to fill the container
-        // We need to do this when the image is loaded to ensure correct positioning
-        for (const image of this.$refs.carouselImages) {
-            image.addEventListener('load', () => {
-                image.style.position = 'absolute';
-                image.style.top = '50%';
-                image.style.transform = 'translateY(-50%)';
-            })
+        if (this.centerImages) {
+            // Center the image vertically if it is not tall enough to fill the container
+            // We need to do this when the image is loaded to ensure correct positioning
+            for (const image of this.$refs.carouselImages) {
+                image.addEventListener('load', () => {
+                    image.style.position = 'absolute';
+                    image.style.top = '50%';
+                    image.style.transform = 'translateY(-50%)';
+                })
+            }
         }
     }
 }
