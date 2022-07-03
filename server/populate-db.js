@@ -46,9 +46,9 @@ function insertData(models) {
                 '(the atrium, the triclinium, the peristyle with the garden, the bedrooms), ending with the dramatic casts of some victims.',
             address: 'Piazza Castello, TO',
             image_links: [
-                'https://www.artislineblog.com/wp-content/uploads/2022/04/po-scaled.jpg',
-                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0514.jpg',
-                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0522.jpg'
+                '/images/event-Invitation-to-Pompei1.jpg',
+                '/images/event-Invitation-to-Pompei2.jpg',
+                '/images/event-Invitation-to-Pompei3.jpg'
             ],
             season: 'Summer',
             start_date: '2022-04-08',
@@ -82,10 +82,10 @@ function insertData(models) {
                 'a wooden bridge and even a greenhouse was built in the eastern part.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/stupinigi-un-gioiello-rococo-dedicato-a-diana/castello-di-stupinigi-veduta-aerea.jpg',
-                'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/palazzina-di-caccia-di-stupinigi-ora-visitabile-anche-il-parco/palazzina-di-caccia-stupinigi.jpg',
-                'https://grinto.it/wp-content/uploads/2016/06/fom-stupinigi-vista-lato-parco-4.jpg',
-                'https://i.pinimg.com/originals/48/a4/d9/48a4d9d84146c23d78eec01b8e6ffcc7.jpg'
+                '/images/event-read-the-garden1.jpg',
+                '/images/event-read-the-garden2.jpg',
+                '/images/event-read-the-garden3.jpg',
+                '/images/event-read-the-garden4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-04-02',
@@ -112,9 +112,9 @@ function insertData(models) {
                 'in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
-                'https://www.museionline.info/images/gallerie/musantictorino/Foto_5.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2015/02/museo-archeologico-torino-interno.jpg'
+                '/images/event-stories-from-the-lathe1.jpg',
+                '/images/event-stories-from-the-lathe2.jpg',
+                '/images/event-stories-from-the-lathe3.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-10',
@@ -144,9 +144,9 @@ function insertData(models) {
                 'multimedia elements make up a unique exhibition for its strong artistic value and high emotional value.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.themammothreflex.com/wp-content/uploads/2020/02/frida-khalo-foto-Nickolas-Muray-mostra-torino-1-5.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/12/frida-kahlo-torino-mostra-2020.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2020/02/notte-stupinigi-club-silencio-2020-633x400.jpg'
+                '/images/event-frida1.jpg',
+                '/images/event-frida2.jpg',
+                '/images/event-frida3.jpg'
             ],
             season: 'Summer',
             start_date: '2022-03-12',
@@ -168,8 +168,8 @@ function insertData(models) {
                 'international group of Egyptologists of the museum composed of Johannes Auenmüller, Divina Centore and Cédric Gobeil.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://api.museoegizio.it/wp-content/uploads/2022/06/GiardinoEgizio2706-376_-1920x1080.jpg',
-                'https://mediterraneoantico.it/wp-content/uploads/2022/06/DSC_2413.jpg'
+                '/images/event-flora1.jpg',
+                '/images/event-flora.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-30',
@@ -196,8 +196,8 @@ function insertData(models) {
                 'fresco of the Medieval Court, there is the protagonist work: Ugo da Carpi. Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul. Holy Year 1525.',
             address: 'Piazza Castello, TO',
             image_links: [
-                'https://www.italpress.com/wp-content/uploads/2022/06/20220615_1840-630x420.jpg',
-                'https://www.osservatoreromano.va/content/dam/or/images/it/2022/06/134/varobj12321419obj2035841.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
+                '/images/event-ugo1.jpg',
+                '/images/event-ugo2.jpg'
             ],
             season: 'Winter',
             start_date: '2022-12-08',
@@ -224,8 +224,8 @@ function insertData(models) {
                 'culture in Egypt and Nubia. Since 2021 he is head of the research group of Archaeology in Egypt and Sudan, Department of Prehistory and Archaeology of West Asia and Northeast Africa, Austrian Academy of Sciences.\n',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://i.pinimg.com/originals/ca/f3/3c/caf33c5308f68b083fcd7b317e3bcad9.jpg',
-                'https://souvenirdiviaggio.it/wp-content/uploads/2020/10/tomba-degli-ignoti-museo-egizio-di-torino-scaled-e1603637115965.jpg'
+                '/images/event-objective1.jpg',
+                '/images/event-objective2.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-07',
@@ -259,10 +259,10 @@ function insertData(models) {
 
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://i.pinimg.com/originals/6e/e1/cf/6ee1cfba97cbfe5d1ac5be5b2f905707.jpg',
-                'https://www.colazionedaaugusta.it/wp-content/uploads/2015/06/palazzina-di-caccia-di-stupinigi.jpg',
-                'https://thumbs.dreamstime.com/b/casetta-di-caccia-reale-palazzina-stupinigi-nichelino-127590822.jpg',
-                'https://i.pinimg.com/originals/c8/5b/36/c85b3619fbca762ade57930d34b254d8.jpg'
+                '/images/event-passpartout1.jpg',
+                '/images/event-passpartout2.jpg',
+                '/images/event-passpartout3.jpg',
+                '/images/event-passpartout4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-03-26',
@@ -305,10 +305,10 @@ function insertData(models) {
                 ' fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',
-                'https://1.bp.blogspot.com/-PCg6kCYBNbc/WuGbO__CV6I/AAAAAAAALgs/7_QkG0ri4ik_tYX_f0Bn8qx2lUUDow-pwCLcBGAs/s1600/Stupinigi%252C%2B29-4-2017.jpg',
-                'https://citynews-torinotoday.stgy.ovh/~media/original-hi/7699112452265/my-fair-ladies-and-gentlemen-per-musical-a-corte.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/07/una-notte-palazzina-caccia-stupinigi-2019.jpg'
+                '/images/event-lirica1.jpg',
+                '/images/event-lirica2.jpg',
+                '/images/event-lirica3.jpg',
+                '/images/event-lirica4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-20',
@@ -338,9 +338,9 @@ function insertData(models) {
                 'Egyptology and since 2017 he has been part of the staff of CAMNES. He has been working within the Transforming the Egyptian Museum project in Cairo since 2019.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://miprendoemiportovia.it/wp-content/uploads/2020/07/torino-museo-egizio-interno.jpg',
-                'https://www.viaggiaescopri.it/wp-content/uploads/2015/07/Suggestiva-sala-delle-statue-al-Museo-Egizio-di-Torino.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/07/Museo-Egizio-di-Torino.jpg'
+                '/images/event-tranforming-egyptian1.jpg',
+                '/images/event-tranforming-egyptian2.jpg',
+                '/images/event-tranforming-egyptian3.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-27',
@@ -377,8 +377,8 @@ function insertData(models) {
                 'Esperta di buone maniere e di storia del galateo, Barbara Ronchi della Rocca ha pubblicato vari titoli di successo. Insegna all’Università La Sapienza di Roma e tiene corsi di galateo aziendale e arte del ricevere.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
-                'https://maifermarsi.it/wp-content/uploads/2019/03/Sala-da-pranzo-1024x576.jpg',
-                'https://i.pinimg.com/474x/cf/e5/9d/cfe59db0ba5eba93fbd06761a4cb3483.jpg'
+                '/images/event-galateo1.jpg',
+                '/images/event-galateo2.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-13',
