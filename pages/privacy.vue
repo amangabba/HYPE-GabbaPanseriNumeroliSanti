@@ -1,5 +1,6 @@
 <template>
     <div class="justify-content-center container-fluid">
+        <!-- Section with all the privacy policies divided by paragraphs -->
         <div id="content" class="container">
             <div class="justify-content-md-center">
                 LAMbRate, in its quality of Data Controller (hereinafter,
@@ -68,7 +69,9 @@
 
 <script>
 import SectionTitle from '~/components/SectionTitle'
-
+/**
+ * Page containing information about our privacy policies
+ */
 export default {
     name: 'PrivacyPage',
     components: { SectionTitle },
@@ -85,6 +88,7 @@ export default {
             ]
         }
     },
+    // Set page information in store to render it
     created() {
         this.$store.commit('setPageInfo', { title: 'Privacy policy' })
     }
