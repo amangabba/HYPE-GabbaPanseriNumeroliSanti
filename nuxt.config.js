@@ -19,7 +19,8 @@ export default {
                 content: 'width=device-width, initial-scale=1'
             },
             { hid: 'description', name: 'description', content: '' },
-            { name: 'format-detection', content: 'telephone=no' }
+            { name: 'format-detection', content: 'telephone=no' },
+            { name: 'keywords', content: 'turin, art town, tour, event, itinerary, point of interest, service, museum, palace'}
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
         script: [
