@@ -26,7 +26,7 @@
                     </p>
 
                     <!-- Content, if available -->
-                    <p v-if="content !== ''" class="card-text">{{ content }}</p>
+                    <p v-if="content" class="card-text">{{ content }}</p>
                     <div id="links" class="row mt-auto p-1">
                         <!-- Open the page regarding the POI -->
                         <NuxtLink

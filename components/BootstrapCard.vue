@@ -53,7 +53,7 @@
                 <!-- Title of the card -->
                 <h3 class="h5 card-title">{{ title }}</h3>
                 <!-- Subtitle of the card -->
-                <h4 class="h6 card-subtitle mb-2 text-muted">{{ subtitle }}</h4>
+                <h4 v-if="subtitle" class="h6 card-subtitle mb-2 text-muted">{{ subtitle }}</h4>
 
                 <!-- Slot for customizing the content of the card -->
                 <p class="card-text">
