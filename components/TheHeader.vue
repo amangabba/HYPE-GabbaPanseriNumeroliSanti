@@ -20,7 +20,6 @@
 
         <div id="navbarToggler" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
                 <!-- Hardcoded navigation list for the events, because we need a dropdown -->
                 <li class="nav-item dropdown">
                     <a

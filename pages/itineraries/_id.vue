@@ -38,6 +38,7 @@
                     No points of interest in this itinerary, no map to show!
                 </h4>
             </div>
+            <!-- Open Street Map -->
             <OSMMap
                 v-if="poi_list.length > 0"
                 ref="map"
@@ -57,6 +58,8 @@
                         here!
                     </h4>
                 </div>
+
+                <!-- Grid cards of POIs -->
                 <BootstrapGridCardPOI
                     v-for="(poi, index) in poi_list"
                     ref="grid-cards"

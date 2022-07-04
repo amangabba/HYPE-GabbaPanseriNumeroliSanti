@@ -195,10 +195,7 @@ function insertData(models) {
                 'The setting is engaging: you are immersed in the imposing architecture of the ancient Vatican basilica. In the center, and in direct relation to the Shroud' +
                 'fresco of the Medieval Court, there is the protagonist work: Ugo da Carpi. Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul. Holy Year 1525.',
             address: 'Piazza Castello, TO',
-            image_links: [
-                '/images/event-ugo1.jpg',
-                '/images/event-ugo2.jpg'
-            ],
+            image_links: ['/images/event-ugo1.jpg', '/images/event-ugo2.jpg'],
             season: 'Winter',
             start_date: '2022-12-08',
             end_date: '2022-12-24',
@@ -780,7 +777,7 @@ function insertData(models) {
                 '/images/poi-duomo3.png',
                 '/images/poi-duomo4.png',
                 '/images/poi-duomo5.png',
-                '/images/poi-duomo6.png',
+                '/images/poi-duomo6.png'
             ],
             latitude: 45.07339264416224,
             longitude: 7.685221433687851
@@ -872,7 +869,7 @@ function insertData(models) {
                 '/images/poi-castello1.png',
                 '/images/poi-castello2.png',
                 '/images/poi-castello3.png',
-                '/images/poi-castello4.png',
+                '/images/poi-castello4.png'
             ],
             latitude: 45.07070853003831,
             longitude: 7.685113762523864
