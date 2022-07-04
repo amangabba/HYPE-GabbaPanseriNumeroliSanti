@@ -1,7 +1,6 @@
 <template>
     <div id="content" class="justify-content-center container">
         <div class="row m-2">
-            <!--ToDo:chiedi come settare l'immagine, se h-auto o w-auto-->
             <img
                 class="img-fluid col-lg-7 h-auto mt-2"
                 src="https://www.eventi.polimi.it/wp-content/uploads/2020/10/FAI_800x600.jpg"
