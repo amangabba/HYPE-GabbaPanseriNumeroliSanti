@@ -46,9 +46,9 @@ function insertData(models) {
                 '(the atrium, the triclinium, the peristyle with the garden, the bedrooms), ending with the dramatic casts of some victims.',
             address: 'Piazza Castello, TO',
             image_links: [
-                'https://www.artislineblog.com/wp-content/uploads/2022/04/po-scaled.jpg',
-                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0514.jpg',
-                'https://pizzimerlettiedintorni.files.wordpress.com/2016/09/sam_0522.jpg'
+                '/images/event-Invitation-to-Pompei1.jpg',
+                '/images/event-Invitation-to-Pompei2.jpg',
+                '/images/event-Invitation-to-Pompei3.jpg'
             ],
             season: 'Summer',
             start_date: '2022-04-08',
@@ -82,10 +82,10 @@ function insertData(models) {
                 'a wooden bridge and even a greenhouse was built in the eastern part.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/stupinigi-un-gioiello-rococo-dedicato-a-diana/castello-di-stupinigi-veduta-aerea.jpg',
-                'https://www.all4shooters.com/it/caccia/storie-viaggi-cultura/palazzina-di-caccia-di-stupinigi-ora-visitabile-anche-il-parco/palazzina-di-caccia-stupinigi.jpg',
-                'https://grinto.it/wp-content/uploads/2016/06/fom-stupinigi-vista-lato-parco-4.jpg',
-                'https://i.pinimg.com/originals/48/a4/d9/48a4d9d84146c23d78eec01b8e6ffcc7.jpg'
+                '/images/event-read-the-garden1.jpg',
+                '/images/event-read-the-garden2.jpg',
+                '/images/event-read-the-garden3.jpg',
+                '/images/event-read-the-garden4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-04-02',
@@ -112,9 +112,9 @@ function insertData(models) {
                 'in the new Archaeological Gallery to discover the most prestigious vases of the Turin collections.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
-                'https://www.museionline.info/images/gallerie/musantictorino/Foto_5.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2015/02/museo-archeologico-torino-interno.jpg'
+                '/images/event-stories-from-the-lathe1.jpg',
+                '/images/event-stories-from-the-lathe2.jpg',
+                '/images/event-stories-from-the-lathe3.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-10',
@@ -144,9 +144,9 @@ function insertData(models) {
                 'multimedia elements make up a unique exhibition for its strong artistic value and high emotional value.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.themammothreflex.com/wp-content/uploads/2020/02/frida-khalo-foto-Nickolas-Muray-mostra-torino-1-5.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/12/frida-kahlo-torino-mostra-2020.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2020/02/notte-stupinigi-club-silencio-2020-633x400.jpg'
+                '/images/event-frida1.jpg',
+                '/images/event-frida2.jpg',
+                '/images/event-frida3.jpg'
             ],
             season: 'Summer',
             start_date: '2022-03-12',
@@ -168,8 +168,8 @@ function insertData(models) {
                 'international group of Egyptologists of the museum composed of Johannes Auenmüller, Divina Centore and Cédric Gobeil.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://api.museoegizio.it/wp-content/uploads/2022/06/GiardinoEgizio2706-376_-1920x1080.jpg',
-                'https://mediterraneoantico.it/wp-content/uploads/2022/06/DSC_2413.jpg'
+                '/images/event-flora1.jpg',
+                '/images/event-flora.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-30',
@@ -196,8 +196,8 @@ function insertData(models) {
                 'fresco of the Medieval Court, there is the protagonist work: Ugo da Carpi. Veronica unfolding the veil of the Holy Face between the Apostles Peter and Paul. Holy Year 1525.',
             address: 'Piazza Castello, TO',
             image_links: [
-                'https://www.italpress.com/wp-content/uploads/2022/06/20220615_1840-630x420.jpg',
-                'https://www.osservatoreromano.va/content/dam/or/images/it/2022/06/134/varobj12321419obj2035841.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
+                '/images/event-ugo1.jpg',
+                '/images/event-ugo2.jpg'
             ],
             season: 'Winter',
             start_date: '2022-12-08',
@@ -224,8 +224,8 @@ function insertData(models) {
                 'culture in Egypt and Nubia. Since 2021 he is head of the research group of Archaeology in Egypt and Sudan, Department of Prehistory and Archaeology of West Asia and Northeast Africa, Austrian Academy of Sciences.\n',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://i.pinimg.com/originals/ca/f3/3c/caf33c5308f68b083fcd7b317e3bcad9.jpg',
-                'https://souvenirdiviaggio.it/wp-content/uploads/2020/10/tomba-degli-ignoti-museo-egizio-di-torino-scaled-e1603637115965.jpg'
+                '/images/event-objective1.jpg',
+                '/images/event-objective2.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-07',
@@ -259,10 +259,10 @@ function insertData(models) {
 
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://i.pinimg.com/originals/6e/e1/cf/6ee1cfba97cbfe5d1ac5be5b2f905707.jpg',
-                'https://www.colazionedaaugusta.it/wp-content/uploads/2015/06/palazzina-di-caccia-di-stupinigi.jpg',
-                'https://thumbs.dreamstime.com/b/casetta-di-caccia-reale-palazzina-stupinigi-nichelino-127590822.jpg',
-                'https://i.pinimg.com/originals/c8/5b/36/c85b3619fbca762ade57930d34b254d8.jpg'
+                '/images/event-passpartout1.jpg',
+                '/images/event-passpartout2.jpg',
+                '/images/event-passpartout3.jpg',
+                '/images/event-passpartout4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-03-26',
@@ -305,10 +305,10 @@ function insertData(models) {
                 ' fictions of comedy and raw reality of the facts. A window wide open on the torment of the human soul that leads to murder and self-annihilation.',
             address: 'Piazza Principe Amedeo 7, Nichelino TO',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2020/06/maghi-oz-musical-stupinigi-2020.jpg',
-                'https://1.bp.blogspot.com/-PCg6kCYBNbc/WuGbO__CV6I/AAAAAAAALgs/7_QkG0ri4ik_tYX_f0Bn8qx2lUUDow-pwCLcBGAs/s1600/Stupinigi%252C%2B29-4-2017.jpg',
-                'https://citynews-torinotoday.stgy.ovh/~media/original-hi/7699112452265/my-fair-ladies-and-gentlemen-per-musical-a-corte.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/07/una-notte-palazzina-caccia-stupinigi-2019.jpg'
+                '/images/event-lirica1.jpg',
+                '/images/event-lirica2.jpg',
+                '/images/event-lirica3.jpg',
+                '/images/event-lirica4.jpg'
             ],
             season: 'Summer',
             start_date: '2022-06-20',
@@ -338,9 +338,9 @@ function insertData(models) {
                 'Egyptology and since 2017 he has been part of the staff of CAMNES. He has been working within the Transforming the Egyptian Museum project in Cairo since 2019.',
             address: 'Via Accademia delle Scienze 6, TO',
             image_links: [
-                'https://miprendoemiportovia.it/wp-content/uploads/2020/07/torino-museo-egizio-interno.jpg',
-                'https://www.viaggiaescopri.it/wp-content/uploads/2015/07/Suggestiva-sala-delle-statue-al-Museo-Egizio-di-Torino.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/07/Museo-Egizio-di-Torino.jpg'
+                '/images/event-tranforming-egyptian1.jpg',
+                '/images/event-tranforming-egyptian2.jpg',
+                '/images/event-tranforming-egyptian3.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-27',
@@ -377,8 +377,8 @@ function insertData(models) {
                 'Esperta di buone maniere e di storia del galateo, Barbara Ronchi della Rocca ha pubblicato vari titoli di successo. Insegna all’Università La Sapienza di Roma e tiene corsi di galateo aziendale e arte del ricevere.',
             address: 'Piazzetta Reale 1, TO',
             image_links: [
-                'https://maifermarsi.it/wp-content/uploads/2019/03/Sala-da-pranzo-1024x576.jpg',
-                'https://i.pinimg.com/474x/cf/e5/9d/cfe59db0ba5eba93fbd06761a4cb3483.jpg'
+                '/images/event-galateo1.jpg',
+                '/images/event-galateo2.jpg'
             ],
             season: 'Winter',
             start_date: '2023-01-13',
@@ -408,15 +408,15 @@ function insertData(models) {
                 'Temple of Ellesyia;\n· the famous Turin Papyrus Map;\n· the Bembine Table of Isis bronze tablet, and the ' +
                 'oldest known version of the Egyptian Book of the Dead, among many others.',
             image_links: [
-                'https://api.museoegizio.it/wp-content/uploads/2021/11/DSF2001-1920x1080.jpg',
-                'https://www.icis.it/wp-content/uploads/2017/09/museo-egizio-34-1600x900.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/07/Museo-Egizio-di-Torino.jpg',
-                'https://api.museoegizio.it/wp-content/uploads/2021/04/Sala-con-pubblico_New_2021.jpg',
-                'https://www.torinofree.it/wp-content/uploads/2013/01/sfinge-museo-egizio-Torino.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/d/d0/-_001_mummia_%28Museo_Egizio_Torino%29.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/5/55/-_01_Torino%2C_Museo_egizio_Sarcofagi_faraonici_in_legno_ricoperti_d%27oro.jpg',
-                'https://www.rsi.ch/rete-due/programmi/cultura/oggi-la-storia/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG-4617094.html/ALTERNATES/LANDSCAPE_1300/KY_Papiro_geroglifici_Egitto_Museo_Torino.JPG',
-                'https://mediterraneoantico.it/wp-content/uploads/2019/04/Libro-dei-Morti-di-Taysnakht-figlia-di-Taymes_Cyperus-papyrus.-Epoca-Tolemaica-332-30-a.C..-Tebe_Collezione-Drovetti-1824.-C.-1833_Pesatura-del-cuore-Copia.jpg'
+                '/images/poi-museoegizio1.png',
+                '/images/poi-museoegizio2.png',
+                '/images/poi-museoegizio3.png',
+                '/images/poi-museoegizio4.png',
+                '/images/poi-museoegizio5.png',
+                '/images/poi-museoegizio6.png',
+                '/images/poi-museoegizio7.png',
+                '/images/poi-museoegizio8.png',
+                '/images/poi-museoegizio9.png'
             ],
             latitude: 45.068493986677595,
             longitude: 7.684330920195937
@@ -444,14 +444,14 @@ function insertData(models) {
                 'The Museum was set up in 1861 by the City of Turin to bring together and house the heritage of Piedmont.',
 
             image_links: [
-                'https://mole24.it/wp-content/uploads/2019/07/Torino_Palazzo_Madama-1.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/9/9c/Torino_-_Palazzo_Madama.jpg',
-                'https://lasottilelineadombrablog.files.wordpress.com/2015/06/palazzo-madama-torino1.jpg?w=1024',
-                'https://www.torinorete.it/wp-content/uploads/2021/03/palazzo-madama-interni-scaled.jpg',
-                'https://1890056479.rsc.cdn77.org/rivista/immagini/2022/1905/camera-di-madama-reale.jpg',
-                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/pala-madama-2.jpg',
-                'https://www.museotorino.it/images/01/9d/17/df/019d17dfe5f04300bbe521a2108def9f-1.jpg?VSCL=100',
-                'https://www.palazzomadamatorino.it/sites/default/files/preview/DSC_7611%20sito.jpg'
+                '/images/poi-madama1.png',
+                '/images/poi-madama2.png',
+                '/images/poi-madama3.png',
+                '/images/poi-madama4.png',
+                '/images/poi-madama5.png',
+                '/images/poi-madama6.png',
+                '/images/poi-madama7.png',
+                '/images/poi-madama8.png'
             ],
             latitude: 45.07100820681161,
             longitude: 7.685898362523839
@@ -481,14 +481,14 @@ function insertData(models) {
                 'dual function of bookcase and desk, presents classicist style furniture in contrast with the Baroque ' +
                 'style and presents stuccos and frescoes by Pietro Domenico Olivero and Giovanni Battista Alberoni.',
             image_links: [
-                'https://siviaggia.it/wp-content/uploads/sites/2/2019/05/cosa-visitare-allinterno-della-palazzina-stupinigi-a-torino.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/4/40/Palazzina_di_caccia_di_Stupinigi_con_la_cancellata%2C_ingresso.jpg',
-                'https://i.pinimg.com/originals/17/bc/25/17bc2543410c8abaebd64944f66a6dff.jpg',
-                'https://www.colazionedaaugusta.it/wp-content/uploads/2015/06/palazzina-di-caccia-di-stupinigi.jpg',
-                'https://c2.staticflickr.com/4/3872/14490748272_4e61973199_b.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Palazzina_di_Stupinigi_-_Salone_centrale_03.jpg/1280px-Palazzina_di_Stupinigi_-_Salone_centrale_03.jpg',
-                'https://www.lastampa.it/image/contentid/policy:1.34235680:1560890663/Copia%20di%202-40136-U11003236488140g6C-U11003236488140j8F-1400x788@LaStampa.it.jpg?f=gallery_1280&h=702&w=1280&$p$f$h$w=8c1f075',
-                'https://www.histouring.com/data/cch/addon_gallery/13621280x1024xy/schermata%202016-07-06%20alle%2023.16.07_6.png'
+                '/images/poi-stupinigi1.png',
+                '/images/poi-stupinigi2.png',
+                '/images/poi-stupinigi3.png',
+                '/images/poi-stupinigi4.png',
+                '/images/poi-stupinigi5.png',
+                '/images/poi-stupinigi6.png',
+                '/images/poi-stupinigi7.png',
+                '/images/poi-stupinigi8.png'
             ],
             latitude: 44.99535401434939,
             longitude: 7.604519933685234
@@ -515,14 +515,14 @@ function insertData(models) {
                 'which belonged to the family from 1453 until 1946. The royal gates of the palace have a golden ' +
                 'Medusa symbol embossed on them, in order to fend off intruders.',
             image_links: [
-                'https://www.piemonteitalia.eu/sites/default/files/musei/immagini/MUSEI_REALI_DI_TORINO-PALAZZO_REALE.jpg',
-                'https://mywowo.net/media/images/cache/torino_polo_reale_02_palazzo_reale_esterno_jpg_1200_630_cover_85.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/Palazzo-Reale-Torino-visita-alle-sale.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/palazzo-reale-torino-13.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2019/01/mrt_pr_salapranzo_DSC6352.jpg',
-                'https://www.somewhere.it/public/foto/SomeWhere-Tour-UnaFiabaDaRe-13.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/09/Torino-Palazzo-Reale-scala-della-Forbice.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/4/48/Galleria_Beaumont.jpg'
+                '/images/poi-palazzoreale1.png',
+                '/images/poi-palazzoreale2.png',
+                '/images/poi-palazzoreale3.png',
+                '/images/poi-palazzoreale4.png',
+                '/images/poi-palazzoreale5.png',
+                '/images/poi-palazzoreale6.png',
+                '/images/poi-palazzoreale7.png',
+                '/images/poi-palazzoreale8.png'
             ],
             latitude: 45.07291323526096,
             longitude: 7.686283418343486
@@ -550,14 +550,14 @@ function insertData(models) {
                 'wealth of data, historical insights, archival images, technical data on cars and coach-builders are in ' +
                 'fact available throughout the visit through smartphone through the app of the Museum.',
             image_links: [
-                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/02/28/9f/esterno.jpg?w=1200&h=-1&s=1',
-                'https://mole24.it/wp-content/uploads/2016/07/mauto6.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2021/02/museo-automobile-torino-riapertura-febbraio-2021.jpg',
-                'https://immagini.alvolante.it/sites/default/files/styles/image_gallery_big/public/news_galleria/2020/07/mauto-guardia-di-finanza_13.jpg?itok=UqYHIoQE',
-                'https://zero-media.s3.amazonaws.com/uploads/2019/10/museo-dell-automobile-mauto-torino.jpg',
-                'https://lp-cms-production.imgix.net/2019-06/7fd206b78473a149bcd9cf01f6c94527-museo-nazionale-dell-automobile.jpg',
-                'https://www.museoauto.com/wp-content/uploads/2019/10/084-mauto_all2.jpg',
-                'https://mole24.it/wp-content/uploads/2021/11/Museo-dellAutomobile-Torino-la-storia-dellauto-in-un-museo-4-1024x682.jpg'
+                '/images/poi-auto1.png',
+                '/images/poi-auto2.png',
+                '/images/poi-auto3.png',
+                '/images/poi-auto4.png',
+                '/images/poi-auto5.png',
+                '/images/poi-auto6.png',
+                '/images/poi-auto7.png',
+                '/images/poi-auto8.png'
             ],
             latitude: 45.031902252410255,
             longitude: 7.6735669336864625
@@ -580,14 +580,14 @@ function insertData(models) {
                 'from Piedmont. Finally, the fountain of the twelve months and the beautiful botanical and rock ' +
                 'garden represent two unmissable attractions in the Parco del Valentino.',
             image_links: [
-                'https://www.giovanigenitori.it/wp-content/uploads/2018/03/Parco-del-valentino1.jpg',
-                'https://www.guidatorino.com/wp-content/uploads/2019/02/torino-parco-valentino-pedonalizzazione.jpg',
-                'https://www.welcometoitalia.com/wp-content/uploads/2021/01/Parco-e-Castello-del-Valentino.jpg',
-                'https://www.quotidianopiemontese.it/wp-content/2022/03/2-PARCO-DEL-VALENTINO_TORINO.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Torino%2C_parco_del_Valentino_%2802%29.jpg/1200px-Torino%2C_parco_del_Valentino_%2802%29.jpg',
-                'https://www.museotorino.it/images/39/ea/86/32/39ea863280a746178492c11ee66d563f-1.jpg?VSCL=100',
-                'https://www.storiamito.it/wp-content/uploads/2021/02/fontana_dodici_mesi14-scaled.jpg',
-                'https://www.museotorino.it/images/c4/ee/4f/57/c4ee4f571b824925bb4b6d2076194918-1.jpg?VSCL=100'
+                '/images/poi-valentino1.png',
+                '/images/poi-valentino2.png',
+                '/images/poi-valentino3.png',
+                '/images/poi-valentino4.png',
+                '/images/poi-valentino5.png',
+                '/images/poi-valentino6.png',
+                '/images/poi-valentino7.png',
+                '/images/poi-valentino8.png'
             ],
             latitude: 45.054843089514605,
             longitude: 7.686730733687203
@@ -615,14 +615,14 @@ function insertData(models) {
                 'include also some of the environments around the Museum of Antiquities, as well as the Orangeries, ' +
                 'the Royal Park, the exhibition hall in Palazzo Chiablese and the Sacra Sindone Chapel.',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2020/09/musei-reali-torino-aperture-straordinarie-settembre-2020.jpg',
-                'https://martinaway.com/wp-content/uploads/2021/11/Musei-Reali-di-Torino.jpg',
-                'https://artemagazine.it/wp-content/uploads/2021/04/9acda34517f879d836deddcda3e271bc.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/palazzo-reale-torino-4.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/biblioteca-reale-torino-2.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-5.jpg',
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/museo-antichita-musei-reali-torino-4.jpg',
-                'https://www.fctp.it/media/locations/photos/f0/5bb78278e34bb.jpg'
+                '/images/poi-museo1.png',
+                '/images/poi-museo2.png',
+                '/images/poi-museo3.png',
+                '/images/poi-museo4.png',
+                '/images/poi-museo5.png',
+                '/images/poi-museo6.png',
+                '/images/poi-museo7.png',
+                '/images/poi-museo8.png'
             ],
             latitude: 45.07410129682033,
             longitude: 7.686117673254131
@@ -649,14 +649,14 @@ function insertData(models) {
                 'movie posters, photographs, and film clips to admire and lots of masks, costumes, and other memorabilia.\n' +
                 'The collection is so big that true film nerds will need a whole afternoon to explore.',
             image_links: [
-                'https://www.latitudeslife.com/wp-content/uploads/Mole_antonelliana_Torino.jpg',
-                'https://www.inthera.it/wp-content/uploads/2017/05/31-marzo-2017-panorama-d-italia.jpg',
-                'https://siviaggia.it/wp-content/uploads/sites/2/2020/07/la_mole_antonelliana.jpg',
-                'https://www.viaggimust.it/wp-content/uploads/2022/01/mole-antonelliana-1.jpg',
-                'https://www.torinofree.it/wp-content/uploads/2013/01/mole-antonelliana-torino.jpg',
-                'https://www.inexhibit.com/wp-content/uploads/2014/01/Museo-Nazionale-Cinema-Mole-Antonelliana-Torino-Inexhibit-3-870x580.jpg',
-                'https://www.piemonteitalia.eu/sites/default/files/styles/ingrandimento/public/musei/immagini/MUSEO_NAZIONALE_DEL_CINEMA.jpg?itok=s75urpxB',
-                'https://buonissimatorino.it/wp-content/uploads/2021/09/01-MDC-00069.jpg'
+                '/images/poi-mole1.png',
+                '/images/poi-mole2.png',
+                '/images/poi-mole3.png',
+                '/images/poi-mole4.png',
+                '/images/poi-mole5.png',
+                '/images/poi-mole6.png',
+                '/images/poi-mole7.png',
+                '/images/poi-mole8.png'
             ],
             latitude: 45.06905771317454,
             longitude: 7.693314433687716
@@ -683,12 +683,12 @@ function insertData(models) {
                 'the Consolata. Every June 20, a procession of the icon of the Virgin takes place in the ' +
                 'streets of the city.',
             image_links: [
-                'https://www.museotorino.it/images/11/1d/51/cf/111d51cf3060427fbfc242a3ecf44bfe-1.jpg?VSCL=100',
-                'https://www.guidatorino.com/wp-content/uploads/2014/09/santuario-consolata-torino.jpg',
-                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/eb/ff/b6/photo0jpg.jpg?w=1200&h=1200&s=1',
-                'https://vocetempo.it/vt2018/wp-content/uploads/2020/06/2020.06.20.Messa_.Consolata.Santuario.della_.Consolata-Torino-0364.jpg',
-                'https://www.museotorino.it/images/34/a9/a4/13/34a9a41381ae483e81610ffeeea9cd9c-1.jpg',
-                'https://www.italiadascoprire.net/piemonte/wp-content/uploads/sites/29/torino-santuario-consolata-interni.jpg'
+                '/images/poi-consolata1.png',
+                '/images/poi-consolata2.png',
+                '/images/poi-consolata3.png',
+                '/images/poi-consolata4.png',
+                '/images/poi-consolata5.png',
+                '/images/poi-consolata6.png'
             ],
             latitude: 45.07688431102633,
             longitude: 7.67915967786841
@@ -712,13 +712,13 @@ function insertData(models) {
                 'Don’t forget to visit the traditional Caffè San Carlo, which opened in 1842, the Caffè Torino and ' +
                 'the pastry Fratelli Stratta, with the original furnishings of 1836, also famous for its chocolate.',
             image_links: [
-                'https://upload.wikimedia.org/wikipedia/commons/2/27/Turin_piazza_san_carlo_2009.JPG',
-                'https://www.filodiritto.com/sites/default/files/styles/lg/public/2019-05/torino.jpg?itok=BnLglJ5w',
-                'https://www.quotidianopiemontese.it/wp-content/2019/02/piazza-san-carlo-torino-qp.jpg',
-                'https://www.museotorino.it/images/6b/c0/4e/34/6bc04e34fd6541709ee258553089cf90-1.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/2/2a/Torino_-_Caval_%C3%ABd_Brons_latoB_particolare_statua.jpg',
-                'https://www.museotorino.it/images/29/39/be/4c/2939be4c5b4a40a981087d551e837423-1.jpg?VSCL=100',
-                'https://www.museotorino.it/images/ec/e9/be/d7/ece9bed7a102497c96ddf8b8ba106760-1.jpg?VSCL=100'
+                '/images/poi-sancarlo1.png',
+                '/images/poi-sancarlo2.png',
+                '/images/poi-sancarlo3.png',
+                '/images/poi-sancarlo4.png',
+                '/images/poi-sancarlo5.png',
+                '/images/poi-sancarlo6.png',
+                '/images/poi-sancarlo7.png'
             ],
             latitude: 45.06763172278214,
             longitude: 7.6829681336876385
@@ -743,12 +743,12 @@ function insertData(models) {
                 'tour that takes in other city highlights such as the Royal Palace, Piazza Castello, and ' +
                 'Mole Antonelliana.',
             image_links: [
-                'https://www.guidatorino.com/wp-content/uploads/2014/09/basilica-superga-torino-1.jpg',
-                'https://www.museotorino.it/images/dc/3d/d2/1c/dc3dd21c39b64abea053a4bbeb59b886-1.jpg?VSCL=100',
-                'https://caiframe.com/wp-content/uploads/2018/11/maxresdefault-1.jpg',
-                'https://media.beniculturali.it/mibac/files/boards/99c11a910aad48e66d038671de790e5a/GEP%202020/superga.jpg',
-                'https://www.museotorino.it/images/9f/22/a1/af/9f22a1afe1924f0295689f7a3dbaeac4-1.jpg?VSCL=100',
-                'https://mywowo.net/media/images/cache/torino_basilica-superga_01_visita_jpg_1200_630_cover_85.jpg'
+                '/images/poi-superga1.png',
+                '/images/poi-superga2.png',
+                '/images/poi-superga3.png',
+                '/images/poi-superga4.png',
+                '/images/poi-superga5.png',
+                '/images/poi-superga6.png'
             ],
             latitude: 45.080821218410506,
             longitude: 7.767671933688086
@@ -775,12 +775,12 @@ function insertData(models) {
                 'avid athlete, and benefactor of the poor, called the "saint for youth of the Third Millennium." ' +
                 'He was beatified by John Paul II in 1990.',
             image_links: [
-                'https://mole24.it/wp-content/uploads/2019/08/duomo-torino.jpg',
-                'https://www.metroitalia.info/img/place/duomo-di-torino.webp',
-                'https://upload.wikimedia.org/wikipedia/commons/d/d3/DuomoTorino.jpg',
-                'https://www.lorenzotaccioli.it/wp-content/uploads/2019/09/Il-duomo-di-Torino-visto-dagli-scavi-archeologici-intorno-alla-Porta-Palatina.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/e/ed/Torino%2C_duomo%2C_interno%2C_01.JPG',
-                'https://www.museotorino.it/images/c3/dd/8c/68/c3dd8c68fd8642a1b443301569d458d9-1.jpg'
+                '/images/poi-duomo1.png',
+                '/images/poi-duomo2.png',
+                '/images/poi-duomo3.png',
+                '/images/poi-duomo4.png',
+                '/images/poi-duomo5.png',
+                '/images/poi-duomo6.png',
             ],
             latitude: 45.07339264416224,
             longitude: 7.685221433687851
@@ -810,13 +810,13 @@ function insertData(models) {
                 'amphitheater and is built on the hillside. The paths are created thus to lead the visitor to ' +
                 'places of great scenic impact from where it is possible to enjoy the panoramic view of Turin and the Alps. ',
             image_links: [
-                'https://upload.wikimedia.org/wikipedia/commons/b/b8/Villa_della_Regina_-_belvedere_superiore18_36_56_488000.jpeg',
-                'https://www.cosediviaggio.it/wp-content/uploads/2020/12/torino-villa-della-regina.jpg',
-                'https://www.consultaditorino.it/static/media/uploads/realizzazioni/2008%20Villa%20della%20Regina%20Mostra%20Giaquinto/2008-villa-della-regina-mostra-giaquinto-galleria.jpg',
-                'https://media.beniculturali.it/mibac/files/boards/99c11a910aad48e66d038671de790e5a/GEP%202021/vdr%20-%20galleria%20dei%20musici.jpg',
-                'https://www.tpnews.it/wp-content/gallery/villa-della-regina/IMG_3865.jpg',
-                'https://www.viaggiacorte.it/wp-content/uploads/2018/09/villa-della-regina-cosa-vedere.jpg',
-                'https://www.gitefuoriportainpiemonte.it/wp-content/uploads/2021/04/villa-regina-torino.jpg'
+                '/images/poi-regina1.png',
+                '/images/poi-regina2.png',
+                '/images/poi-regina3.png',
+                '/images/poi-regina4.png',
+                '/images/poi-regina5.png',
+                '/images/poi-regina6.png',
+                '/images/poi-regina7.png'
             ],
             latitude: 45.05802506221488,
             longitude: 7.708311433687335
@@ -839,11 +839,11 @@ function insertData(models) {
                 'During the night between 11 and 12 April 1997, the Chapel was affected by a large ' +
                 'fire which seriously damaged the building.',
             image_links: [
-                'https://museireali.beniculturali.it/wp-content/uploads/2017/07/cappella-sacra-sindone-torino.jpg',
-                'https://www.architetti.com/wp-content/uploads/2018/10/IMG_6129_crediti-Daniele-Bottallo-1024x683.jpg',
-                'https://www.piemonteitalia.eu/sites/default/files/musei/immagini/MUSEI_REALI_DI_TORINO-CAPPELLA_DELLA_SACRA_SINDONE.jpg',
-                'https://www.ilvaloreitaliano.it/wp-content/uploads/2021/03/Altare-Cappella-della-Sindone_03_Credits-Musei-Reali-Torino.jpg',
-                'https://www.diocesi.torino.it/wp-content/uploads/2018/03/Duomo-di-Torino.jpg'
+                '/images/poi-sindone1.png',
+                '/images/poi-sindone2.png',
+                '/images/poi-sindone3.png',
+                '/images/poi-sindone4.png',
+                '/images/poi-sindone5.png'
             ],
             latitude: 45.07318449073021,
             longitude: 7.685854033687847
@@ -869,10 +869,10 @@ function insertData(models) {
                 'and nearby the church of San Lorenzo. Take a break from sightseeing and indulge in a yummy ' +
                 'ice cream or dessert at Gelateria Abela (Piazza Castello, n. 70).',
             image_links: [
-                'https://www.yourlocalguides.net/wp-content/uploads/Piazza-Castello-1024x685.jpg',
-                'https://mywowo.net/media/images/cache/torino_piazza_castello_01_introduzione_jpg_1200_630_cover_85.jpg',
-                'https://www.museotorino.it/images/12/9b/0d/9e/129b0d9eafc24a2aa57c71e977489b10-1.jpg?VSCL=100',
-                'https://img.grouponcdn.com/seocms/epQE88T1ZwPkJNTvXaAFsh/Palazzo_reale-1600x1069-1600x1069.jpeg'
+                '/images/poi-castello1.png',
+                '/images/poi-castello2.png',
+                '/images/poi-castello3.png',
+                '/images/poi-castello4.png',
             ],
             latitude: 45.07070853003831,
             longitude: 7.685113762523864
