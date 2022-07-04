@@ -1,7 +1,6 @@
 <template>
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
-
             <!-- Section - Vaccination and mask rules -->
             <SectionTitle>Vaccination and mask rules</SectionTitle>
             <div id="rules" class="mx-auto">

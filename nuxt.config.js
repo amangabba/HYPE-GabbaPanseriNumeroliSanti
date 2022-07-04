@@ -20,7 +20,11 @@ export default {
             },
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
-            { name: 'keywords', content: 'turin, art town, tour, event, itinerary, point of interest, service, museum, palace'}
+            {
+                name: 'keywords',
+                content:
+                    'turin, art town, tour, event, itinerary, point of interest, service, museum, palace'
+            }
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
         script: [
