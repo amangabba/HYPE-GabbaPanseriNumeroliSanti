@@ -1,12 +1,12 @@
 <template>
     <div id="content" class="justify-content-center container">
         <div class="row m-2">
-            <!--ToDo:chiedi come settare l'immagine, se h-auto o w-auto-->
             <img
                 class="img-fluid col-lg-7 h-auto mt-2"
-                src="https://www.eventi.polimi.it/wp-content/uploads/2020/10/FAI_800x600.jpg"
+                src="/images/poli.png"
                 alt="Politecnico Milano"
             />
+            <!-- Section with information about our contacts (they are fictitious) -->
             <div class="col-lg-5 text-left p-2">
                 <SectionTitle>Our Information</SectionTitle>
 
@@ -22,6 +22,9 @@
 
                 <SectionTitle>Contact Us</SectionTitle>
 
+                <!-- Section with a form. The Submit button only responds with an
+                acknowledge message through the function "submitForm()" without processing the received
+                 message -->
                 <form class="justify-content-lg-center w-auto">
                     <div class="mb-2">
                         <label class="form-label" for="name">Name</label>
@@ -55,6 +58,9 @@
 <script>
 import SectionTitle from '~/components/SectionTitle'
 
+/**
+ * Page containing information about our Contacts (they are fictitious)
+ */
 export default {
     name: 'ContactsComponent',
     components: { SectionTitle },
@@ -71,10 +77,14 @@ export default {
             ]
         }
     },
+    // Set page information in store to render it
     created() {
         this.$store.commit('setPageInfo', { title: 'Contacts' })
     },
     methods: {
+        /**
+         * This method just return the specified string after a form is submitted
+         */
         submitForm() {
             window.alert('Your message has been delivered')
         }

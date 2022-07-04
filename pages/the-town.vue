@@ -1,9 +1,10 @@
 <template>
     <div id="content" class="justify-content-center container">
         <div class="row m-2">
+            <!-- Section with a brief description of the town -->
             <img
                 class="img-fluid col-lg-7 h-auto mt-2"
-                src="https://images.musement.com/cover/0002/45/view-of-turin-center-with-mole-antonelliana-italy_header-144980.jpeg"
+                src="/images/turin.png"
                 alt="Turin"
             />
             <div class="col-lg-5 text-left p-2">
@@ -30,7 +31,9 @@
 
 <script>
 import SectionTitle from '~/components/SectionTitle'
-
+/**
+ * Page containing a brief description of Turin
+ */
 export default {
     name: 'TheTown',
     components: { SectionTitle },
@@ -47,6 +50,7 @@ export default {
             ]
         }
     },
+    // Set page information in store to render it
     created() {
         this.$store.commit('setPageInfo', { title: 'The town' })
     }
