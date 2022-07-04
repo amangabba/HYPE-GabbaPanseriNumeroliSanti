@@ -10,4 +10,9 @@ $theme-colors: (
     'dark': #001738
 );
 $enable-shadows: true;
+
+$navbar-light-color:                rgba(0, 0, 0, .75);
+$navbar-light-hover-color:          rgba(0, 0, 0, .9);
+$navbar-light-active-color:         rgba(0, 0, 0, 1);
+
 @import '~bootstrap/scss/bootstrap.scss';

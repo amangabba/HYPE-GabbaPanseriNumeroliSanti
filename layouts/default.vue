@@ -62,4 +62,7 @@ export default {
     width: 100%;
     bottom: 0;
 }
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+}
 </style>
