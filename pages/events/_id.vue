@@ -18,6 +18,7 @@
                     <p>
                         <i><b> Practical information: </b></i>
                     </p>
+                    <!-- Pratical info are added in a different way because in this way we can control the style of the text ( spaces, new line, new paragraph etc.)-->
                     <p v-html="practical_info"></p>
                     <p>
                         <i><b> Address: </b></i> {{ address }}
@@ -32,7 +33,7 @@
                         <i><b> This event will be held in: </b> </i>
                         {{ season }}
                     </p>
-
+                    <!--Different link if we are in the page of a summer event or a winter one.-->
                     <p v-if="season === 'Summer'">
                         <NuxtLink to="/summer-events">
                             More summer events
@@ -45,7 +46,7 @@
                     </p>
                 </div>
             </div>
-
+            <!-- Description is added in a different way because in this way we can control the style of the text ( spaces, new line, new paragraph etc.)-->
             <SectionTitle class="row m-2 mt-4 mb-4">Description</SectionTitle>
             <div class="row m-2 mt-4 mb-4" v-html="description"></div>
 
