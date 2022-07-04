@@ -1,6 +1,7 @@
 <template>
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
+            <!-- Section containing the information about luggage deposits -->
             <div id="introduction" class="mx-auto">
                 <div>
                     Luckily, most airports have a left luggage service where for
@@ -24,6 +25,8 @@
                         </h5>
                     </div>
                     <p class="mb-1">
+                        <!-- Luggage deposits have a Google Maps link associated, so users can
+                        see their position-->
                         Via Assietta, 6/E, 10128 Torino TO (<a
                             href="https://goo.gl/maps/RR4TCUxQntwabZpB6"
                             target="_blank"
@@ -68,6 +71,9 @@
 </template>
 
 <script>
+/**
+ * Page containing information on where to deposit your luggage
+ */
 export default {
     name: 'TravelInfoLuggagePage',
     head() {

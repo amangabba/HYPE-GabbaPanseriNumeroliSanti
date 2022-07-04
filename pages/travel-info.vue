@@ -1,5 +1,6 @@
 <template>
     <div class="justify-content-center container">
+        <!-- Section with the links to the 3 parts of the "Travel Info" page -->
         <div class="container">
             <ul class="nav nav-pills mt-2">
                 <li class="nav-item">
@@ -42,6 +43,9 @@
 </template>
 
 <script>
+/**
+ * Page containing 3 structural links to the sections of "Travel Info"
+ */
 export default {
     name: 'TravelInfoPage',
     layout: 'single-topic',
@@ -57,6 +61,7 @@ export default {
             ]
         }
     },
+    // Set page information in store to render it
     created() {
         this.$store.commit('setPageInfo', { title: 'Travel info' })
     }

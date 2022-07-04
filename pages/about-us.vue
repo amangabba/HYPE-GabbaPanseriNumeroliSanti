@@ -24,7 +24,7 @@
                     incentive travel, and business travel.
                 </p>
             </div>
-
+          <!-- Section - Goals -->
             <SectionTitle>Goals</SectionTitle>
 
             <div id="goals" class="mx-auto">
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
             </div>
-
+             <!-- Section - Actions -->
             <SectionTitle>Actions</SectionTitle>
 
             <div id="actions" class="mx-auto">

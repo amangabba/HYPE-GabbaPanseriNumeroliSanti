@@ -14,6 +14,7 @@
                 </div>
             </div>
 
+            <!-- Each section contains the information about a specific mean of transport -->
             <SectionTitle>Bus</SectionTitle>
 
             <div id="by-bus" class="list-group mx-auto">
@@ -110,6 +111,9 @@
 <script>
 import SectionTitle from '~/components/SectionTitle'
 
+/**
+ * Page containing information on how to reach the city
+ */
 export default {
     name: 'TravelInfoMovePage',
     components: { SectionTitle },

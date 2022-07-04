@@ -26,7 +26,7 @@ export default {
         store.commit('setPageInfo', {
             title: 'All Points of Interest',
             subtitle: 'All the magical places in Turin',
-            imageUrl: '/images/introductory-cover.png'
+            imageUrl: '/images/introductory-cover.webp'
         })
         store.commit('setIntroductoryPageElements', poiList)
 

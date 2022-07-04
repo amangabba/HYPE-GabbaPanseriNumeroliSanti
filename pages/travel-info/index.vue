@@ -13,7 +13,7 @@
                     The most common ways to reach Turin are listed below:
                 </div>
             </div>
-
+            <!-- Each section contains the information about a specific mean of transport -->
             <SectionTitle>By plane</SectionTitle>
 
             <div id="airports" class="list-group mx-auto">
@@ -24,6 +24,8 @@
                         <h5 class="mb-1">Aeroporto Torino – Caselle</h5>
                     </div>
                     <p class="mb-1">
+                        <!-- Airports and train stations have a Google Maps link associated, so users can
+                        see their position-->
                         Strada Aeroporto, 12, 10072 Caselle Torinese TO (<a
                             href="https://goo.gl/maps/7cw8SDVdWGeh6LJS6"
                             target="_blank"
@@ -155,7 +157,9 @@
 
 <script>
 import SectionTitle from '~/components/SectionTitle'
-
+/**
+ * Page containing information on how to reach the city
+ */
 export default {
     name: 'TravelInfoReachPage',
     components: { SectionTitle },

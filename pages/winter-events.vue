@@ -29,7 +29,7 @@ export default {
         store.commit('setPageInfo', {
             title: 'Winter Events',
             subtitle: 'Discover the next winter events',
-            imageUrl: '/images/introductory-cover.png'
+            imageUrl: '/images/introductory-cover.webp'
         })
         store.commit('setIntroductoryPageElements', eventList)
 
