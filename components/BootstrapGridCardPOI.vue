@@ -4,6 +4,7 @@
         :class="active ? 'card mb-3 bg-primary bg-opacity-10' : 'card mb-3'"
     >
         <div class="row g-0">
+            <!-- Image -->
             <div class="col-md-3 my-auto p-3">
                 <img
                     class="img-fluid rounded-start rounded-2"
@@ -11,15 +12,20 @@
                     :alt="imageText"
                 />
             </div>
+            <!-- Card content -->
             <div class="col-md-9">
                 <div class="card-body d-flex flex-column h-100">
+                    <!-- Title -->
                     <h5 class="card-title">
                         {{ title }}
                     </h5>
+
+                    <!-- Subtitle -->
                     <p class="card-text text-muted">
                         {{ subtitle }}
                     </p>
 
+                    <!-- Content, if available -->
                     <p v-if="content !== ''" class="card-text">{{ content }}</p>
                     <div id="links" class="row mt-auto p-1">
                         <!-- Open the page regarding the POI -->
@@ -93,6 +99,7 @@ export default {
         }
     },
     methods: {
+        // CallParentFunction emits putMarker from the parent, giving it as params poi's info
         callParentFunction() {
             this.$emit(
                 'putMarker',

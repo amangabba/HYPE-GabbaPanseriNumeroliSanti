@@ -1,8 +1,9 @@
 <template>
     <div class="justify-content-center container-fluid">
         <div id="content" class="container">
-            <SectionTitle>Vaccination and mask rules</SectionTitle>
 
+            <!-- Section - Vaccination and mask rules -->
+            <SectionTitle>Vaccination and mask rules</SectionTitle>
             <div id="rules" class="mx-auto">
                 <h4 class="mt-2">Public spaces and services</h4>
                 <p>
@@ -39,8 +40,8 @@
                 </p>
             </div>
 
+            <!-- Section - Where to get tested -->
             <SectionTitle>Where to get tested</SectionTitle>
-
             <div id="tests" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
@@ -86,8 +87,8 @@
                 </div>
             </div>
 
+            <!-- Section - Where to get vaccinated -->
             <SectionTitle>Where to get vaccinated</SectionTitle>
-
             <div id="vaccinations" class="list-group mx-auto">
                 <div
                     class="list-group-item list-group-item-action flex-column align-items-start"
