@@ -2,10 +2,11 @@
     <div id="content" class="justify-content-center container">
         <div class="row m-2">
             <!-- Section with a brief description of the town -->
-            <img
+            <nuxt-img
                 class="img-fluid col-lg-7 h-auto mt-2"
                 src="/images/turin.png"
                 alt="Turin"
+                format="webp"
             />
             <div class="col-lg-5 text-left p-2">
                 <SectionTitle>Turin</SectionTitle>
