@@ -66,5 +66,6 @@ export default {
 <style scoped>
 .title-background {
     padding: 10px;
+    display: inline-block;
 }
 </style>
