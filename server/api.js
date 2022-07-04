@@ -1,4 +1,4 @@
-import { DATEONLY, Op } from 'sequelize'
+import { Op } from 'sequelize'
 
 const express = require('express')
 const app = express()
@@ -8,7 +8,7 @@ const { initializeDatabaseConnection } = require('./database')
 // that contains some JSON in the body
 app.use(express.json())
 
-// Function to format DATEONLY in a human-friendly form
+// Function to change date in a human-friendly format
 function dateToString(date) {
     const event = new Date(date)
     const dateElems = event.toDateString().split(' ').slice(1)
