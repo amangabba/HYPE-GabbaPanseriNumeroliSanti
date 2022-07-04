@@ -28,7 +28,7 @@ export default {
         store.commit('setPageInfo', {
             title: 'All Itineraries',
             subtitle: 'Visit the city with different plans!',
-            imageUrl: '/images/introductory-cover.png'
+            imageUrl: '/images/introductory-cover.webp'
         })
         store.commit('setIntroductoryPageElements', itineraryList)
 

@@ -27,7 +27,7 @@ export default {
         store.commit('setPageInfo', {
             title: 'All Events',
             subtitle: 'Discover the next exciting events',
-            imageUrl: '/images/introductory-cover.png'
+            imageUrl: '/images/introductory-cover.webp'
         })
         store.commit('setIntroductoryPageElements', eventList)
 

@@ -25,7 +25,7 @@ export default {
         store.commit('setPageInfo', {
             title: 'Main Services',
             subtitle: 'Discover the main services present in Torino',
-            imageUrl: '/images/introductory-cover.png'
+            imageUrl: '/images/introductory-cover.webp'
         })
         store.commit('setIntroductoryPageElements', serviceTypeList)
 
