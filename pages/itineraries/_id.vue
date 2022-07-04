@@ -145,6 +145,14 @@ export default {
     },
     methods: {
         // Called to update the map, it's information and the selected grid card
+        /**
+         * Formats opening hours from an array of float arrays to a human-readable string
+         * @param key key of the grid card
+         * @param lat latitude of the center and the marker
+         * @param long longitude of the center and the marker
+         * @param name name of the new POI
+         * @param address address of the new POI
+         */
         putMarker(key, lat, long, name, address) {
             // Update Map center
             this.centerLong = long
